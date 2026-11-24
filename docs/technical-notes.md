@@ -24,8 +24,8 @@
 
 実機確認が必要で、まだ確かめていないもの。確認できたら消し、CHANGELOG に「確認済み」と1行残す。
 
-- Node.js 24 での実行。手元の Node.js は 20 のため、型チェック・単体テスト・wake の通し実行は Deno 1.41 で代用した。
-- GitHub Actions 上での heartbeat(checkout → wake → commit → push)。
-- `actions/checkout@v7` `actions/setup-node@v7` の入力名。タグの存在だけ確認した。
+- 単体テスト(`node --test`)の Node.js での実行。手元の Node.js は 20 のため、Deno 1.41 で代用した。
+- schedule(cron)からの起動。手動実行(workflow_dispatch)だけ確認した。
+- 30分以上あけた2回目以降の起床(304 の扱い、新着の検出、`⚠間隔超過`)の Actions 上での挙動。
 - launchd からの workflow_dispatch(fine-grained PAT の権限、スリープ明けの挙動)。
 - schedule の遅延の大きさ(遅れ方によっては launchd の起床と20分以上離れ、両方が動く)。

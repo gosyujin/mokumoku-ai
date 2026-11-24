@@ -4,5 +4,6 @@
 
 ## 2026-11-24
 
-- Added: 骨組み(SOUL.md の境界、RULES.md、agent.md、state/ ほか)と、段階2の wake・commit・heartbeat.yml(LLM なし)、launchd の雛形。GitHub 上では未実行([docs/technical-notes.md](docs/technical-notes.md) の未検証)。
+- 確認済み: GitHub Actions 上の heartbeat(Node.js 24 で wake → commit → push)と、直後の再実行が二重起動として commit を作らないこと。残りは [docs/technical-notes.md](docs/technical-notes.md) の未検証。
+- Added: 骨組み(SOUL.md の境界、RULES.md、agent.md、state/ ほか)と、段階2の wake・commit・heartbeat.yml(LLM なし)、launchd の雛形。
 - Added: CLAUDE.md・`.claude/settings.json`・docs/ の雛形を入れた(repo-rules)。
