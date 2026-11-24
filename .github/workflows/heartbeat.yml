@@ -68,6 +68,12 @@ jobs:
             --settings ops/agent/settings.json
             --strict-mcp-config
             --max-turns 30
+      # エージェントが失敗したら、最後の結果(失敗の理由)だけをログに出す。途中のやり取りは出さない
+      - if: failure() && steps.agent.conclusion == 'failure'
+        run: |
+          jq -r '[.. | objects | select(.type? == "result")] | last | {subtype, is_error, num_turns, result}' "$EXECUTION_FILE" || echo "実行ログを読めなかった"
+        env:
+          EXECUTION_FILE: ${{ steps.agent.outputs.execution_file || format('{0}/claude-execution-output.json', runner.temp) }}
       # 書いてよい場所の外に変更があれば、ここで失敗させる(後ろの commit が動かないので、何も push されない)
       - run: node tools/guard.ts
       - run: node tools/commit.ts agent

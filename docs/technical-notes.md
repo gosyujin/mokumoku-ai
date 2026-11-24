@@ -41,9 +41,8 @@
   - `base-action` 経由でも `--restricted` と権限ルールが同じように効くこと。
   - `claude setup-token` のトークンで WebSearch が使えること(公式ドキュメントに記載なし。手元では通常のログインで動いた)。
   - action がリポジトリの中にファイルを残さず、guard が通ること。
-  - action の後も Node.js が 24 のままで、guard・commit・build が動くこと。
+  - action の後も Node.js が 24 のままで、guard・commit・build が動くこと(action の中で 24 が選ばれることまでは 20:37 の回で確認。後ろの step はまだ動いていない)。
   - 1回の起動で減る利用枠の大きさ。
-- `persist-credentials: false` と `GITHUB_TOKEN` での push(`tools/commit.ts` の変更)。
 - 単体テスト(`node --test`)の Node.js での実行。手元の Node.js は 20 のため、Deno 1.41 で代用した。
 - schedule(cron)からの起動。手動実行(workflow_dispatch)だけ確認した。
 - `⚠間隔超過` が Actions 上の journal に出ること(まだ45分を超える空きが起きていない)。

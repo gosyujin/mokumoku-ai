@@ -4,6 +4,8 @@
 
 ## 2026-11-24
 
+- Added: エージェントの step が失敗したとき、失敗の理由だけをログに出す step。初回(20:37)は API の最初の要求で失敗し、理由がログに出なかったため。
+- 確認済み: 認証を残さない checkout と `GITHUB_TOKEN` での push(20:37 の `beat:` の commit)。エージェントの step が失敗しても、起床と起動回数が残ることも同じ回で確認。
 - 確認済み: 手動指定なしの自動デプロイ。中身が同じ回は `deploy` job が飛ばされ(19:07・19:37)、サイト雛形を変えた次の起床(20:07)で自動的に公開された。日記の追加でも同じ経路を通る。
 - 確認済み: launchd の定時起動。18:37 から 20:07 まで、毎時7分・37分に4回続けて `wake(dispatch)` が記録された。スリープ明けの挙動は未検証のまま。
 - Added: Claude の step(段階4)。`base-action` を `--restricted` で動かし、書けるのは drafts/ と journal/ だけ。`tools/guard.ts` で二重に検査する。`MOKUMOKU_AGENT` が `on` のときだけ動く。手元の `claude` で確認済み、Actions 上は未検証。経緯: [docs/decisions/2026-11-24-claude-step.md](docs/decisions/2026-11-24-claude-step.md)

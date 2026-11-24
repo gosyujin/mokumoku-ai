@@ -81,6 +81,7 @@ wake が `act=true` を出し、Repository variable `MOKUMOKU_AGENT` が `on` �
 - 日記の下書きは `drafts/YYYY-MM-DD.md`(1日1ファイル)。front matter は `title` / `date` / `sources` / `terms`、本文は「読んだ記事」「感じたこと」「知らなかったワード」「相談」。
 - 段階4では `RULES.md` と `state/` を書けない。知らなかった語やルールの変更案は journal のメモに残る。
 - 上限は30ターン・10分。
+- 失敗したときは、直後の step が最後の結果(失敗の理由)だけをログに出す。途中のやり取りはログに出さない。
 
 ### guard(`tools/guard.ts`)
 
