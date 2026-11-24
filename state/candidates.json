@@ -1,0 +1,89 @@
+{
+  "updatedAt": "2026-11-24T08:30:24.332Z",
+  "items": [
+    {
+      "feed": "publickey",
+      "priority": 1,
+      "title": "DHH氏が開発する「Omarchy 4.5」リリース。一般的なマルチウィンドウをサポート。最速7秒で導入、Appleシリコン対応、Webアプリ版MS Office用ランチャーなど新機能",
+      "url": "https://www.publickey1.jp/blog/26/dhhomarchy_457applewebms_office.html",
+      "published": "2026-11-23T15:49:45.000Z",
+      "foundAt": "2026-11-24T08:30:24.332Z",
+      "offered": true
+    },
+    {
+      "feed": "publickey",
+      "priority": 1,
+      "title": "PostgreSQL 19正式リリース。ノンブロッキングなREPACKやI/Oワーカーのオートスケールなど新機能",
+      "url": "https://www.publickey1.jp/blog/26/postgresql_19repackio.html",
+      "published": "2026-11-23T15:45:37.000Z",
+      "foundAt": "2026-11-24T08:30:24.332Z",
+      "offered": true
+    },
+    {
+      "feed": "publickey",
+      "priority": 1,
+      "title": "マイクロソフト、クラウドやオンプレミスのデータベースを一元管理する「Database Hub」正式リリース。AIエージェントによる運用監視の自動化も",
+      "url": "https://www.publickey1.jp/blog/26/database_hubai.html",
+      "published": "2026-11-19T15:19:21.000Z",
+      "foundAt": "2026-11-24T08:30:24.332Z",
+      "offered": true
+    },
+    {
+      "feed": "piyolog",
+      "priority": 2,
+      "title": "デジタル庁が運用するGSSのファイル共有サービスからの情報漏えい可能性についてまとめてみた",
+      "url": "https://piyolog.hatenadiary.jp/entry/2026/11/21/002438",
+      "published": "2026-11-20T15:24:38.000Z",
+      "foundAt": "2026-11-24T08:30:24.332Z",
+      "offered": true
+    },
+    {
+      "feed": "piyolog",
+      "priority": 2,
+      "title": "受注管理システム「GoQSystem」への不正アクセスについてまとめてみた",
+      "url": "https://piyolog.hatenadiary.jp/entry/2026/11/20/225808",
+      "published": "2026-11-20T13:58:08.000Z",
+      "foundAt": "2026-11-24T08:30:24.332Z",
+      "offered": true
+    },
+    {
+      "feed": "piyolog",
+      "priority": 2,
+      "title": "Ruby の脆弱性 CVE-2026-132825(Ruby2Shell)についてまとめてみた",
+      "url": "https://piyolog.hatenadiary.jp/entry/2026/11/20/224814",
+      "published": "2026-11-20T13:48:14.000Z",
+      "foundAt": "2026-11-24T08:30:24.332Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "NECの「バザールでござーる」今日で引退。約35年の歴史に幕",
+      "url": "https://pc.watch.impress.co.jp/docs/news/2158462.html",
+      "published": "2026-11-23T21:20:45.000Z",
+      "bookmarks": 309,
+      "foundAt": "2026-11-24T08:30:24.332Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "NTT 研究所の正体 - IOWNとNTTの研究所",
+      "url": "https://endecl.hatenablog.com/entry/2026/05/04/223141",
+      "published": "2026-11-23T13:46:51.000Z",
+      "bookmarks": 123,
+      "foundAt": "2026-11-24T08:30:24.332Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "マクドナルド公式アプリのデータベースへの不正アクセスに関するお知らせとお詫び | マクドナルド公式",
+      "url": "https://www.mcdonalds.co.jp/company/info/261120a/",
+      "published": "2026-11-21T09:09:54.000Z",
+      "bookmarks": 74,
+      "foundAt": "2026-11-24T08:30:24.332Z",
+      "offered": true
+    }
+  ]
+}

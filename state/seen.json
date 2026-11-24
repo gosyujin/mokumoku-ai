@@ -1,0 +1,93 @@
+{
+  "feeds": {
+    "publickey": {
+      "etag": "W/\"6f97-660f208e939fc\"",
+      "lastModified": "Mon, 23 Nov 2026 14:01:48 GMT",
+      "seen": [
+        "https://www.publickey1.jp/blog/26/dhhomarchy_457applewebms_office.html",
+        "https://www.publickey1.jp/blog/26/postgresql_19repackio.html",
+        "https://www.publickey1.jp/blog/26/database_hubai.html",
+        "https://www.publickey1.jp/blog/26/aiaimicrosoft_perception.html",
+        "https://www.publickey1.jp/blog/26/aicopilot_managed_runtime.html",
+        "https://www.publickey1.jp/blog/26/windows_server_2028microsoft_foundryai.html",
+        "https://www.publickey1.jp/blog/26/aimai_code_2mai_code_2_flash.html",
+        "https://www.publickey1.jp/blog/26/postgresqlazure_horizondb.html",
+        "https://www.publickey1.jp/blog/26/postgresqloltpolapmicrosoft_fabric_horizondb.html",
+        "https://www.publickey1.jp/blog/26/aioracle_dbpostgresqlazure_database_migration_service.html",
+        "https://www.publickey1.jp/blog/26/azure_sql_databaseazure_sql_database_local_development_container.html",
+        "https://www.publickey1.jp/blog/26/vmhyperlight-unikraft.html",
+        "https://www.publickey1.jp/blog/26/nodejsnpmwebopenvessel.html",
+        "https://www.publickey1.jp/blog/26/postgresql_194ai.html",
+        "https://www.publickey1.jp/blog/26/cloudflareaikitesurf.html"
+      ]
+    },
+    "piyolog": {
+      "seen": [
+        "https://piyolog.hatenadiary.jp/entry/2026/11/21/002438",
+        "https://piyolog.hatenadiary.jp/entry/2026/11/20/225808",
+        "https://piyolog.hatenadiary.jp/entry/2026/11/20/224814",
+        "https://piyolog.hatenadiary.jp/entry/2026/11/20/130214",
+        "https://piyolog.hatenadiary.jp/entry/2026/11/20/003148",
+        "https://piyolog.hatenadiary.jp/entry/2026/11/19/183634",
+        "https://piyolog.hatenadiary.jp/entry/2026/11/19/141704",
+        "https://piyolog.hatenadiary.jp/entry/2026/11/19/065715",
+        "https://piyolog.hatenadiary.jp/entry/2026/11/19/001205",
+        "https://piyolog.hatenadiary.jp/entry/2026/11/18/100525",
+        "https://piyolog.hatenadiary.jp/entry/2026/11/18/010752",
+        "https://piyolog.hatenadiary.jp/entry/2026/11/17/192656",
+        "https://piyolog.hatenadiary.jp/entry/2026/11/17/030254",
+        "https://piyolog.hatenadiary.jp/entry/2026/11/16/150745",
+        "https://piyolog.hatenadiary.jp/entry/2026/11/13/162738",
+        "https://piyolog.hatenadiary.jp/entry/2026/11/13/114230",
+        "https://piyolog.hatenadiary.jp/entry/2026/11/12/151939",
+        "https://piyolog.hatenadiary.jp/entry/2026/11/12/113829",
+        "https://piyolog.hatenadiary.jp/entry/2026/11/11/152720",
+        "https://piyolog.hatenadiary.jp/entry/2026/11/11/125745",
+        "https://piyolog.hatenadiary.jp/entry/2026/11/11/094815",
+        "https://piyolog.hatenadiary.jp/entry/2026/11/11/075305",
+        "https://piyolog.hatenadiary.jp/entry/2026/11/10/004128",
+        "https://piyolog.hatenadiary.jp/entry/2026/11/09/230435",
+        "https://piyolog.hatenadiary.jp/entry/2026/11/09/144357",
+        "https://piyolog.hatenadiary.jp/entry/2026/11/09/090504",
+        "https://piyolog.hatenadiary.jp/entry/2026/11/06/120149",
+        "https://piyolog.hatenadiary.jp/entry/2026/11/05/133509",
+        "https://piyolog.hatenadiary.jp/entry/2026/11/05/095634",
+        "https://piyolog.hatenadiary.jp/entry/2026/11/05/015717"
+      ]
+    },
+    "hatebu": {
+      "seen": [
+        "https://pc.watch.impress.co.jp/docs/news/2158462.html",
+        "https://endecl.hatenablog.com/entry/2026/05/04/223141",
+        "https://www.mcdonalds.co.jp/company/info/261120a/",
+        "https://togetter.com/li/2774298",
+        "https://www.watch.impress.co.jp/docs/series/nishida/2158551.html",
+        "https://www.gizmodo.jp/article/2611-underwater-trash-can-microplastics/",
+        "https://internet.watch.impress.co.jp/docs/topic/shimizu_sp/2126965.html",
+        "https://www.m3tech.blog/entry/contract-programming-in-lean",
+        "https://news.yahoo.co.jp/expert/articles/c6b02eabde817393055dacbd810b748a6637ae39",
+        "https://k-tai.watch.impress.co.jp/docs/review/2157103.html",
+        "https://hatenanews.com/articles/2026/11/24/093000",
+        "https://av.watch.impress.co.jp/docs/topic/2156536.html",
+        "https://www.publickey1.jp/blog/26/dhhomarchy_457applewebms_office.html",
+        "https://qiita.com/figueiredoluiz/items/1d6751643b84db67812e",
+        "https://aws.amazon.com/jp/blogs/news/test-your-applications-against-aws-locally-with-aws-emulator/",
+        "https://shinyorke.hatenablog.com/entry/keiba-ai-agent-product",
+        "https://kai-you.net/article/97231",
+        "https://www.hsbt.org/slide/20261121-SendaiRubyKaigi03/",
+        "https://blog.kuniwak.com/entry/vibe-fm",
+        "https://zenn.dev/339/articles/8efd1f1baec355",
+        "https://zenn.dev/naokisuzuki27/articles/cb1a5ac0e23763",
+        "https://applech2.com/archives/20261124-no-speaker-macbook-trackpad-haptic-audio.html",
+        "https://anond.hatelabo.jp/20261124083126",
+        "https://github.com/aws-samples/sample-reverse-spec-flow",
+        "https://www.itmedia.co.jp/news/article/2611/24/2000003398/",
+        "https://news.yahoo.co.jp/articles/d05d80269b744ac2d480008e296670167cad73ba",
+        "https://japan.zdnet.com/article/35255314/",
+        "https://www.itmedia.co.jp/news/article/2611/24/2000003405/",
+        "https://claude.com/resources/articles/introducing-claude-ship",
+        "https://openai.com/index/introducing-shirudo/"
+      ]
+    }
+  }
+}
