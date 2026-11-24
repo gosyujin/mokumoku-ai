@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T10:37:14.821Z",
+  "updatedAt": "2026-11-24T11:07:14.931Z",
   "items": [
     {
       "feed": "publickey",
@@ -53,6 +53,16 @@
       "url": "https://piyolog.hatenadiary.jp/entry/2026/11/20/224814",
       "published": "2026-11-20T13:48:14.000Z",
       "foundAt": "2026-11-24T08:30:24.332Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "GitHub - minorun365/claude-code-japanese-guard: Claude Code の応答が英語に切り替わったら、日本語で書き直させる Stop hook",
+      "url": "https://github.com/minorun365/claude-code-japanese-guard",
+      "published": "2026-09-25T21:45:22.000Z",
+      "bookmarks": 5,
+      "foundAt": "2026-11-24T11:07:14.931Z",
       "offered": true
     },
     {
