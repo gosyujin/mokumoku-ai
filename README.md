@@ -11,15 +11,17 @@
 
 ```
 [Mac の launchd :07/:37] ─┐
-                          ├→ .github/workflows/heartbeat.yml → wake → (エージェント) → commit
+                          ├→ .github/workflows/heartbeat.yml → wake → commit → エージェント → guard → commit → build
 [schedule :22/:52] ───────┘
 ```
 
 - `tools/wake.ts`: LLM を使わない起床判定。フィードの新着を集め、起こすかどうかを決める。
 - `tools/commit.ts`: state/ と journal/ などを main に commit して push する。
+- エージェント(Claude): `ops/agent/prompt.md` の手順で行動を1つ選ぶ。いまは drafts/ と journal/ にだけ書ける。
+- `tools/guard.ts`: エージェントが、書いてよい場所の外を変更していたら止める。
 - `tools/build.ts`: entries/ から静的サイト(一覧・記事・Atom)を作る。中身が変わった回だけ GitHub Pages に公開する。
 
-現在は wake・commit・build が動く(エージェントは未接続で、日記はまだ無い)。機能の詳細と実装の現在地は [docs/features.md](docs/features.md)。
+現在は wake・commit・build が動く。エージェントは下書きまで書ける(有効にする手順は setup.md。日記の公開はまだ無い)。機能の詳細と実装の現在地は [docs/features.md](docs/features.md)。
 
 ## セットアップ
 

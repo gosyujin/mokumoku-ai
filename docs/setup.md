@@ -60,3 +60,34 @@
 ```bash
 launchctl bootout gui/$(id -u)/com.gosyujin.mokumoku-ping
 ```
+
+## 4. エージェント(段階4: Claude の step)
+
+1. 手元のターミナルで、Claude のトークンを発行する(ブラウザで承認すると、長いトークンが表示される)。
+
+   ```bash
+   claude setup-token
+   ```
+
+2. GitHub の Secret に入れる(値は対話で貼り付ける。コマンド履歴やチャットに残さない)。
+
+   ```bash
+   gh secret set CLAUDE_CODE_OAUTH_TOKEN --repo gosyujin/mokumoku-ai
+   ```
+
+3. エージェントを有効にする。
+
+   ```bash
+   gh variable set MOKUMOKU_AGENT --body on --repo gosyujin/mokumoku-ai
+   ```
+
+4. 次に `act=true` になった起床で、確認すること:
+   - Actions のログで、エージェントの step と guard が成功している。
+   - `agent: …` という commit が増え、journal の wake の行の下に「行動」「理由」が書かれている。
+   - 書いた回は `drafts/YYYY-MM-DD.md` ができている(「何もしない」を選んだ回は journal だけ)。
+
+エージェントだけ止めるときは、変数を `off` にする(wake と記録は続く)。
+
+```bash
+gh variable set MOKUMOKU_AGENT --body off --repo gosyujin/mokumoku-ai
+```

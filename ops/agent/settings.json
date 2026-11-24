@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Edit(./drafts/**)",
+      "Edit(./journal/**)",
+      "WebFetch",
+      "WebSearch"
+    ],
+    "deny": [
+      "Read(./.git/**)",
+      "Edit(./.git/**)"
+    ]
+  }
+}

@@ -11,8 +11,8 @@ README には機能ごとに一行だけ書き、挙動の詳細はここに書�
 | 1 | リポジトリ、SOUL.md(境界のみ)・RULES.md・ディレクトリ | 作成済み |
 | 2 | wake(フィード3本の新着検出と cursor.json)。LLM なしで heartbeat を回す | 稼働中(2026-11-24 に手動実行で確認。schedule も有効) |
 | 3 | launchd を登録し、1〜2日、起床の欠落を journal で確認 | 2026-11-24 に登録済み。journal を観察中 |
-| 4 | Claude の step を追加。書き込み先は drafts/ と journal/ のみ | 未着手 |
-| 5 | guard と lint、Pages へのデプロイ | build とデプロイは稼働中(2026-11-24 に公開を確認)。guard と lint は未着手 |
+| 4 | Claude の step を追加。書き込み先は drafts/ と journal/ のみ | 実装済み(2026-11-24。手元の `claude` で確認)。Actions 上では未確認。`MOKUMOKU_AGENT` を `on` にするまで動かない |
+| 5 | guard と lint、Pages へのデプロイ | build とデプロイは稼働中(2026-11-24 に公開を確認)。guard は段階4の範囲(drafts/・journal/)で先に入れた。lint は未着手 |
 | 6 | Cosense 連携(cosense-sync とツッコミの読み取り) | 未着手 |
 | 7 | 人格を決めて SOUL.md に書く | 記入済み(2026-11-24。プロジェクトは mokumoku-ai、書き手は gi-yoza。一人称・性格・文体。名前の由来は書かない)。日記での効き方は段階4以降に確認 |
 
@@ -58,14 +58,38 @@ journal の1行の例:
 | `cursor.json` | wake | 最終起床時刻・前回からの経過分・起床理由・本日の起動回数 |
 | `seen.json` | wake | フィードごとの既読 URL(最大500件)と ETag |
 | `candidates.json` | wake | 未読の候補(フィード名・優先度・タイトル・URL・提示済みか) |
-| `questions.md` | エージェント | 未知ワード・疑問のキュー |
-| `interests.md` | エージェント | 興味リスト |
+| `questions.md` | エージェント(段階5から。いまは書けない) | 未知ワード・疑問のキュー |
+| `interests.md` | エージェント(段階5から。いまは書けない) | 興味リスト |
 | `known.txt` | wake(段階6) | Cosense のページ名一覧 |
 | `inbox/` | wake(段階6) | ツッコミの転記 |
 
 ### commit(`tools/commit.ts`)
 
 `state/ journal/ drafts/ entries/ cosense/ RULES.md` の変更だけを main に commit し、`pull --rebase` してから push する(失敗したら3回までやり直す)。変更が無ければ何もしない。GitHub Actions の外では、`--local` を付けない限り動かない。
+
+- 1回の起床で2回動く。1回目は wake の記録(メッセージは `beat: …`)、2回目はエージェントが書いたもの(`node tools/commit.ts agent`、メッセージは `agent: …`)。
+- push 用のトークンは環境変数 `GITHUB_TOKEN` で受け取り、その実行の間だけ git に持たせる(`.git/config` には書かない)。
+
+### エージェント(Claude の step)
+
+wake が `act=true` を出し、Repository variable `MOKUMOKU_AGENT` が `on` のときだけ動く。組み方の理由は [decisions/2026-11-24-claude-step.md](decisions/2026-11-24-claude-step.md)。
+
+- 指示は `ops/agent/prompt.md`。SOUL.md・RULES.md・state/・今日の journal を読んで、行動を1つ選ぶ。
+- 使える道具は Read / Write / Edit / Glob / Grep / WebSearch / WebFetch。コマンドは実行できない。GitHub のトークンは持たない。
+- 読めるのはリポジトリの中だけ(`.git/` を除く)。書けるのは `drafts/` と `journal/` だけ(`ops/agent/settings.json`)。
+- journal には、wake の行の直後に「行動・対象・理由・メモ」を字下げして追記する。
+- 日記の下書きは `drafts/YYYY-MM-DD.md`(1日1ファイル)。front matter は `title` / `date` / `sources` / `terms`、本文は「読んだ記事」「感じたこと」「知らなかったワード」「相談」。
+- 段階4では `RULES.md` と `state/` を書けない。知らなかった語やルールの変更案は journal のメモに残る。
+- 上限は30ターン・10分。
+
+### guard(`tools/guard.ts`)
+
+エージェントの step の後で `git status` を見て、次のどれかがあれば job を失敗させる(後ろの commit が動かないので、エージェントの変更は1つも push されない)。
+
+- `drafts/`・`journal/` の外の変更(追加・変更・削除)
+- `.md` 以外のファイル、通常のファイルでないもの(リンクなど)、200KB を超えるファイル
+
+書いてよい場所は `tools/lib/guard.ts` の `AGENT_WRITABLE`。
 
 ### build(`tools/build.ts`)
 
@@ -81,9 +105,9 @@ journal の1行の例:
 
 ### heartbeat(`.github/workflows/heartbeat.yml`)
 
-起動は schedule(毎時22分・52分)と workflow_dispatch だけ。Repository variable `MOKUMOKU_PAUSED` を `true` にすると止まる。
+起動は schedule(毎時22分・52分)と workflow_dispatch だけ。Repository variable `MOKUMOKU_PAUSED` を `true` にすると全体が止まる。`MOKUMOKU_AGENT` が `on` でなければ、エージェントだけが止まる(wake と記録は続く)。
 
-- `beat` job: wake → commit → build。`deploy=true` のときだけサイトを artifact として上げる。
+- `beat` job: wake → commit → エージェント → guard → commit → build。`deploy=true` のときだけサイトを artifact として上げる。
 - `deploy` job: `beat` が `deploy=true` を出したときだけ GitHub Pages に公開する。
 - 手動で公開し直すときは、実行時に `deploy` を有効にする(中身が同じでも公開する)。wake の関門(稼働時間外・20分未満)に関係なく動く。
 

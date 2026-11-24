@@ -28,17 +28,51 @@ jobs:
       contents: write
     outputs:
       deploy: ${{ steps.build.outputs.deploy }}
+    env:
+      # tools/*.ts をビルドなしで実行する(22.18 以上が必要)。
+      # Claude の action も、この名前の値で Node.js を入れ直す(無いと 18 に戻り、後ろの tools が動かなくなる)
+      NODE_VERSION: "24"
     steps:
+      # 認証を .git に残さない。push 用のトークンは commit の step にだけ渡す(Claude の step から読めないようにする)
       - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
       - uses: actions/setup-node@v7
         with:
-          node-version: 24 # tools/*.ts をビルドなしで実行する(22.18 以上が必要)
+          node-version: ${{ env.NODE_VERSION }}
       - id: wake
         run: node tools/wake.ts
         env:
           MOKUMOKU_TRIGGER: ${{ github.event_name }}
-      # ここに Claude の step が入る(steps.wake.outputs.act == 'true' のときだけ)
+      # wake の記録を先に push する。後ろの step が失敗しても、起床と起動回数は残る。
+      # ここで作業ツリーがきれいになるので、この後に見える変更はすべてエージェントが書いたものになる
       - run: node tools/commit.ts
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+      # エージェント。Variables の MOKUMOKU_AGENT が on のときだけ動く。
+      # GitHub のトークンは渡さない。コマンド実行の道具は持たせず、読めるのはリポジトリの中だけ(--restricted)、
+      # 書けるのは ops/agent/settings.json で許可した場所だけ。
+      - id: agent
+        if: steps.wake.outputs.act == 'true' && vars.MOKUMOKU_AGENT == 'on'
+        timeout-minutes: 10
+        uses: anthropics/claude-code-action/base-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          prompt: |
+            ops/agent/prompt.md を読んで、その手順に従ってください。
+            いまは ${{ steps.wake.outputs.date }} ${{ steps.wake.outputs.time }}(日本時間)です。
+            今日の行動ログは journal/${{ steps.wake.outputs.date }}.md、日記の下書きは drafts/${{ steps.wake.outputs.date }}.md です。
+          claude_args: |
+            --restricted
+            --tools "Read,Write,Edit,Glob,Grep,WebSearch,WebFetch"
+            --settings ops/agent/settings.json
+            --strict-mcp-config
+            --max-turns 30
+      # 書いてよい場所の外に変更があれば、ここで失敗させる(後ろの commit が動かないので、何も push されない)
+      - run: node tools/guard.ts
+      - run: node tools/commit.ts agent
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
       # サイトは毎回作る(数十ミリ秒)。公開中のものと中身が違うときだけ deploy=true になる
       - id: build
         run: node tools/build.ts

@@ -165,6 +165,9 @@ async function main(): Promise<void> {
   appendFileSync(journalFile, line + "\n");
   console.log(line);
 
+  // Claude の step に渡す日付と時刻(JST)。自分で計算した値だけを出す(外部のテキストを出力に混ぜない)
+  output("date", today.date);
+  output("time", today.hhmm);
   output("act", String(decision.act));
 }
 
