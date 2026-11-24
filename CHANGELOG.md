@@ -2,6 +2,10 @@
 
 1エントリ1〜3行。バージョン番号は採番せず、日付とコミットhashで管理する(新しい順)。調査・判断に経緯があるものは [docs/decisions/](docs/decisions/) に置き、該当エントリからリンクする。
 
+## 2026-11-25
+
+- Added: heartbeat の手動実行に `sync` の指定を足した(起床の関門に関係なく cosense-sync を動かす)。最初の用語ページ(eBPF)を、人間の指示で手動で送る。
+
 ## 2026-11-24
 
 - Added: Cosense 連携(段階6)。wake がページ名の一覧(known.txt)とツッコミの転記(inbox/)を作り、cosense-sync がエージェントの書いた用語ページと返信を送る。読み取りは実際の Cosense で確認。書き込みは、送らずに表示するモードでだけ確認(実際の送信は未検証)。経緯: [docs/decisions/2026-11-24-cosense.md](docs/decisions/2026-11-24-cosense.md)

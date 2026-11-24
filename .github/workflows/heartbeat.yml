@@ -11,6 +11,10 @@ on:
         description: "日記に変更が無くても、サイトを作り直して公開する"
         type: boolean
         default: false
+      sync:
+        description: "起床の関門(稼働時間外・20分未満)に関係なく、cosense-sync を動かす"
+        type: boolean
+        default: false
 
 concurrency:
   group: heartbeat
@@ -83,7 +87,7 @@ jobs:
         run: node tools/lint.ts
       # エージェントが cosense/ に書いた用語ページと返信を、Cosense に送る。
       # Cosense のトークンを持つのは、この step だけ。書き込み先のプロジェクトはコードの中の定数で固定している
-      - if: steps.wake.outputs.beat == 'true'
+      - if: steps.wake.outputs.beat == 'true' || inputs.sync
         run: node tools/cosense-sync.ts
         env:
           COSENSE_PAT: ${{ secrets.COSENSE_PAT }}

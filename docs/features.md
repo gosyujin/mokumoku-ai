@@ -150,6 +150,11 @@ wake が `act=true` を出し、Repository variable `MOKUMOKU_AGENT` が `on` �
 - `beat` job: wake → commit → エージェント → guard → lint → cosense-sync → commit → build。`deploy=true` のときだけサイトを artifact として上げる。
 - `deploy` job: `beat` が `deploy=true` を出したときだけ GitHub Pages に公開する。
 - 手動で公開し直すときは、実行時に `deploy` を有効にする(中身が同じでも公開する)。wake の関門(稼働時間外・20分未満)に関係なく動く。
+- Cosense への送信だけを手動で動かすときは、実行時に `sync` を有効にする。wake の関門に関係なく cosense-sync が動く(エージェントと lint は動かない)。
+
+  ```bash
+  gh workflow run heartbeat.yml --repo gosyujin/mokumoku-ai -f sync=true
+  ```
 
   ```bash
   gh workflow run heartbeat.yml --repo gosyujin/mokumoku-ai -f deploy=true
