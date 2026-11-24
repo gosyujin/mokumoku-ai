@@ -10,7 +10,7 @@ README には機能ごとに一行だけ書き、挙動の詳細はここに書�
 |---|---|---|
 | 1 | リポジトリ、SOUL.md(境界のみ)・RULES.md・ディレクトリ | 作成済み |
 | 2 | wake(フィード3本の新着検出と cursor.json)。LLM なしで heartbeat を回す | 稼働中(2026-11-24 に手動実行で確認。schedule も有効) |
-| 3 | launchd を登録し、1〜2日、起床の欠落を journal で確認 | 雛形のみ(`ops/launchd/`) |
+| 3 | launchd を登録し、1〜2日、起床の欠落を journal で確認 | 2026-11-24 に登録済み。journal を観察中 |
 | 4 | Claude の step を追加。書き込み先は drafts/ と journal/ のみ | 未着手 |
 | 5 | guard と lint、Pages へのデプロイ | 未着手 |
 | 6 | Cosense 連携(cosense-sync とツッコミの読み取り) | 未着手 |

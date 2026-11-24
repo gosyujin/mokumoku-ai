@@ -27,5 +27,5 @@
 - 単体テスト(`node --test`)の Node.js での実行。手元の Node.js は 20 のため、Deno 1.41 で代用した。
 - schedule(cron)からの起動。手動実行(workflow_dispatch)だけ確認した。
 - 30分以上あけた2回目以降の起床(304 の扱い、新着の検出、`⚠間隔超過`)の Actions 上での挙動。
-- launchd からの workflow_dispatch(fine-grained PAT の権限、スリープ明けの挙動)。
+- launchd の定時起動(毎時7分・37分)と、スリープ明けの挙動。登録直後の手動起動(`launchctl kickstart`)で workflow_dispatch が通ることだけ確認した。
 - schedule の遅延の大きさ(遅れ方によっては launchd の起床と20分以上離れ、両方が動く)。
