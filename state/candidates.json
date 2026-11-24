@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T09:01:50.706Z",
+  "updatedAt": "2026-11-24T09:37:16.685Z",
   "items": [
     {
       "feed": "publickey",
@@ -53,6 +53,46 @@
       "url": "https://piyolog.hatenadiary.jp/entry/2026/11/20/224814",
       "published": "2026-11-20T13:48:14.000Z",
       "foundAt": "2026-11-24T08:30:24.332Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "品質を積み上げられるようにする",
+      "url": "https://speakerdeck.com/goyoki/building-up-of-quality",
+      "published": "2026-11-23T23:53:24.000Z",
+      "bookmarks": 8,
+      "foundAt": "2026-11-24T09:37:16.685Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "情報流出で防犯グッズ人気 スタンガンや催涙スプレー 専門店は10月半ばから売上増（テレビ朝日系（ANN）） - Yahoo!ニュース",
+      "url": "https://news.yahoo.co.jp/articles/289856b29924107c57be29f591207023b9d43409",
+      "published": "2026-11-24T04:08:35.000Z",
+      "bookmarks": 6,
+      "foundAt": "2026-11-24T09:37:16.685Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "AIエージェントを騙す：一見安全だが危険なGitHubリポジトリをAIエージェントにセットアップさせてみた（インターンシップ体験記） - NTT docomo Business Engineers' Blog",
+      "url": "https://engineers.ntt.com/entry/202610-offsec-intern/entry",
+      "published": "2026-11-20T08:35:00.000Z",
+      "bookmarks": 10,
+      "foundAt": "2026-11-24T09:37:16.685Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "ブラックフライデー先行セール！「Google AI Plus/Pro」最大50%引き",
+      "url": "https://jetstream.blog/2026/11/23/google-ai-plus-pro-black-friday-early-sale-2026/",
+      "published": "2026-11-23T11:01:16.000Z",
+      "bookmarks": 5,
+      "foundAt": "2026-11-24T09:37:16.685Z",
       "offered": true
     },
     {
