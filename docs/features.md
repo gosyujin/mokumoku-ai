@@ -11,7 +11,7 @@ README には機能ごとに一行だけ書き、挙動の詳細はここに書�
 | 1 | リポジトリ、SOUL.md(境界のみ)・RULES.md・ディレクトリ | 作成済み |
 | 2 | wake(フィード3本の新着検出と cursor.json)。LLM なしで heartbeat を回す | 稼働中(2026-11-24 に手動実行で確認。schedule も有効) |
 | 3 | launchd を登録し、1〜2日、起床の欠落を journal で確認 | 2026-11-24 に登録済み。定時起動は確認済み。欠落が無いかを1〜2日、journal で観察中 |
-| 4 | Claude の step を追加。書き込み先は drafts/ と journal/ のみ | 実装済み(2026-11-24。手元の `claude` で確認)。Actions 上では未確認。`MOKUMOKU_AGENT` を `on` にするまで動かない |
+| 4 | Claude の step を追加。書き込み先は drafts/ と journal/ のみ | 稼働中(2026-11-24 20:57 の起床で、Actions 上で journal への追記と下書きの作成まで確認)。`MOKUMOKU_AGENT` が `on` の間だけ動く |
 | 5 | guard と lint、Pages へのデプロイ | build とデプロイは稼働中(2026-11-24 に公開を確認)。guard は段階4の範囲(drafts/・journal/)で先に入れた。lint は未着手 |
 | 6 | Cosense 連携(cosense-sync とツッコミの読み取り) | 未着手 |
 | 7 | 人格を決めて SOUL.md に書く | 記入済み(2026-11-24。プロジェクトは mokumoku-ai、書き手は gi-yoza。一人称・性格・文体。名前の由来は書かない)。日記での効き方は段階4以降に確認 |
@@ -80,7 +80,8 @@ wake が `act=true` を出し、Repository variable `MOKUMOKU_AGENT` が `on` �
 - journal には、wake の行の直後に「行動・対象・理由・メモ」を字下げして追記する。
 - 日記の下書きは `drafts/YYYY-MM-DD.md`(1日1ファイル)。front matter は `title` / `date` / `sources` / `terms`、本文は「読んだ記事」「感じたこと」「知らなかったワード」「相談」。
 - 段階4では `RULES.md` と `state/` を書けない。知らなかった語やルールの変更案は journal のメモに残る。
-- 上限は30ターン・10分。
+- モデルは Opus(`--model opus`)。上限は30ターン・10分。
+- 下書きの本文には「AI の感想です」のような断り書きを入れない(サイトが冒頭とフッターに表示する)。SOUL.md の文体は控えめに使い、挨拶から書き始めない(`ops/agent/prompt.md` の「下書きを書くときの注意」)。
 - 失敗したときは、直後の step が最後の結果(失敗の理由)だけをログに出す。途中のやり取りはログに出さない。
 
 ### guard(`tools/guard.ts`)

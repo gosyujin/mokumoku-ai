@@ -18,6 +18,7 @@
 - **wake の commit を Claude の step より前に置く。** guard は「commit 後に見える変更はすべてエージェントのもの」という前提で動く。順番を変えると、wake が書いた `state/` を違反と判定する。また、後ろの step が失敗しても起動回数が残る。
 - **checkout の `persist-credentials: false` を外さない。** push 用のトークンは commit の step の `env`(`GITHUB_TOKEN`)にだけ渡す。Claude の step はリポジトリの中を読めるので、認証を作業ツリーの近くに残さない。
 - **job の `env` の `NODE_VERSION` を消さない。** `base-action` が内部で Node.js を入れ直すときにこの値を使う。無いと 18 になり、後ろの guard・commit・build が動かない。
+- **Claude の step のモデルは `--model opus` で Opus に固定している。** 外すと契約の既定(2026-11-24 時点では claude-sonnet-5-5)になる。`opus` は別名で、新しい Opus が出るとそちらに切り替わる(2026-11-24 時点では claude-opus-5-5)。版まで固定するなら、モデルの正式な名前を書く。
 - **権限は job ごとに付ける。** エージェントが動く `beat` job は `contents: write` だけ、`deploy` job は `pages: write` と `id-token: write` だけ。ワークフロー全体の `permissions` に足さない。
 - **デプロイするかどうかは「公開中のサイトの `build.json` と、今回の出力のハッシュが違うか」で決める。** コミットの差分で決めると、人間が push したサイト雛形の変更を拾えないため。`build.json` の `builtAt` はハッシュに含めない(含めると毎回デプロイになる)。Atom の日時も日記の日付から作り、ビルド時刻を使わない。
 - **サイトは日記の中の生の HTML を通さない。** 日記は AI が外部の記事を読んで書くので、`tools/lib/markdown.ts` は全体をエスケープしてから、http(s) のリンクと強調だけをタグにする。HTML を通す機能を足さない。
@@ -29,7 +30,8 @@
 - guard の禁止側に `site/` を入れる(サイト雛形をエージェントに書き換えさせない)。
 - guard は `state/` 全体を許可すると、エージェントが `cursor.json` の起動回数や `seen.json` を書き換えられる。`cursor.json` `seen.json` `known.txt` `inbox/` は禁止側に入れる想定。
 - エージェントは段階4では `state/` を書けない。`questions.md` に語を足せないので、疑問キューを理由にした起床はまだ起きない。`candidates.json` の「読んだかどうか」も更新できず、既読は journal から読み取っている。
-- Claude の step のモデルは指定していない(契約の既定のもの)。利用枠の減り方を見て、`claude_args` に `--model` を足すかを決める。
+- lint の「AI が書いた旨の署名がある」は、日記の本文ではなくサイト側で満たす(`tools/build.ts` が記事の冒頭とフッターに入れる)。本文には断り書きを書かせていないので、lint で本文に署名を求めない。
+- 21時以降の「今日の日記が未作成」は `entries/` を見ている。段階4では `entries/` に書く手段が無いので、21時以降は毎回 `act=true` になる(下書きがあっても起こされる)。lint を入れるまでの間、この理由を止めるかを決める。
 - はてブは入れ替わりが速い。新着があるたびに `act=true` になるので、午前中に12回を使い切る可能性がある。段階3の journal で実際の頻度を見てから、はてブ単独では起こさない等の調整を決める。
 - 疑問キューが残っている間は毎回 `act=true` になる。掘るのは1日2語までなので、キュー残だけを理由にする回数は絞る余地がある。
 
@@ -37,12 +39,10 @@
 
 実機確認が必要で、まだ確かめていないもの。確認できたら消し、CHANGELOG に「確認済み」と1行残す。
 
-- Claude の step の Actions 上での動作。手元の `claude` で同じ引数を確かめただけ。特に次の点:
-  - `base-action` 経由でも `--restricted` と権限ルールが同じように効くこと。
-  - `claude setup-token` のトークンで WebSearch が使えること(公式ドキュメントに記載なし。手元では通常のログインで動いた)。
-  - action がリポジトリの中にファイルを残さず、guard が通ること。
-  - action の後も Node.js が 24 のままで、guard・commit・build が動くこと(action の中で 24 が選ばれることまでは 20:37 の回で確認。後ろの step はまだ動いていない)。
-  - 1回の起動で減る利用枠の大きさ。
+- Claude の step の制限が、Actions 上でも拒否として働くこと。20:57 の回は成功したが、許可の外に触れようとする場面が無かった(拒否0件)。手元の `claude` では同じ引数で拒否を確認済みで、すり抜けた場合は guard が止める。
+- `claude setup-token` のトークンで WebSearch が使えること(公式ドキュメントに記載なし。20:57 の回は記事の取得だけで足りたらしく、検索を使ったかはログから分からない)。
+- 1日の利用枠への影響。1回の起動は、claude-sonnet-5-5 で12ターン・約35秒・概算 0.10 ドル相当(Actions)、claude-opus-5-5 で11ターン・約50秒・概算 0.27 ドル相当(手元)だった。契約の枠が1日でどれだけ減るかは見ていない。
+- `--model opus` の Actions 上での動作(手元の `claude` で、Opus で動くことだけ確認した)。
 - 単体テスト(`node --test`)の Node.js での実行。手元の Node.js は 20 のため、Deno 1.41 で代用した。
 - schedule(cron)からの起動。手動実行(workflow_dispatch)だけ確認した。
 - `⚠間隔超過` が Actions 上の journal に出ること(まだ45分を超える空きが起きていない)。
