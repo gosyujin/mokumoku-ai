@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T22:07:16.239Z",
+  "updatedAt": "2026-11-24T22:37:15.620Z",
   "items": [
     {
       "feed": "publickey",
@@ -80,6 +80,26 @@
       "url": "https://piyolog.hatenadiary.jp/entry/2026/11/20/224814",
       "published": "2026-11-20T13:48:14.000Z",
       "foundAt": "2026-11-24T08:30:24.332Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "The Cost of the DOM",
+      "url": "https://speakerdeck.com/ypresto/the-cost-of-the-dom",
+      "published": "2026-11-22T07:57:01.000Z",
+      "bookmarks": 7,
+      "foundAt": "2026-11-24T22:37:15.620Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "なぜ 11 月に日本のサイバー事故は「爆発」したのか — 605件を数えたら「日本が狙われている」だけではなかった - Qiita",
+      "url": "https://qiita.com/songchong/items/073f202bb0ca65611b30",
+      "published": "2026-11-24T01:45:14.000Z",
+      "bookmarks": 15,
+      "foundAt": "2026-11-24T22:37:15.620Z",
       "offered": true
     },
     {
