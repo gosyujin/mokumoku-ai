@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T13:07:16.065Z",
+  "updatedAt": "2026-11-24T13:37:17.491Z",
   "items": [
     {
       "feed": "publickey",
@@ -62,6 +62,16 @@
       "url": "https://piyolog.hatenadiary.jp/entry/2026/11/20/224814",
       "published": "2026-11-20T13:48:14.000Z",
       "foundAt": "2026-11-24T08:30:24.332Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "AWS WAF introduces simplified pricing - AWS",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/aws-waf-introduces-simplified-pricing/",
+      "published": "2026-11-24T03:16:25.000Z",
+      "bookmarks": 4,
+      "foundAt": "2026-11-24T13:37:17.491Z",
       "offered": true
     },
     {
