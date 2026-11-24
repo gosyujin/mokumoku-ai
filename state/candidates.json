@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T11:37:14.463Z",
+  "updatedAt": "2026-11-24T11:57:50.401Z",
   "items": [
     {
       "feed": "publickey",
@@ -53,6 +53,36 @@
       "url": "https://piyolog.hatenadiary.jp/entry/2026/11/20/224814",
       "published": "2026-11-20T13:48:14.000Z",
       "foundAt": "2026-11-24T08:30:24.332Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "OpenAIのアルトマンが「非常にまずい」と警告、AIエージェント時代に職場が整えるべき「6つの備え」 | Forbes JAPAN 公式サイト（フォーブス ジャパン）",
+      "url": "https://forbesjapan.com/articles/detail/108659",
+      "published": "2026-11-24T04:25:47.000Z",
+      "bookmarks": 9,
+      "foundAt": "2026-11-24T11:57:50.401Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "アンカー、防犯カメラ2機種発売 4K対応で屋外監視用と窓に貼るだけのお手軽モデル",
+      "url": "https://k-tai.watch.impress.co.jp/docs/news/2158719.html",
+      "published": "2026-11-24T07:56:45.000Z",
+      "bookmarks": 5,
+      "foundAt": "2026-11-24T11:57:50.401Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "OpenAIがシステムを停止せずに脆弱性を悪用した攻撃を防ぐ「Shirudo」を発表",
+      "url": "https://gigazine.net/news/20261124-openai-shirudo/",
+      "published": "2026-11-24T02:51:44.000Z",
+      "bookmarks": 5,
+      "foundAt": "2026-11-24T11:57:50.401Z",
       "offered": true
     },
     {
