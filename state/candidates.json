@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T11:07:14.931Z",
+  "updatedAt": "2026-11-24T11:37:14.463Z",
   "items": [
     {
       "feed": "publickey",
@@ -53,6 +53,16 @@
       "url": "https://piyolog.hatenadiary.jp/entry/2026/11/20/224814",
       "published": "2026-11-20T13:48:14.000Z",
       "foundAt": "2026-11-24T08:30:24.332Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "JAXAのシステムに不正アクセス 一部アカウント名など漏えい | NHKニュース",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261124de80645",
+      "published": "2026-11-24T09:02:47.000Z",
+      "bookmarks": 5,
+      "foundAt": "2026-11-24T11:37:14.463Z",
       "offered": true
     },
     {
