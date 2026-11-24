@@ -135,3 +135,52 @@ test("journalLine: 同じ日に45分を超えて空いたら警告を付ける",
   });
   assert.equal(line, "- 11:07 wake(dispatch)前回から60分 ⚠間隔超過 → act=false 理由なし");
 });
+
+// --- サイト生成(tools/lib/markdown.ts)
+
+import { renderInline, renderMarkdown, splitFrontMatter } from "./lib/markdown.ts";
+import { japaneseDate } from "./lib/time.ts";
+
+test("japaneseDate: ゼロ埋めしない(ツッコミページの名前と同じ形)", () => {
+  assert.equal(japaneseDate("2026-01-05"), "2026年1月5日");
+});
+
+test("splitFrontMatter: 値とリストを読む", () => {
+  const { meta, body } = splitFrontMatter(
+    '---\ntitle: "A: B"\ndate: 2026-11-24\nsources:\n  - https://example.com/a\n  - https://example.com/b\nterms:\n  - WASI\n---\n本文\n',
+  );
+  assert.deepEqual(meta, {
+    title: "A: B",
+    date: "2026-11-24",
+    sources: ["https://example.com/a", "https://example.com/b"],
+    terms: ["WASI"],
+  });
+  assert.equal(body, "本文\n");
+});
+
+test("renderInline: 生の HTML は通さず、http(s) のリンクだけをタグにする", () => {
+  assert.equal(renderInline("<script>alert(1)</script>"), "&lt;script&gt;alert(1)&lt;/script&gt;");
+  assert.equal(renderInline("[x](javascript:alert(1))"), "[x](javascript:alert(1))");
+  assert.equal(
+    renderInline('**大事** [記事](https://example.com/?a=1&b="2") と `<b>`'),
+    '<strong>大事</strong> <a href="https://example.com/?a=1&amp;b=&quot;2&quot;" rel="noopener">記事</a> と <code>&lt;b&gt;</code>',
+  );
+  assert.equal(
+    renderInline("出典は https://example.com/x。"),
+    '出典は <a href="https://example.com/x" rel="noopener">https://example.com/x</a>。',
+  );
+});
+
+test("renderMarkdown: 見出しは1段下げ、リスト・引用・コードを分ける", () => {
+  const html = renderMarkdown("## 読んだ記事\n一行目\n二行目\n\n- a\n- b\n\n> 引用\n\n```\n<x>\n```\n");
+  assert.equal(
+    html,
+    [
+      "<h3>読んだ記事</h3>",
+      "<p>一行目<br>二行目</p>",
+      "<ul><li>a</li><li>b</li></ul>",
+      "<blockquote><p>引用</p></blockquote>",
+      "<pre><code>&lt;x&gt;</code></pre>",
+    ].join("\n"),
+  );
+});

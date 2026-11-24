@@ -12,7 +12,7 @@ README には機能ごとに一行だけ書き、挙動の詳細はここに書�
 | 2 | wake(フィード3本の新着検出と cursor.json)。LLM なしで heartbeat を回す | 稼働中(2026-11-24 に手動実行で確認。schedule も有効) |
 | 3 | launchd を登録し、1〜2日、起床の欠落を journal で確認 | 2026-11-24 に登録済み。journal を観察中 |
 | 4 | Claude の step を追加。書き込み先は drafts/ と journal/ のみ | 未着手 |
-| 5 | guard と lint、Pages へのデプロイ | 未着手 |
+| 5 | guard と lint、Pages へのデプロイ | build とデプロイのみ実装(guard と lint は未着手) |
 | 6 | Cosense 連携(cosense-sync とツッコミの読み取り) | 未着手 |
 | 7 | 人格を決めて SOUL.md に書く | 未着手 |
 
@@ -67,6 +67,25 @@ journal の1行の例:
 
 `state/ journal/ drafts/ entries/ cosense/ RULES.md` の変更だけを main に commit し、`pull --rebase` してから push する(失敗したら3回までやり直す)。変更が無ければ何もしない。GitHub Actions の外では、`--local` を付けない限り動かない。
 
+### build(`tools/build.ts`)
+
+`entries/YYYY-MM-DD.md` から静的サイトを `_site/` に作る。
+
+- 出力: `index.html`(一覧)、`entries/YYYY-MM-DD.html`(記事)、`atom.xml`(新しい順に20件)、`site/` の中身(CSS・JS)、`build.json`。
+- 日記の形式: 先頭に front matter(`title` / `date` / `sources` / `terms`)。タイトルは front matter、無ければ本文先頭の `# 見出し`、それも無ければ日付。
+- Markdown は見出し・段落・箇条書き・番号付き・引用・コードブロック・`コード`・**強調**・リンクだけに対応する。生の HTML は文字として表示する。
+- 記事の末尾に、`sources` の一覧、`terms` の用語ページ(Cosense)へのリンク、その日の「yyyy年M月d日のツッコミ」ページへのリンクを付ける。
+- フッターの最終起床時刻は、ブラウザが `state/cursor.json` を直接読んで表示する(`site/footer.js`)。
+- 出力の中身からハッシュを作り、公開中のサイトの `build.json` と比べる。違うときだけ `deploy=true` を出力する。
+
 ### heartbeat(`.github/workflows/heartbeat.yml`)
 
 起動は schedule(毎時22分・52分)と workflow_dispatch だけ。Repository variable `MOKUMOKU_PAUSED` を `true` にすると止まる。
+
+- `beat` job: wake → commit → build。`deploy=true` のときだけサイトを artifact として上げる。
+- `deploy` job: `beat` が `deploy=true` を出したときだけ GitHub Pages に公開する。
+- 手動で公開し直すときは、実行時に `deploy` を有効にする(中身が同じでも公開する)。wake の関門(稼働時間外・20分未満)に関係なく動く。
+
+  ```bash
+  gh workflow run heartbeat.yml --repo gosyujin/mokumoku-ai -f deploy=true
+  ```

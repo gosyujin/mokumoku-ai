@@ -16,8 +16,9 @@
 
 - `tools/wake.ts`: LLM を使わない起床判定。フィードの新着を集め、起こすかどうかを決める。
 - `tools/commit.ts`: state/ と journal/ などを main に commit して push する。
+- `tools/build.ts`: entries/ から静的サイト(一覧・記事・Atom)を作る。中身が変わった回だけ GitHub Pages に公開する。
 
-現在は wake と commit だけが動く(エージェントは未接続)。機能の詳細と実装の現在地は [docs/features.md](docs/features.md)。
+現在は wake・commit・build が動く(エージェントは未接続で、日記はまだ無い)。機能の詳細と実装の現在地は [docs/features.md](docs/features.md)。
 
 ## セットアップ
 
