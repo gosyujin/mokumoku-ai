@@ -91,11 +91,13 @@ async function main(): Promise<void> {
   const g = gate(now, lastBeat);
   if (g.kind === "outside-hours") {
     console.log(`稼働時間外(JST ${today.hhmm})。何もしない`);
+    output("beat", "false");
     output("act", "false");
     return;
   }
   if (g.kind === "too-soon") {
     console.log(`前回の起床から${g.minutes}分。二重起動とみなして何もしない`);
+    output("beat", "false");
     output("act", "false");
     return;
   }
@@ -168,6 +170,8 @@ async function main(): Promise<void> {
   // Claude の step に渡す日付と時刻(JST)。自分で計算した値だけを出す(外部のテキストを出力に混ぜない)
   output("date", today.date);
   output("time", today.hhmm);
+  // 関門を通った起床か。lint は、この回だけ動かす(関門で止まった回に commit を作らないため)
+  output("beat", "true");
   output("act", String(decision.act));
 }
 

@@ -11,7 +11,7 @@
 
 ```
 [Mac の launchd :07/:37] ─┐
-                          ├→ .github/workflows/heartbeat.yml → wake → commit → エージェント → guard → commit → build
+                          ├→ .github/workflows/heartbeat.yml → wake → commit → エージェント → guard → lint → commit → build
 [schedule :22/:52] ───────┘
 ```
 
@@ -19,9 +19,10 @@
 - `tools/commit.ts`: state/ と journal/ などを main に commit して push する。
 - エージェント(Claude): `ops/agent/prompt.md` の手順で行動を1つ選ぶ。いまは drafts/ と journal/ にだけ書ける。
 - `tools/guard.ts`: エージェントが、書いてよい場所の外を変更していたら止める。
+- `tools/lint.ts`: エージェントが仕上げた下書き(`status: ready`)を検査し、合格したものだけ entries/ に移す。
 - `tools/build.ts`: entries/ から静的サイト(一覧・記事・Atom)を作る。中身が変わった回だけ GitHub Pages に公開する。
 
-現在は wake・commit・build が動く。エージェントは下書きまで書ける(有効にする手順は setup.md。日記の公開はまだ無い)。機能の詳細と実装の現在地は [docs/features.md](docs/features.md)。
+現在は、エージェントが記事を読んで下書きを書き、仕上げたものが検査を通ると公開される(有効にする手順は setup.md)。機能の詳細と実装の現在地は [docs/features.md](docs/features.md)。
 
 ## セットアップ
 

@@ -4,6 +4,8 @@
 
 ## 2026-11-24
 
+- Added: lint(段階5)。エージェントが `status: ready` を付けた下書きだけを検査し、合格したものを entries/ に移す。不合格の理由は journal に書く。手元で確認済み、Actions 上は未検証。経緯: [docs/decisions/2026-11-24-lint-publish.md](docs/decisions/2026-11-24-lint-publish.md)
+- 確認済み: `--model opus` と直した下書きの指示の Actions 上での動作(22:07 の起床)。claude-opus-5-5 で動き、エージェントが前回の挨拶の行を自分で直した。
 - Changed: エージェントのモデルを Opus に固定(`--model opus`)。下書きの指示を直した(本文に AI の断り書きを入れない、SOUL.md の文体は控えめに、挨拶から始めない)。手元の `claude` で確認済み、Actions 上は未検証。
 - 確認済み: Claude の step の Actions 上での動作(20:57 の起床)。エージェントが記事を1本読み、journal への追記と `drafts/2026-11-24.md` の作成を行い、guard・`agent:` の commit・build まで通った。action の後も Node.js は 24 のまま。初回(20:37)の失敗は、登録したトークンが途中で切れていたため。
 - Added: エージェントの step が失敗したとき、失敗の理由だけをログに出す step。初回(20:37)は API の最初の要求で失敗し、理由がログに出なかったため。

@@ -1,0 +1,185 @@
+// lint の判定部分(ファイルもネットワークも触らない純粋な関数)。
+// 下書き(drafts/YYYY-MM-DD.md)を公開(entries/)に移してよいかを決める。
+
+import { splitFrontMatter } from "./markdown.ts";
+import type { FrontMatter } from "./markdown.ts";
+
+/** 下書きの front matter にこの印があるものだけを検査する(エージェントが「仕上げた」と判断したときに付ける) */
+export const READY_STATUS = "ready";
+
+/** 用語ページ(Cosense)へのリンクは、この形でなければならない */
+export const COSENSE_PREFIX = "https://scrapbox.io/mokumoku-ai/";
+
+/** 1つの引用の上限(文字数)。本文の転載をしないため */
+export const QUOTE_MAX_CHARS = 200;
+
+/** 1つの下書きで生存確認する URL の上限 */
+export const URL_CHECK_LIMIT = 30;
+
+/** 用語1つの上限(文字数) */
+export const TERM_MAX_CHARS = 60;
+
+/** 本文に無ければならない節 */
+export const REQUIRED_SECTIONS: readonly string[] = ["## 読んだ記事", "## 感じたこと"];
+
+const URL_PATTERN = /https?:\/\/[^\s<>()「」、。]+/g;
+
+export function isReady(meta: FrontMatter): boolean {
+  return typeof meta.status === "string" && meta.status.trim().toLowerCase() === READY_STATUS;
+}
+
+function asList(value: string | string[] | undefined): string[] {
+  if (value === undefined) return [];
+  return (Array.isArray(value) ? value : [value]).map((s) => s.trim()).filter((s) => s !== "");
+}
+
+/** 文章の中の http(s) の URL(出てきた順、重複なし) */
+export function extractUrls(text: string): string[] {
+  const found = text.match(URL_PATTERN) ?? [];
+  return [...new Set(found.map((u) => u.replace(/[.,;:!?)\]]+$/, "")))];
+}
+
+/** 公開の Web の URL か(IP アドレス直書きや localhost は、生存確認の対象にしない) */
+export function isPublicWebUrl(raw: string): boolean {
+  let url: URL;
+  try {
+    url = new URL(raw);
+  } catch {
+    return false;
+  }
+  if (url.protocol !== "http:" && url.protocol !== "https:") return false;
+  if (url.username !== "" || url.password !== "") return false;
+  const host = url.hostname.toLowerCase();
+  if (host === "localhost" || host.endsWith(".localhost") || host.endsWith(".local") || host.endsWith(".internal")) {
+    return false;
+  }
+  if (/^\d+(\.\d+){3}$/.test(host) || host.includes(":") || host.startsWith("[")) return false;
+  return host.includes(".");
+}
+
+/** 引用(行頭が > の連続)を、直後の行と一緒に取り出す */
+export function quoteBlocks(body: string): { text: string; next: string }[] {
+  const lines = body.split("\n");
+  const blocks: { text: string; next: string }[] = [];
+  let inCode = false;
+  for (let i = 0; i < lines.length; i++) {
+    if (lines[i].startsWith("```")) inCode = !inCode;
+    if (inCode || !/^>\s?/.test(lines[i])) continue;
+    const quote: string[] = [];
+    while (i < lines.length && /^>\s?/.test(lines[i])) quote.push(lines[i++].replace(/^>\s?/, ""));
+    let j = i;
+    while (j < lines.length && lines[j].trim() === "") j++;
+    blocks.push({ text: quote.join("\n"), next: lines[j] ?? "" });
+    i--;
+  }
+  return blocks;
+}
+
+export interface DraftInput {
+  /** ファイル名の日付(YYYY-MM-DD) */
+  fileDate: string;
+  /** ファイルの中身 */
+  source: string;
+  /** 今日(JST、YYYY-MM-DD) */
+  today: string;
+}
+
+/**
+ * ネットワークを使わない検査。問題の一覧を返す(空なら合格)。
+ * 「AI が書いた旨の署名」は、サイトが記事の冒頭とフッターに入れるので、本文には求めない。
+ */
+export function staticProblems(input: DraftInput): string[] {
+  const { meta, body } = splitFrontMatter(input.source);
+  const problems: string[] = [];
+
+  if (typeof meta.title !== "string" || meta.title.trim() === "") problems.push("front matter に title が無い");
+  if (meta.date !== input.fileDate) problems.push(`front matter の date がファイル名の日付(${input.fileDate})と違う`);
+  if (input.fileDate > input.today) problems.push("未来の日付の日記は公開しない");
+
+  const sources = asList(meta.sources);
+  if (sources.length === 0) problems.push("front matter に sources(出典の URL)が無い");
+  for (const s of sources) {
+    if (!isPublicWebUrl(s)) problems.push(`sources に公開の Web の URL でないものがある: ${s}`);
+  }
+
+  for (const t of asList(meta.terms)) {
+    if (t.length > TERM_MAX_CHARS) problems.push(`terms の語が長すぎる(${TERM_MAX_CHARS}文字まで): ${t.slice(0, 20)}…`);
+    if (/[\[\]\n]/.test(t) || /^https?:/.test(t)) problems.push(`terms には語だけを書く(URL や [ ] は書かない): ${t.slice(0, 40)}`);
+  }
+
+  for (const heading of REQUIRED_SECTIONS) {
+    const at = body.split("\n").findIndex((l) => l.trim() === heading);
+    if (at < 0) {
+      problems.push(`本文に「${heading}」の節が無い`);
+      continue;
+    }
+    const rest = body.split("\n").slice(at + 1);
+    const end = rest.findIndex((l) => /^##\s/.test(l));
+    const section = (end < 0 ? rest : rest.slice(0, end)).join("\n").trim();
+    if (section === "") problems.push(`「${heading}」の節が空`);
+  }
+
+  for (const q of quoteBlocks(body)) {
+    const length = q.text.replace(/\s/g, "").length;
+    if (length > QUOTE_MAX_CHARS) problems.push(`引用が長い(${length}文字。${QUOTE_MAX_CHARS}文字まで)`);
+    if (extractUrls(q.text + "\n" + q.next).length === 0) {
+      problems.push(`引用に出典のリンクが無い(引用の中か、直後の行に URL を書く): ${q.text.slice(0, 20)}…`);
+    }
+  }
+
+  for (const url of extractUrls(body)) {
+    if (!isPublicWebUrl(url)) {
+      problems.push(`本文に公開の Web の URL でないものがある: ${url}`);
+      continue;
+    }
+    const host = new URL(url).hostname.toLowerCase();
+    const isCosense = host === "scrapbox.io" || host.endsWith(".scrapbox.io") || host === "cosen.se";
+    if (isCosense && !url.startsWith(COSENSE_PREFIX)) {
+      problems.push(`用語リンクは ${COSENSE_PREFIX}{用語} の形にする: ${url}`);
+    }
+  }
+
+  return problems;
+}
+
+/** 生存確認する URL(sources と本文のリンク。重複なし、上限あり) */
+export function urlsToCheck(source: string): string[] {
+  const { meta, body } = splitFrontMatter(source);
+  const all = [...new Set([...asList(meta.sources), ...extractUrls(body)])].filter(isPublicWebUrl);
+  return all.slice(0, URL_CHECK_LIMIT);
+}
+
+/**
+ * alive   : 取れた
+ * dead    : 無い(404 など)。不合格
+ * retry   : サーバー側の一時的な失敗かもしれない。今回は公開せず、次の起床でもう一度試す
+ * blocked : 機械からの取得を断られた(403 など)。あるかどうか分からないので、警告だけ出して通す
+ */
+export type LinkVerdict = "alive" | "dead" | "retry" | "blocked";
+
+export function classifyStatus(status: number): LinkVerdict {
+  if (status >= 200 && status < 400) return "alive";
+  if (status === 401 || status === 403 || status === 405 || status === 429 || status === 451) return "blocked";
+  if (status === 408 || status >= 500) return "retry";
+  return "dead";
+}
+
+/** 公開するときの中身。front matter の status の行だけを取り除く */
+export function toEntry(source: string): string {
+  const text = source.replace(/\r\n?/g, "\n");
+  const m = /^---\n([\s\S]*?)\n---\n?/.exec(text);
+  if (!m) return text;
+  const kept = m[1].split("\n").filter((line) => !/^status:\s*/.test(line));
+  return `---\n${kept.join("\n")}\n---\n${text.slice(m[0].length)}`;
+}
+
+/** journal に書く1行 */
+export function lintLine(hhmm: string, draft: string, outcome: { published: string } | { problems: string[] }): string {
+  if ("published" in outcome) return `- ${hhmm} lint ${draft} → 公開した(${outcome.published})`;
+  return `- ${hhmm} lint ${draft} → 不合格: ${outcome.problems.join(" / ")}`;
+}
+
+/** 同じ結果を何度も journal に書かないための比較(時刻を除いた部分) */
+export function lintLineKey(line: string): string {
+  return line.replace(/^- \d{2}:\d{2} /, "");
+}

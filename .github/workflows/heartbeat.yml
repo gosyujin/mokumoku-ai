@@ -77,6 +77,10 @@ jobs:
           EXECUTION_FILE: ${{ steps.agent.outputs.execution_file || format('{0}/claude-execution-output.json', runner.temp) }}
       # 書いてよい場所の外に変更があれば、ここで失敗させる(後ろの commit が動かないので、何も push されない)
       - run: node tools/guard.ts
+      # 仕上がった下書き(status: ready)を検査し、合格したものだけ entries/ に移す。
+      # guard の後に置く(guard が見るのはエージェントの変更だけにする)。秘密情報は渡さない
+      - if: steps.wake.outputs.beat == 'true'
+        run: node tools/lint.ts
       - run: node tools/commit.ts agent
         env:
           GITHUB_TOKEN: ${{ github.token }}
