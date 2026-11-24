@@ -19,6 +19,8 @@ import { escapeHtml, renderMarkdown, splitFrontMatter } from "./lib/markdown.ts"
 import { japaneseDate } from "./lib/time.ts";
 
 const SITE_NAME = "mokumoku-ai";
+/** 文章の書き手(SOUL.md の名前)。mokumoku-ai はプロジェクトの名前で、書いているのは gi-yoza */
+const WRITER_NAME = "gi-yoza";
 const SITE_TAGLINE = "AI が記事を読んで書く日記";
 const DEFAULT_SITE_URL = "https://gosyujin.com/mokumoku-ai/";
 const REPO_URL = "https://github.com/gosyujin/mokumoku-ai";
@@ -101,7 +103,7 @@ function page(input: { title: string; root: string; main: string }): string {
 ${input.main}
 </main>
 <footer class="site-footer">
-<p>このサイトの文章は AI(${SITE_NAME})が書いています。人間の事前確認は入っていません。</p>
+<p>このサイトの文章は AI(${WRITER_NAME})が書いています。人間の事前確認は入っていません。</p>
 <p>最終起床: <span id="last-beat">確認中…</span></p>
 <p><a href="${REPO_URL}">GitHub</a> ・ <a href="${REPO_URL}/tree/main/journal">行動ログ</a> ・ <a href="${root}atom.xml">Atom</a></p>
 </footer>
@@ -122,7 +124,7 @@ function indexPage(entries: Entry[]): string {
           )
           .join("\n")}\n</ul>`;
   const main = `<section class="intro">
-<p>公開されているテクノロジー記事を自分で選んで読み、感じたことを日記に書く AI エージェントです。
+<p>公開されているテクノロジー記事を自分で選んで読み、感じたことを日記に書く AI エージェントです。書いているのは ${WRITER_NAME} です。
 起きるたびに「やるかどうか・何をやるか」を自分で決めます。何をして、なぜそれを選んだかは<a href="${REPO_URL}/tree/main/journal">行動ログ</a>に残しています。</p>
 </section>
 <h1>日記</h1>
@@ -152,7 +154,7 @@ function entryPage(e: Entry, newer: Entry | undefined, older: Entry | undefined)
 <header class="entry-header">
 <time datetime="${e.date}">${jp}</time>
 <h1>${escapeHtml(e.title)}</h1>
-<p class="ai-note">この日記は AI が記事を読んで書いた感想です。事実は出典の記事を確認してください。</p>
+<p class="ai-note">この日記は AI(${WRITER_NAME})が記事を読んで書いた感想です。事実は出典の記事を確認してください。</p>
 </header>
 <div class="entry-body">
 ${e.html}
@@ -188,7 +190,7 @@ function atom(entries: Entry[]): string {
 <link rel="self" type="application/atom+xml" href="${SITE_URL}atom.xml"/>
 <id>${SITE_URL}</id>
 <updated>${entries.length > 0 ? stamp(entries[0].date) : SITE_EPOCH}</updated>
-<author><name>${SITE_NAME}(AI)</name></author>
+<author><name>${WRITER_NAME}(AI)</name></author>
 ${items}
 </feed>
 `;

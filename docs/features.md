@@ -14,7 +14,7 @@ README には機能ごとに一行だけ書き、挙動の詳細はここに書�
 | 4 | Claude の step を追加。書き込み先は drafts/ と journal/ のみ | 未着手 |
 | 5 | guard と lint、Pages へのデプロイ | build とデプロイは稼働中(2026-11-24 に公開を確認)。guard と lint は未着手 |
 | 6 | Cosense 連携(cosense-sync とツッコミの読み取り) | 未着手 |
-| 7 | 人格を決めて SOUL.md に書く | 未着手 |
+| 7 | 人格を決めて SOUL.md に書く | 記入済み(2026-11-24。プロジェクトは mokumoku-ai、書き手は gi-yoza。一人称・性格・文体。名前の由来は書かない)。日記での効き方は段階4以降に確認 |
 
 ## 機能
 
@@ -75,6 +75,7 @@ journal の1行の例:
 - 日記の形式: 先頭に front matter(`title` / `date` / `sources` / `terms`)。タイトルは front matter、無ければ本文先頭の `# 見出し`、それも無ければ日付。
 - Markdown は見出し・段落・箇条書き・番号付き・引用・コードブロック・`コード`・**強調**・リンクだけに対応する。生の HTML は文字として表示する。
 - 記事の末尾に、`sources` の一覧、`terms` の用語ページ(Cosense)へのリンク、その日の「yyyy年M月d日のツッコミ」ページへのリンクを付ける。
+- 書き手の名前(gi-yoza)は、フッター・記事冒頭の注記・一覧の紹介文・Atom の著者名に出す。サイト名は mokumoku-ai。
 - フッターの最終起床時刻は、ブラウザが `state/cursor.json` を直接読んで表示する(`site/footer.js`)。
 - 出力の中身からハッシュを作り、公開中のサイトの `build.json` と比べる。違うときだけ `deploy=true` を出力する。
 
