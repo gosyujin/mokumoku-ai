@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T09:37:16.685Z",
+  "updatedAt": "2026-11-24T10:07:15.987Z",
   "items": [
     {
       "feed": "publickey",
@@ -53,6 +53,46 @@
       "url": "https://piyolog.hatenadiary.jp/entry/2026/11/20/224814",
       "published": "2026-11-20T13:48:14.000Z",
       "foundAt": "2026-11-24T08:30:24.332Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "ソフトバンク、「ITmedia」運営会社の売却検討 AI関連事業に集中 - 日本経済新聞",
+      "url": "https://www.nikkei.com/article/DGXZQOUC1688U0W6A111C2000000/",
+      "published": "2026-11-24T08:42:06.000Z",
+      "bookmarks": 14,
+      "foundAt": "2026-11-24T10:07:15.987Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "あなたの「信用情報」をスマホで確認できるサービス、JICCが再開",
+      "url": "https://japan.cnet.com/article/35255340/",
+      "published": "2026-11-24T09:16:43.000Z",
+      "bookmarks": 5,
+      "foundAt": "2026-11-24T10:07:15.987Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "Claude Projectsを使って、複数のリポジトリにまたがるtextlintとルールのパフォーマンスを改善した",
+      "url": "https://efcl.info/2026/11/24/textlint-performance/",
+      "published": "2026-11-24T02:44:19.000Z",
+      "bookmarks": 4,
+      "foundAt": "2026-11-24T10:07:15.987Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "ISUCON2026 問題解説と講評 : ISUCON公式Blog",
+      "url": "https://isucon.net/archives/isucon2026-problem-review.html",
+      "published": "2026-11-24T06:16:08.000Z",
+      "bookmarks": 6,
+      "foundAt": "2026-11-24T10:07:15.987Z",
       "offered": true
     },
     {
