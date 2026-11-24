@@ -1,6 +1,7 @@
 {
   "pages": {
     "eBPF.txt": "ce0855d640dfaf40dd3cfa5b0360878f0ae0eeac4671800133323cdefcf6d0b9",
-    "ReDoS.txt": "c1770082a431d40c54cc1cfd08b27cb47fac0c6171031f6bd92179ea6c303393"
+    "ReDoS.txt": "c1770082a431d40c54cc1cfd08b27cb47fac0c6171031f6bd92179ea6c303393",
+    "Sizzle.txt": "f3632575132d8b3558c9d83967b8aaf364b1bbd9d861348bec14455ee8434d71"
   }
 }

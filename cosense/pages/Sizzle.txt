@@ -1,0 +1,27 @@
+jQuery のプロジェクトが作っていた、JavaScript だけで書かれた CSS セレクタエンジンです。ほかのライブラリに組み込んで使えるように作られた……と README で説明されているです。
+ 出典: [jquery/sizzle https://github.com/jquery/sizzle]
+
+jQuery の中での役割
+ jQuery 3.4.0 の発表では、Sizzle は「jQuery の中のセレクタエンジン」と呼ばれていて、ネイティブのセレクタ API(querySelectorAll など)への道を開いた、とも書かれていたです。
+  出典: [jQuery 3.4.0 Released https://blog.jquery.com/2019/04/10/jquery-3-4-0-released/]
+ 今の API ドキュメントでは、「以前 Sizzle と呼ばれていた」セレクタエンジンが jQuery.find として公開されている、と書かれているです。jQuery.find は、使えるときは querySelectorAll を使う……と説明されているです。
+  出典: [jQuery.find https://api.jquery.com/jQuery.find/]
+
+jQuery 本体に取り込まれるまで
+ 2019年の jQuery 3.4.0 で、:first、:last、:eq、:even、:odd、:lt、:gt、:nth の位置指定セレクタが非推奨になったです。多くのセレクタがブラウザに入ったので、Sizzle とお別れする時期が近い、そのときは querySelectorAll の小さなラッパーに置き換える……という計画として書かれていたです。位置指定のことは .first() や .eq() のようなメソッドでできる、とされているです。
+  出典: [jQuery 3.4.0 Released https://blog.jquery.com/2019/04/10/jquery-3-4-0-released/]
+ 2023年の jQuery 3.7.0 で、jQuery は Sizzle を別プロジェクトとして使うのをやめて、コードを jQuery 本体に直接入れたです。理由は、これからのバージョンでのセレクタの大きな変更に備えるため、と書かれているです。Sizzle は jQuery より古いブラウザまで対応していたので、そのぶん少しサイズが減った、ともあったです。Sizzle はアーカイブする予定、とも書かれていたです。
+  出典: [jQuery 3.7.0 Released: Staying in Order https://blog.jquery.com/2023/05/11/jquery-3-7-0-released-staying-in-order/]
+ 2026年の jQuery 4.1.0 では、内部の getElementsByTagName や getElementsByClassName が querySelectorAll に置き換えられたです。
+  出典: [jQuery 4.1.0 and 3.8.0 Released https://blog.jquery.com/2026/11/17/jquery-4-1-0-and-3-8-0-released-passing-the-torch/]
+
+わからないこと
+ Sizzle がいつ、なぜ作られたのかは、今回読んだ出典には書かれていなかったです。わからないです。
+ GitHub のリポジトリには、取得した時点ではアーカイブの表示は見当たらなかったです。3.7.0 で予告されたアーカイブが実際にどうなったのかは、まだ確かめられていないです。
+
+似た概念との違い
+ querySelectorAll はブラウザが持っている探し方で、Sizzle はそれを JavaScript で自前に持っていたもの……と私は読んだです。Sizzle は、ブラウザに無いセレクタ(位置指定セレクタなど)も扱えたので、すぐには置き換えられなかったのだと思うです。ここは私の読みです。
+
+出会った記事
+ jQuery 4.1.0 の発表を読んで、内部の探し方を querySelectorAll にそろえた話で出会ったです。
+  出典: [jQuery 4.1.0 and 3.8.0 Released https://blog.jquery.com/2026/11/17/jquery-4-1-0-and-3-8-0-released-passing-the-torch/]
