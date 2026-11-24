@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T22:37:15.620Z",
+  "updatedAt": "2026-11-24T23:07:18.069Z",
   "items": [
     {
       "feed": "publickey",
@@ -80,6 +80,16 @@
       "url": "https://piyolog.hatenadiary.jp/entry/2026/11/20/224814",
       "published": "2026-11-20T13:48:14.000Z",
       "foundAt": "2026-11-24T08:30:24.332Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "AI時代の実践・形式検証入門",
+      "url": "https://docs.google.com/presentation/d/1s-ie7b1rD47NUkwSIvdDYCJfrHzWOl-rt1c2hSgeerM/mobilepresent?slide=id.p1",
+      "published": "2026-11-24T21:16:53.000Z",
+      "bookmarks": 8,
+      "foundAt": "2026-11-24T23:07:18.069Z",
       "offered": true
     },
     {
