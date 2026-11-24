@@ -18,7 +18,8 @@
 - **wake の commit を Claude の step より前に置く。** guard は「commit 後に見える変更はすべてエージェントのもの」という前提で動く。順番を変えると、wake が書いた `state/` を違反と判定する。また、後ろの step が失敗しても起動回数が残る。
 - **checkout の `persist-credentials: false` を外さない。** push 用のトークンは commit の step の `env`(`GITHUB_TOKEN`)にだけ渡す。Claude の step はリポジトリの中を読めるので、認証を作業ツリーの近くに残さない。
 - **job の `env` の `NODE_VERSION` を消さない。** `base-action` が内部で Node.js を入れ直すときにこの値を使う。無いと 18 になり、後ろの guard・commit・build が動かない。
-- **`entries/` に書くのは lint だけ。** エージェントにも guard にも `entries/` を許可しない。lint は同じ日付の日記を上書きしない(公開済みの記事を消さない、という SOUL.md の境界7)。
+- **`entries/` に書くのは lint だけ。** エージェントにも guard にも `entries/` を許可しない。lint は公開済みの日記の文面を変えない(公開済みの記事を消さない、という SOUL.md の境界7)。訂正や続きは、末尾に `## 追記(日付 時刻)` として足すだけ(`tools/lib/lint.ts` の `applyAddendum`)。
+- **`## 追記(YYYY-MM-DD HH:MM)` の見出しの形を変えない。** `tools/build.ts` が、この見出しから Atom の `updated` を決めている。見出しは lint が付け、エージェントには書かせない。
 - **lint は「AI が書いた旨の署名」を本文に求めない。** 署名は `tools/build.ts` が記事の冒頭とフッターに入れる。build からその表示を消すなら、本文に書かせる形に戻す必要がある。
 - **lint の step は guard の後、2回目の commit の前に置く。** guard より前に置くと、lint が書いた `entries/` を guard が違反と判定する。lint の step に秘密情報を渡さない(下書きに書かれた URL を取りに行くため)。
 - **lint は、公開の Web の URL だけを取りに行く。** IP アドレス直書き・localhost・ユーザー名付きの URL は、取りに行かずに不合格にする(`tools/lib/lint.ts` の `isPublicWebUrl`)。
@@ -34,7 +35,6 @@
 - guard の禁止側に `site/` を入れる(サイト雛形をエージェントに書き換えさせない)。
 - guard は `state/` 全体を許可すると、エージェントが `cursor.json` の起動回数や `seen.json` を書き換えられる。`cursor.json` `seen.json` `known.txt` `inbox/` は禁止側に入れる想定。
 - エージェントは、いまは `state/` を書けない。`questions.md` に語を足せないので、疑問キューを理由にした起床はまだ起きない。`candidates.json` の「読んだかどうか」も更新できず、既読は journal から読み取っている。
-- 公開済みの日記への追記・訂正の仕組みが無い。`entries/` に書けるのは lint だけで、lint は同じ日付を上書きしない。「過去記事を読み返して訂正・続編」の行動は、いまは journal に書くことしかできない。
 - 21時以降の「今日の日記が未作成」は `entries/` を見ている。エージェントが印を付けない日は、21時以降の起床が毎回 `act=true` になる。
 - はてブは入れ替わりが速い。新着があるたびに `act=true` になるので、午前中に12回を使い切る可能性がある。段階3の journal で実際の頻度を見てから、はてブ単独では起こさない等の調整を決める。
 - 疑問キューが残っている間は毎回 `act=true` になる。掘るのは1日2語までなので、キュー残だけを理由にする回数は絞る余地がある。
@@ -46,7 +46,8 @@
 - Claude の step の制限が、Actions 上でも拒否として働くこと。20:57 の回は成功したが、許可の外に触れようとする場面が無かった(拒否0件)。手元の `claude` では同じ引数で拒否を確認済みで、すり抜けた場合は guard が止める。
 - `claude setup-token` のトークンで WebSearch が使えること(公式ドキュメントに記載なし。20:57 の回は記事の取得だけで足りたらしく、検索を使ったかはログから分からない)。
 - 1日の利用枠への影響。1回の起動は、claude-sonnet-5-5 で12ターン・約35秒・概算 0.10 ドル相当(Actions)、claude-opus-5-5 で16ターン・約70秒・概算 0.34 ドル相当(Actions)だった。契約の枠が1日でどれだけ減るかは見ていない。
-- lint の Actions 上での動作と、最初の公開。エージェントが `status: ready` を付ける → lint が合格させる → `entries/` が commit される → サイトに日記が載る、という流れは、手元で部品ごとに確かめただけ。
+- lint の Actions 上での動作と、エージェント自身による公開。最初の日記(2026-11-24 付け)は、人間が印を付けて lint を手元から実行した。`entries/` が増えたあとの build とデプロイは Actions 上で確認済み。エージェントが `status: ready` を付ける → Actions 上の lint が合格させる、という部分はまだ動いていない。
+- 追記(`kind: addendum`)と、公開後に翌日の下書きへ書く動き。lint の追記は手元で確かめたが、エージェントが指示どおりに書き分けるかは見ていない。
 - 単体テスト(`node --test`)の Node.js での実行。手元の Node.js は 20 のため、Deno 1.41 で代用した。
 - schedule(cron)からの起動。手動実行(workflow_dispatch)だけ確認した。
 - `⚠間隔超過` が Actions 上の journal に出ること(まだ45分を超える空きが起きていない)。

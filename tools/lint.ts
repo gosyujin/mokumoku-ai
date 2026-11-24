@@ -2,7 +2,8 @@
 //   - 検査するのは、front matter に `status: ready` がある下書きだけ(エージェントが仕上げたと判断した印)
 //   - 合格: status の行を除いて entries/ に書き、下書きを消す。次の build でサイトに載る
 //   - 不合格: 下書きは残し、理由を今日の journal に書く(同じ理由を繰り返しては書かない)
-//   - entries/ に書くのは、この lint だけ。同じ日付の日記がすでにあれば上書きしない
+//   - 公開済みの日記への訂正・続き: `kind: addendum` も付いた下書きは、日記の末尾に「追記(日時)」として足す
+//   - entries/ に書くのは、この lint だけ。公開済みの日記の文面は変えない(足すだけ)
 //
 // 実行: node tools/lint.ts   (Node.js 22.18 以上)
 // 環境変数:
@@ -14,13 +15,24 @@ import { dirname, join } from "node:path";
 import process from "node:process";
 
 import { USER_AGENT } from "./lib/feed.ts";
-import { classifyStatus, isReady, lintLine, lintLineKey, staticProblems, toEntry, urlsToCheck } from "./lib/lint.ts";
+import {
+  addendumProblems,
+  applyAddendum,
+  classifyStatus,
+  isAddendum,
+  isReady,
+  lintLine,
+  lintLineKey,
+  staticProblems,
+  toEntry,
+  urlsToCheck,
+} from "./lib/lint.ts";
 import type { LinkVerdict } from "./lib/lint.ts";
 import { splitFrontMatter } from "./lib/markdown.ts";
 import { jst } from "./lib/time.ts";
 
-/** 1回の実行で公開する日記の上限(まとめて大量に公開されないようにする) */
-const MAX_PUBLISH_PER_RUN = 1;
+/** 1回の実行で公開する日記・足す追記の上限(それぞれ。まとめて大量に公開されないようにする) */
+const MAX_PER_RUN = 1;
 const FETCH_TIMEOUT_MS = 15000;
 
 const ROOT = process.env.MOKUMOKU_ROOT ?? join(import.meta.dirname ?? ".", "..");
@@ -79,6 +91,7 @@ async function main(): Promise<void> {
   const draftsDir = path("drafts");
   const names = existsSync(draftsDir) ? readdirSync(draftsDir).sort() : [];
   let published = 0;
+  let appended = 0;
   let checked = 0;
 
   for (const name of names) {
@@ -94,16 +107,23 @@ async function main(): Promise<void> {
     }
     checked++;
 
+    const meta = splitFrontMatter(source).meta;
+    const exists = existsSync(path("entries", name));
+    const addendum = isAddendum(meta);
     let problems: string[];
     try {
-      if (existsSync(path("entries", name))) {
-        problems = [`この日の日記は公開済み(${entry})。公開済みの日記への追記の仕組みは、まだ無い`];
-      } else if (published >= MAX_PUBLISH_PER_RUN) {
-        problems = [];
-        console.log(`${draft}: 今回の公開は${MAX_PUBLISH_PER_RUN}件まで。次の起床に回す`);
+      if (addendum && !exists) {
+        problems = [`追記する先の日記(${entry})が無い。kind: addendum は、公開済みの日記に足すときだけ付ける`];
+      } else if (!addendum && exists) {
+        problems = [
+          `この日の日記は公開済み(${entry})。訂正や続きを足すなら、front matter に kind: addendum を付け、本文には足す内容だけを書く`,
+        ];
+      } else if ((addendum ? appended : published) >= MAX_PER_RUN) {
+        console.log(`${draft}: 今回の${addendum ? "追記" : "公開"}は${MAX_PER_RUN}件まで。次の起床に回す`);
         continue;
       } else {
-        problems = staticProblems({ fileDate, source, today: today.date });
+        const input = { fileDate, source, today: today.date };
+        problems = addendum ? addendumProblems(input) : staticProblems(input);
         if (problems.length === 0) problems = await linkProblems(source);
       }
     } catch (e) {
@@ -118,6 +138,17 @@ async function main(): Promise<void> {
       continue;
     }
 
+    if (addendum) {
+      // 公開済みの日記の末尾に足す。元の本文は変えない
+      const current = readFileSync(path("entries", name), "utf8");
+      writeFileSync(path("entries", name), applyAddendum(current, source, { date: today.date, hhmm: today.hhmm }));
+      unlinkSync(path("drafts", name));
+      appended++;
+      console.log(`${draft}: 合格。${entry} に追記した`);
+      writeJournal(today.date, lintLine(today.hhmm, draft, { appended: entry }));
+      continue;
+    }
+
     mkdirSync(path("entries"), { recursive: true });
     writeFileSync(path("entries", name), toEntry(source), { flag: "wx" }); // すでにあれば失敗させる(上書きしない)
     unlinkSync(path("drafts", name));
@@ -126,7 +157,7 @@ async function main(): Promise<void> {
     writeJournal(today.date, lintLine(today.hhmm, draft, { published: entry }));
   }
 
-  console.log(`lint: 検査 ${checked} 件、公開 ${published} 件`);
+  console.log(`lint: 検査 ${checked} 件、公開 ${published} 件、追記 ${appended} 件`);
 }
 
 main().catch((e) => {

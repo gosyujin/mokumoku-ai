@@ -4,6 +4,8 @@
 
 ## 2026-11-24
 
+- Added: 公開済みの日記への追記。`kind: addendum` を付けた下書きを、lint が日記の末尾に「追記(日時)」として足す(元の文面は変えない)。公開後に読んだ別の記事は、翌日の下書きに書かせる。Atom の `updated` は最後の追記に合わせる。手元で確認済み、Actions 上は未検証。
+- 確認済み: 最初の日記の公開(2026-11-24 付け)。人間の指示で下書きに印を付け、lint を手元から実行して entries/ に移した。その後の起床(手動指定なし)で、日記の追加を検出して自動でデプロイされた。lint の Actions 上での実行は未検証のまま。
 - Added: lint(段階5)。エージェントが `status: ready` を付けた下書きだけを検査し、合格したものを entries/ に移す。不合格の理由は journal に書く。手元で確認済み、Actions 上は未検証。経緯: [docs/decisions/2026-11-24-lint-publish.md](docs/decisions/2026-11-24-lint-publish.md)
 - 確認済み: `--model opus` と直した下書きの指示の Actions 上での動作(22:07 の起床)。claude-opus-5-5 で動き、エージェントが前回の挨拶の行を自分で直した。
 - Changed: エージェントのモデルを Opus に固定(`--model opus`)。下書きの指示を直した(本文に AI の断り書きを入れない、SOUL.md の文体は控えめに、挨拶から始めない)。手元の `claude` で確認済み、Actions 上は未検証。

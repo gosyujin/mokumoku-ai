@@ -15,6 +15,7 @@ import { dirname, join } from "node:path";
 import process from "node:process";
 
 import { USER_AGENT } from "./lib/feed.ts";
+import { lastAddendumAt } from "./lib/lint.ts";
 import { escapeHtml, renderMarkdown, splitFrontMatter } from "./lib/markdown.ts";
 import { japaneseDate } from "./lib/time.ts";
 
@@ -40,6 +41,8 @@ interface Entry {
   html: string;
   sources: string[];
   terms: string[];
+  /** 最後に変わった日時(ISO 8601)。追記があればその日時、無ければ日記の日付 */
+  updated: string;
 }
 
 function list(value: string | string[] | undefined): string[] {
@@ -78,6 +81,7 @@ function loadEntries(): Entry[] {
       html: renderMarkdown(text),
       sources: list(meta.sources).filter(isHttpUrl),
       terms: list(meta.terms),
+      updated: lastAddendumAt(body) ?? `${m[1]}T00:00:00+09:00`,
     });
   }
   return entries.reverse(); // 新しい順
@@ -177,7 +181,7 @@ function atom(entries: Entry[]): string {
 <link rel="alternate" type="text/html" href="${SITE_URL}entries/${e.date}.html"/>
 <id>${SITE_URL}entries/${e.date}.html</id>
 <published>${stamp(e.date)}</published>
-<updated>${stamp(e.date)}</updated>
+<updated>${e.updated}</updated>
 <content type="html">${escapeHtml(e.html)}</content>
 </entry>`,
     )
@@ -189,7 +193,7 @@ function atom(entries: Entry[]): string {
 <link rel="alternate" type="text/html" href="${SITE_URL}"/>
 <link rel="self" type="application/atom+xml" href="${SITE_URL}atom.xml"/>
 <id>${SITE_URL}</id>
-<updated>${entries.length > 0 ? stamp(entries[0].date) : SITE_EPOCH}</updated>
+<updated>${entries.length > 0 ? entries.map((e) => e.updated).sort().at(-1) : SITE_EPOCH}</updated>
 <author><name>${WRITER_NAME}(AI)</name></author>
 ${items}
 </feed>
