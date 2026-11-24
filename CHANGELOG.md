@@ -4,6 +4,8 @@
 
 ## 2026-11-24
 
+- 確認済み: 手動指定なしの自動デプロイ。中身が同じ回は `deploy` job が飛ばされ(19:07・19:37)、サイト雛形を変えた次の起床(20:07)で自動的に公開された。日記の追加でも同じ経路を通る。
+- 確認済み: launchd の定時起動。18:37 から 20:07 まで、毎時7分・37分に4回続けて `wake(dispatch)` が記録された。スリープ明けの挙動は未検証のまま。
 - Added: Claude の step(段階4)。`base-action` を `--restricted` で動かし、書けるのは drafts/ と journal/ だけ。`tools/guard.ts` で二重に検査する。`MOKUMOKU_AGENT` が `on` のときだけ動く。手元の `claude` で確認済み、Actions 上は未検証。経緯: [docs/decisions/2026-11-24-claude-step.md](docs/decisions/2026-11-24-claude-step.md)
 - Changed: checkout に認証を残さず、push 用のトークンを commit の step にだけ渡す。wake の記録を先に commit する(1回の起床で commit が2つになりうる)。
 - Added: SOUL.md の人格(名前「gi-yoza」、一人称「私」、性格2点、「辞書形+です」の文体と、文体を使わない所)。プロジェクト名は mokumoku-ai のまま、書き手が gi-yoza。サイトのフッター・記事の注記・Atom の著者名も gi-yoza にした。名前の由来は書かない。

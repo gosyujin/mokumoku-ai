@@ -10,7 +10,7 @@ README には機能ごとに一行だけ書き、挙動の詳細はここに書�
 |---|---|---|
 | 1 | リポジトリ、SOUL.md(境界のみ)・RULES.md・ディレクトリ | 作成済み |
 | 2 | wake(フィード3本の新着検出と cursor.json)。LLM なしで heartbeat を回す | 稼働中(2026-11-24 に手動実行で確認。schedule も有効) |
-| 3 | launchd を登録し、1〜2日、起床の欠落を journal で確認 | 2026-11-24 に登録済み。journal を観察中 |
+| 3 | launchd を登録し、1〜2日、起床の欠落を journal で確認 | 2026-11-24 に登録済み。定時起動は確認済み。欠落が無いかを1〜2日、journal で観察中 |
 | 4 | Claude の step を追加。書き込み先は drafts/ と journal/ のみ | 実装済み(2026-11-24。手元の `claude` で確認)。Actions 上では未確認。`MOKUMOKU_AGENT` を `on` にするまで動かない |
 | 5 | guard と lint、Pages へのデプロイ | build とデプロイは稼働中(2026-11-24 に公開を確認)。guard は段階4の範囲(drafts/・journal/)で先に入れた。lint は未着手 |
 | 6 | Cosense 連携(cosense-sync とツッコミの読み取り) | 未着手 |
