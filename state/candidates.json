@@ -1,6 +1,24 @@
 {
-  "updatedAt": "2026-11-24T14:07:17.385Z",
+  "updatedAt": "2026-11-24T22:07:16.239Z",
   "items": [
+    {
+      "feed": "publickey",
+      "priority": 1,
+      "title": "AWS、DynamoDB互換データベースをローカルマシンで構築可能にするオープンソース「ExtendDB」がバージョン1.0に到達",
+      "url": "https://www.publickey1.jp/blog/26/awsdynamodbextenddb10.html",
+      "published": "2026-11-24T15:19:30.000Z",
+      "foundAt": "2026-11-24T22:07:16.239Z",
+      "offered": true
+    },
+    {
+      "feed": "publickey",
+      "priority": 1,
+      "title": "jQuery 4.1正式版がリリース、内部実装をquerySelectorAllに統一でより高速に。jQuery 3.x系最後となるjQuery 3.8も同時リリース",
+      "url": "https://www.publickey1.jp/blog/26/jquery_41queryselectoralljquery_3xjquery_38.html",
+      "published": "2026-11-24T15:15:39.000Z",
+      "foundAt": "2026-11-24T22:07:16.239Z",
+      "offered": true
+    },
     {
       "feed": "publickey",
       "priority": 1,
@@ -62,6 +80,156 @@
       "url": "https://piyolog.hatenadiary.jp/entry/2026/11/20/224814",
       "published": "2026-11-20T13:48:14.000Z",
       "foundAt": "2026-11-24T08:30:24.332Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "Rails: 37signalsのコード品質を支える独自のエンジニアリング戦略（翻訳）｜TechRacho by BPS株式会社",
+      "url": "https://techracho.bpsinc.jp/hachi8833/2026_11_24/161424",
+      "published": "2026-11-24T08:35:39.000Z",
+      "bookmarks": 15,
+      "foundAt": "2026-11-24T22:07:16.239Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "ロシア軍の死者４９万人超か、サイバー攻撃による流出データは「本物」と英報道…「５分に１人」戦死の計算",
+      "url": "https://www.yomiuri.co.jp/world/20261124-GYT1T00383/",
+      "published": "2026-11-24T15:56:25.000Z",
+      "bookmarks": 8,
+      "foundAt": "2026-11-24T22:07:16.239Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "JAXAに不正アクセス、地球観測データの利用者2000人の情報が漏洩 - 日本経済新聞",
+      "url": "https://www.nikkei.com/article/DGXZQOSG244FZ0U6A121C2000000/",
+      "published": "2026-11-24T11:37:35.000Z",
+      "bookmarks": 5,
+      "foundAt": "2026-11-24T22:07:16.239Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "GoogleがAIの性能測定ツール「gBench」をオープンソース化",
+      "url": "https://gigazine.net/news/20261124-google-gbench-benchmarking-framework/",
+      "published": "2026-11-24T03:53:34.000Z",
+      "bookmarks": 5,
+      "foundAt": "2026-11-24T22:07:16.239Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "「AIがリーマン予想を証明したらどう感じるか？」と約1年半にわたって数学者たちに聞いてきたインタビューを振り返る",
+      "url": "https://gigazine.net/news/20261124-riemann-hypothesis-mathematician/",
+      "published": "2026-11-24T11:03:20.000Z",
+      "bookmarks": 15,
+      "foundAt": "2026-11-24T22:07:16.239Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "パスワード、全く自己管理する気がなくほぼ毎回リセットする運用の人が居てびびった→実はむしろこれが正しい運用であることをまだ人類は知らない",
+      "url": "https://togetter.com/li/2774455",
+      "published": "2026-11-24T09:12:32.000Z",
+      "bookmarks": 31,
+      "foundAt": "2026-11-24T22:07:16.239Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "来たる「Windows Server 2028」は既定で32bitアプリを実行できない！ 「WoW64」が削除／必要ならオンデマンド機能として追加可能、マルウェア対策の一環【やじうまの杜】",
+      "url": "https://forest.watch.impress.co.jp/docs/serial/yajiuma/2158861.html",
+      "published": "2026-11-24T12:43:30.000Z",
+      "bookmarks": 11,
+      "foundAt": "2026-11-24T22:07:16.239Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "「コードを書くAI」ではなく「承認するAI」登場、Anthropicが新機能「Claude Ship」提供",
+      "url": "https://japan.cnet.com/article/35255329/",
+      "published": "2026-11-24T06:29:05.000Z",
+      "bookmarks": 8,
+      "foundAt": "2026-11-24T22:07:16.239Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "AWS Sign-In introduces configurable Sign-in duration of up to 90 days - AWS",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/configurable-aws-sign-in-duration/",
+      "published": "2026-11-24T02:13:50.000Z",
+      "bookmarks": 6,
+      "foundAt": "2026-11-24T22:07:16.239Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "TiDB から PostgreSQL へ、本番 DB を書き込みを止めて切り替えた記録",
+      "url": "https://zenn.dev/hirahara/articles/tidb-to-postgresql-cutover",
+      "published": "2026-11-23T14:26:46.000Z",
+      "bookmarks": 10,
+      "foundAt": "2026-11-24T22:07:16.239Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "Chrome版「LINE」、2027年1月26日に終了",
+      "url": "https://k-tai.watch.impress.co.jp/docs/news/2158838.html",
+      "published": "2026-11-24T12:13:49.000Z",
+      "bookmarks": 16,
+      "foundAt": "2026-11-24T22:07:16.239Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "ゲームボーイアドバンスエミュレータをRustで書いた",
+      "url": "https://bokuweb.github.io/undefined/articles/20261103.html",
+      "published": "2026-11-24T02:34:14.000Z",
+      "bookmarks": 18,
+      "foundAt": "2026-11-24T22:07:16.239Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "定番の日本語フォント「M+ FONTS」に新しい一員、「M PLUS 3」がリリース／伝統的なゴシック体の形をモダンな手法でリデザイン、「SIL OFL」で無償利用可",
+      "url": "https://forest.watch.impress.co.jp/docs/news/2158533.html",
+      "published": "2026-11-24T05:38:00.000Z",
+      "bookmarks": 16,
+      "foundAt": "2026-11-24T22:07:16.239Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "エヌビディア株、31％急騰 時価総額151兆円増",
+      "url": "https://www.cnn.co.jp/business/35255312.html",
+      "published": "2026-11-24T00:42:32.000Z",
+      "bookmarks": 8,
+      "foundAt": "2026-11-24T22:07:16.239Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "NDLOCR-Lite ver.2の公開について | NDLラボ",
+      "url": "https://lab.ndl.go.jp/news/2026/2026-11-24/",
+      "published": "2026-11-24T07:53:32.000Z",
+      "bookmarks": 10,
+      "foundAt": "2026-11-24T22:07:16.239Z",
       "offered": true
     },
     {
