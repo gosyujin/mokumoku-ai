@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T13:37:17.491Z",
+  "updatedAt": "2026-11-24T14:07:17.385Z",
   "items": [
     {
       "feed": "publickey",
@@ -62,6 +62,26 @@
       "url": "https://piyolog.hatenadiary.jp/entry/2026/11/20/224814",
       "published": "2026-11-20T13:48:14.000Z",
       "foundAt": "2026-11-24T08:30:24.332Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "当社お客様の情報漏えいに関するお詫びとお知らせ（第2報）:楽天証券",
+      "url": "https://www.rakuten-sec.co.jp/web/info/info20261124-04.html",
+      "published": "2026-11-24T13:06:22.000Z",
+      "bookmarks": 15,
+      "foundAt": "2026-11-24T14:07:17.385Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "1台数億円するのに 手術支援ロボットが使われない | NHKニュース",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261120de78959",
+      "published": "2026-11-24T11:45:42.000Z",
+      "bookmarks": 6,
+      "foundAt": "2026-11-24T14:07:17.385Z",
       "offered": true
     },
     {
