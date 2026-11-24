@@ -6,19 +6,28 @@ on:
   schedule:
     - cron: "22,52 22-23,0-14 * * *" # UTC。JST 7:22〜23:52 相当(保険。主は Mac の launchd)
   workflow_dispatch:
+    inputs:
+      deploy:
+        description: "日記に変更が無くても、サイトを作り直して公開する"
+        type: boolean
+        default: false
 
 concurrency:
   group: heartbeat
   cancel-in-progress: false
 
-permissions:
-  contents: write
+# 権限は job ごとに付ける(エージェントが動く job に Pages の権限を持たせない)
+permissions: {}
 
 jobs:
   beat:
     if: github.repository == 'gosyujin/mokumoku-ai' && vars.MOKUMOKU_PAUSED != 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    permissions:
+      contents: write
+    outputs:
+      deploy: ${{ steps.build.outputs.deploy }}
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v7
@@ -30,3 +39,28 @@ jobs:
           MOKUMOKU_TRIGGER: ${{ github.event_name }}
       # ここに Claude の step が入る(steps.wake.outputs.act == 'true' のときだけ)
       - run: node tools/commit.ts
+      # サイトは毎回作る(数十ミリ秒)。公開中のものと中身が違うときだけ deploy=true になる
+      - id: build
+        run: node tools/build.ts
+        env:
+          FORCE_DEPLOY: ${{ inputs.deploy }}
+      - if: steps.build.outputs.deploy == 'true'
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: _site
+
+  # GITHUB_TOKEN の push は別のワークフローを起動しないので、公開もこのワークフローの中で行う
+  deploy:
+    needs: beat
+    if: needs.beat.outputs.deploy == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5

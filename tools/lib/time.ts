@@ -35,6 +35,12 @@ export function jst(now: Date): JstParts {
   };
 }
 
+/** 2026-11-04 → 2026年11月4日(Cosense のツッコミページの名前と同じ形。ゼロ埋めしない) */
+export function japaneseDate(date: string): string {
+  const [y, m, d] = date.split("-").map(Number);
+  return `${y}年${m}月${d}日`;
+}
+
 export function isActiveHours(now: Date): boolean {
   const m = jst(now).minuteOfDay;
   return m >= ACTIVE_FROM_MIN && m <= ACTIVE_TO_MIN;
