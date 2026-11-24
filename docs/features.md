@@ -13,7 +13,7 @@ README には機能ごとに一行だけ書き、挙動の詳細はここに書�
 | 3 | launchd を登録し、1〜2日、起床の欠落を journal で確認 | 2026-11-24 に登録済み。定時起動は確認済み。欠落が無いかを1〜2日、journal で観察中 |
 | 4 | Claude の step を追加。書き込み先は drafts/ と journal/ のみ | 稼働中(2026-11-24 20:57 の起床で、Actions 上で journal への追記と下書きの作成まで確認)。`MOKUMOKU_AGENT` が `on` の間だけ動く |
 | 5 | guard と lint、Pages へのデプロイ | build とデプロイは稼働中。guard は drafts/・journal/ の範囲で稼働中。lint は実装済み(2026-11-24。手元で確認、Actions 上は未確認)。エージェントが書ける場所(state/・RULES.md・cosense/)の拡大は未着手 |
-| 6 | Cosense 連携(cosense-sync とツッコミの読み取り) | 未着手 |
+| 6 | Cosense 連携(cosense-sync とツッコミの読み取り) | 実装済み(2026-11-24)。読み取りは実際の Cosense で確認。書き込みは、トークンなしの表示だけのモードで確認(実際に送る部分は未確認) |
 | 7 | 人格を決めて SOUL.md に書く | 記入済み(2026-11-24。プロジェクトは mokumoku-ai、書き手は gi-yoza。一人称・性格・文体。名前の由来は書かない)。日記での効き方は段階4以降に確認 |
 
 ## 機能
@@ -49,7 +49,11 @@ journal の1行の例:
 - `dispatch` は launchd(workflow_dispatch)、`schedule` は保険の cron。
 - `⚠間隔超過` は、同じ日のうちに前回から45分を超えて空いた印(起床の欠落)。
 
-未実装: Cosense のツッコミページの更新検知、`state/known.txt` の更新(段階6)。
+Cosense の読み取り(認証なしの公開 API):
+
+- ページ名の一覧から `state/known.txt` を作る(用語ページの名前。ツッコミと、設定・メンバーのページは除く)。
+- 更新のあった「yyyy年M月d日のツッコミ」のページを読み、人間(gosyujin)の行が増えた・変わったときだけ、その行を `state/inbox/ページ名.md` に写して、起床理由「ツッコミ 新着N」にする。エージェント自身の返信で更新されただけなら、理由にしない。
+- 取得に失敗したら、journal の行に `⚠取得失敗` として残し、フィードの処理は続ける。
 
 ### state/ のファイル
 
@@ -60,8 +64,10 @@ journal の1行の例:
 | `candidates.json` | wake | 未読の候補(フィード名・優先度・タイトル・URL・提示済みか) |
 | `questions.md` | エージェント(いまは書けない) | 未知ワード・疑問のキュー |
 | `interests.md` | エージェント(いまは書けない) | 興味リスト |
-| `known.txt` | wake(段階6) | Cosense のページ名一覧 |
-| `inbox/` | wake(段階6) | ツッコミの転記 |
+| `known.txt` | wake | Cosense の用語ページの名前の一覧 |
+| `inbox/` | wake | ツッコミの転記(人間の行だけ) |
+| `cosense-read.json` | wake | ツッコミのページごとの、最後に見た更新時刻と人間の行のダイジェスト |
+| `cosense-sent.json` | cosense-sync | 用語ページのファイルごとの、最後に送った中身のハッシュ |
 
 ### commit(`tools/commit.ts`)
 
@@ -76,10 +82,11 @@ wake が `act=true` を出し、Repository variable `MOKUMOKU_AGENT` が `on` �
 
 - 指示は `ops/agent/prompt.md`。SOUL.md・RULES.md・state/・今日の journal を読んで、行動を1つ選ぶ。
 - 使える道具は Read / Write / Edit / Glob / Grep / WebSearch / WebFetch。コマンドは実行できない。GitHub のトークンは持たない。
-- 読めるのはリポジトリの中だけ(`.git/` を除く)。書けるのは `drafts/` と `journal/` だけ(`ops/agent/settings.json`)。
+- 読めるのはリポジトリの中だけ(`.git/` を除く)。書けるのは `drafts/`・`journal/`・`cosense/pages/`・`cosense/append/` だけ(`ops/agent/settings.json`)。
 - journal には、wake の行の直後に「行動・対象・理由・メモ」を字下げして追記する。
 - 日記の下書きは `drafts/YYYY-MM-DD.md`(1日1ファイル)。front matter は `title` / `date` / `sources` / `terms`、本文は「読んだ記事」「感じたこと」「知らなかったワード」「相談」。
 - `RULES.md` と `state/` は、まだ書けない。知らなかった語やルールの変更案は journal のメモに残る。
+- 用語ページは `cosense/pages/語.txt`、ツッコミへの返信は `cosense/append/yyyy年M月d日のツッコミ.txt` に書く(送るのは cosense-sync)。人間からのツッコミは `state/inbox/` で読む。
 - 日記を公開するときは、下書きを仕上げて front matter に `status: ready` を付ける(検査と移動は lint が行う)。
 - 公開したあと、その日のうちに読んだ別の記事は、翌日の日付の下書きに書く。公開済みの日記の訂正・続きは、追記(`kind: addendum`)として足す。
 - モデルは Opus(`--model opus`)。上限は30ターン・10分。
@@ -90,8 +97,9 @@ wake が `act=true` を出し、Repository variable `MOKUMOKU_AGENT` が `on` �
 
 エージェントの step の後で `git status` を見て、次のどれかがあれば job を失敗させる(後ろの commit が動かないので、エージェントの変更は1つも push されない)。
 
-- `drafts/`・`journal/` の外の変更(追加・変更・削除)
-- `.md` 以外のファイル、通常のファイルでないもの(リンクなど)、200KB を超えるファイル
+- 書いてよい場所(`drafts/`・`journal/`・`cosense/pages/`・`cosense/append/`)の外の変更(追加・変更・削除)
+- 決まった拡張子以外のファイル(`drafts/`・`journal/` は `.md`、`cosense/` は `.txt`)、`cosense/` の下の階層
+- 通常のファイルでないもの(リンクなど)、200KB を超えるファイル
 
 書いてよい場所は `tools/lib/guard.ts` の `AGENT_WRITABLE`。
 
@@ -108,6 +116,19 @@ wake が `act=true` を出し、Repository variable `MOKUMOKU_AGENT` が `on` �
 - 公開済みの日付で `kind: addendum` の無い下書きは不合格(日記の作り直しを追記として足さない)。未来の日付の下書きは公開しない。
 - URL の生存確認: 404・存在しないサイトは不合格。5xx・時間切れは次の起床でやり直し。403・429 は警告だけ出して通す。
 - 関門を通った起床のときだけ動く(稼働時間外・20分未満の回は動かない)。
+
+### cosense-sync(`tools/cosense-sync.ts`)
+
+エージェントが `cosense/` に書いたものを、Cosense のプロジェクト `mokumoku-ai` に送る。組み方の理由は [decisions/2026-11-24-cosense.md](decisions/2026-11-24-cosense.md)。
+
+- `cosense/pages/ページ名.txt`: 用語ページの中身。前回送ったあとに変わったものだけ送る。ページが無ければ作る。あれば、食い違う部分だけを差し替える。
+  差し替える範囲にエージェント以外の行があれば、何も消さず、まだ無い行だけを末尾に足す。
+- `cosense/append/yyyy年M月d日のツッコミ.txt`: ツッコミへの返信。ページの末尾に足し、送ったら消す。ページが無ければ送らない。
+- 送る前の検査: ページ名(設定・メンバーのページなどは不可)、行数と1行の長さ、出典の URL が生きているか。用語ページは、出典の URL が1つは要る。
+- 署名(`[gi-yoza.icon]`)は、送るときに付ける。
+- トークン(`COSENSE_PAT`)は、エージェント用アカウント(satoca)のものでなければ何も送らない。トークンが無いときは、送るつもりの内容を表示するだけ。
+- 1回の実行で送るのは、返信3件・用語ページ3件まで。
+- 結果は journal に `- HH:MM cosense ファイル → 作成した / 更新した / 返信した / 送らなかった: 理由` の行で書く。失敗しても job は止めない(次の起床でもう一度試す)。
 
 ### build(`tools/build.ts`)
 
@@ -126,7 +147,7 @@ wake が `act=true` を出し、Repository variable `MOKUMOKU_AGENT` が `on` �
 
 起動は schedule(毎時22分・52分)と workflow_dispatch だけ。Repository variable `MOKUMOKU_PAUSED` を `true` にすると全体が止まる。`MOKUMOKU_AGENT` が `on` でなければ、エージェントだけが止まる(wake と記録は続く)。
 
-- `beat` job: wake → commit → エージェント → guard → lint → commit → build。`deploy=true` のときだけサイトを artifact として上げる。
+- `beat` job: wake → commit → エージェント → guard → lint → cosense-sync → commit → build。`deploy=true` のときだけサイトを artifact として上げる。
 - `deploy` job: `beat` が `deploy=true` を出したときだけ GitHub Pages に公開する。
 - 手動で公開し直すときは、実行時に `deploy` を有効にする(中身が同じでも公開する)。wake の関門(稼働時間外・20分未満)に関係なく動く。
 

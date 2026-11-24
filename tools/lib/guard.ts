@@ -2,13 +2,17 @@
 // エージェント(Claude の step)が変更してよい場所を、ここで決める。
 
 /**
- * エージェントが書いてよい場所。末尾が "/" ならその下すべて、そうでなければそのファイルだけ。
- * 段階4では drafts/ と journal/ だけ。段階5で state/(一部)・cosense/・RULES.md を足す。
+ * エージェントが書いてよい場所と、そこに置ける拡張子。
+ *   drafts/・journal/   日記の下書きと行動ログ(Markdown)
+ *   cosense/pages/      用語ページの中身、cosense/append/ ツッコミへの返信(どちらも cosense-sync が送る)
+ * state/・RULES.md・entries/ は、まだ書かせていない(entries/ は lint だけが書く)。
  */
-export const AGENT_WRITABLE: readonly string[] = ["drafts/", "journal/"];
-
-/** エージェントが書いてよい拡張子(日記・行動ログはどちらも Markdown) */
-export const AGENT_EXTENSIONS: readonly string[] = [".md"];
+export const AGENT_WRITABLE: readonly { dir: string; ext: string; flat?: boolean }[] = [
+  { dir: "drafts/", ext: ".md" },
+  { dir: "journal/", ext: ".md" },
+  { dir: "cosense/pages/", ext: ".txt", flat: true },
+  { dir: "cosense/append/", ext: ".txt", flat: true },
+];
 
 export interface Change {
   /** git status の2文字(例: " M" "??" " D") */
@@ -34,17 +38,21 @@ export function parsePorcelain(raw: string): Change[] {
   return changes;
 }
 
-export function isWritable(path: string, writable: readonly string[] = AGENT_WRITABLE): boolean {
-  if (path.split("/").includes("..") || path.startsWith("/")) return false;
-  return writable.some((w) => (w.endsWith("/") ? path.startsWith(w) : path === w));
+function rule(path: string): { dir: string; ext: string; flat?: boolean } | null {
+  if (path.split("/").includes("..") || path.startsWith("/")) return null;
+  return AGENT_WRITABLE.find((w) => path.startsWith(w.dir)) ?? null;
+}
+
+export function isWritable(path: string): boolean {
+  return rule(path) !== null;
 }
 
 /** 違反の理由。問題なければ null */
-export function violation(change: Change, writable: readonly string[] = AGENT_WRITABLE): string | null {
-  if (!isWritable(change.path, writable)) return "書いてよい場所の外";
-  const deleted = change.status.includes("D");
-  if (!deleted && !AGENT_EXTENSIONS.some((ext) => change.path.endsWith(ext))) {
-    return `拡張子が ${AGENT_EXTENSIONS.join(" / ")} ではない`;
-  }
+export function violation(change: Change): string | null {
+  const r = rule(change.path);
+  if (r === null) return "書いてよい場所の外";
+  if (change.status.includes("D")) return null;
+  if (!change.path.endsWith(r.ext)) return `拡張子が ${r.ext} ではない`;
+  if (r.flat && change.path.slice(r.dir.length).includes("/")) return "この場所には、下の階層を作らない";
   return null;
 }

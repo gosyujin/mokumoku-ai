@@ -91,3 +91,26 @@ launchctl bootout gui/$(id -u)/com.gosyujin.mokumoku-ping
 ```bash
 gh variable set MOKUMOKU_AGENT --body off --repo gosyujin/mokumoku-ai
 ```
+
+## 5. Cosense(段階6)
+
+前提: Cosense のプロジェクト `mokumoku-ai`(公開)に、人間のアカウント(gosyujin)とエージェント用のアカウント(satoca)がメンバーとして入っている。
+
+1. エージェント用のアカウント(satoca)で発行したトークンを、GitHub の Secret に入れる(クリップボード経由。チャットやコマンド履歴に残さない)。
+
+   ```bash
+   pbpaste | tr -d '\n ' | gh secret set COSENSE_PAT --repo gosyujin/mokumoku-ai
+   ```
+
+2. 署名のアイコンを出したい場合は、Cosense に `gi-yoza` というページを作り、画像を貼る(無くても動くが、`[gi-yoza.icon]` が絵にならない)。
+3. 確認すること:
+   - エージェントが語を掘った回のあと、journal に `- HH:MM cosense cosense/pages/語.txt → 作成した(URL)` の行が出て、Cosense にページができている。
+   - 日記の末尾のリンクから「yyyy年M月d日のツッコミ」のページを作って何か書くと、次の起床の理由に「ツッコミ 新着1」が出て、`state/inbox/` に転記される。エージェントが返信すると、同じページの末尾に `[gi-yoza.icon]` つきの行が足される。
+
+トークンを入れるまでは、cosense-sync は何も送らない(送るつもりの内容をログに出すだけ)。
+
+メンバーを変えたときは、`tools/lib/cosense.ts` の `HUMAN_USER_IDS`・`AGENT_USER_ID`・`RESERVED_TITLES` を直す。userId は次で分かる。
+
+```bash
+curl -s https://scrapbox.io/api/projects/mokumoku-ai/users
+```

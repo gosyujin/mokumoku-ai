@@ -29,7 +29,7 @@ export interface Candidate {
 }
 
 export interface Reason {
-  kind: "feed" | "questions" | "diary";
+  kind: "tsukkomi" | "feed" | "questions" | "diary";
   detail: string;
 }
 
@@ -92,8 +92,12 @@ export function buildReasons(input: {
   questions: number;
   diaryExists: boolean;
   now: Date;
+  /** 人間の行が増えた・変わったツッコミページの数(Cosense) */
+  tsukkomi?: number;
 }): Reason[] {
   const reasons: Reason[] = [];
+  // ツッコミは人間からの指摘なので、最初に挙げる。ページ名や中身は理由に入れない(外部のテキストを行動ログに混ぜない)
+  if ((input.tsukkomi ?? 0) > 0) reasons.push({ kind: "tsukkomi", detail: `ツッコミ 新着${input.tsukkomi}` });
   const parts: string[] = [];
   for (const f of input.feeds) {
     const n = input.candidates.filter((c) => c.feed === f.id && !c.offered).length;

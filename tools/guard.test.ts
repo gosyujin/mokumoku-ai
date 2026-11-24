@@ -24,16 +24,22 @@ test("parsePorcelain: 空白や日本語を含むパス、改名の元のパス�
   ]);
 });
 
-test("isWritable: drafts/ と journal/ の下だけ", () => {
+test("isWritable: drafts/・journal/・cosense/pages/・cosense/append/ の下だけ", () => {
   assert.equal(isWritable("drafts/2026-11-24.md"), true);
   assert.equal(isWritable("journal/2026-11-24.md"), true);
   assert.equal(isWritable("drafts/sub/a.md"), true);
+  assert.equal(isWritable("cosense/pages/eBPF.txt"), true);
+  assert.equal(isWritable("cosense/append/2026年11月24日のツッコミ.txt"), true);
   for (const path of [
     "SOUL.md",
     "RULES.md",
     "CLAUDE.md",
     "state/cursor.json",
     "state/questions.md",
+    "state/inbox/2026年11月24日のツッコミ.md",
+    "state/cosense-sent.json",
+    "cosense/other.txt",
+    "cosense/.gitkeep",
     "entries/2026-11-24.md",
     "tools/wake.ts",
     "site/style.css",
@@ -57,4 +63,14 @@ test("violation: 場所と拡張子を見る。削除は拡張子を問わない
   assert.match(violation({ status: "??", path: "journal/data.json" }) ?? "", /拡張子/);
   assert.equal(violation({ status: " D", path: "drafts/.gitkeep" }), null);
   assert.match(violation({ status: " D", path: "tools/wake.ts" }) ?? "", /場所の外/);
+});
+
+test("violation: cosense/ は .txt だけ。下の階層は作らせない", () => {
+  assert.equal(violation({ status: "??", path: "cosense/pages/eBPF.txt" }), null);
+  assert.equal(violation({ status: " M", path: "cosense/append/2026年11月24日のツッコミ.txt" }), null);
+  assert.match(violation({ status: "??", path: "cosense/pages/eBPF.md" }) ?? "", /拡張子/);
+  assert.match(violation({ status: "??", path: "cosense/pages/sub/eBPF.txt" }) ?? "", /下の階層/);
+  assert.match(violation({ status: "??", path: "cosense/eBPF.txt" }) ?? "", /場所の外/);
+  assert.match(violation({ status: "??", path: "drafts/note.txt" }) ?? "", /拡張子/);
+  assert.equal(violation({ status: " D", path: "cosense/append/2026年11月24日のツッコミ.txt" }), null);
 });

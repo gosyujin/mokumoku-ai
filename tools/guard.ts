@@ -35,7 +35,7 @@ for (const change of changes) {
   if (reason !== null) problems.push(`${change.status} ${change.path} — ${reason}`);
 }
 
-console.log(`エージェントの変更: ${changes.length} 件(書いてよい場所: ${AGENT_WRITABLE.join(" ")})`);
+console.log(`エージェントの変更: ${changes.length} 件(書いてよい場所: ${AGENT_WRITABLE.map((w) => w.dir).join(" ")})`);
 for (const change of changes) console.log(`  ${change.status} ${change.path}`);
 
 if (problems.length > 0) {

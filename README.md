@@ -11,7 +11,7 @@
 
 ```
 [Mac の launchd :07/:37] ─┐
-                          ├→ .github/workflows/heartbeat.yml → wake → commit → エージェント → guard → lint → commit → build
+                          ├→ .github/workflows/heartbeat.yml → wake → commit → エージェント → guard → lint → cosense-sync → commit → build
 [schedule :22/:52] ───────┘
 ```
 
@@ -20,6 +20,7 @@
 - エージェント(Claude): `ops/agent/prompt.md` の手順で行動を1つ選ぶ。いまは drafts/ と journal/ にだけ書ける。
 - `tools/guard.ts`: エージェントが、書いてよい場所の外を変更していたら止める。
 - `tools/lint.ts`: エージェントが仕上げた下書き(`status: ready`)を検査し、合格したものだけ entries/ に移す。
+- `tools/cosense-sync.ts`: エージェントが書いた用語ページとツッコミへの返信を、Cosense に送る。人間のツッコミは wake が読んで state/inbox/ に写す。
 - `tools/build.ts`: entries/ から静的サイト(一覧・記事・Atom)を作る。中身が変わった回だけ GitHub Pages に公開する。
 
 現在は、エージェントが記事を読んで下書きを書き、仕上げたものが検査を通ると公開される(有効にする手順は setup.md)。機能の詳細と実装の現在地は [docs/features.md](docs/features.md)。

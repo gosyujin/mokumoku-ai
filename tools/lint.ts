@@ -10,77 +10,33 @@
 //   MOKUMOKU_NOW    現在時刻を差し替える(動作確認用。ISO 8601)
 //   MOKUMOKU_ROOT   読み書きする場所を差し替える(動作確認用)
 
-import { appendFileSync, existsSync, mkdirSync, readdirSync, readFileSync, unlinkSync, writeFileSync } from "node:fs";
-import { dirname, join } from "node:path";
+import { existsSync, mkdirSync, readdirSync, readFileSync, unlinkSync, writeFileSync } from "node:fs";
+import { join } from "node:path";
 import process from "node:process";
 
-import { USER_AGENT } from "./lib/feed.ts";
+import { appendJournalOnce } from "./lib/journalfile.ts";
+import { linkProblems } from "./lib/linkcheck.ts";
 import {
   addendumProblems,
   applyAddendum,
-  classifyStatus,
   isAddendum,
   isReady,
   lintLine,
-  lintLineKey,
   staticProblems,
   toEntry,
   urlsToCheck,
 } from "./lib/lint.ts";
-import type { LinkVerdict } from "./lib/lint.ts";
 import { splitFrontMatter } from "./lib/markdown.ts";
 import { jst } from "./lib/time.ts";
 
 /** 1回の実行で公開する日記・足す追記の上限(それぞれ。まとめて大量に公開されないようにする) */
 const MAX_PER_RUN = 1;
-const FETCH_TIMEOUT_MS = 15000;
 
 const ROOT = process.env.MOKUMOKU_ROOT ?? join(import.meta.dirname ?? ".", "..");
 const path = (...parts: string[]) => join(ROOT, ...parts);
 
-/** URL が生きているかを GET で確かめる。本文は読まない */
-async function checkUrl(url: string): Promise<{ verdict: LinkVerdict; detail: string }> {
-  try {
-    const res = await fetch(url, {
-      headers: { "User-Agent": USER_AGENT, Accept: "text/html,*/*;q=0.8" },
-      redirect: "follow",
-      signal: AbortSignal.timeout(FETCH_TIMEOUT_MS),
-    });
-    await res.body?.cancel();
-    return { verdict: classifyStatus(res.status), detail: String(res.status) };
-  } catch (e) {
-    // 名前が引けないのは、存在しないサイト。それ以外(時間切れ・接続の失敗)は一時的かもしれない
-    const code = String((e as { cause?: { code?: unknown } }).cause?.code ?? "");
-    const message = e instanceof Error ? e.message : String(e);
-    if (code === "ENOTFOUND" || /ENOTFOUND|dns error|failed to lookup/i.test(message)) {
-      return { verdict: "dead", detail: "サイトが見つからない" };
-    }
-    return { verdict: "retry", detail: "取得できなかった" };
-  }
-}
-
-async function linkProblems(source: string): Promise<string[]> {
-  const problems: string[] = [];
-  for (const url of urlsToCheck(source)) {
-    const { verdict, detail } = await checkUrl(url);
-    if (verdict === "dead") problems.push(`出典の URL が生きていない(${detail}): ${url}`);
-    else if (verdict === "retry") problems.push(`出典の URL を確かめられなかった(${detail})。次の起床でもう一度試す: ${url}`);
-    else if (verdict === "blocked") console.warn(`  警告: 機械からの取得を断られた(${detail})。あるものとして通す: ${url}`);
-  }
-  return problems;
-}
-
 function writeJournal(today: string, line: string): void {
-  const file = path("journal", `${today}.md`);
-  mkdirSync(dirname(file), { recursive: true });
-  if (!existsSync(file)) writeFileSync(file, `# ${today} の行動ログ\n\n`);
-  const existing = readFileSync(file, "utf8").split("\n").map(lintLineKey);
-  if (existing.includes(lintLineKey(line))) {
-    console.log("  journal には同じ結果がすでにある。書かない");
-    return;
-  }
-  const text = readFileSync(file, "utf8");
-  appendFileSync(file, (text.endsWith("\n") ? "" : "\n") + line + "\n");
+  if (!appendJournalOnce(ROOT, today, line)) console.log("  journal には同じ結果がすでにある。書かない");
 }
 
 async function main(): Promise<void> {
@@ -124,7 +80,7 @@ async function main(): Promise<void> {
       } else {
         const input = { fileDate, source, today: today.date };
         problems = addendum ? addendumProblems(input) : staticProblems(input);
-        if (problems.length === 0) problems = await linkProblems(source);
+        if (problems.length === 0) problems = await linkProblems(urlsToCheck(source));
       }
     } catch (e) {
       console.error(e);

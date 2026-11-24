@@ -81,6 +81,12 @@ jobs:
       # guard の後に置く(guard が見るのはエージェントの変更だけにする)。秘密情報は渡さない
       - if: steps.wake.outputs.beat == 'true'
         run: node tools/lint.ts
+      # エージェントが cosense/ に書いた用語ページと返信を、Cosense に送る。
+      # Cosense のトークンを持つのは、この step だけ。書き込み先のプロジェクトはコードの中の定数で固定している
+      - if: steps.wake.outputs.beat == 'true'
+        run: node tools/cosense-sync.ts
+        env:
+          COSENSE_PAT: ${{ secrets.COSENSE_PAT }}
       - run: node tools/commit.ts agent
         env:
           GITHUB_TOKEN: ${{ github.token }}

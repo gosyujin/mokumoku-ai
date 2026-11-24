@@ -23,6 +23,11 @@
 - **lint は「AI が書いた旨の署名」を本文に求めない。** 署名は `tools/build.ts` が記事の冒頭とフッターに入れる。build からその表示を消すなら、本文に書かせる形に戻す必要がある。
 - **lint の step は guard の後、2回目の commit の前に置く。** guard より前に置くと、lint が書いた `entries/` を guard が違反と判定する。lint の step に秘密情報を渡さない(下書きに書かれた URL を取りに行くため)。
 - **lint は、公開の Web の URL だけを取りに行く。** IP アドレス直書き・localhost・ユーザー名付きの URL は、取りに行かずに不合格にする(`tools/lib/lint.ts` の `isPublicWebUrl`)。
+- **Cosense に書き込む URL は、`tools/lib/cosense.ts` の `COSENSE_ORIGIN` と `COSENSE_PROJECT` からしか作らない。** トークンは流用しているアカウントのもので、ほかのプロジェクトにも書ける。ページ名やプロジェクト名を、エージェントが書いた文字列から URL に組み立てない(ページ名は本文の1行目として送るだけ)。
+- **`COSENSE_PAT` は cosense-sync の step の `env` にだけ渡す。** トークンは `x-personal-access-token` ヘッダーで送り、転送(redirect)は追わない(別の場所にトークンが付いていかないようにする)。
+- **ツッコミとして採用するのは、`HUMAN_USER_IDS` の行だけ。** 「エージェント以外」ではなく、人間のアカウントの許可リストで絞る。inbox の中身はエージェントへの指摘として扱われるので、ここが信頼の境目になる。
+- **cosense-sync は、エージェント以外の行を消さない・書き換えない。** 差し替える範囲に他人の行があれば、末尾に足すだけにする(`planPage`)。設定・メンバーのページ(`RESERVED_TITLES`)には書かない。
+- **cosense-sync は失敗しても終了コードを 0 にする。** 止めると、同じ起床の日記や行動ログが commit されない。失敗は journal の `cosense` の行で分かる。
 - **Claude の step のモデルは `--model opus` で Opus に固定している。** 外すと契約の既定(2026-11-24 時点では claude-sonnet-5-5)になる。`opus` は別名で、新しい Opus が出るとそちらに切り替わる(2026-11-24 時点では claude-opus-5-5)。版まで固定するなら、モデルの正式な名前を書く。
 - **権限は job ごとに付ける。** エージェントが動く `beat` job は `contents: write` だけ、`deploy` job は `pages: write` と `id-token: write` だけ。ワークフロー全体の `permissions` に足さない。
 - **デプロイするかどうかは「公開中のサイトの `build.json` と、今回の出力のハッシュが違うか」で決める。** コミットの差分で決めると、人間が push したサイト雛形の変更を拾えないため。`build.json` の `builtAt` はハッシュに含めない(含めると毎回デプロイになる)。Atom の日時も日記の日付から作り、ビルド時刻を使わない。
@@ -31,7 +36,8 @@
 
 ## 段階4以降で決めること
 
-- Cosense では、プロジェクトが `/mokumoku-ai`、書き手が gi-yoza。エージェントが書く行には `[gi-yoza.icon]` を付ける想定(段階6)。アイコンを出すには、プロジェクト内に画像つきの `gi-yoza` ページが要る(人間が用意する)。
+- `[gi-yoza.icon]` を表示するには、Cosense のプロジェクトに、画像つきの `gi-yoza` ページが要る(人間が用意する。エージェントには書かせていない)。無くても送れるが、アイコンは出ない。
+- エージェントは `RULES.md` を書けないので、「ツッコミで直されたらルールに反映する」(RULES.md)は、まだ返信と journal のメモまで。
 - guard の禁止側に `site/` を入れる(サイト雛形をエージェントに書き換えさせない)。
 - guard は `state/` 全体を許可すると、エージェントが `cursor.json` の起動回数や `seen.json` を書き換えられる。`cursor.json` `seen.json` `known.txt` `inbox/` は禁止側に入れる想定。
 - エージェントは、いまは `state/` を書けない。`questions.md` に語を足せないので、疑問キューを理由にした起床はまだ起きない。`candidates.json` の「読んだかどうか」も更新できず、既読は journal から読み取っている。
@@ -48,6 +54,8 @@
 - 1日の利用枠への影響。1回の起動は、claude-sonnet-5-5 で12ターン・約35秒・概算 0.10 ドル相当(Actions)、claude-opus-5-5 で16ターン・約70秒・概算 0.34 ドル相当(Actions)だった。契約の枠が1日でどれだけ減るかは見ていない。
 - lint の Actions 上での動作と、エージェント自身による公開。最初の日記(2026-11-24 付け)は、人間が印を付けて lint を手元から実行した。`entries/` が増えたあとの build とデプロイは Actions 上で確認済み。エージェントが `status: ready` を付ける → Actions 上の lint が合格させる、という部分はまだ動いていない。
 - 追記(`kind: addendum`)と、公開後に翌日の下書きへ書く動き。lint の追記は手元で確かめたが、エージェントが指示どおりに書き分けるかは見ていない。
+- Cosense への実際の書き込み(preview → submit)。トークンを手元で扱えないので、送らずに計画を表示するモードでしか確かめていない。用語ページの作成・更新、ツッコミへの返信、トークンの持ち主の確認が、Actions 上で初めて動く。
+- 実際のツッコミのページの読み取り。プロジェクトにまだツッコミのページが無い。ページ一覧と `known.txt` は、実際の Cosense で確かめた。
 - 単体テスト(`node --test`)の Node.js での実行。手元の Node.js は 20 のため、Deno 1.41 で代用した。
 - schedule(cron)からの起動。手動実行(workflow_dispatch)だけ確認した。
 - `⚠間隔超過` が Actions 上の journal に出ること(まだ45分を超える空きが起きていない)。

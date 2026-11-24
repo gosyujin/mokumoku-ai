@@ -3,6 +3,8 @@
     "allow": [
       "Edit(./drafts/**)",
       "Edit(./journal/**)",
+      "Edit(./cosense/pages/**)",
+      "Edit(./cosense/append/**)",
       "WebFetch",
       "WebSearch"
     ],

@@ -1,0 +1,219 @@
+// Cosense(Scrapbox)連携の判定部分(ファイルもネットワークも触らない純粋な関数)。
+//   - 読み取り: ツッコミページから、人間が書いた行だけを取り出す
+//   - 書き込み: エージェントが望む中身と、いまのページとの差分を作る(他人が書いた行は変えない)
+
+import { extractUrls, isPublicWebUrl } from "./lint.ts";
+
+export const COSENSE_ORIGIN = "https://scrapbox.io";
+/** 書き込み先のプロジェクト。ここ以外には書かない(URL はこの定数からしか作らない) */
+export const COSENSE_PROJECT = "mokumoku-ai";
+
+/** 人間のアカウント(gosyujin)。この userId の行だけを、ツッコミとしてエージェントに渡す */
+export const HUMAN_USER_IDS: readonly string[] = ["5d3666e602575b00172c53d8"];
+/** エージェント用のアカウント(satoca)。書き込みに使うトークンは、このアカウントのものでなければならない */
+export const AGENT_USER_ID = "60921a9653ca71001cb497d3";
+/** エージェントの署名(プロジェクトは mokumoku-ai、書き手は gi-yoza) */
+export const AGENT_ICON = "[gi-yoza.icon]";
+
+export const TSUKKOMI_TITLE = /^\d{4}年\d{1,2}月\d{1,2}日のツッコミ$/;
+
+/** エージェントに書かせないページ(設定・メンバーのページ・署名のアイコン) */
+export const RESERVED_TITLES: readonly string[] = ["settings", "favicon", "gosyujin", "gosyujin_2", "satoca", "gi-yoza"];
+
+export const TITLE_MAX_CHARS = 80;
+export const PAGE_MAX_LINES = 300;
+export const APPEND_MAX_LINES = 50;
+export const LINE_MAX_CHARS = 1000;
+
+export interface Line {
+  id: string;
+  text: string;
+  userId: string;
+  /** 最後に変わった時刻(UNIX 秒) */
+  updated?: number;
+}
+
+export interface Page {
+  id: string;
+  title: string;
+  updated: number;
+  lines: Line[];
+}
+
+/** サーバーに送る変更(cosense-cli の previewEdit と同じ形) */
+export type Change =
+  | { _insert: string; lines: { id: string; text: string } }
+  | { _delete: string };
+
+export function isTsukkomiTitle(title: string): boolean {
+  return TSUKKOMI_TITLE.test(title);
+}
+
+/** ページの URL の末尾(空白は _ にする。Cosense の慣習) */
+export function encodeTitle(title: string): string {
+  return encodeURIComponent(title.replace(/ /g, "_"));
+}
+
+export function pageUrl(title: string): string {
+  return `${COSENSE_ORIGIN}/${COSENSE_PROJECT}/${encodeTitle(title)}`;
+}
+
+/**
+ * ファイル名(例: "eBPF.txt")からページ名を決める。使えない名前なら理由を返す。
+ * ページ名はエージェントが決めるので、設定ページや他人のページを指せないようにする。
+ */
+export function titleFromFileName(name: string): { title: string } | { problem: string } {
+  if (!name.endsWith(".txt")) return { problem: "拡張子が .txt ではない" };
+  const title = name.slice(0, -4).normalize("NFC").trim();
+  if (title === "") return { problem: "ページ名が空" };
+  if (title.length > TITLE_MAX_CHARS) return { problem: `ページ名が長い(${TITLE_MAX_CHARS}文字まで)` };
+  if (/[\/\\\[\]#\n\r\t]/.test(title) || /^\.+/.test(title)) return { problem: "ページ名に使えない文字がある(/ \\ [ ] # や、先頭の .)" };
+  // deno-lint-ignore no-control-regex
+  if (/[\u0000-\u001f\u007f]/.test(title)) return { problem: "ページ名に制御文字がある" };
+  const lower = title.toLowerCase().replace(/ /g, "_");
+  if (RESERVED_TITLES.some((r) => r.toLowerCase() === lower)) return { problem: `「${title}」は書き込めないページ` };
+  return { title };
+}
+
+/** ファイルの中身を行に分ける。末尾の空行は落とす */
+export function toLines(text: string): string[] {
+  const lines = text.replace(/\r\n?/g, "\n").split("\n").map((l) => l.replace(/\s+$/, ""));
+  while (lines.length > 0 && lines[lines.length - 1] === "") lines.pop();
+  return lines;
+}
+
+function lineProblems(lines: readonly string[], max: number): string[] {
+  const problems: string[] = [];
+  if (lines.length === 0) problems.push("中身が空");
+  if (lines.length > max) problems.push(`行が多い(${lines.length}行。${max}行まで)`);
+  if (lines.some((l) => l.length > LINE_MAX_CHARS)) problems.push(`長すぎる行がある(1行${LINE_MAX_CHARS}文字まで)`);
+  for (const url of extractUrls(lines.join("\n"))) {
+    if (!isPublicWebUrl(url)) problems.push(`公開の Web の URL でないものがある: ${url}`);
+  }
+  return problems;
+}
+
+/** 用語ページ(cosense/pages/*.txt)の検査。出典の URL が1つは要る */
+export function pageProblems(title: string, body: readonly string[]): string[] {
+  const problems = lineProblems(body, PAGE_MAX_LINES);
+  if (isTsukkomiTitle(title)) problems.push("ツッコミのページは pages/ では書かない(返信は append/ に書く)");
+  if (body.length > 0 && body[0].trim() === title) problems.push("1行目にページ名を書かない(ページ名はファイル名で決まる)");
+  if (extractUrls(body.join("\n")).length === 0) problems.push("出典の URL が1つも無い");
+  return problems;
+}
+
+/** 返信(cosense/append/*.txt)の検査。書けるのはツッコミのページだけ */
+export function appendProblems(title: string, lines: readonly string[]): string[] {
+  const problems = lineProblems(lines, APPEND_MAX_LINES);
+  if (!isTsukkomiTitle(title)) problems.push("append/ で書けるのは「yyyy年M月d日のツッコミ」のページだけ");
+  return problems;
+}
+
+/** 用語ページの中身に、署名が無ければ最後に足す */
+export function withSignature(body: readonly string[]): string[] {
+  if (body.some((l) => l.includes(AGENT_ICON))) return [...body];
+  return [...body, "", AGENT_ICON];
+}
+
+/** 返信の先頭の行に、署名が無ければ付ける(字下げは保つ) */
+export function signReply(lines: readonly string[]): string[] {
+  if (lines.length === 0 || lines.some((l) => l.includes(AGENT_ICON))) return [...lines];
+  const indent = /^\s*/.exec(lines[0])?.[0] ?? "";
+  return [`${indent}${AGENT_ICON} ${lines[0].slice(indent.length)}`, ...lines.slice(1)];
+}
+
+/** 末尾に足すときの位置。ページの最後に空行が続いていれば、その空行の手前に入れる */
+function tailAnchor(lines: readonly Line[]): string {
+  let i = lines.length;
+  while (i > 1 && lines[i - 1].text.trim() === "") i--;
+  return i < lines.length ? lines[i].id : "_end";
+}
+
+export type PagePlan =
+  | { kind: "create"; lines: string[] }
+  | { kind: "noop" }
+  | { kind: "update"; mode: "replace" | "append"; changes: Change[] };
+
+/**
+ * 用語ページを、エージェントが望む中身にするための変更を作る。
+ *   - ページが無ければ作る。
+ *   - あれば、先頭と末尾の一致する部分は残し、食い違う真ん中だけを差し替える。
+ *   - 差し替える範囲に他人が書いた行があれば、何も消さず、まだページに無い行だけを末尾に足す。
+ * 1行目(ページ名の行)は変えない。
+ */
+export function planPage(current: Page | null, title: string, body: readonly string[], newId: () => string): PagePlan {
+  if (current === null) return { kind: "create", lines: [title, ...body] };
+
+  // 比較は、いまのページの末尾の空行を除いて行う(空行そのものは触らない)
+  let end = current.lines.length;
+  while (end > 1 && current.lines[end - 1].text.trim() === "") end--;
+  const cur = current.lines.slice(1, end);
+  const want = [...body];
+
+  let p = 0;
+  while (p < cur.length && p < want.length && cur[p].text === want[p]) p++;
+  let s = 0;
+  while (s < cur.length - p && s < want.length - p && cur[cur.length - 1 - s].text === want[want.length - 1 - s]) s++;
+  const midOld = cur.slice(p, cur.length - s);
+  const midNew = want.slice(p, want.length - s);
+  if (midOld.length === 0 && midNew.length === 0) return { kind: "noop" };
+
+  if (midOld.every((l) => l.userId === AGENT_USER_ID)) {
+    const anchor = s > 0 ? cur[cur.length - s].id : tailAnchor(current.lines);
+    const changes: Change[] = [
+      ...midNew.map((text) => ({ _insert: anchor, lines: { id: newId(), text } })),
+      ...midOld.map((l) => ({ _delete: l.id })),
+    ];
+    return { kind: "update", mode: "replace", changes };
+  }
+
+  // 他人の行に触れる差し替えはしない。まだ無い行だけを末尾に足す
+  const have = new Set(current.lines.map((l) => l.text));
+  const missing = want.filter((text) => text.trim() !== "" && !have.has(text));
+  if (missing.length === 0) return { kind: "noop" };
+  const anchor = tailAnchor(current.lines);
+  return { kind: "update", mode: "append", changes: missing.map((text) => ({ _insert: anchor, lines: { id: newId(), text } })) };
+}
+
+/** ツッコミのページの末尾に、返信の行を足す変更を作る */
+export function planAppend(current: Page, lines: readonly string[], newId: () => string): Change[] {
+  const anchor = tailAnchor(current.lines);
+  return signReply(lines).map((text) => ({ _insert: anchor, lines: { id: newId(), text } }));
+}
+
+/** 人間が書いた行(ページ名の行と空行は除く) */
+export function humanLines(page: Page): Line[] {
+  return page.lines.slice(1).filter((l) => HUMAN_USER_IDS.includes(l.userId) && l.text.trim() !== "");
+}
+
+/** 人間の行が増えた・変わったかを比べるための文字列(行の id と中身) */
+export function humanDigestSource(page: Page): string {
+  return humanLines(page).map((l) => `${l.id}\t${l.text}`).join("\n");
+}
+
+/**
+ * state/inbox/ に書く転記。人間が書いた行だけを、順番と字下げを保って写す。
+ * since より後に変わった行には ★ を付ける(since が null なら全部)。
+ */
+export function inboxText(page: Page, since: number | null, fetchedAt: string): string {
+  const lines = humanLines(page);
+  const mark = (l: Line) => (since === null || (l.updated ?? 0) > since ? "★" : " ");
+  return [
+    `# ${page.title}`,
+    "",
+    `- ページ: ${pageUrl(page.title)}`,
+    `- 転記した時刻: ${fetchedAt}`,
+    "- 人間(gosyujin)が書いた行だけを写している。★ は、前回の転記のあとに増えた・変わった行。",
+    "- このファイルは wake が書き直す。返信は cosense/append/ に書く。",
+    "",
+    "```",
+    ...lines.map((l) => `${mark(l)} ${l.text}`),
+    "```",
+    "",
+  ].join("\n");
+}
+
+/** journal に書く1行 */
+export function syncLine(hhmm: string, file: string, result: string): string {
+  return `- ${hhmm} cosense ${file} → ${result}`;
+}

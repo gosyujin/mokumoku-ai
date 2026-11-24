@@ -28,6 +28,8 @@ import {
 import type { Candidate, Reason } from "./lib/core.ts";
 import { FEEDS, fetchFeed } from "./lib/feed.ts";
 import type { FeedCache } from "./lib/feed.ts";
+import { updateFromCosense } from "./lib/cosenseInbox.ts";
+import type { CosenseReadState } from "./lib/cosenseInbox.ts";
 import { gate, jst } from "./lib/time.ts";
 
 interface Cursor {
@@ -134,6 +136,21 @@ async function main(): Promise<void> {
   }
   candidates = pruneCandidates(candidates, now);
 
+  // --- Cosense: ページ名の一覧(known.txt)と、ツッコミの転記(inbox/)。認証なしの公開 API だけを使う
+  const cosenseFile = path("state", "cosense-read.json");
+  let cosense = readJson<CosenseReadState>(cosenseFile, { tsukkomi: {} });
+  let tsukkomi = 0;
+  try {
+    const res = await updateFromCosense(ROOT, cosense, `${today.date} ${today.hhmm}`);
+    cosense = res.state;
+    tsukkomi = res.fresh.length;
+    console.log(`Cosense: 用語ページ${res.known}件、ツッコミの新着${tsukkomi}件`);
+  } catch (e) {
+    const message = e instanceof Error ? e.message : String(e);
+    errors.push(`Cosense(${message.slice(0, 60)})`);
+    console.warn(`Cosense: 取得失敗 ${message}`);
+  }
+
   // --- 起床理由と判定
   const questionsFile = path("state", "questions.md");
   const questions = existsSync(questionsFile) ? countQuestions(readFileSync(questionsFile, "utf8")) : 0;
@@ -143,6 +160,7 @@ async function main(): Promise<void> {
     questions,
     diaryExists: existsSync(path("entries", `${today.date}.md`)),
     now,
+    tsukkomi,
   });
   const llmToday = prev.llm?.date === today.date ? (prev.llm.count ?? 0) : 0;
   const decision = decide(reasons, llmToday);
@@ -150,6 +168,7 @@ async function main(): Promise<void> {
 
   // --- 記録
   writeJson(seenFile, seen);
+  writeJson(cosenseFile, cosense);
   writeJson(candidatesFile, { updatedAt: now.toISOString(), items: candidates } satisfies CandidatesFile);
   writeJson(cursorFile, {
     lastBeat: now.toISOString(),

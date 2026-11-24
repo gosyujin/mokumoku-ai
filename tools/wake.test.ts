@@ -184,3 +184,9 @@ test("renderMarkdown: 見出しは1段下げ、リスト・引用・コードを
     ].join("\n"),
   );
 });
+
+test("buildReasons: ツッコミの新着は最初の理由になる。ページ名は入れない", () => {
+  const reasons = buildReasons({ candidates: [], feeds: FEEDS, questions: 0, diaryExists: true, now: at("10:07"), tsukkomi: 2 });
+  assert.deepEqual(reasons, [{ kind: "tsukkomi", detail: "ツッコミ 新着2" }]);
+  assert.deepEqual(buildReasons({ candidates: [], feeds: FEEDS, questions: 0, diaryExists: true, now: at("10:07"), tsukkomi: 0 }), []);
+});
