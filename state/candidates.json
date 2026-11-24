@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T11:57:50.401Z",
+  "updatedAt": "2026-11-24T12:37:16.864Z",
   "items": [
     {
       "feed": "publickey",
@@ -53,6 +53,26 @@
       "url": "https://piyolog.hatenadiary.jp/entry/2026/11/20/224814",
       "published": "2026-11-20T13:48:14.000Z",
       "foundAt": "2026-11-24T08:30:24.332Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "呼びかけると故人の写真を映すAI仏壇「コハコ」発売、49万5000円 10年後の家族に動画を届ける機能も | テクノエッジ TechnoEdge",
+      "url": "https://www.techno-edge.net/article/2026/11/24/5803.html",
+      "published": "2026-11-24T08:03:49.000Z",
+      "bookmarks": 7,
+      "foundAt": "2026-11-24T12:37:16.864Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "都営新宿線「岩本町駅」が急行停車駅に 秋葉原との乗換駅",
+      "url": "https://www.watch.impress.co.jp/docs/news/2158833.html",
+      "published": "2026-11-24T12:12:03.000Z",
+      "bookmarks": 4,
+      "foundAt": "2026-11-24T12:37:16.864Z",
       "offered": true
     },
     {

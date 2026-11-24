@@ -1,17 +1,21 @@
 {
-  "lastBeat": "2026-11-24T11:57:50.401Z",
-  "elapsedMinutes": 20,
+  "lastBeat": "2026-11-24T12:37:16.864Z",
+  "elapsedMinutes": 39,
   "trigger": "dispatch",
   "act": true,
   "reasons": [
     {
       "kind": "feed",
-      "detail": "はてブ 新着3"
+      "detail": "はてブ 新着2"
+    },
+    {
+      "kind": "diary",
+      "detail": "今日の日記が未作成"
     }
   ],
   "llm": {
     "date": "2026-11-24",
-    "count": 8,
+    "count": 9,
     "limit": 12
   }
 }
