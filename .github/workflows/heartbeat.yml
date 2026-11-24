@@ -1,0 +1,32 @@
+name: heartbeat
+
+# 起動条件は schedule と workflow_dispatch だけ。
+# issue_comment や pull_request_target など、他人の入力で起動するイベントは足さない。
+on:
+  schedule:
+    - cron: "22,52 22-23,0-14 * * *" # UTC。JST 7:22〜23:52 相当(保険。主は Mac の launchd)
+  workflow_dispatch:
+
+concurrency:
+  group: heartbeat
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  beat:
+    if: github.repository == 'gosyujin/mokumoku-ai' && vars.MOKUMOKU_PAUSED != 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24 # tools/*.ts をビルドなしで実行する(22.18 以上が必要)
+      - id: wake
+        run: node tools/wake.ts
+        env:
+          MOKUMOKU_TRIGGER: ${{ github.event_name }}
+      # ここに Claude の step が入る(steps.wake.outputs.act == 'true' のときだけ)
+      - run: node tools/commit.ts

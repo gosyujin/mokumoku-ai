@@ -1,0 +1,12 @@
+{
+  "name": "mokumoku-ai",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "wake": "node tools/wake.ts",
+    "test": "node --test"
+  }
+}

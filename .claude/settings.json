@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "ask": [
+      "Bash(*tools/commit.ts*--local*)",
+      "Bash(*gh workflow run*)"
+    ],
+    "deny": []
+  }
+}
