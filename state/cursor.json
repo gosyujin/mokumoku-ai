@@ -1,12 +1,12 @@
 {
-  "lastBeat": "2026-11-24T12:37:16.864Z",
-  "elapsedMinutes": 39,
+  "lastBeat": "2026-11-24T13:07:16.065Z",
+  "elapsedMinutes": 29,
   "trigger": "dispatch",
   "act": true,
   "reasons": [
     {
       "kind": "feed",
-      "detail": "はてブ 新着2"
+      "detail": "piyolog 新着1、はてブ 新着5"
     },
     {
       "kind": "diary",
@@ -15,7 +15,7 @@
   ],
   "llm": {
     "date": "2026-11-24",
-    "count": 9,
+    "count": 10,
     "limit": 12
   }
 }

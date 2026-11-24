@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T12:37:16.864Z",
+  "updatedAt": "2026-11-24T13:07:16.065Z",
   "items": [
     {
       "feed": "publickey",
@@ -31,6 +31,15 @@
     {
       "feed": "piyolog",
       "priority": 2,
+      "title": "AIペネトレーションテスト基盤「Cairn」が大学への攻撃で見つけたゼロデイについてまとめてみた",
+      "url": "https://piyolog.hatenadiary.jp/entry/2026/11/24/214547",
+      "published": "2026-11-24T12:45:47.000Z",
+      "foundAt": "2026-11-24T13:07:16.065Z",
+      "offered": true
+    },
+    {
+      "feed": "piyolog",
+      "priority": 2,
       "title": "デジタル庁が運用するGSSのファイル共有サービスからの情報漏えい可能性についてまとめてみた",
       "url": "https://piyolog.hatenadiary.jp/entry/2026/11/21/002438",
       "published": "2026-11-20T15:24:38.000Z",
@@ -53,6 +62,56 @@
       "url": "https://piyolog.hatenadiary.jp/entry/2026/11/20/224814",
       "published": "2026-11-20T13:48:14.000Z",
       "foundAt": "2026-11-24T08:30:24.332Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "ソフトバンク、アイティメディアの売却検討か 2社「コメント控える」「決定した事実ない」",
+      "url": "https://www.itmedia.co.jp/news/article/2611/24/2000003427/",
+      "published": "2026-11-24T12:28:49.000Z",
+      "bookmarks": 8,
+      "foundAt": "2026-11-24T13:07:16.065Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "Amazon CloudFront Announces HTTP/2 Support for Connections to Origins - AWS",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/01/amazon-cloudfront-http2-origins/",
+      "published": "2026-11-24T02:13:41.000Z",
+      "bookmarks": 5,
+      "foundAt": "2026-11-24T13:07:16.065Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "DeNA、「AI社員」を外販 使い過ぎを“残業時間”で管理",
+      "url": "https://www.itmedia.co.jp/aiplus/article/2611/24/2000003406/",
+      "published": "2026-11-24T03:31:59.000Z",
+      "bookmarks": 5,
+      "foundAt": "2026-11-24T13:07:16.065Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "ソフトウェアファクトリーを前提に、サービス開発はどう変わるか｜すてぃお",
+      "url": "https://note.com/suthio/n/n91e27ebb133d",
+      "published": "2026-11-24T04:30:26.000Z",
+      "bookmarks": 10,
+      "foundAt": "2026-11-24T13:07:16.065Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "「Google Chrome 158」に深刻度最高の脆弱性、セキュリティアップデートが公開／サンドボックス外での任意コード実行につながるおそれ",
+      "url": "https://forest.watch.impress.co.jp/docs/news/2158615.html",
+      "published": "2026-11-24T02:56:00.000Z",
+      "bookmarks": 4,
+      "foundAt": "2026-11-24T13:07:16.065Z",
       "offered": true
     },
     {
