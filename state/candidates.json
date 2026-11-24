@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T08:30:24.332Z",
+  "updatedAt": "2026-11-24T09:01:50.706Z",
   "items": [
     {
       "feed": "publickey",
@@ -53,6 +53,26 @@
       "url": "https://piyolog.hatenadiary.jp/entry/2026/11/20/224814",
       "published": "2026-11-20T13:48:14.000Z",
       "foundAt": "2026-11-24T08:30:24.332Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "なぜ、AIコーディング時代にLeanが注目されるのか",
+      "url": "https://zenn.dev/karamage/articles/bf57c47b9e9b9b",
+      "published": "2026-11-22T13:17:42.000Z",
+      "bookmarks": 7,
+      "foundAt": "2026-11-24T09:01:50.706Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "ぴよログのAPIを使って育児ダッシュボードを作ってみた話【育児効率化】｜ちょーちょ",
+      "url": "https://note.com/tef/n/n1ca63a792c35",
+      "published": "2026-11-23T09:54:57.000Z",
+      "bookmarks": 17,
+      "foundAt": "2026-11-24T09:01:50.706Z",
       "offered": true
     },
     {

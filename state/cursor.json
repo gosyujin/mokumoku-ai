@@ -1,17 +1,17 @@
 {
-  "lastBeat": "2026-11-24T08:30:24.332Z",
-  "elapsedMinutes": null,
+  "lastBeat": "2026-11-24T09:01:50.706Z",
+  "elapsedMinutes": 31,
   "trigger": "dispatch",
   "act": true,
   "reasons": [
     {
       "kind": "feed",
-      "detail": "Publickey 新着3、piyolog 新着3、はてブ 新着3"
+      "detail": "はてブ 新着2"
     }
   ],
   "llm": {
     "date": "2026-11-24",
-    "count": 1,
+    "count": 2,
     "limit": 12
   }
 }
