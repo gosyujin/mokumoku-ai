@@ -7,6 +7,7 @@ import {
   AGENT_ICON,
   AGENT_USER_ID,
   appendProblems,
+  formatPageBody,
   HUMAN_USER_IDS,
   humanDigestSource,
   humanLines,
@@ -19,7 +20,6 @@ import {
   signReply,
   titleFromFileName,
   toLines,
-  withSignature,
 } from "./lib/cosense.ts";
 import type { Line, Page } from "./lib/cosense.ts";
 
@@ -79,72 +79,103 @@ test("pageProblems / appendProblems", () => {
   assert.match(appendProblems("2026年11月24日のツッコミ", Array(51).fill("a")).join("\n"), /行が多い/);
 });
 
-test("withSignature / signReply: 署名が無ければ付ける", () => {
-  assert.deepEqual(withSignature(["a"]), ["a", "", AGENT_ICON]);
-  assert.deepEqual(withSignature(["a", AGENT_ICON]), ["a", AGENT_ICON]);
+test("formatPageBody: 先頭に空行1つ、区切りは空行1つ、署名、末尾に空行1つ", () => {
+  assert.deepEqual(formatPageBody(["定義", " 出典: https://ebpf.io/"]), ["", "定義", " 出典: https://ebpf.io/", "", AGENT_ICON, ""]);
+  // 先頭や途中に空行が続いていても、1つにする。末尾の空行も1つにする
+  assert.deepEqual(formatPageBody(["", "", "定義", "", "", "", "登場背景", " まだ調べていない", "", ""]), [
+    "",
+    "定義",
+    "",
+    "登場背景",
+    " まだ調べていない",
+    "",
+    AGENT_ICON,
+    "",
+  ]);
+  // 署名がすでにあれば足さない。空白だけの行は空行として扱う
+  assert.deepEqual(formatPageBody(["定義", "  ", AGENT_ICON]), ["", "定義", "", AGENT_ICON, ""]);
+  // 何度通しても同じ
+  const once = formatPageBody(["定義", "", "登場背景"]);
+  assert.deepEqual(formatPageBody(once), once);
+});
+
+test("signReply: 返信の先頭に署名を付ける(字下げは保つ)", () => {
   assert.deepEqual(signReply([" 直したです", "  詳しくは日記の追記に"]), [` ${AGENT_ICON} 直したです`, "  詳しくは日記の追記に"]);
   assert.deepEqual(signReply([`${AGENT_ICON} 済み`]), [`${AGENT_ICON} 済み`]);
 });
 
-test("planPage: 無ければ作る。同じなら何もしない", () => {
-  assert.deepEqual(planPage(null, "eBPF", ["a", "b"], newId), { kind: "create", lines: ["eBPF", "a", "b"] });
-  const cur = page("eBPF", [["a", AGENT], ["b", AGENT], ["", AGENT]]);
-  assert.deepEqual(planPage(cur, "eBPF", ["a", "b"], newId), { kind: "noop" });
+test("planPage: 無ければ作る(ページ名の次は空行、末尾は空行1つ)。同じなら何もしない", () => {
+  const body = formatPageBody(["a", "b"]);
+  assert.deepEqual(planPage(null, "eBPF", body, newId), { kind: "create", lines: ["eBPF", "", "a", "b", "", AGENT_ICON, ""] });
+  const cur = page("eBPF", [["", AGENT], ["a", AGENT], ["b", AGENT], ["", AGENT], [AGENT_ICON, AGENT], ["", AGENT]]);
+  assert.deepEqual(planPage(cur, "eBPF", body, newId), { kind: "noop" });
 });
 
-test("planPage: 自分の行だけなら、食い違う真ん中だけを差し替える", () => {
+test("planPage: 古い書式のページには、先頭と末尾の空行だけを足す(ほかの行は触らない)", () => {
   seq = 0;
-  const cur = page("eBPF", [["a", AGENT], ["古い", AGENT], ["c", AGENT]]);
-  assert.deepEqual(planPage(cur, "eBPF", ["a", "新しい1", "新しい2", "c"], newId), {
+  const cur = page("eBPF", [["a", AGENT], ["b", AGENT], ["", AGENT], [AGENT_ICON, AGENT]]);
+  assert.deepEqual(planPage(cur, "eBPF", formatPageBody(["a", "b"]), newId), {
     kind: "update",
     mode: "replace",
     changes: [
-      { _insert: "l3", lines: { id: "new1", text: "新しい1" } },
-      { _insert: "l3", lines: { id: "new2", text: "新しい2" } },
-      { _delete: "l2" },
+      { _insert: "l1", lines: { id: "new1", text: "" } },
+      { _insert: "_end", lines: { id: "new2", text: "" } },
     ],
-  });
-  // 末尾に足すだけのとき。最後の空行の手前に入れる
-  seq = 0;
-  const tail = page("eBPF", [["a", AGENT], ["", AGENT]]);
-  assert.deepEqual(planPage(tail, "eBPF", ["a", "b"], newId), {
-    kind: "update",
-    mode: "replace",
-    changes: [{ _insert: "l2", lines: { id: "new1", text: "b" } }],
   });
 });
 
-test("planPage: 差し替える範囲に他人の行があれば、消さずに、無い行だけを末尾に足す", () => {
+test("planPage: 自分の行だけなら、違う所だけを足したり消したりする", () => {
   seq = 0;
-  const cur = page("eBPF", [["a", AGENT], ["人間が直した行", HUMAN], ["c", AGENT]]);
-  const plan = planPage(cur, "eBPF", ["a", "エージェントの案", "c", "d"], newId);
+  const cur = page("eBPF", [["", AGENT], ["a", AGENT], ["古い", AGENT], ["c", AGENT], ["", AGENT], [AGENT_ICON, AGENT], ["", AGENT]]);
+  assert.deepEqual(planPage(cur, "eBPF", formatPageBody(["a", "新しい1", "新しい2", "c"]), newId), {
+    kind: "update",
+    mode: "replace",
+    changes: [
+      { _delete: "l3" },
+      { _insert: "l4", lines: { id: "new1", text: "新しい1" } },
+      { _insert: "l4", lines: { id: "new2", text: "新しい2" } },
+    ],
+  });
+});
+
+test("planPage: 消すことになる行に他人の行があれば、消さずに、無い行だけを末尾に足す", () => {
+  seq = 0;
+  const cur = page("eBPF", [["", AGENT], ["a", AGENT], ["人間が直した行", HUMAN], ["c", AGENT], ["", AGENT]]);
+  const plan = planPage(cur, "eBPF", formatPageBody(["a", "エージェントの案", "c", "d"]), newId);
   assert.deepEqual(plan, {
     kind: "update",
     mode: "append",
     changes: [
-      { _insert: "_end", lines: { id: "new1", text: "エージェントの案" } },
-      { _insert: "_end", lines: { id: "new2", text: "d" } },
+      { _insert: "l5", lines: { id: "new1", text: "エージェントの案" } },
+      { _insert: "l5", lines: { id: "new2", text: "d" } },
+      { _insert: "l5", lines: { id: "new3", text: AGENT_ICON } },
     ],
   });
   assert.equal(JSON.stringify(plan).includes("_delete"), false);
-  // 人間の行が、差し替えない場所(一致する先頭・末尾)にあるだけなら、ふつうに差し替える
+  // 人間の行を残したまま、自分の行だけを差し替えるのは、ふつうにできる
   seq = 0;
-  const kept = page("eBPF", [["人間の前書き", HUMAN], ["古い", AGENT]]);
-  assert.deepEqual(planPage(kept, "eBPF", ["人間の前書き", "新しい"], newId), {
+  const kept = page("eBPF", [["", HUMAN], ["人間の前書き", HUMAN], ["古い", AGENT], ["", AGENT], [AGENT_ICON, AGENT], ["", AGENT]]);
+  assert.deepEqual(planPage(kept, "eBPF", formatPageBody(["人間の前書き", "新しい"]), newId), {
     kind: "update",
     mode: "replace",
-    changes: [{ _insert: "_end", lines: { id: "new1", text: "新しい" } }, { _delete: "l2" }],
+    changes: [{ _delete: "l3" }, { _insert: "l4", lines: { id: "new1", text: "新しい" } }],
   });
   // 知らないアカウントの行も、他人の行として扱う
   const other = page("eBPF", [["誰かの行", OTHER]]);
-  assert.equal((planPage(other, "eBPF", ["別の中身 https://example.com/"], newId) as { mode: string }).mode, "append");
+  assert.equal((planPage(other, "eBPF", formatPageBody(["別の中身 https://example.com/"]), newId) as { mode: string }).mode, "append");
 });
 
-test("planAppend: 末尾に、署名つきで足す", () => {
+test("planAppend: 末尾の空行の手前に、署名つきで足す。空行で終わっていなければ、空行を1つ足す", () => {
   seq = 0;
   const cur = page("2026年11月24日のツッコミ", [["Java4Shell は Log4Shell の間違いでは?", HUMAN], ["", HUMAN]]);
   assert.deepEqual(planAppend(cur, [" 確かめるです"], newId), [
     { _insert: "l2", lines: { id: "new1", text: ` ${AGENT_ICON} 確かめるです` } },
+  ]);
+  seq = 0;
+  const noBlank = page("2026年11月24日のツッコミ", [["指摘", HUMAN]]);
+  assert.deepEqual(planAppend(noBlank, [" 確かめるです"], newId), [
+    { _insert: "_end", lines: { id: "new1", text: ` ${AGENT_ICON} 確かめるです` } },
+    { _insert: "_end", lines: { id: "new2", text: "" } },
   ]);
 });
 

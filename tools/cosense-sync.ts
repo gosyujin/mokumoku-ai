@@ -23,6 +23,8 @@ import process from "node:process";
 import {
   AGENT_USER_ID,
   appendProblems,
+  formatPageBody,
+  PAGE_FORMAT,
   pageProblems,
   pageUrl,
   planAppend,
@@ -30,7 +32,6 @@ import {
   syncLine,
   titleFromFileName,
   toLines,
-  withSignature,
 } from "./lib/cosense.ts";
 import type { Change } from "./lib/cosense.ts";
 import { previewEdit, readPage, submitEdit, whoami } from "./lib/cosenseApi.ts";
@@ -56,6 +57,8 @@ interface SentState {
 
 const newLineId = () => randomBytes(12).toString("hex");
 const sha256 = (text: string) => createHash("sha256").update(text).digest("hex");
+/** 送信済みかどうかの判定に使う値。書式の版を混ぜてあるので、書式を変えると送り直しになる */
+const sentKey = (raw: string) => sha256(`format:${PAGE_FORMAT}\n${raw}`);
 
 function listTxt(dir: string): string[] {
   return existsSync(path("cosense", dir)) ? readdirSync(path("cosense", dir)).filter((n) => n.endsWith(".txt")).sort() : [];
@@ -95,7 +98,7 @@ async function main(): Promise<void> {
   sent.pages ??= {};
 
   const appendFiles = listTxt("append");
-  const pageFiles = listTxt("pages").filter((name) => sent.pages[name] !== sha256(readFileSync(path("cosense", "pages", name), "utf8")));
+  const pageFiles = listTxt("pages").filter((name) => sent.pages[name] !== sentKey(readFileSync(path("cosense", "pages", name), "utf8")));
   if (appendFiles.length === 0 && pageFiles.length === 0) {
     console.log("cosense-sync: 送るものが無い");
     return;
@@ -174,10 +177,10 @@ async function main(): Promise<void> {
         continue;
       }
       const page = await readPage(parsed.title);
-      const plan = planPage(page, page?.title ?? parsed.title, withSignature(body), newLineId);
+      const plan = planPage(page, page?.title ?? parsed.title, formatPageBody(body), newLineId);
       if (plan.kind === "noop") {
         console.log(`${file}: ページはすでに同じ中身`);
-        if (!DRY_RUN) sent.pages[name] = sha256(raw);
+        if (!DRY_RUN) sent.pages[name] = sentKey(raw);
         continue;
       }
       const changes: Change[] =
@@ -190,7 +193,7 @@ async function main(): Promise<void> {
         continue;
       }
       await send(page?.id ?? null, changes, parsed.title);
-      sent.pages[name] = sha256(raw);
+      sent.pages[name] = sentKey(raw);
       note(file, `${what}(${pageUrl(page?.title ?? parsed.title)})`);
     } catch (e) {
       note(file, `失敗: ${(e instanceof Error ? e.message : String(e)).slice(0, 200)}`);

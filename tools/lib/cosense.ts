@@ -25,6 +25,12 @@ export const PAGE_MAX_LINES = 300;
 export const APPEND_MAX_LINES = 50;
 export const LINE_MAX_CHARS = 1000;
 
+/**
+ * 用語ページの書式の版。書式の決まり(formatPageBody)を変えたら、数を上げる。
+ * 送信済みかどうかの判定に混ぜてあるので、上げると全部の用語ページが1回だけ送り直される。
+ */
+export const PAGE_FORMAT = 2;
+
 export interface Line {
   id: string;
   text: string;
@@ -109,10 +115,29 @@ export function appendProblems(title: string, lines: readonly string[]): string[
   return problems;
 }
 
-/** 用語ページの中身に、署名が無ければ最後に足す */
-export function withSignature(body: readonly string[]): string[] {
-  if (body.some((l) => l.includes(AGENT_ICON))) return [...body];
-  return [...body, "", AGENT_ICON];
+/**
+ * 用語ページの書式を整える(ページ名の行より後ろの部分を返す)。
+ *   - ページ名の次の行は、必ず空行
+ *   - まとまりの区切りは、空行1つ(空行が続いていたら1つにする)
+ *   - 署名が無ければ、最後に足す
+ *   - ページの末尾は、必ず空行1つ
+ */
+export function formatPageBody(body: readonly string[]): string[] {
+  const out: string[] = [""];
+  const push = (line: string) => {
+    if (line.trim() === "") {
+      if (out[out.length - 1] !== "") out.push("");
+    } else {
+      out.push(line);
+    }
+  };
+  for (const line of body) push(line);
+  if (!out.some((l) => l.includes(AGENT_ICON))) {
+    push("");
+    out.push(AGENT_ICON);
+  }
+  push("");
+  return out;
 }
 
 /** 返信の先頭の行に、署名が無ければ付ける(字下げは保つ) */
@@ -122,11 +147,11 @@ export function signReply(lines: readonly string[]): string[] {
   return [`${indent}${AGENT_ICON} ${lines[0].slice(indent.length)}`, ...lines.slice(1)];
 }
 
-/** 末尾に足すときの位置。ページの最後に空行が続いていれば、その空行の手前に入れる */
-function tailAnchor(lines: readonly Line[]): string {
+/** 末尾の空行の、最初の1つの位置(無ければ行数) */
+function trailingBlankStart(lines: readonly Line[]): number {
   let i = lines.length;
   while (i > 1 && lines[i - 1].text.trim() === "") i--;
-  return i < lines.length ? lines[i].id : "_end";
+  return i;
 }
 
 export type PagePlan =
@@ -134,51 +159,86 @@ export type PagePlan =
   | { kind: "noop" }
   | { kind: "update"; mode: "replace" | "append"; changes: Change[] };
 
+type Step = { op: "keep"; i: number } | { op: "del"; i: number } | { op: "ins"; j: number };
+
+/** 行の並び a を b にするための手順(共通部分をできるだけ残す。ページは高々数百行) */
+function diffLines(a: readonly string[], b: readonly string[]): Step[] {
+  const n = a.length;
+  const m = b.length;
+  // lcs[i][j] = a[i..] と b[j..] の共通部分の長さ
+  const lcs: number[][] = Array.from({ length: n + 1 }, () => new Array<number>(m + 1).fill(0));
+  for (let i = n - 1; i >= 0; i--) {
+    for (let j = m - 1; j >= 0; j--) {
+      lcs[i][j] = a[i] === b[j] ? lcs[i + 1][j + 1] + 1 : Math.max(lcs[i + 1][j], lcs[i][j + 1]);
+    }
+  }
+  const steps: Step[] = [];
+  let i = 0;
+  let j = 0;
+  while (i < n || j < m) {
+    if (i < n && j < m && a[i] === b[j]) {
+      steps.push({ op: "keep", i });
+      i++;
+      j++;
+    } else if (j < m && (i >= n || lcs[i][j + 1] >= lcs[i + 1][j])) {
+      steps.push({ op: "ins", j });
+      j++;
+    } else {
+      steps.push({ op: "del", i });
+      i++;
+    }
+  }
+  return steps;
+}
+
 /**
- * 用語ページを、エージェントが望む中身にするための変更を作る。
+ * 用語ページを、エージェントが望む中身(formatPageBody を通したもの)にするための変更を作る。
  *   - ページが無ければ作る。
- *   - あれば、先頭と末尾の一致する部分は残し、食い違う真ん中だけを差し替える。
- *   - 差し替える範囲に他人が書いた行があれば、何も消さず、まだページに無い行だけを末尾に足す。
+ *   - あれば、同じ行は残し、違う所だけを足したり消したりする。
+ *   - 消すことになる行に、他人が書いた行が1つでもあれば、何も消さず、まだページに無い行だけを末尾に足す。
  * 1行目(ページ名の行)は変えない。
  */
 export function planPage(current: Page | null, title: string, body: readonly string[], newId: () => string): PagePlan {
   if (current === null) return { kind: "create", lines: [title, ...body] };
 
-  // 比較は、いまのページの末尾の空行を除いて行う(空行そのものは触らない)
-  let end = current.lines.length;
-  while (end > 1 && current.lines[end - 1].text.trim() === "") end--;
-  const cur = current.lines.slice(1, end);
-  const want = [...body];
+  const cur = current.lines.slice(1);
+  const steps = diffLines(cur.map((l) => l.text), body);
+  if (steps.every((s) => s.op === "keep")) return { kind: "noop" };
 
-  let p = 0;
-  while (p < cur.length && p < want.length && cur[p].text === want[p]) p++;
-  let s = 0;
-  while (s < cur.length - p && s < want.length - p && cur[cur.length - 1 - s].text === want[want.length - 1 - s]) s++;
-  const midOld = cur.slice(p, cur.length - s);
-  const midNew = want.slice(p, want.length - s);
-  if (midOld.length === 0 && midNew.length === 0) return { kind: "noop" };
-
-  if (midOld.every((l) => l.userId === AGENT_USER_ID)) {
-    const anchor = s > 0 ? cur[cur.length - s].id : tailAnchor(current.lines);
-    const changes: Change[] = [
-      ...midNew.map((text) => ({ _insert: anchor, lines: { id: newId(), text } })),
-      ...midOld.map((l) => ({ _delete: l.id })),
-    ];
+  const deleted = steps.filter((s) => s.op === "del").map((s) => cur[(s as { i: number }).i]);
+  if (deleted.every((l) => l.userId === AGENT_USER_ID)) {
+    // 足す行は、次に残る行の直前に入れる(残る行が無ければ末尾)。同じ場所に続けて入れると、入れた順に並ぶ
+    const changes: Change[] = [];
+    let pending: string[] = [];
+    for (const s of steps) {
+      if (s.op === "ins") pending.push(body[s.j]);
+      else if (s.op === "del") changes.push({ _delete: cur[s.i].id });
+      else {
+        for (const text of pending) changes.push({ _insert: cur[s.i].id, lines: { id: newId(), text } });
+        pending = [];
+      }
+    }
+    for (const text of pending) changes.push({ _insert: "_end", lines: { id: newId(), text } });
     return { kind: "update", mode: "replace", changes };
   }
 
-  // 他人の行に触れる差し替えはしない。まだ無い行だけを末尾に足す
+  // 他人の行は消さない。まだ無い行だけを、末尾の空行の手前に足す
   const have = new Set(current.lines.map((l) => l.text));
-  const missing = want.filter((text) => text.trim() !== "" && !have.has(text));
+  const missing = body.filter((text) => text.trim() !== "" && !have.has(text));
   if (missing.length === 0) return { kind: "noop" };
-  const anchor = tailAnchor(current.lines);
-  return { kind: "update", mode: "append", changes: missing.map((text) => ({ _insert: anchor, lines: { id: newId(), text } })) };
+  return { kind: "update", mode: "append", changes: tailInserts(current.lines, missing, newId) };
 }
 
-/** ツッコミのページの末尾に、返信の行を足す変更を作る */
+/** 末尾に足す。ページが空行で終わっていれば、その手前に入れる。終わっていなければ、足したあとに空行を1つ置く */
+function tailInserts(lines: readonly Line[], texts: readonly string[], newId: () => string): Change[] {
+  const at = trailingBlankStart(lines);
+  if (at < lines.length) return texts.map((text) => ({ _insert: lines[at].id, lines: { id: newId(), text } }));
+  return [...texts, ""].map((text) => ({ _insert: "_end", lines: { id: newId(), text } }));
+}
+
+/** ツッコミのページの末尾に、返信の行を足す変更を作る(ページの末尾は空行1つのままにする) */
 export function planAppend(current: Page, lines: readonly string[], newId: () => string): Change[] {
-  const anchor = tailAnchor(current.lines);
-  return signReply(lines).map((text) => ({ _insert: anchor, lines: { id: newId(), text } }));
+  return tailInserts(current.lines, signReply(lines), newId);
 }
 
 /** 人間が書いた行(ページ名の行と空行は除く) */
