@@ -4,7 +4,14 @@ import type { FeedDef, FeedItem } from "./feed.ts";
 import { GAP_WARN_MIN, jst } from "./time.ts";
 
 /** 1日の LLM 起動上限 */
-export const LLM_DAILY_LIMIT = 12;
+export const LLM_DAILY_LIMIT = 18;
+/**
+ * エージェントを起こす間隔(分)。前に起こしてからこれだけ空くまでは、新着があっても起こさない。
+ * 起床は30分ごとなので、空けないと朝のうちに1日の上限を使い切り、午後と夜に動けなくなる。
+ */
+export const ACT_INTERVAL_MIN = 60;
+/** 間隔の判定の余裕(分)。起床の時刻は数分ずれるので、「59分だから見送り」で1回飛ばさないようにする */
+export const ACT_INTERVAL_SLACK_MIN = 5;
 /** 初めて読むフィードは、先頭のこの件数だけを新着として扱う(全件が新着になるのを防ぐ) */
 export const FIRST_RUN_LIMIT = 3;
 /** フィードごとに覚えておく既読 URL の数 */
@@ -116,12 +123,22 @@ export interface Decision {
   /** この起床を含めた本日の LLM 起動回数 */
   llmCount: number;
   capped: boolean;
+  /** 前に起こしてから間隔が空いていないので見送ったとき、前に起こしてからの分 */
+  waitedMinutes?: number;
 }
 
-/** 理由があり、上限に達していなければ起こす */
-export function decide(reasons: readonly Reason[], llmCountToday: number): Decision {
+/**
+ * 理由があり、上限に達しておらず、前に起こしてから間隔が空いていれば起こす。
+ * ツッコミ(人間からの指摘)があるときは、間隔に関係なく起こす(上限には数える)。
+ * minutesSinceAct は、前にエージェントを起こしてからの分(まだ起こしたことが無ければ null)。
+ */
+export function decide(reasons: readonly Reason[], llmCountToday: number, minutesSinceAct: number | null = null): Decision {
   if (reasons.length === 0) return { act: false, llmCount: llmCountToday, capped: false };
   if (llmCountToday >= LLM_DAILY_LIMIT) return { act: false, llmCount: llmCountToday, capped: true };
+  const urgent = reasons.some((r) => r.kind === "tsukkomi");
+  if (!urgent && minutesSinceAct !== null && minutesSinceAct < ACT_INTERVAL_MIN - ACT_INTERVAL_SLACK_MIN) {
+    return { act: false, llmCount: llmCountToday, capped: false, waitedMinutes: minutesSinceAct };
+  }
   return { act: true, llmCount: llmCountToday + 1, capped: false };
 }
 
@@ -143,7 +160,9 @@ export function journalLine(input: {
     ? `act=true(本日${input.decision.llmCount}/${LLM_DAILY_LIMIT})`
     : input.decision.capped
       ? `act=false(上限${LLM_DAILY_LIMIT}回に到達)`
-      : "act=false";
+      : input.decision.waitedMinutes !== undefined
+        ? `act=false(前の行動から${input.decision.waitedMinutes}分。${ACT_INTERVAL_MIN}分あける)`
+        : "act=false";
   const why = input.reasons.length > 0 ? `理由: ${input.reasons.map((r) => r.detail).join(" / ")}` : "理由なし";
   let line = `- ${t.hhmm} wake(${input.trigger})${elapsed}${gap ? " ⚠間隔超過" : ""} → ${verdict} ${why}`;
   if (input.errors.length > 0) line += ` ⚠取得失敗: ${input.errors.join("、")}`;

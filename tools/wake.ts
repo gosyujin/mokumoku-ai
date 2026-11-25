@@ -39,6 +39,8 @@ interface Cursor {
   act: boolean;
   reasons: Reason[];
   llm: { date: string; count: number; limit: number };
+  /** 最後にエージェントを起こした時刻(ISO 8601)。まだ無ければ null */
+  lastAct?: string | null;
 }
 
 interface SeenFile {
@@ -138,7 +140,8 @@ async function main(): Promise<void> {
 
   // --- Cosense: ページ名の一覧(known.txt)と、ツッコミの転記(inbox/)。認証なしの公開 API だけを使う
   const cosenseFile = path("state", "cosense-read.json");
-  let cosense = readJson<CosenseReadState>(cosenseFile, { tsukkomi: {} });
+  const cosenseBefore = readJson<CosenseReadState>(cosenseFile, { tsukkomi: {} });
+  let cosense = cosenseBefore;
   let tsukkomi = 0;
   try {
     const res = await updateFromCosense(ROOT, cosense, `${today.date} ${today.hhmm}`);
@@ -163,12 +166,16 @@ async function main(): Promise<void> {
     tsukkomi,
   });
   const llmToday = prev.llm?.date === today.date ? (prev.llm.count ?? 0) : 0;
-  const decision = decide(reasons, llmToday);
+  const lastAct = prev.lastAct ?? null;
+  const sinceAct = lastAct === null ? null : Math.floor((now.getTime() - Date.parse(lastAct)) / 60000);
+  const decision = decide(reasons, llmToday, sinceAct === null || Number.isNaN(sinceAct) ? null : sinceAct);
   if (decision.act) candidates = candidates.map((c) => ({ ...c, offered: true }));
 
   // --- 記録
   writeJson(seenFile, seen);
-  writeJson(cosenseFile, cosense);
+  // ツッコミを「読んだ」と覚えるのは、エージェントを起こした回だけ。
+  // 起こさなかった回(上限など)に覚えてしまうと、そのツッコミは次の起床で新着にならず、返信されないままになる
+  writeJson(cosenseFile, decision.act ? cosense : cosenseBefore);
   writeJson(candidatesFile, { updatedAt: now.toISOString(), items: candidates } satisfies CandidatesFile);
   writeJson(cursorFile, {
     lastBeat: now.toISOString(),
@@ -177,6 +184,7 @@ async function main(): Promise<void> {
     act: decision.act,
     reasons,
     llm: { date: today.date, count: decision.llmCount, limit: LLM_DAILY_LIMIT },
+    lastAct: decision.act ? now.toISOString() : lastAct,
   } satisfies Cursor);
 
   const journalFile = path("journal", `${today.date}.md`);

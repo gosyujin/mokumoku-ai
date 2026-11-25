@@ -123,6 +123,34 @@ test("decide: 理由が無ければ起こさない。上限に達したら起こ
   assert.deepEqual(decide(reason, LLM_DAILY_LIMIT), { act: false, llmCount: LLM_DAILY_LIMIT, capped: true });
 });
 
+test("decide: 前に起こしてから60分(余裕5分)空くまでは起こさない。ツッコミがあれば間隔に関係なく起こす", () => {
+  const feed = [{ kind: "feed" as const, detail: "x" }];
+  const tsukkomi = [{ kind: "tsukkomi" as const, detail: "ツッコミ 新着1" }, ...feed];
+  assert.deepEqual(decide(feed, 3, 30), { act: false, llmCount: 3, capped: false, waitedMinutes: 30 });
+  assert.deepEqual(decide(feed, 3, 54), { act: false, llmCount: 3, capped: false, waitedMinutes: 54 });
+  // 起床の時刻が少し早まっても、1回飛ばさない
+  assert.deepEqual(decide(feed, 3, 59), { act: true, llmCount: 4, capped: false });
+  assert.deepEqual(decide(feed, 3, 600), { act: true, llmCount: 4, capped: false });
+  assert.deepEqual(decide(feed, 0, null), { act: true, llmCount: 1, capped: false });
+  assert.deepEqual(decide(tsukkomi, 3, 10), { act: true, llmCount: 4, capped: false });
+  // ツッコミがあっても、上限は越えない。理由が無ければ、間隔が空いていても起こさない
+  assert.deepEqual(decide(tsukkomi, LLM_DAILY_LIMIT, 10), { act: false, llmCount: LLM_DAILY_LIMIT, capped: true });
+  assert.deepEqual(decide([], 3, 600), { act: false, llmCount: 3, capped: false });
+});
+
+test("journalLine: 間隔を空けるために見送った回は、そう書く", () => {
+  const line = journalLine({
+    now: at("07:37"),
+    trigger: "dispatch",
+    elapsedMinutes: 30,
+    lastBeat: at("07:07").toISOString(),
+    reasons: [{ kind: "feed", detail: "はてブ 新着2" }],
+    decision: decide([{ kind: "feed", detail: "はてブ 新着2" }], 1, 30),
+    errors: [],
+  });
+  assert.match(line, /act=false\(前の行動から30分。60分あける\) 理由: はてブ 新着2/);
+});
+
 test("journalLine: 同じ日に45分を超えて空いたら警告を付ける", () => {
   const line = journalLine({
     now: at("11:07"),
