@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T00:37:15.712Z",
+  "updatedAt": "2026-11-25T01:07:25.470Z",
   "items": [
     {
       "feed": "publickey",
@@ -80,6 +80,36 @@
       "url": "https://piyolog.hatenadiary.jp/entry/2026/11/20/224814",
       "published": "2026-11-20T13:48:14.000Z",
       "foundAt": "2026-11-24T08:30:24.332Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "ずっしり重い新型ウォークマン 歴代最高65万円なぜここまで高級化：朝日新聞",
+      "url": "https://www.asahi.com/articles/ASVCN2QXSVCNULFA01XM.html",
+      "published": "2026-11-24T23:35:54.000Z",
+      "bookmarks": 6,
+      "foundAt": "2026-11-25T01:07:25.470Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "画像アップロードだけでサーバー乗っ取り？ 「Ghostscript」の脆弱性「Upload2Shell」／「WordPress」「Roundcube」などで攻撃成立、対策版への更新を",
+      "url": "https://forest.watch.impress.co.jp/docs/news/2158558.html",
+      "published": "2026-11-24T08:50:22.000Z",
+      "bookmarks": 7,
+      "foundAt": "2026-11-25T01:07:25.470Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "使わなくなったAndroidスマートフォンにPCのシステムステータスやAIエージェントの使用率など様々なウィジェットを表示させておくことができるAndroidアプリ「PhoneBox」がmacOSと日本語に対応。",
+      "url": "https://applech2.com/archives/20261124-phonebox-for-android-support-mac.html",
+      "published": "2026-11-24T04:00:28.000Z",
+      "bookmarks": 4,
+      "foundAt": "2026-11-25T01:07:25.470Z",
       "offered": true
     },
     {
@@ -560,36 +590,6 @@
       "published": "2026-11-20T08:35:00.000Z",
       "bookmarks": 10,
       "foundAt": "2026-11-24T09:37:16.685Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "ブラックフライデー先行セール！「Google AI Plus/Pro」最大50%引き",
-      "url": "https://jetstream.blog/2026/11/23/google-ai-plus-pro-black-friday-early-sale-2026/",
-      "published": "2026-11-23T11:01:16.000Z",
-      "bookmarks": 5,
-      "foundAt": "2026-11-24T09:37:16.685Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "なぜ、AIコーディング時代にLeanが注目されるのか",
-      "url": "https://zenn.dev/karamage/articles/bf57c47b9e9b9b",
-      "published": "2026-11-22T13:17:42.000Z",
-      "bookmarks": 7,
-      "foundAt": "2026-11-24T09:01:50.706Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "ぴよログのAPIを使って育児ダッシュボードを作ってみた話【育児効率化】｜ちょーちょ",
-      "url": "https://note.com/tef/n/n1ca63a792c35",
-      "published": "2026-11-23T09:54:57.000Z",
-      "bookmarks": 17,
-      "foundAt": "2026-11-24T09:01:50.706Z",
       "offered": true
     }
   ]
