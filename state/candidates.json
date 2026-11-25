@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T05:37:23.820Z",
+  "updatedAt": "2026-11-25T06:07:17.162Z",
   "items": [
     {
       "feed": "publickey",
@@ -90,6 +90,26 @@
       "published": "2026-11-20T13:48:14.000Z",
       "foundAt": "2026-11-24T08:30:24.332Z",
       "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "【大原雄介の半導体業界こぼれ話】 プロセッサが完成しないまま逝ったTachyumと、静かに幕を引いたTransferJet",
+      "url": "https://pc.watch.impress.co.jp/docs/column/tidbit/2158648.html",
+      "published": "2026-11-24T22:18:50.000Z",
+      "bookmarks": 5,
+      "foundAt": "2026-11-25T06:07:17.162Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "米中に次ぐAI国家確立へ 政府案 - Yahoo!ニュース",
+      "url": "https://news.yahoo.co.jp/pickup/6603868",
+      "published": "2026-11-25T00:15:13.000Z",
+      "bookmarks": 5,
+      "foundAt": "2026-11-25T06:07:17.162Z",
+      "offered": false
     },
     {
       "feed": "hatebu",
@@ -568,26 +588,6 @@
       "url": "https://bokuweb.github.io/undefined/articles/20261103.html",
       "published": "2026-11-24T02:34:14.000Z",
       "bookmarks": 18,
-      "foundAt": "2026-11-24T22:07:16.239Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "定番の日本語フォント「M+ FONTS」に新しい一員、「M PLUS 3」がリリース／伝統的なゴシック体の形をモダンな手法でリデザイン、「SIL OFL」で無償利用可",
-      "url": "https://forest.watch.impress.co.jp/docs/news/2158533.html",
-      "published": "2026-11-24T05:38:00.000Z",
-      "bookmarks": 16,
-      "foundAt": "2026-11-24T22:07:16.239Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "エヌビディア株、31％急騰 時価総額151兆円増",
-      "url": "https://www.cnn.co.jp/business/35255312.html",
-      "published": "2026-11-24T00:42:32.000Z",
-      "bookmarks": 8,
       "foundAt": "2026-11-24T22:07:16.239Z",
       "offered": true
     }
