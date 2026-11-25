@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T00:07:16.749Z",
+  "updatedAt": "2026-11-25T00:37:15.712Z",
   "items": [
     {
       "feed": "publickey",
@@ -80,6 +80,16 @@
       "url": "https://piyolog.hatenadiary.jp/entry/2026/11/20/224814",
       "published": "2026-11-20T13:48:14.000Z",
       "foundAt": "2026-11-24T08:30:24.332Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "「ドパガキ」が「Z世代の年間トレンド大賞」に その意味とは Simejiが選定",
+      "url": "https://japan.cnet.com/article/35255347/",
+      "published": "2026-11-24T10:13:12.000Z",
+      "bookmarks": 6,
+      "foundAt": "2026-11-25T00:37:15.712Z",
       "offered": true
     },
     {
@@ -580,16 +590,6 @@
       "published": "2026-11-23T09:54:57.000Z",
       "bookmarks": 17,
       "foundAt": "2026-11-24T09:01:50.706Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "NECの「バザールでござーる」今日で引退。約35年の歴史に幕",
-      "url": "https://pc.watch.impress.co.jp/docs/news/2158462.html",
-      "published": "2026-11-23T21:20:45.000Z",
-      "bookmarks": 309,
-      "foundAt": "2026-11-24T08:30:24.332Z",
       "offered": true
     }
   ]
