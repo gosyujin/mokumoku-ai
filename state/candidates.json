@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T11:07:16.222Z",
+  "updatedAt": "2026-11-25T11:37:22.565Z",
   "items": [
     {
       "feed": "publickey",
@@ -90,6 +90,26 @@
       "published": "2026-11-20T13:48:14.000Z",
       "foundAt": "2026-11-24T08:30:24.332Z",
       "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "M＆A仲介会社に不正アクセス 最大数千社分の顧客情報漏えいか | NHKニュース",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261125de81289",
+      "published": "2026-11-25T09:13:49.000Z",
+      "bookmarks": 5,
+      "foundAt": "2026-11-25T11:37:22.565Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "日経平均株価、終値1633円安 フジクラ売り誘ったAI懸念 - 日本経済新聞",
+      "url": "https://www.nikkei.com/article/DGXZQOFL250PVTV21C26A1000000/",
+      "published": "2026-11-25T06:43:55.000Z",
+      "bookmarks": 6,
+      "foundAt": "2026-11-25T11:37:22.565Z",
+      "offered": false
     },
     {
       "feed": "hatebu",
@@ -568,26 +588,6 @@
       "url": "https://levtech.jp/media/detail_973/",
       "published": "2026-11-25T00:58:54.000Z",
       "bookmarks": 14,
-      "foundAt": "2026-11-25T02:07:29.346Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "三重県警 小学校元講師 AI生成の児童ポルノ画像所持で追送検 | NHKニュース",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261124de80746",
-      "published": "2026-11-24T23:37:15.000Z",
-      "bookmarks": 11,
-      "foundAt": "2026-11-25T02:07:29.346Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "楽天証券、約441万件の個人情報漏えいを確認 168万口座の資産残高も流出",
-      "url": "https://japan.cnet.com/article/35255354/",
-      "published": "2026-11-24T22:17:25.000Z",
-      "bookmarks": 7,
       "foundAt": "2026-11-25T02:07:29.346Z",
       "offered": true
     }
