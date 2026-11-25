@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T09:37:15.058Z",
+  "updatedAt": "2026-11-25T10:07:16.402Z",
   "items": [
     {
       "feed": "publickey",
@@ -90,6 +90,36 @@
       "published": "2026-11-20T13:48:14.000Z",
       "foundAt": "2026-11-24T08:30:24.332Z",
       "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "5.9GBでエージェント性能アップ！「Ternary Bonsai 2.5 27B」登場",
+      "url": "https://pc.watch.impress.co.jp/docs/news/2159034.html",
+      "published": "2026-11-25T04:56:46.000Z",
+      "bookmarks": 5,
+      "foundAt": "2026-11-25T10:07:16.402Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "音楽サービスのTIDAL、AI生成楽曲を削除・受付停止へ 直近90日の配信楽曲の43％がAI生成",
+      "url": "https://www.itmedia.co.jp/news/article/2611/25/2000003433/",
+      "published": "2026-11-25T02:00:39.000Z",
+      "bookmarks": 5,
+      "foundAt": "2026-11-25T10:07:16.402Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "数学者への提言｜洞龍弥",
+      "url": "https://note.com/potycaty/n/n3a700f6c1d84",
+      "published": "2026-11-24T10:07:54.000Z",
+      "bookmarks": 7,
+      "foundAt": "2026-11-25T10:07:16.402Z",
+      "offered": false
     },
     {
       "feed": "hatebu",
@@ -559,36 +589,6 @@
       "published": "2026-11-24T23:35:54.000Z",
       "bookmarks": 6,
       "foundAt": "2026-11-25T01:07:25.470Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "画像アップロードだけでサーバー乗っ取り？ 「Ghostscript」の脆弱性「Upload2Shell」／「WordPress」「Roundcube」などで攻撃成立、対策版への更新を",
-      "url": "https://forest.watch.impress.co.jp/docs/news/2158558.html",
-      "published": "2026-11-24T08:50:22.000Z",
-      "bookmarks": 7,
-      "foundAt": "2026-11-25T01:07:25.470Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "使わなくなったAndroidスマートフォンにPCのシステムステータスやAIエージェントの使用率など様々なウィジェットを表示させておくことができるAndroidアプリ「PhoneBox」がmacOSと日本語に対応。",
-      "url": "https://applech2.com/archives/20261124-phonebox-for-android-support-mac.html",
-      "published": "2026-11-24T04:00:28.000Z",
-      "bookmarks": 4,
-      "foundAt": "2026-11-25T01:07:25.470Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "「ドパガキ」が「Z世代の年間トレンド大賞」に その意味とは Simejiが選定",
-      "url": "https://japan.cnet.com/article/35255347/",
-      "published": "2026-11-24T10:13:12.000Z",
-      "bookmarks": 6,
-      "foundAt": "2026-11-25T00:37:15.712Z",
       "offered": true
     }
   ]
