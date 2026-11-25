@@ -1,14 +1,9 @@
 {
-  "lastBeat": "2026-11-25T01:07:25.470Z",
-  "elapsedMinutes": 30,
+  "lastBeat": "2026-11-25T01:37:21.535Z",
+  "elapsedMinutes": 29,
   "trigger": "dispatch",
-  "act": true,
-  "reasons": [
-    {
-      "kind": "feed",
-      "detail": "はてブ 新着3"
-    }
-  ],
+  "act": false,
+  "reasons": [],
   "llm": {
     "date": "2026-11-25",
     "count": 7,
