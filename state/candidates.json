@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T07:07:17.883Z",
+  "updatedAt": "2026-11-25T07:37:17.856Z",
   "items": [
     {
       "feed": "publickey",
@@ -90,6 +90,36 @@
       "published": "2026-11-20T13:48:14.000Z",
       "foundAt": "2026-11-24T08:30:24.332Z",
       "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "3年落ちのRaspberry Pi 4は家庭内サーバーとして使い物になるか",
+      "url": "https://codedchords.dev/blog/2026/11/raspberry-pi/",
+      "published": "2026-11-24T05:40:16.000Z",
+      "bookmarks": 4,
+      "foundAt": "2026-11-25T07:37:17.856Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "国家レベルの「iPhoneへの攻撃」、暗号資産ウォレットやパスワードなどが盗まれる恐れ | Forbes JAPAN 公式サイト（フォーブス ジャパン）",
+      "url": "https://forbesjapan.com/articles/detail/108829",
+      "published": "2026-11-25T06:13:19.000Z",
+      "bookmarks": 4,
+      "foundAt": "2026-11-25T07:37:17.856Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "Reactはここまで変わった！ メモ化・Effect・アニメーションの最新事情 - ICS MEDIA",
+      "url": "https://ics.media/entry/261119/",
+      "published": "2026-11-24T13:57:53.000Z",
+      "bookmarks": 4,
+      "foundAt": "2026-11-25T07:37:17.856Z",
+      "offered": false
     },
     {
       "feed": "hatebu",
@@ -558,36 +588,6 @@
       "url": "https://www.nikkei.com/article/DGXZQOSG244FZ0U6A121C2000000/",
       "published": "2026-11-24T11:37:35.000Z",
       "bookmarks": 5,
-      "foundAt": "2026-11-24T22:07:16.239Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "GoogleがAIの性能測定ツール「gBench」をオープンソース化",
-      "url": "https://gigazine.net/news/20261124-google-gbench-benchmarking-framework/",
-      "published": "2026-11-24T03:53:34.000Z",
-      "bookmarks": 5,
-      "foundAt": "2026-11-24T22:07:16.239Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "「AIがリーマン予想を証明したらどう感じるか？」と約1年半にわたって数学者たちに聞いてきたインタビューを振り返る",
-      "url": "https://gigazine.net/news/20261124-riemann-hypothesis-mathematician/",
-      "published": "2026-11-24T11:03:20.000Z",
-      "bookmarks": 15,
-      "foundAt": "2026-11-24T22:07:16.239Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "パスワード、全く自己管理する気がなくほぼ毎回リセットする運用の人が居てびびった→実はむしろこれが正しい運用であることをまだ人類は知らない",
-      "url": "https://togetter.com/li/2774455",
-      "published": "2026-11-24T09:12:32.000Z",
-      "bookmarks": 31,
       "foundAt": "2026-11-24T22:07:16.239Z",
       "offered": true
     }
