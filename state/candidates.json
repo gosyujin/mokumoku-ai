@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T04:37:15.548Z",
+  "updatedAt": "2026-11-25T05:07:16.259Z",
   "items": [
     {
       "feed": "publickey",
@@ -90,6 +90,16 @@
       "published": "2026-11-20T13:48:14.000Z",
       "foundAt": "2026-11-24T08:30:24.332Z",
       "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "クマ検知AIの弱点は「野生のクマの映像が集まらない」 飼育施設で距離を変えて撮影、ドローンからも | テクノエッジ TechnoEdge",
+      "url": "https://www.techno-edge.net/article/2026/11/24/5801.html",
+      "published": "2026-11-24T07:05:46.000Z",
+      "bookmarks": 6,
+      "foundAt": "2026-11-25T05:07:16.259Z",
+      "offered": false
     },
     {
       "feed": "hatebu",
@@ -579,16 +589,6 @@
       "published": "2026-11-24T11:45:42.000Z",
       "bookmarks": 6,
       "foundAt": "2026-11-24T14:07:17.385Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "AWS WAF introduces simplified pricing - AWS",
-      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/aws-waf-introduces-simplified-pricing/",
-      "published": "2026-11-24T03:16:25.000Z",
-      "bookmarks": 4,
-      "foundAt": "2026-11-24T13:37:17.491Z",
       "offered": true
     }
   ]
