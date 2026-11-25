@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T13:37:15.492Z",
+  "updatedAt": "2026-11-25T14:07:18.027Z",
   "items": [
     {
       "feed": "publickey",
@@ -94,12 +94,22 @@
     {
       "feed": "hatebu",
       "priority": 3,
+      "title": "「バザールでござーる」が、35年間の感謝を伝える ～キャラクター総出で「どうもありがとう」",
+      "url": "https://pc.watch.impress.co.jp/docs/news/2159142.html",
+      "published": "2026-11-25T06:10:09.000Z",
+      "bookmarks": 4,
+      "foundAt": "2026-11-25T14:07:18.027Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
       "title": "EXT4に4万行のAI生成コード、rcサイクル終盤の投入にトーバルズ氏が警告",
       "url": "https://joho-todai.com/ext4-ai-generated-code-linus-warning/",
       "published": "2026-11-25T05:26:03.000Z",
       "bookmarks": 4,
       "foundAt": "2026-11-25T13:37:15.492Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
@@ -578,16 +588,6 @@
       "url": "https://onk.hatenablog.jp/entry/2026/11/25/022804",
       "published": "2026-11-25T01:35:22.000Z",
       "bookmarks": 4,
-      "foundAt": "2026-11-25T04:07:16.059Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "MCP servers can now ship skills, run tasks, and more with Claude",
-      "url": "https://claude.com/resources/articles/skills-over-mcp-tasks-and-more",
-      "published": "2026-11-25T00:13:28.000Z",
-      "bookmarks": 5,
       "foundAt": "2026-11-25T04:07:16.059Z",
       "offered": true
     }
