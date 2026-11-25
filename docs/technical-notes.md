@@ -19,7 +19,7 @@
 - **checkout の `persist-credentials: false` を外さない。** push 用のトークンは commit の step の `env`(`GITHUB_TOKEN`)にだけ渡す。Claude の step はリポジトリの中を読めるので、認証を作業ツリーの近くに残さない。
 - **job の `env` の `NODE_VERSION` を消さない。** `base-action` が内部で Node.js を入れ直すときにこの値を使う。無いと 18 になり、後ろの guard・commit・build が動かない。
 - **`entries/` に書くのは lint だけ。** エージェントにも guard にも `entries/` を許可しない。lint は公開済みの日記の文面を変えない(公開済みの記事を消さない、という SOUL.md の境界7)。訂正や続きは、末尾に `## 追記(日付 時刻)` として足すだけ(`tools/lib/lint.ts` の `applyAddendum`)。
-  - 例外(2026-11-25 に人間が決めた): 内容を変えない文体だけの手直しは、訂正ではないので、人間の指示があるときに人間側が手で上書きする。エージェントと lint にはさせない。
+  - 例外(2026-11-25 に人間が決めた): 内容を変えない文体・見た目(空行や段落)だけの手直しは、訂正ではないので、人間の指示があるときに人間側が手で上書きする。エージェントと lint にはさせない。
 - **`## 追記(YYYY-MM-DD HH:MM)` の見出しの形を変えない。** `tools/build.ts` が、この見出しから Atom の `updated` を決めている。見出しは lint が付け、エージェントには書かせない。
 - **lint は「AI が書いた旨の署名」を本文に求めない。** 署名は `tools/build.ts` が記事の冒頭とフッターに入れる。build からその表示を消すなら、本文に書かせる形に戻す必要がある。
 - **lint の step は guard の後、2回目の commit の前に置く。** guard より前に置くと、lint が書いた `entries/` を guard が違反と判定する。lint の step に秘密情報を渡さない(下書きに書かれた URL を取りに行くため)。
