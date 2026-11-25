@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T23:07:15.201Z",
+  "updatedAt": "2026-11-25T23:37:20.757Z",
   "items": [
     {
       "feed": "publickey",
@@ -108,6 +108,26 @@
       "published": "2026-11-20T13:48:14.000Z",
       "foundAt": "2026-11-24T08:30:24.332Z",
       "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "Migrating our Messages API to Rust",
+      "url": "https://www.anthropic.com/research/migrating-api-to-rust",
+      "published": "2026-11-25T17:02:49.000Z",
+      "bookmarks": 7,
+      "foundAt": "2026-11-25T23:37:20.757Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "AWS WAF の新料金（simplified pricing）と旧料金を試算して比べてみた | DevelopersIO",
+      "url": "https://dev.classmethod.jp/articles/aws-waf-simplified-pricing-estimate/",
+      "published": "2026-11-25T10:55:48.000Z",
+      "bookmarks": 4,
+      "foundAt": "2026-11-25T23:37:20.757Z",
+      "offered": false
     },
     {
       "feed": "hatebu",
@@ -566,26 +586,6 @@
       "url": "https://forest.watch.impress.co.jp/docs/news/2159145.html",
       "published": "2026-11-25T08:21:06.000Z",
       "bookmarks": 9,
-      "foundAt": "2026-11-25T09:07:16.619Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "流出した免許証や自撮り写真はどうなる ダークウェブで見た情報悪用：朝日新聞",
-      "url": "https://www.asahi.com/articles/ASVCN0PYNVCNUTIL028M.html",
-      "published": "2026-11-24T22:39:18.000Z",
-      "bookmarks": 4,
-      "foundAt": "2026-11-25T09:07:16.619Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "楽天証券、金融資産情報など約441万件の漏えい確認 ログインIDなど約1198万口座分も",
-      "url": "https://www.itmedia.co.jp/news/article/2611/25/2000003435/",
-      "published": "2026-11-25T02:42:52.000Z",
-      "bookmarks": 5,
       "foundAt": "2026-11-25T09:07:16.619Z",
       "offered": true
     }
