@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T12:37:21.617Z",
+  "updatedAt": "2026-11-25T13:07:16.984Z",
   "items": [
     {
       "feed": "publickey",
@@ -94,12 +94,42 @@
     {
       "feed": "hatebu",
       "priority": 3,
+      "title": "高木浩光＠自宅の日記 - 「氏名は含まれておりません」では済まない——KARTE事件で漏れた行動の記録は誰の個人データか",
+      "url": "http://takagi-hiromitsu.jp/diary/20261124.html",
+      "published": "2026-11-25T00:26:29.000Z",
+      "bookmarks": 12,
+      "foundAt": "2026-11-25T13:07:16.984Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "Claude Code を5〜8個並べても迷わないように、自分用のダッシュボードをバイブコーディングで作った",
+      "url": "https://zenn.dev/nexta_/articles/a3ff76a9f98f1c",
+      "published": "2026-11-24T17:54:05.000Z",
+      "bookmarks": 29,
+      "foundAt": "2026-11-25T13:07:16.984Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "マイクロソフト、障害対応へ「非常事態」宣言 1時間で復旧へ - 日本経済新聞",
+      "url": "https://www.nikkei.com/article/DGXZQOGN251A90V21C26A1000000/",
+      "published": "2026-11-25T07:12:44.000Z",
+      "bookmarks": 5,
+      "foundAt": "2026-11-25T13:07:16.984Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
       "title": "Apple製モニターを経由して有線LAN接続したらインターネット速度が4分の1に低下したという体験談",
       "url": "https://gigazine.net/news/20261125-monitor-was-cutting-download-speed/",
       "published": "2026-11-24T23:07:45.000Z",
       "bookmarks": 10,
       "foundAt": "2026-11-25T12:37:21.617Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
@@ -109,7 +139,7 @@
       "published": "2026-11-25T02:26:14.000Z",
       "bookmarks": 5,
       "foundAt": "2026-11-25T12:37:21.617Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
@@ -558,36 +588,6 @@
       "url": "https://k-tai.watch.impress.co.jp/docs/column/stapaapple/2158744.html",
       "published": "2026-11-24T15:12:12.000Z",
       "bookmarks": 6,
-      "foundAt": "2026-11-25T03:37:16.729Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "楽天証券の情報漏えい、個人情報は約441万件と判明 資産残高168万件、口座未開設の119万件も | テクノエッジ TechnoEdge",
-      "url": "https://www.techno-edge.net/article/2026/11/25/5808.html",
-      "published": "2026-11-25T00:52:31.000Z",
-      "bookmarks": 7,
-      "foundAt": "2026-11-25T03:37:16.729Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "「PHP 8.6」が正式リリース、関数型っぽく書ける「Partial Function Application」などを導入／経過時間を表す「Duration」クラスや「clamp()」関数も。2030年末までサポート",
-      "url": "https://forest.watch.impress.co.jp/docs/news/2158479.html",
-      "published": "2026-11-24T01:53:46.000Z",
-      "bookmarks": 6,
-      "foundAt": "2026-11-25T03:37:16.729Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "GitHub - zed-industries/gpui: A GPU-accelerated, open-source UI framework for Rust that combines immediate and retained modes. 🚀",
-      "url": "https://github.com/zed-industries/gpui",
-      "published": "2026-11-24T15:47:06.000Z",
-      "bookmarks": 5,
       "foundAt": "2026-11-25T03:37:16.729Z",
       "offered": true
     }
