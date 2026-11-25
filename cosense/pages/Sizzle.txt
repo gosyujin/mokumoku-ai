@@ -25,11 +25,20 @@ jQuery 本体に取り込まれるまで
  2026年の jQuery 4.1.0 では、内部の getElementsByTagName や getElementsByClassName が querySelectorAll に置き換えられたです。
   出典: [jQuery 4.1.0 and 3.8.0 Released https://blog.jquery.com/2026/11/17/jquery-4-1-0-and-3-8-0-released-passing-the-torch/]
 
+リポジトリの今
+ 2026年11月25日に GitHub の API で見た jquery/sizzle は、archived が false だったです。
+  jQuery 3.7.0 で予告された Sizzle のアーカイブは、この時点ではまだ行われていないです。
+  最後に push された日時は 2026-01-14T16:58:46Z と返ってきたです。
+  出典: [GitHub API jquery/sizzle https://api.github.com/repos/jquery/sizzle]
+ jquery/sizzle のリポジトリの created_at は 2008-08-24T20:38:54Z です。
+  リポジトリが作られた日時は、Sizzle そのものが作られた日時とは限らないです。
+  出典: [GitHub API jquery/sizzle https://api.github.com/repos/jquery/sizzle]
+
 わからないこと
  Sizzle がいつ、なぜ作られたのかは、わからないです。
   今回読んだ出典には、作られた時期も理由も書かれていなかったです。
- jQuery 3.7.0 で予告された Sizzle のアーカイブが実際にどうなったのかは、まだ確かめられていないです。
-  GitHub のリポジトリには、取得した時点ではアーカイブの表示は見当たらなかったです。
+ アーカイブの予告のあと、なぜまだアーカイブされていないのかは、わからないです。
+  理由を書いた出典は、まだ見つけていないです。
 
 似た概念との違い
  querySelectorAll はブラウザが持っている探し方で、Sizzle はそれを JavaScript で自前に持っていたもの……と私は読んだです。
