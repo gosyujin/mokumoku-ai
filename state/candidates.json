@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T01:37:21.535Z",
+  "updatedAt": "2026-11-25T02:07:29.346Z",
   "items": [
     {
       "feed": "publickey",
@@ -80,6 +80,56 @@
       "url": "https://piyolog.hatenadiary.jp/entry/2026/11/20/224814",
       "published": "2026-11-20T13:48:14.000Z",
       "foundAt": "2026-11-24T08:30:24.332Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "34年目の秀丸エディタと、AIの距離感 「正直皆どんな目的で使ってるかよく分かりません」 - レバテックLAB",
+      "url": "https://levtech.jp/media/detail_973/",
+      "published": "2026-11-25T00:58:54.000Z",
+      "bookmarks": 14,
+      "foundAt": "2026-11-25T02:07:29.346Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "三重県警 小学校元講師 AI生成の児童ポルノ画像所持で追送検 | NHKニュース",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261124de80746",
+      "published": "2026-11-24T23:37:15.000Z",
+      "bookmarks": 11,
+      "foundAt": "2026-11-25T02:07:29.346Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "楽天証券、約441万件の個人情報漏えいを確認 168万口座の資産残高も流出",
+      "url": "https://japan.cnet.com/article/35255354/",
+      "published": "2026-11-24T22:17:25.000Z",
+      "bookmarks": 7,
+      "foundAt": "2026-11-25T02:07:29.346Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "アプリ高速化ツール「SpeedyFox」が約14年ぶりのメジャー更新 ～対応プログラム拡充／ゼロから書き直し、Windows/macOS版を共通化、対応プログラムは30種類に",
+      "url": "https://forest.watch.impress.co.jp/docs/news/2158563.html",
+      "published": "2026-11-24T21:27:04.000Z",
+      "bookmarks": 5,
+      "foundAt": "2026-11-25T02:07:29.346Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "「Claude」で作ったアプリをMac／Windowsにインストール可能に 全プランでβ提供",
+      "url": "https://www.itmedia.co.jp/news/article/2611/25/2000003431/",
+      "published": "2026-11-25T01:11:25.000Z",
+      "bookmarks": 4,
+      "foundAt": "2026-11-25T02:07:29.346Z",
       "offered": true
     },
     {
@@ -540,56 +590,6 @@
       "published": "2026-11-24T09:16:43.000Z",
       "bookmarks": 5,
       "foundAt": "2026-11-24T10:07:15.987Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "Claude Projectsを使って、複数のリポジトリにまたがるtextlintとルールのパフォーマンスを改善した",
-      "url": "https://efcl.info/2026/11/24/textlint-performance/",
-      "published": "2026-11-24T02:44:19.000Z",
-      "bookmarks": 4,
-      "foundAt": "2026-11-24T10:07:15.987Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "ISUCON2026 問題解説と講評 : ISUCON公式Blog",
-      "url": "https://isucon.net/archives/isucon2026-problem-review.html",
-      "published": "2026-11-24T06:16:08.000Z",
-      "bookmarks": 6,
-      "foundAt": "2026-11-24T10:07:15.987Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "品質を積み上げられるようにする",
-      "url": "https://speakerdeck.com/goyoki/building-up-of-quality",
-      "published": "2026-11-23T23:53:24.000Z",
-      "bookmarks": 8,
-      "foundAt": "2026-11-24T09:37:16.685Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "情報流出で防犯グッズ人気 スタンガンや催涙スプレー 専門店は10月半ばから売上増（テレビ朝日系（ANN）） - Yahoo!ニュース",
-      "url": "https://news.yahoo.co.jp/articles/289856b29924107c57be29f591207023b9d43409",
-      "published": "2026-11-24T04:08:35.000Z",
-      "bookmarks": 6,
-      "foundAt": "2026-11-24T09:37:16.685Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "AIエージェントを騙す：一見安全だが危険なGitHubリポジトリをAIエージェントにセットアップさせてみた（インターンシップ体験記） - NTT docomo Business Engineers' Blog",
-      "url": "https://engineers.ntt.com/entry/202610-offsec-intern/entry",
-      "published": "2026-11-20T08:35:00.000Z",
-      "bookmarks": 10,
-      "foundAt": "2026-11-24T09:37:16.685Z",
       "offered": true
     }
   ]
