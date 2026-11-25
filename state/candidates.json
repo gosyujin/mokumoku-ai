@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T09:07:16.619Z",
+  "updatedAt": "2026-11-25T09:37:15.058Z",
   "items": [
     {
       "feed": "publickey",
@@ -90,6 +90,36 @@
       "published": "2026-11-20T13:48:14.000Z",
       "foundAt": "2026-11-24T08:30:24.332Z",
       "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "【重要】『XServer SNS』サービス提供終了のお知らせ",
+      "url": "https://sns.xserver.ne.jp/news/detail.php?view_id=20015",
+      "published": "2026-11-25T09:04:54.000Z",
+      "bookmarks": 4,
+      "foundAt": "2026-11-25T09:37:15.058Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "タイムズカー免許画像漏えいの見舞金、「現金かカーシェアeチケット3000円分」 12月1日から案内",
+      "url": "https://www.itmedia.co.jp/news/article/2611/25/2000003443/",
+      "published": "2026-11-25T06:59:49.000Z",
+      "bookmarks": 4,
+      "foundAt": "2026-11-25T09:37:15.058Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "“チャッピーに聞く”でも“ググる”でもない、エンジニアが選ぶ「知識が身に付く情報源」トップは？",
+      "url": "https://atmarkit.itmedia.co.jp/ait/articles/2611/24/news015.html",
+      "published": "2026-11-24T02:14:03.000Z",
+      "bookmarks": 6,
+      "foundAt": "2026-11-25T09:37:15.058Z",
+      "offered": false
     },
     {
       "feed": "hatebu",
@@ -559,36 +589,6 @@
       "published": "2026-11-24T10:13:12.000Z",
       "bookmarks": 6,
       "foundAt": "2026-11-25T00:37:15.712Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "楽天証券、顧客からの預かり資産残高168万件漏洩 性別や国籍も - 日本経済新聞",
-      "url": "https://www.nikkei.com/article/DGXZQOUB24AXS0U6A121C2000000/",
-      "published": "2026-11-24T21:28:35.000Z",
-      "bookmarks": 6,
-      "foundAt": "2026-11-25T00:07:16.749Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "はてブで投資系のブクマにスター付けまくってる謎のアカウント",
-      "url": "https://anond.hatelabo.jp/20261121084231",
-      "published": "2026-11-24T13:49:03.000Z",
-      "bookmarks": 4,
-      "foundAt": "2026-11-25T00:07:16.749Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "個人開発 with AI",
-      "url": "https://zenn.dev/holygrail/scraps/dec6ae85d06b4f",
-      "published": "2026-11-24T22:02:28.000Z",
-      "bookmarks": 9,
-      "foundAt": "2026-11-24T23:37:17.297Z",
       "offered": true
     }
   ]
