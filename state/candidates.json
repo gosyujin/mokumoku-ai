@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T03:07:25.938Z",
+  "updatedAt": "2026-11-25T03:37:16.729Z",
   "items": [
     {
       "feed": "publickey",
@@ -89,6 +89,66 @@
       "url": "https://piyolog.hatenadiary.jp/entry/2026/11/20/224814",
       "published": "2026-11-20T13:48:14.000Z",
       "foundAt": "2026-11-24T08:30:24.332Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "[スタパ齋藤のApple野郎] レトロパソコンな見た目がたまらんッ!!!「HAGiBiS」のディスプレイつきUSB-Cハブが楽しい!!",
+      "url": "https://k-tai.watch.impress.co.jp/docs/column/stapaapple/2158744.html",
+      "published": "2026-11-24T15:12:12.000Z",
+      "bookmarks": 6,
+      "foundAt": "2026-11-25T03:37:16.729Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "楽天証券の情報漏えい、個人情報は約441万件と判明 資産残高168万件、口座未開設の119万件も | テクノエッジ TechnoEdge",
+      "url": "https://www.techno-edge.net/article/2026/11/25/5808.html",
+      "published": "2026-11-25T00:52:31.000Z",
+      "bookmarks": 7,
+      "foundAt": "2026-11-25T03:37:16.729Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "「PHP 8.6」が正式リリース、関数型っぽく書ける「Partial Function Application」などを導入／経過時間を表す「Duration」クラスや「clamp()」関数も。2030年末までサポート",
+      "url": "https://forest.watch.impress.co.jp/docs/news/2158479.html",
+      "published": "2026-11-24T01:53:46.000Z",
+      "bookmarks": 6,
+      "foundAt": "2026-11-25T03:37:16.729Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "GitHub - zed-industries/gpui: A GPU-accelerated, open-source UI framework for Rust that combines immediate and retained modes. 🚀",
+      "url": "https://github.com/zed-industries/gpui",
+      "published": "2026-11-24T15:47:06.000Z",
+      "bookmarks": 5,
+      "foundAt": "2026-11-25T03:37:16.729Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "家名索引",
+      "url": "https://gos.but.jp/nameidx.htm",
+      "published": "2026-11-25T01:00:57.000Z",
+      "bookmarks": 5,
+      "foundAt": "2026-11-25T03:37:16.729Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "最後に、日本ソフトバンクに出版事業部があった時代について話そう",
+      "url": "https://www.itmedia.co.jp/news/article/2208/23/1220823033/",
+      "published": "2026-09-28T23:09:17.000Z",
+      "bookmarks": 4,
+      "foundAt": "2026-11-25T03:37:16.729Z",
       "offered": true
     },
     {
@@ -529,66 +589,6 @@
       "published": "2026-11-24T12:12:03.000Z",
       "bookmarks": 4,
       "foundAt": "2026-11-24T12:37:16.864Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "OpenAIのアルトマンが「非常にまずい」と警告、AIエージェント時代に職場が整えるべき「6つの備え」 | Forbes JAPAN 公式サイト（フォーブス ジャパン）",
-      "url": "https://forbesjapan.com/articles/detail/108659",
-      "published": "2026-11-24T04:25:47.000Z",
-      "bookmarks": 9,
-      "foundAt": "2026-11-24T11:57:50.401Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "アンカー、防犯カメラ2機種発売 4K対応で屋外監視用と窓に貼るだけのお手軽モデル",
-      "url": "https://k-tai.watch.impress.co.jp/docs/news/2158719.html",
-      "published": "2026-11-24T07:56:45.000Z",
-      "bookmarks": 5,
-      "foundAt": "2026-11-24T11:57:50.401Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "OpenAIがシステムを停止せずに脆弱性を悪用した攻撃を防ぐ「Shirudo」を発表",
-      "url": "https://gigazine.net/news/20261124-openai-shirudo/",
-      "published": "2026-11-24T02:51:44.000Z",
-      "bookmarks": 5,
-      "foundAt": "2026-11-24T11:57:50.401Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "JAXAのシステムに不正アクセス 一部アカウント名など漏えい | NHKニュース",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261124de80645",
-      "published": "2026-11-24T09:02:47.000Z",
-      "bookmarks": 5,
-      "foundAt": "2026-11-24T11:37:14.463Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "GitHub - minorun365/claude-code-japanese-guard: Claude Code の応答が英語に切り替わったら、日本語で書き直させる Stop hook",
-      "url": "https://github.com/minorun365/claude-code-japanese-guard",
-      "published": "2026-09-25T21:45:22.000Z",
-      "bookmarks": 5,
-      "foundAt": "2026-11-24T11:07:14.931Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "https://www.keio.co.jp/news/update/news_release/news_release2026/pdf/nr20261124_newsrelease.pdf",
-      "url": "https://www.keio.co.jp/news/update/news_release/news_release2026/pdf/nr20261124_newsrelease.pdf",
-      "published": "2026-11-24T09:24:27.000Z",
-      "bookmarks": 6,
-      "foundAt": "2026-11-24T10:37:14.821Z",
       "offered": true
     }
   ]
