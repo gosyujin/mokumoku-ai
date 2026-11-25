@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T11:37:22.565Z",
+  "updatedAt": "2026-11-25T12:07:15.321Z",
   "items": [
     {
       "feed": "publickey",
@@ -94,12 +94,52 @@
     {
       "feed": "hatebu",
       "priority": 3,
+      "title": "中国の諜報機関が高性能AIチップの密輸を支援する秘密工作を少なくとも2年前から展開していたことが明らかに",
+      "url": "https://gigazine.net/news/20261125-china-spy-nvidia-chips/",
+      "published": "2026-11-25T09:49:34.000Z",
+      "bookmarks": 6,
+      "foundAt": "2026-11-25T12:07:15.321Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "窓の内側に貼って屋外を撮影する防犯カメラ Ankerが9990円で発売",
+      "url": "https://japan.cnet.com/article/35255394/",
+      "published": "2026-11-25T08:33:34.000Z",
+      "bookmarks": 8,
+      "foundAt": "2026-11-25T12:07:15.321Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "Anthropicが「アプリとしてインストール」ベータ版をリリース、Claudeアーティファクトが通知機能・オプションのフルコンピュータアクセスなどを備えたWindows・Mac用アプリに変換される",
+      "url": "https://gigazine.net/news/20261125-anthropic-claude-install-as-app/",
+      "published": "2026-11-25T05:40:03.000Z",
+      "bookmarks": 7,
+      "foundAt": "2026-11-25T12:07:15.321Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "Turn artifacts into Mac and Windows apps",
+      "url": "https://claude.com/resources/articles/install-as-app",
+      "published": "2026-11-25T00:27:37.000Z",
+      "bookmarks": 4,
+      "foundAt": "2026-11-25T12:07:15.321Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
       "title": "M＆A仲介会社に不正アクセス 最大数千社分の顧客情報漏えいか | NHKニュース",
       "url": "https://news.web.nhk/newsweb/na/nd-20261125de81289",
       "published": "2026-11-25T09:13:49.000Z",
       "bookmarks": 5,
       "foundAt": "2026-11-25T11:37:22.565Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
@@ -109,7 +149,7 @@
       "published": "2026-11-25T06:43:55.000Z",
       "bookmarks": 6,
       "foundAt": "2026-11-25T11:37:22.565Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
@@ -549,46 +589,6 @@
       "published": "2026-09-28T23:09:17.000Z",
       "bookmarks": 4,
       "foundAt": "2026-11-25T03:37:16.729Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "@marty_friedman のポスト on X（2026-11-24 03:26） / X",
-      "url": "https://x.com/marty_friedman/status/2124932608882598144",
-      "published": "2026-11-25T02:30:15.000Z",
-      "bookmarks": 7,
-      "foundAt": "2026-11-25T03:07:25.938Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "国会図書館の軽量AI-OCR「NDLOCR-Lite」がv2.0に、読書バリアフリーを目指す機能強化／異体字包摂、表の構造化、「PyPI」経由でのインストールにも対応",
-      "url": "https://forest.watch.impress.co.jp/docs/news/2158877.html",
-      "published": "2026-11-25T00:50:47.000Z",
-      "bookmarks": 6,
-      "foundAt": "2026-11-25T02:37:15.137Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "AIにもブラックフライデー。Google AI Plus/Proの年間プランが半額！",
-      "url": "https://pc.watch.impress.co.jp/docs/news/2158884.html",
-      "published": "2026-11-24T22:33:26.000Z",
-      "bookmarks": 6,
-      "foundAt": "2026-11-25T02:37:15.137Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "34年目の秀丸エディタと、AIの距離感 「正直皆どんな目的で使ってるかよく分かりません」 - レバテックLAB",
-      "url": "https://levtech.jp/media/detail_973/",
-      "published": "2026-11-25T00:58:54.000Z",
-      "bookmarks": 14,
-      "foundAt": "2026-11-25T02:07:29.346Z",
       "offered": true
     }
   ]
