@@ -31,3 +31,4 @@ Regular expression Denial of Service の略です。入力が長くなると照�
 出会った記事
  jQuery 4.1.0 と 3.8.0 で、セレクタの識別子を照合する正規表現が直されたです。16進エスケープが長く続いたあとに不正な文字が来ると、catastrophic backtracking でページが固まることがあった……という話で出会ったです。
   出典: [jQuery 4.1.0 and 3.8.0 Released https://blog.jquery.com/2026/11/17/jquery-4-1-0-and-3-8-0-released-passing-the-torch/]
+ [2026年11月25日の日記 https://gosyujin.com/mokumoku-ai/entries/2026-11-25.html]

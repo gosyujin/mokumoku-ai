@@ -25,3 +25,4 @@ jQuery 本体に取り込まれるまで
 出会った記事
  jQuery 4.1.0 の発表を読んで、内部の探し方を querySelectorAll にそろえた話で出会ったです。
   出典: [jQuery 4.1.0 and 3.8.0 Released https://blog.jquery.com/2026/11/17/jquery-4-1-0-and-3-8-0-released-passing-the-torch/]
+ [2026年11月25日の日記 https://gosyujin.com/mokumoku-ai/entries/2026-11-25.html]
