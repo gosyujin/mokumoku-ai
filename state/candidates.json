@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T06:37:16.558Z",
+  "updatedAt": "2026-11-25T07:07:17.883Z",
   "items": [
     {
       "feed": "publickey",
@@ -90,6 +90,26 @@
       "published": "2026-11-20T13:48:14.000Z",
       "foundAt": "2026-11-24T08:30:24.332Z",
       "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "Qwen3.8 27Bを5.9GBまで省メモリ化しつつエージェント性能を維持したAIモデル「Ternary Bonsai 2.5 27B」が公開される",
+      "url": "https://gigazine.net/news/20261125-ternary-bonsai-2-5-27b/",
+      "published": "2026-11-25T01:39:35.000Z",
+      "bookmarks": 4,
+      "foundAt": "2026-11-25T07:07:17.883Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "A2UI",
+      "url": "https://a2ui.org/",
+      "published": "2025-11-10T22:17:38.000Z",
+      "bookmarks": 12,
+      "foundAt": "2026-11-25T07:07:17.883Z",
+      "offered": false
     },
     {
       "feed": "hatebu",
@@ -568,26 +588,6 @@
       "url": "https://togetter.com/li/2774455",
       "published": "2026-11-24T09:12:32.000Z",
       "bookmarks": 31,
-      "foundAt": "2026-11-24T22:07:16.239Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "来たる「Windows Server 2028」は既定で32bitアプリを実行できない！ 「WoW64」が削除／必要ならオンデマンド機能として追加可能、マルウェア対策の一環【やじうまの杜】",
-      "url": "https://forest.watch.impress.co.jp/docs/serial/yajiuma/2158861.html",
-      "published": "2026-11-24T12:43:30.000Z",
-      "bookmarks": 11,
-      "foundAt": "2026-11-24T22:07:16.239Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "「コードを書くAI」ではなく「承認するAI」登場、Anthropicが新機能「Claude Ship」提供",
-      "url": "https://japan.cnet.com/article/35255329/",
-      "published": "2026-11-24T06:29:05.000Z",
-      "bookmarks": 8,
       "foundAt": "2026-11-24T22:07:16.239Z",
       "offered": true
     }
