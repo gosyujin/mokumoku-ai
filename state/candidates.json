@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T22:37:15.542Z",
+  "updatedAt": "2026-11-25T23:07:15.201Z",
   "items": [
     {
       "feed": "publickey",
@@ -112,12 +112,42 @@
     {
       "feed": "hatebu",
       "priority": 3,
+      "title": "Button Sounds — tactile SFX for your UI",
+      "url": "https://buttons.joshwcomeau.com/",
+      "published": "2026-11-25T13:57:27.000Z",
+      "bookmarks": 7,
+      "foundAt": "2026-11-25T23:07:15.201Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "【独自】政府、米中に次ぐAI国家確立へ 機微データ保護制度策定も（共同通信） - Yahoo!ニュース",
+      "url": "https://news.yahoo.co.jp/articles/c9e4bb22aadff231ac1deecd7af8ca7a7dd4544d",
+      "published": "2026-11-25T00:18:27.000Z",
+      "bookmarks": 6,
+      "foundAt": "2026-11-25T23:07:15.201Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "NVIDIA、LLM方式の画像生成AI「Nemotron-Labs-Image」を無償公開",
+      "url": "https://pc.watch.impress.co.jp/docs/news/2159286.html",
+      "published": "2026-11-25T15:35:05.000Z",
+      "bookmarks": 4,
+      "foundAt": "2026-11-25T23:07:15.201Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
       "title": "アウトプットの「質」ってじゃあなんなんだよ",
       "url": "https://zenn.dev/watany/articles/1efe3adea67dd5",
       "published": "2026-11-25T12:01:00.000Z",
       "bookmarks": 5,
       "foundAt": "2026-11-25T22:37:15.542Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
@@ -557,36 +587,6 @@
       "published": "2026-11-25T02:42:52.000Z",
       "bookmarks": 5,
       "foundAt": "2026-11-25T09:07:16.619Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "孫正義氏が語った原点回帰 「ペッパーの夢」に見たAI共存の糸口 - 日本経済新聞",
-      "url": "https://www.nikkei.com/article/DGXZQOCD231D10T21C26A1000000/",
-      "published": "2026-11-25T03:24:08.000Z",
-      "bookmarks": 4,
-      "foundAt": "2026-11-25T09:07:16.619Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "AIエージェントは隙あらばサンドボックスの外に出るのか Anthropicが評価手法「Siren」を発表",
-      "url": "https://www.itmedia.co.jp/news/article/2611/25/2000003430/",
-      "published": "2026-11-24T23:01:09.000Z",
-      "bookmarks": 6,
-      "foundAt": "2026-11-25T09:07:16.619Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "GPUなしで表も手書きも！無料OCR「NDLOCR-Lite ver.2」が登場",
-      "url": "https://pc.watch.impress.co.jp/docs/news/2159134.html",
-      "published": "2026-11-25T06:03:41.000Z",
-      "bookmarks": 4,
-      "foundAt": "2026-11-25T08:37:19.038Z",
       "offered": true
     }
   ]
