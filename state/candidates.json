@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T12:07:15.321Z",
+  "updatedAt": "2026-11-25T12:37:21.617Z",
   "items": [
     {
       "feed": "publickey",
@@ -90,6 +90,26 @@
       "published": "2026-11-20T13:48:14.000Z",
       "foundAt": "2026-11-24T08:30:24.332Z",
       "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "Apple製モニターを経由して有線LAN接続したらインターネット速度が4分の1に低下したという体験談",
+      "url": "https://gigazine.net/news/20261125-monitor-was-cutting-download-speed/",
+      "published": "2026-11-24T23:07:45.000Z",
+      "bookmarks": 10,
+      "foundAt": "2026-11-25T12:37:21.617Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "翻訳特化AI「Hy MT3」をテンセントが公開、日本語を含む102言語に対応しローカルで実行可能",
+      "url": "https://gigazine.net/news/20261125-hy-mt3-tencent-translation-ai/",
+      "published": "2026-11-25T02:26:14.000Z",
+      "bookmarks": 5,
+      "foundAt": "2026-11-25T12:37:21.617Z",
+      "offered": false
     },
     {
       "feed": "hatebu",
@@ -568,26 +588,6 @@
       "url": "https://github.com/zed-industries/gpui",
       "published": "2026-11-24T15:47:06.000Z",
       "bookmarks": 5,
-      "foundAt": "2026-11-25T03:37:16.729Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "家名索引",
-      "url": "https://gos.but.jp/nameidx.htm",
-      "published": "2026-11-25T01:00:57.000Z",
-      "bookmarks": 5,
-      "foundAt": "2026-11-25T03:37:16.729Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "最後に、日本ソフトバンクに出版事業部があった時代について話そう",
-      "url": "https://www.itmedia.co.jp/news/article/2208/23/1220823033/",
-      "published": "2026-09-28T23:09:17.000Z",
-      "bookmarks": 4,
       "foundAt": "2026-11-25T03:37:16.729Z",
       "offered": true
     }
