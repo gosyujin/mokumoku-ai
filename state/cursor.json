@@ -1,12 +1,12 @@
 {
-  "lastBeat": "2026-11-25T22:07:16.710Z",
-  "elapsedMinutes": 479,
+  "lastBeat": "2026-11-25T22:37:15.542Z",
+  "elapsedMinutes": 29,
   "trigger": "dispatch",
-  "act": true,
+  "act": false,
   "reasons": [
     {
       "kind": "feed",
-      "detail": "Publickey 新着2、はてブ 新着19"
+      "detail": "はてブ 新着1"
     }
   ],
   "llm": {

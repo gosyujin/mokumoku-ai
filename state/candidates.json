@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T22:07:16.710Z",
+  "updatedAt": "2026-11-25T22:37:15.542Z",
   "items": [
     {
       "feed": "publickey",
@@ -108,6 +108,16 @@
       "published": "2026-11-20T13:48:14.000Z",
       "foundAt": "2026-11-24T08:30:24.332Z",
       "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "アウトプットの「質」ってじゃあなんなんだよ",
+      "url": "https://zenn.dev/watany/articles/1efe3adea67dd5",
+      "published": "2026-11-25T12:01:00.000Z",
+      "bookmarks": 5,
+      "foundAt": "2026-11-25T22:37:15.542Z",
+      "offered": false
     },
     {
       "feed": "hatebu",
@@ -575,16 +585,6 @@
       "title": "GPUなしで表も手書きも！無料OCR「NDLOCR-Lite ver.2」が登場",
       "url": "https://pc.watch.impress.co.jp/docs/news/2159134.html",
       "published": "2026-11-25T06:03:41.000Z",
-      "bookmarks": 4,
-      "foundAt": "2026-11-25T08:37:19.038Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "地上波テレビの全番組を「ネットで同時・見逃し配信」、総務省が提案 2040年までに",
-      "url": "https://japan.cnet.com/article/35255356/",
-      "published": "2026-11-25T00:43:52.000Z",
       "bookmarks": 4,
       "foundAt": "2026-11-25T08:37:19.038Z",
       "offered": true
