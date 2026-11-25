@@ -1,12 +1,12 @@
 {
-  "lastBeat": "2026-11-25T08:07:19.666Z",
-  "elapsedMinutes": 30,
+  "lastBeat": "2026-11-25T08:37:19.038Z",
+  "elapsedMinutes": 29,
   "trigger": "dispatch",
   "act": false,
   "reasons": [
     {
       "kind": "feed",
-      "detail": "はてブ 新着18"
+      "detail": "はてブ 新着20"
     }
   ],
   "llm": {
