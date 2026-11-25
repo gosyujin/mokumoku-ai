@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T23:37:17.297Z",
+  "updatedAt": "2026-11-25T00:07:16.749Z",
   "items": [
     {
       "feed": "publickey",
@@ -80,6 +80,26 @@
       "url": "https://piyolog.hatenadiary.jp/entry/2026/11/20/224814",
       "published": "2026-11-20T13:48:14.000Z",
       "foundAt": "2026-11-24T08:30:24.332Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "楽天証券、顧客からの預かり資産残高168万件漏洩 性別や国籍も - 日本経済新聞",
+      "url": "https://www.nikkei.com/article/DGXZQOUB24AXS0U6A121C2000000/",
+      "published": "2026-11-24T21:28:35.000Z",
+      "bookmarks": 6,
+      "foundAt": "2026-11-25T00:07:16.749Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "はてブで投資系のブクマにスター付けまくってる謎のアカウント",
+      "url": "https://anond.hatelabo.jp/20261121084231",
+      "published": "2026-11-24T13:49:03.000Z",
+      "bookmarks": 4,
+      "foundAt": "2026-11-25T00:07:16.749Z",
       "offered": true
     },
     {
@@ -569,26 +589,6 @@
       "url": "https://pc.watch.impress.co.jp/docs/news/2158462.html",
       "published": "2026-11-23T21:20:45.000Z",
       "bookmarks": 309,
-      "foundAt": "2026-11-24T08:30:24.332Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "NTT 研究所の正体 - IOWNとNTTの研究所",
-      "url": "https://endecl.hatenablog.com/entry/2026/05/04/223141",
-      "published": "2026-11-23T13:46:51.000Z",
-      "bookmarks": 123,
-      "foundAt": "2026-11-24T08:30:24.332Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "マクドナルド公式アプリのデータベースへの不正アクセスに関するお知らせとお詫び | マクドナルド公式",
-      "url": "https://www.mcdonalds.co.jp/company/info/261120a/",
-      "published": "2026-11-21T09:09:54.000Z",
-      "bookmarks": 74,
       "foundAt": "2026-11-24T08:30:24.332Z",
       "offered": true
     }
