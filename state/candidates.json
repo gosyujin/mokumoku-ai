@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T05:07:16.259Z",
+  "updatedAt": "2026-11-25T05:37:23.820Z",
   "items": [
     {
       "feed": "publickey",
@@ -90,6 +90,36 @@
       "published": "2026-11-20T13:48:14.000Z",
       "foundAt": "2026-11-24T08:30:24.332Z",
       "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "Deploying agents safely in your enterprise | Google Cloud Blog",
+      "url": "https://cloud.google.com/blog/products/identity-security/deploying-agents-safely-in-your-enterprise",
+      "published": "2026-11-25T00:04:34.000Z",
+      "bookmarks": 4,
+      "foundAt": "2026-11-25T05:37:23.820Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "爆増するサイバー攻撃、魔の手はITだけでなく「OT」にも 元米軍のセキュリティ専門家が警鐘",
+      "url": "https://www.itmedia.co.jp/news/article/2611/24/2000003408/",
+      "published": "2026-11-24T06:29:01.000Z",
+      "bookmarks": 5,
+      "foundAt": "2026-11-25T05:37:23.820Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "「JavaScriptを抜いた」 10年かけて首位になった言語は？ Java衰退・PHP半減が示す開発現場のリアル",
+      "url": "https://atmarkit.itmedia.co.jp/ait/articles/2611/18/news031.html",
+      "published": "2026-11-18T05:44:39.000Z",
+      "bookmarks": 4,
+      "foundAt": "2026-11-25T05:37:23.820Z",
+      "offered": false
     },
     {
       "feed": "hatebu",
@@ -559,36 +589,6 @@
       "published": "2026-11-24T00:42:32.000Z",
       "bookmarks": 8,
       "foundAt": "2026-11-24T22:07:16.239Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "NDLOCR-Lite ver.2の公開について | NDLラボ",
-      "url": "https://lab.ndl.go.jp/news/2026/2026-11-24/",
-      "published": "2026-11-24T07:53:32.000Z",
-      "bookmarks": 10,
-      "foundAt": "2026-11-24T22:07:16.239Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "当社お客様の情報漏えいに関するお詫びとお知らせ（第2報）:楽天証券",
-      "url": "https://www.rakuten-sec.co.jp/web/info/info20261124-04.html",
-      "published": "2026-11-24T13:06:22.000Z",
-      "bookmarks": 15,
-      "foundAt": "2026-11-24T14:07:17.385Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "1台数億円するのに 手術支援ロボットが使われない | NHKニュース",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261120de78959",
-      "published": "2026-11-24T11:45:42.000Z",
-      "bookmarks": 6,
-      "foundAt": "2026-11-24T14:07:17.385Z",
       "offered": true
     }
   ]
