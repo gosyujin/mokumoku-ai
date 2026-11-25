@@ -1,6 +1,24 @@
 {
-  "updatedAt": "2026-11-25T14:07:18.027Z",
+  "updatedAt": "2026-11-25T22:07:16.710Z",
   "items": [
+    {
+      "feed": "publickey",
+      "priority": 1,
+      "title": "MCPに新機能「Skills over MCP」登場。ツールとの接続だけでなく使い方のスキルもMCP経由で提供",
+      "url": "https://www.publickey1.jp/blog/26/mcpskills_over_mcpmcp.html",
+      "published": "2026-11-25T15:29:05.000Z",
+      "foundAt": "2026-11-25T22:07:16.710Z",
+      "offered": true
+    },
+    {
+      "feed": "publickey",
+      "priority": 1,
+      "title": "「Google Workspace MCPサーバ」と「Google Workspace CLI」が正式版としてリリース",
+      "url": "https://www.publickey1.jp/blog/26/google_workspace_mcpgoogle_workspace_cli.html",
+      "published": "2026-11-25T15:27:15.000Z",
+      "foundAt": "2026-11-25T22:07:16.710Z",
+      "offered": true
+    },
     {
       "feed": "publickey",
       "priority": 1,
@@ -89,6 +107,196 @@
       "url": "https://piyolog.hatenadiary.jp/entry/2026/11/20/224814",
       "published": "2026-11-20T13:48:14.000Z",
       "foundAt": "2026-11-24T08:30:24.332Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "Update on a security incident involving 1Password’s backend systems. | 1Password",
+      "url": "https://1password.com/blog/update-on-nov-2026-security-incident",
+      "published": "2026-11-25T18:52:09.000Z",
+      "bookmarks": 14,
+      "foundAt": "2026-11-25T22:07:16.710Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "AnthropicとOpenAIの従業員らが「未公開モデルが強力になりすぎて一般公開するのは危険」と懸念",
+      "url": "https://gigazine.net/news/20261125-anthropic-openai-employees-fear-unreleased-ai-models/",
+      "published": "2026-11-25T11:43:19.000Z",
+      "bookmarks": 42,
+      "foundAt": "2026-11-25T22:07:16.710Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "観測者から当事者へ、AI 時代にドメインへ深入りする知識と技術 / From Observer to Practitioner: Going Deep into Domains in the Age of AI",
+      "url": "https://speakerdeck.com/nrslib/from-observer-to-practitioner-going-deep-into-domains-in-the-age-of-ai",
+      "published": "2026-11-25T11:26:01.000Z",
+      "bookmarks": 14,
+      "foundAt": "2026-11-25T22:07:16.710Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "組織レベルごとの品質定義（リライト）｜snsk",
+      "url": "https://note.com/_snsk/n/n9473a6e95b1c",
+      "published": "2026-11-25T16:01:22.000Z",
+      "bookmarks": 17,
+      "foundAt": "2026-11-25T22:07:16.710Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "日本語サイトで指定しておきたいCSS 2026年版 - Qiita",
+      "url": "https://qiita.com/tofu_frontend/items/6a1bb7d80a58736eef0e",
+      "published": "2026-11-23T10:33:25.000Z",
+      "bookmarks": 6,
+      "foundAt": "2026-11-25T22:07:16.710Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "ChordTube - YouTube の曲のコード進行・キー・BPM",
+      "url": "https://chordtube.net/",
+      "published": "2026-11-24T18:01:23.000Z",
+      "bookmarks": 22,
+      "foundAt": "2026-11-25T22:07:16.710Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "【自動化】Muse のサイドチャットへ Webhook を届ける MuseKnock の仕組み",
+      "url": "https://zenn.dev/codehex/articles/33bc6ee330b880",
+      "published": "2026-11-25T06:40:35.000Z",
+      "bookmarks": 10,
+      "foundAt": "2026-11-25T22:07:16.710Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "[アップデート]AWS Continuum for Penetration Testingでコストの事前予測ができるようになりました | DevelopersIO",
+      "url": "https://dev.classmethod.jp/articles/aws-continuum-estimate/",
+      "published": "2026-11-25T04:48:33.000Z",
+      "bookmarks": 7,
+      "foundAt": "2026-11-25T22:07:16.710Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "防衛省、自衛官の定数削減へ 「AI指揮統制」で人手補強 - 日本経済新聞",
+      "url": "https://www.nikkei.com/article/DGXZQOUA20BWZ0Q6A121C2000000/",
+      "published": "2026-11-25T14:15:12.000Z",
+      "bookmarks": 27,
+      "foundAt": "2026-11-25T22:07:16.710Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "最近のMySQL事情について",
+      "url": "https://speakerdeck.com/yoku0825/mysql-in-2026",
+      "published": "2026-11-25T12:41:19.000Z",
+      "bookmarks": 15,
+      "foundAt": "2026-11-25T22:07:16.710Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "GitHub Copilot が切り拓くエージェント時代の開発ワークフロー",
+      "url": "https://speakerdeck.com/moulongzhang/20261124-githubconnecttokyo-session2",
+      "published": "2026-11-25T07:56:34.000Z",
+      "bookmarks": 13,
+      "foundAt": "2026-11-25T22:07:16.710Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "AI-DLC最前線のCognitive Surrenderに陥らないチーム作り",
+      "url": "https://speakerdeck.com/yuukiyo/building-teams-that-resist-cognitive-surrender-in-ai-dlc",
+      "published": "2026-11-25T11:22:09.000Z",
+      "bookmarks": 13,
+      "foundAt": "2026-11-25T22:07:16.710Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "え！理想のターミナル作れますよ！早く気づいて！",
+      "url": "https://eiji.page/blog/niwaterm-fun-to-make",
+      "published": "2026-11-25T11:04:20.000Z",
+      "bookmarks": 22,
+      "foundAt": "2026-11-25T22:07:16.710Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "小型で低発熱なUSB充電器。エレコムが日本電源技術メーカーと協業",
+      "url": "https://pc.watch.impress.co.jp/docs/news/2158950.html",
+      "published": "2026-11-25T02:10:37.000Z",
+      "bookmarks": 7,
+      "foundAt": "2026-11-25T22:07:16.710Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "PayPayでシステム障害 カード連携サービスで決済できず | NHKニュース",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261125de81532",
+      "published": "2026-11-25T14:26:59.000Z",
+      "bookmarks": 8,
+      "foundAt": "2026-11-25T22:07:16.710Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "「小学生くらいの頃に見たロボットに乗って戦うアニメを探してるのですが見つかりません」情報を元に推理して2択に絞られるが、解決したと思ったら謎が残った",
+      "url": "https://togetter.com/li/2774878",
+      "published": "2026-11-25T11:47:41.000Z",
+      "bookmarks": 11,
+      "foundAt": "2026-11-25T22:07:16.710Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "AI時代の実践・形式検証入門",
+      "url": "https://docs.google.com/presentation/d/1s-ie7b1rD47NUkwSIvdDYCJfrHzWOl-rt1c2hSgeerM/edit?slide=id.p1",
+      "published": "2026-11-24T23:23:30.000Z",
+      "bookmarks": 9,
+      "foundAt": "2026-11-25T22:07:16.710Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "MacBookのトラックパッドをスピーカーに変えてしゃべらせる「NO SPEAKER」が登場",
+      "url": "https://gigazine.net/news/20261125-no-speaker-macbook-trackpad/",
+      "published": "2026-11-25T11:02:17.000Z",
+      "bookmarks": 9,
+      "foundAt": "2026-11-25T22:07:16.710Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "パルシステムの顧客情報 約200万件が漏えい | NHKニュース",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261125de81299",
+      "published": "2026-11-25T09:10:54.000Z",
+      "bookmarks": 5,
+      "foundAt": "2026-11-25T22:07:16.710Z",
       "offered": true
     },
     {
@@ -379,216 +587,6 @@
       "published": "2026-11-25T00:43:52.000Z",
       "bookmarks": 4,
       "foundAt": "2026-11-25T08:37:19.038Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "3年落ちのRaspberry Pi 4は家庭内サーバーとして使い物になるか",
-      "url": "https://codedchords.dev/blog/2026/11/raspberry-pi/",
-      "published": "2026-11-24T05:40:16.000Z",
-      "bookmarks": 4,
-      "foundAt": "2026-11-25T07:37:17.856Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "国家レベルの「iPhoneへの攻撃」、暗号資産ウォレットやパスワードなどが盗まれる恐れ | Forbes JAPAN 公式サイト（フォーブス ジャパン）",
-      "url": "https://forbesjapan.com/articles/detail/108829",
-      "published": "2026-11-25T06:13:19.000Z",
-      "bookmarks": 4,
-      "foundAt": "2026-11-25T07:37:17.856Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "Reactはここまで変わった！ メモ化・Effect・アニメーションの最新事情 - ICS MEDIA",
-      "url": "https://ics.media/entry/261119/",
-      "published": "2026-11-24T13:57:53.000Z",
-      "bookmarks": 4,
-      "foundAt": "2026-11-25T07:37:17.856Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "Qwen3.8 27Bを5.9GBまで省メモリ化しつつエージェント性能を維持したAIモデル「Ternary Bonsai 2.5 27B」が公開される",
-      "url": "https://gigazine.net/news/20261125-ternary-bonsai-2-5-27b/",
-      "published": "2026-11-25T01:39:35.000Z",
-      "bookmarks": 4,
-      "foundAt": "2026-11-25T07:07:17.883Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "A2UI",
-      "url": "https://a2ui.org/",
-      "published": "2025-11-10T22:17:38.000Z",
-      "bookmarks": 12,
-      "foundAt": "2026-11-25T07:07:17.883Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "C言語が危険なのではない。コンピュータが危険なのだ - keroxpのScrapbox",
-      "url": "https://scrapbox.io/keroxp/C%E8%A8%80%E8%AA%9E%E3%81%8C%E5%8D%B1%E9%99%BA%E3%81%AA%E3%81%AE%E3%81%A7%E3%81%AF%E3%81%AA%E3%81%84%E3%80%82%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%81%8C%",
-      "published": "2026-11-25T00:40:46.000Z",
-      "bookmarks": 4,
-      "foundAt": "2026-11-25T06:37:16.558Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "「見せる」登壇資料デザインの極意",
-      "url": "https://speakerdeck.com/takanorip/jian-seru-deng-tan-zi-liao-dezainnoji-yi",
-      "published": "2026-02-25T03:57:56.000Z",
-      "bookmarks": 5,
-      "foundAt": "2026-11-25T06:37:16.558Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "Claude Code の /ship を図解する",
-      "url": "https://zenn.dev/peoplex_blog/articles/claude-code-ship",
-      "published": "2026-11-24T18:03:40.000Z",
-      "bookmarks": 4,
-      "foundAt": "2026-11-25T06:37:16.558Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "六花亭のカード情報流出、対応が「誠実」と評判 再発行時の「伝え方」まで明記",
-      "url": "https://www.itmedia.co.jp/news/article/2611/25/2000003437/",
-      "published": "2026-11-25T02:53:09.000Z",
-      "bookmarks": 4,
-      "foundAt": "2026-11-25T06:37:16.558Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "【大原雄介の半導体業界こぼれ話】 プロセッサが完成しないまま逝ったTachyumと、静かに幕を引いたTransferJet",
-      "url": "https://pc.watch.impress.co.jp/docs/column/tidbit/2158648.html",
-      "published": "2026-11-24T22:18:50.000Z",
-      "bookmarks": 5,
-      "foundAt": "2026-11-25T06:07:17.162Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "米中に次ぐAI国家確立へ 政府案 - Yahoo!ニュース",
-      "url": "https://news.yahoo.co.jp/pickup/6603868",
-      "published": "2026-11-25T00:15:13.000Z",
-      "bookmarks": 5,
-      "foundAt": "2026-11-25T06:07:17.162Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "Deploying agents safely in your enterprise | Google Cloud Blog",
-      "url": "https://cloud.google.com/blog/products/identity-security/deploying-agents-safely-in-your-enterprise",
-      "published": "2026-11-25T00:04:34.000Z",
-      "bookmarks": 4,
-      "foundAt": "2026-11-25T05:37:23.820Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "爆増するサイバー攻撃、魔の手はITだけでなく「OT」にも 元米軍のセキュリティ専門家が警鐘",
-      "url": "https://www.itmedia.co.jp/news/article/2611/24/2000003408/",
-      "published": "2026-11-24T06:29:01.000Z",
-      "bookmarks": 5,
-      "foundAt": "2026-11-25T05:37:23.820Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "「JavaScriptを抜いた」 10年かけて首位になった言語は？ Java衰退・PHP半減が示す開発現場のリアル",
-      "url": "https://atmarkit.itmedia.co.jp/ait/articles/2611/18/news031.html",
-      "published": "2026-11-18T05:44:39.000Z",
-      "bookmarks": 4,
-      "foundAt": "2026-11-25T05:37:23.820Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "クマ検知AIの弱点は「野生のクマの映像が集まらない」 飼育施設で距離を変えて撮影、ドローンからも | テクノエッジ TechnoEdge",
-      "url": "https://www.techno-edge.net/article/2026/11/24/5801.html",
-      "published": "2026-11-24T07:05:46.000Z",
-      "bookmarks": 6,
-      "foundAt": "2026-11-25T05:07:16.259Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "AIでドーピングしたコンサルの実力は 使わない人材との能力差、BCG約500人で検証 Nature系列誌",
-      "url": "https://www.itmedia.co.jp/news/article/2611/25/2000003421/",
-      "published": "2026-11-25T03:07:53.000Z",
-      "bookmarks": 11,
-      "foundAt": "2026-11-25T04:37:15.548Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "「半導体氷河期」を招く3つの衝撃――トランプ敗北、NVIDIAの経営混乱、メモリ各社の巨額投資",
-      "url": "https://eetimes.itmedia.co.jp/ee/articles/2611/25/news044.html",
-      "published": "2026-11-25T03:01:48.000Z",
-      "bookmarks": 4,
-      "foundAt": "2026-11-25T04:37:15.548Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "AIハーネスは第3世代へ。自己改善するハーネスの全体像",
-      "url": "https://zenn.dev/knowledgesense/articles/68128456fe7d28",
-      "published": "2026-11-24T04:24:09.000Z",
-      "bookmarks": 6,
-      "foundAt": "2026-11-25T04:37:15.548Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "Rubyを安心して使い続けるために",
-      "url": "https://www.ruby.or.jp/ja/news/20261125",
-      "published": "2026-11-25T03:12:19.000Z",
-      "bookmarks": 6,
-      "foundAt": "2026-11-25T04:07:16.059Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "我々はもう少し、Googleに怒っていいと思う",
-      "url": "https://blog.tinect.jp/?p=91593",
-      "published": "2026-11-24T23:52:07.000Z",
-      "bookmarks": 7,
-      "foundAt": "2026-11-25T04:07:16.059Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "AI に文章を書かせるときは、ネストした箇条書きで取捨選択させる - id:onk のはてなブログ",
-      "url": "https://onk.hatenablog.jp/entry/2026/11/25/022804",
-      "published": "2026-11-25T01:35:22.000Z",
-      "bookmarks": 4,
-      "foundAt": "2026-11-25T04:07:16.059Z",
       "offered": true
     }
   ]
