@@ -177,7 +177,9 @@ async function main(): Promise<void> {
         continue;
       }
       const page = await readPage(parsed.title);
-      const plan = planPage(page, page?.title ?? parsed.title, formatPageBody(body), newLineId);
+      // 人間が書いた行は、書式を整える対象から外す(整えると、その行を消して書き直す変更になってしまう)
+      const humanTexts = new Set((page?.lines ?? []).filter((l) => l.userId !== AGENT_USER_ID).map((l) => l.text));
+      const plan = planPage(page, page?.title ?? parsed.title, formatPageBody(body, humanTexts), newLineId);
       if (plan.kind === "noop") {
         console.log(`${file}: ページはすでに同じ中身`);
         if (!DRY_RUN) sent.pages[name] = sentKey(raw);

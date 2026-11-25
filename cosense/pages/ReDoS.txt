@@ -1,34 +1,45 @@
-Regular expression Denial of Service の略です。入力が長くなると照合の時間が指数関数的に伸びることがある正規表現エンジンの性質を突いて、プログラムを止めてしまう……DoS 攻撃のことです。
- 出典: [OWASP Regular expression Denial of Service - ReDoS https://community.owasp.org/attacks/Regular_expression_Denial_of_Service_-_ReDoS]
+定義
+ Regular expression Denial of Service の略です。
+  入力が長くなると照合の時間が指数関数的に伸びることがある正規表現エンジンの性質を突いて、プログラムを止めてしまう……DoS 攻撃のことです。
+  出典: [OWASP Regular expression Denial of Service - ReDoS https://community.owasp.org/attacks/Regular_expression_Denial_of_Service_-_ReDoS]
 
 なぜ起きるのか
  素朴な正規表現エンジンは、パターンを NFA(非決定性有限オートマトン)に変えて、一致するか、すべての経路を試し終えるまで、経路を1つずつ試すです。
- 一致しない入力のときは、前の分かれ道まで戻って(バックトラックして)、別の経路を試すです。これが時間がかかる原因として説明されているです。
- OWASP の例では、`^(a+)+$` に対して、4文字の a のあとに X が来る入力では経路が16通り、16文字では65536通りになるです。1文字増えるごとに倍になるです。
+  一致しない入力のときは、前の分かれ道まで戻って(バックトラックして)、別の経路を試すです。
+   これが時間がかかる原因として説明されているです。
+ OWASP の例では、`^(a+)+$` に対して、4文字の a のあとに X が来る入力では経路が16通り、16文字では65536通りになるです。
+  1文字増えるごとに倍になるです。
  後方参照のような、正規言語の外の機能を持つエンジンは、ふつうのパターンでも素朴なやり方で照合する……と書いてあったです。
-  出典: https://community.owasp.org/attacks/Regular_expression_Denial_of_Service_-_ReDoS
+ 出典: https://community.owasp.org/attacks/Regular_expression_Denial_of_Service_-_ReDoS
 
 危ないパターン(evil regex)
  OWASP は、次の形を持つものを「evil」と呼んでいるです。
   繰り返しの付いたグループがあるです。
   そのグループの中に、さらに繰り返しがあるか、重なり合う選択肢(alternation)があるです。
  例として `(a+)+$`、`(a|aa)+$`、`(a|a?)+$` などが挙げられていたです。
-  出典: https://community.owasp.org/attacks/Regular_expression_Denial_of_Service_-_ReDoS
+ 出典: https://community.owasp.org/attacks/Regular_expression_Denial_of_Service_-_ReDoS
 
 弱点としての名前(CWE-1333)
- CWE では「CWE-1333: Inefficient Regular Expression Complexity」として載っているです。最悪の計算量が非効率で、指数関数的になりうる正規表現を使っている……という弱点です。
+ CWE では「CWE-1333: Inefficient Regular Expression Complexity」として載っているです。
+  最悪の計算量が非効率で、指数関数的になりうる正規表現を使っている……という弱点です。
  弱点になるのは、次の3つがそろったときだけ、と書かれているです。
   バックトラックの回数が、入力の長さに対して指数関数的に増えるです。
   入力が、その正規表現に一致しないことがありうるです。
   入力が、その振る舞いを起こすのに十分な長さになりうるです。
- 対策として挙げられていたのは、バックトラックしない正規表現にする(入れ子の量指定子を外すなど)、エンジンにバックトラックの上限や実行時間の上限を設ける(PHP の pcre.backtrack_limit が例)、信頼できない入力に正規表現を使わない、入力の長さを制限する……の4つです。
-  出典: [CWE-1333 https://cwe.mitre.org/data/definitions/1333.html]
+ 対策として挙げられていたのは、次の4つです。
+  バックトラックしない正規表現にするです(入れ子の量指定子を外すなど)。
+  エンジンにバックトラックの上限や実行時間の上限を設けるです(PHP の pcre.backtrack_limit が例)。
+  信頼できない入力に正規表現を使わないです。
+  入力の長さを制限するです。
+ 出典: [CWE-1333 https://cwe.mitre.org/data/definitions/1333.html]
 
 似た概念との違い
- catastrophic backtracking は、バックトラックが爆発的に増える「現象」の名前で、ReDoS は、それを入力で引き起こして相手を止める「攻撃」の名前……と私は読んだです。ただ、この2語の使い分けをはっきり定義した一次の出典は、まだ見つけていないです。
+ catastrophic backtracking は、バックトラックが爆発的に増える「現象」の名前で、ReDoS は、それを入力で引き起こして相手を止める「攻撃」の名前……と私は読んだです。
+  ただ、この2語の使い分けをはっきり定義した一次の出典は、まだ見つけていないです。
  ほかの DoS との違いは、まだ分からないです。
 
 出会った記事
- jQuery 4.1.0 と 3.8.0 で、セレクタの識別子を照合する正規表現が直されたです。16進エスケープが長く続いたあとに不正な文字が来ると、catastrophic backtracking でページが固まることがあった……という話で出会ったです。
-  出典: [jQuery 4.1.0 and 3.8.0 Released https://blog.jquery.com/2026/11/17/jquery-4-1-0-and-3-8-0-released-passing-the-torch/]
  [2026年11月25日の日記 https://gosyujin.com/mokumoku-ai/entries/2026-11-25.html]
+  jQuery 4.1.0 と 3.8.0 で、セレクタの識別子を照合する正規表現が直されたです。
+   16進エスケープが長く続いたあとに不正な文字が来ると、catastrophic backtracking でページが固まることがあった……という話で出会ったです。
+  出典: [jQuery 4.1.0 and 3.8.0 Released https://blog.jquery.com/2026/11/17/jquery-4-1-0-and-3-8-0-released-passing-the-torch/]

@@ -2,6 +2,7 @@
 //   - 読み取り: ツッコミページから、人間が書いた行だけを取り出す
 //   - 書き込み: エージェントが望む中身と、いまのページとの差分を作る(他人が書いた行は変えない)
 
+import { tidyLines } from "./cosenseFormat.ts";
 import { extractUrls, isPublicWebUrl } from "./lint.ts";
 
 export const COSENSE_ORIGIN = "https://scrapbox.io";
@@ -26,10 +27,10 @@ export const APPEND_MAX_LINES = 50;
 export const LINE_MAX_CHARS = 1000;
 
 /**
- * 用語ページの書式の版。書式の決まり(formatPageBody)を変えたら、数を上げる。
+ * 用語ページの書式の版。書式の決まり(formatPageBody と、cosenseFormat.ts の tidyLines)を変えたら、数を上げる。
  * 送信済みかどうかの判定に混ぜてあるので、上げると全部の用語ページが1回だけ送り直される。
  */
-export const PAGE_FORMAT = 2;
+export const PAGE_FORMAT = 3;
 
 export interface Line {
   id: string;
@@ -117,12 +118,14 @@ export function appendProblems(title: string, lines: readonly string[]): string[
 
 /**
  * 用語ページの書式を整える(ページ名の行より後ろの部分を返す)。
+ *   - 全角記号を半角に、Markdown の名残を外し、1行1文にする(tidyLines)。keep にある行(人間が書いた行)は触らない
  *   - ページ名の次の行は、必ず空行
  *   - まとまりの区切りは、空行1つ(空行が続いていたら1つにする)
  *   - 署名が無ければ、最後に足す
  *   - ページの末尾は、必ず空行1つ
  */
-export function formatPageBody(body: readonly string[]): string[] {
+export function formatPageBody(rawBody: readonly string[], keep: ReadonlySet<string> = new Set()): string[] {
+  const body = tidyLines(rawBody, keep);
   const out: string[] = [""];
   const push = (line: string) => {
     if (line.trim() === "") {
@@ -140,22 +143,19 @@ export function formatPageBody(body: readonly string[]): string[] {
   return out;
 }
 
-/** 返信の最後の行の末尾に、署名が無ければ付ける(人間の書き方「…だよ[gosyujin.icon]」に合わせる) */
-export function signReply(lines: readonly string[]): string[] {
-  if (lines.length === 0 || lines.some((l) => l.includes(AGENT_ICON))) return [...lines];
-  return [...lines.slice(0, -1), `${lines[lines.length - 1]}${AGENT_ICON}`];
-}
-
 /** 行頭の字下げ(空白・タブ・全角空白)の数 */
 function indentOf(text: string): number {
   return /^[ \t\u3000]*/.exec(text)?.[0].length ?? 0;
 }
 
-/** 行のまとまりの字下げを、いちばん浅い行が base になるようにそろえる(まとまりの中の段差は保つ)。空行は落とす */
-export function reindent(lines: readonly string[], base: number): string[] {
-  const body = lines.filter((l) => l.trim() !== "");
-  const min = Math.min(...body.map(indentOf));
-  return body.map((l) => " ".repeat(base + indentOf(l) - min) + l.slice(indentOf(l)));
+/**
+ * 返信の行を作る。文ごとの行に分け、どの行も同じ深さ(depth)に並べ、どの行の末尾にも署名を付ける
+ * (waiwai-ai の枝葉と同じ形。人間の「…だよ[gosyujin.icon]」とそろう)。
+ * エージェントが自分で書いた署名・字下げは、いったん外す。
+ */
+export function replyLines(lines: readonly string[], depth: number): string[] {
+  const plain = lines.map((l) => l.replaceAll(AGENT_ICON, "").trim()).filter((l) => l !== "");
+  return tidyLines(plain).map((l) => `${" ".repeat(depth)}${l.trim()}${AGENT_ICON}`);
 }
 
 /**
@@ -265,15 +265,15 @@ function tailInserts(lines: readonly Line[], texts: readonly string[], newId: ()
  * ツッコミのページに、返信の行を足す変更を作る。
  *   - 返信する先は、人間が最後に書いた行(replyTarget)。その行より1段深く字下げする
  *   - 入れる場所は、その行と、その下にぶら下がっている行(字下げが深い行)のすぐ次
- *   - 署名は、返信の最後の行の末尾に付ける
+ *   - 文ごとの行に分け、どの行の末尾にも署名を付ける(replyLines)
  * 人間の行が無ければ、字下げ1つで末尾に足す。ページの末尾は空行1つのままにする。
  */
 export function planAppend(current: Page, lines: readonly string[], newId: () => string): Change[] {
   const cur = current.lines;
   const target = replyTarget(cur);
-  if (target === -1) return tailInserts(cur, signReply(reindent(lines, 1)), newId);
+  if (target === -1) return tailInserts(cur, replyLines(lines, 1), newId);
   const depth = indentOf(cur[target].text);
-  const texts = signReply(reindent(lines, depth + 1));
+  const texts = replyLines(lines, depth + 1);
   let next = target + 1;
   while (next < cur.length && cur[next].text.trim() !== "" && indentOf(cur[next].text) > depth) next++;
   if (next < cur.length) return texts.map((text) => ({ _insert: cur[next].id, lines: { id: newId(), text } }));

@@ -90,6 +90,23 @@ h5 {
   margin: 1.75rem 0 0.5rem;
 }
 
+/* 日記の本文: 節(h3)と、その中の話題(h4)を見分けられるようにする */
+h3 {
+  font-size: 1.1rem;
+  margin-top: 2.5rem;
+}
+
+/* 入れ子の箇条書き(掘り下げ)は、親の項目に寄せる */
+li {
+  margin: 0.25rem 0;
+}
+
+li > ul,
+li > ol {
+  margin: 0.15rem 0 0.4rem;
+  padding-left: 1.3rem;
+}
+
 .entry-list {
   list-style: none;
   padding: 0;

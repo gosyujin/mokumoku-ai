@@ -1,6 +1,6 @@
 // 日記(entries/*.md)を HTML にする最小限の変換。外部依存なし。
 // 日記は AI が外部の記事を読んで書いたものなので、生の HTML は一切通さない(すべて文字として出す)。
-// 対応: 見出し / 段落 / 箇条書き / 番号付き / 引用 / コードブロック / 区切り線 / `コード` / **強調** / リンク
+// 対応: 見出し / 段落 / 箇条書き(入れ子) / 番号付き / 引用 / コードブロック / 区切り線 / `コード` / **強調** / リンク
 
 export function escapeHtml(s: string): string {
   return s
@@ -68,6 +68,29 @@ export function renderInline(raw: string): string {
     .join("");
 }
 
+const LIST_ITEM = /^(\s*)([-*]|\d+\.)\s+(.*)$/;
+
+interface ListRow {
+  indent: number;
+  ordered: boolean;
+  text: string;
+}
+
+/** rows[start..end) を1つのリストにする。先頭の項目より字下げが深い行は、その直前の項目の中のリストにする */
+function renderList(rows: readonly ListRow[], start: number, end: number): string {
+  const base = rows[start].indent;
+  const tag = rows[start].ordered ? "ol" : "ul";
+  let html = `<${tag}>`;
+  let k = start;
+  while (k < end) {
+    let next = k + 1;
+    while (next < end && rows[next].indent > base) next++;
+    html += `<li>${renderInline(rows[k].text)}${next > k + 1 ? renderList(rows, k + 1, next) : ""}</li>`;
+    k = next;
+  }
+  return `${html}</${tag}>`;
+}
+
 export function renderMarkdown(source: string): string {
   const lines = source.replace(/\r\n?/g, "\n").split("\n");
   const out: string[] = [];
@@ -108,14 +131,16 @@ export function renderMarkdown(source: string): string {
       out.push(`<blockquote><p>${quote.map(renderInline).join("<br>")}</p></blockquote>`);
       continue;
     }
-    const bullet = /^\s*[-*]\s+/;
-    const numbered = /^\s*\d+\.\s+/;
-    if (bullet.test(line) || numbered.test(line)) {
-      const marker = bullet.test(line) ? bullet : numbered;
-      const tag = marker === bullet ? "ul" : "ol";
-      const items: string[] = [];
-      while (i < lines.length && marker.test(lines[i])) items.push(lines[i++].replace(marker, ""));
-      out.push(`<${tag}>${items.map((t) => `<li>${renderInline(t)}</li>`).join("")}</${tag}>`);
+    if (LIST_ITEM.test(line)) {
+      // 箇条書き。行頭の字下げが深い行は、直前の項目の下に入れ子にする
+      const rows: ListRow[] = [];
+      while (i < lines.length) {
+        const m = LIST_ITEM.exec(lines[i]);
+        if (!m) break;
+        rows.push({ indent: m[1].replace(/\t/g, "  ").length, ordered: /\d/.test(m[2]), text: m[3] });
+        i++;
+      }
+      out.push(renderList(rows, 0, rows.length));
       continue;
     }
     const para: string[] = [];

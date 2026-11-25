@@ -12,6 +12,6 @@ paths:
 - 外部依存を足さない(`npm install` の工程を作らない)。
 - Claude の step の `--restricted`・`--tools`・`--settings`、checkout の `persist-credentials: false`、job の `NODE_VERSION` を外さない。GitHub のトークンを Claude の step に渡さない。
 - step の順番(wake → commit → エージェント → guard → lint → cosense-sync → commit)を変えない。guard は、直前の commit で作業ツリーがきれいになっている前提で動く。
-- `entries/` に書くのは `tools/lint.ts` だけ。公開済みの日記の文面は変えず、追記は末尾に `## 追記(日付 時刻)` で足す(この見出しの形は build も読む)。手で上書きしてよいのは、人間に頼まれた、内容を変えない文体・見た目の手直しだけ。lint の step に秘密情報を渡さない。
+- `entries/` に書くのは `tools/lint.ts` だけ。公開済みの日記の文面は変えず、追記は末尾に `## 追記(日付 時刻)` で足す(この見出しの形は build も読む)。手で上書きしてよいのは、人間に頼まれた、内容を変えない文体・見た目・構造の手直しだけ。lint の step に秘密情報を渡さない。
 - エージェントが書ける場所は `ops/agent/settings.json`(パスは `./` 始まり)と `tools/lib/guard.ts` の両方にある。片方だけ直さない。
 - 詳細: [docs/technical-notes.md](../../docs/technical-notes.md)

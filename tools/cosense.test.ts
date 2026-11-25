@@ -17,13 +17,13 @@ import {
   pageUrl,
   planAppend,
   planPage,
-  reindent,
+  replyLines,
   replyTarget,
-  signReply,
   titleFromFileName,
   toLines,
 } from "./lib/cosense.ts";
 import type { Line, Page } from "./lib/cosense.ts";
+import { splitSentences, tidyLines, toHalfWidth } from "./lib/cosenseFormat.ts";
 
 const HUMAN = HUMAN_USER_IDS[0];
 const AGENT = AGENT_USER_ID;
@@ -101,14 +101,46 @@ test("formatPageBody: 先頭に空行1つ、区切りは空行1つ、署名、�
   assert.deepEqual(formatPageBody(once), once);
 });
 
-test("signReply: 返信の最後の行の末尾に署名を付ける", () => {
-  assert.deepEqual(signReply([" 直したです", "  詳しくは日記の追記に"]), [" 直したです", `  詳しくは日記の追記に${AGENT_ICON}`]);
-  assert.deepEqual(signReply([`${AGENT_ICON} 済み`]), [`${AGENT_ICON} 済み`]);
+test("toHalfWidth: 全角の英数・記号を半角に。！？ と ＃［］ は残す", () => {
+  assert.equal(toHalfWidth("ＡＢＣ１２３（補足）：５０％，Ａ＆Ｂ"), "ABC123(補足):50%,A&B");
+  assert.equal(toHalfWidth("本当ですか？　すごい！「」、。"), "本当ですか？ すごい！「」、。");
+  assert.equal(toHalfWidth("＃タグ ［リンク］"), "＃タグ ［リンク］");
 });
 
-test("reindent: いちばん浅い行を base にそろえ、中の段差は保つ。空行は落とす", () => {
-  assert.deepEqual(reindent(["直したです", "", " 詳しくは追記に"], 2), ["  直したです", "   詳しくは追記に"]);
-  assert.deepEqual(reindent(["   深く書いた", "\t\tタブ"], 1), ["  深く書いた", " タブ"]);
+test("splitSentences: 。！？ で分ける。括弧・リンク・URL の中では分けない", () => {
+  assert.deepEqual(splitSentences("確かめたです。直っていたです。"), ["確かめたです。", "直っていたです。"]);
+  assert.deepEqual(splitSentences("本当ですか！？ そうらしいです"), ["本当ですか！？", "そうらしいです"]);
+  assert.deepEqual(splitSentences("「できる。たぶん。」と書いてあったです。(未確認です。)"), ["「できる。たぶん。」と書いてあったです。", "(未確認です。)"]);
+  assert.deepEqual(splitSentences("[題名。その2 https://example.com/a?b=1] を読んだです。"), ["[題名。その2 https://example.com/a?b=1] を読んだです。"]);
+  assert.deepEqual(splitSentences("eBPF は……まだ分からないです"), ["eBPF は……まだ分からないです"]);
+});
+
+test("tidyLines: 1行1文に分け(続きの文は1段深く)、記号と Markdown の名残を直す", () => {
+  assert.deepEqual(tidyLines([" 技術です。拡張できるです。", "  出典: https://example.com/。", "", "仕組み"]), [
+    " 技術です。",
+    "  拡張できるです。",
+    "  出典: https://example.com/。",
+    "",
+    "仕組み",
+  ]);
+  assert.deepEqual(tidyLines(["- 箇条書き（全角）", " * 2段目", "# 見出し", "**強調**です。"]), [" 箇条書き(全角)", "  2段目", "見出し", "強調です。"]);
+  // 引用・リンクだけの行・コードのある行・code: ブロックの中は、分けない・変えない
+  const asIs = ["> 引用。その続き。", "[題名 https://example.com/]", " `a。b（）` を使うです。次の文です。", "code:sample.js", " const a = '。（）';", "本文に戻る（ここは直る）"];
+  assert.deepEqual(tidyLines(asIs), [...asIs.slice(0, 5), "本文に戻る(ここは直る)"]);
+  // 人間が書いた行は触らない
+  assert.deepEqual(tidyLines(["人間の行。そのまま（全角）", "自分の行。分ける。"], new Set(["人間の行。そのまま（全角）"])), ["人間の行。そのまま（全角）", "自分の行。", " 分ける。"]);
+});
+
+test("formatPageBody: 文ごとの行に分けたうえで、書式を整える。何度通しても同じ", () => {
+  const once = formatPageBody(["定義", " 定義です。補足です。", "  出典: https://ebpf.io/"]);
+  assert.deepEqual(once, ["", "定義", " 定義です。", "  補足です。", "  出典: https://ebpf.io/", "", AGENT_ICON, ""]);
+  assert.deepEqual(formatPageBody(once), once);
+});
+
+test("replyLines: 文ごとの行にして、同じ深さに並べ、どの行の末尾にも署名を付ける", () => {
+  assert.deepEqual(replyLines(["確かめたです。直してもらったです。"], 2), [`  確かめたです。${AGENT_ICON}`, `  直してもらったです。${AGENT_ICON}`]);
+  // 自分で書いた字下げ・署名・空行は外してから付け直す
+  assert.deepEqual(replyLines([` ${AGENT_ICON} 済みです`, "", "   深く書いた行です"], 1), [` 済みです${AGENT_ICON}`, ` 深く書いた行です${AGENT_ICON}`]);
 });
 
 test("replyTarget: 人間が最後に書いた行。同じ時刻なら下の行", () => {
@@ -180,12 +212,12 @@ test("planPage: 消すことになる行に他人の行があれば、消さず�
   assert.equal((planPage(other, "eBPF", formatPageBody(["別の中身 https://example.com/"]), newId) as { mode: string }).mode, "append");
 });
 
-test("planAppend: 指摘の行のすぐ下に、1段深く、署名を文末に付けて足す", () => {
+test("planAppend: 指摘の行のすぐ下に、1段深く、文ごとの行で足す(どの行にも署名)", () => {
   // 実際のページと同じ形(引用の行、1段下げた指摘、末尾の空行)
   seq = 0;
   const cur = page("2026年11月24日のツッコミ", [["", HUMAN], ["> 【Shirudo の記事について】", HUMAN, 100], [" 変だよ[gosyujin.icon]", HUMAN, 120], ["", HUMAN]]);
-  assert.deepEqual(planAppend(cur, [" 確かめたです。", " 直してもらったです。"], newId), [
-    { _insert: "l4", lines: { id: "new1", text: "  確かめたです。" } },
+  assert.deepEqual(planAppend(cur, ["確かめたです。直してもらったです。"], newId), [
+    { _insert: "l4", lines: { id: "new1", text: `  確かめたです。${AGENT_ICON}` } },
     { _insert: "l4", lines: { id: "new2", text: `  直してもらったです。${AGENT_ICON}` } },
   ]);
   // 字下げなしで書いた指摘には、字下げ1つで返す。空行で終わっていなければ、空行を1つ足す
