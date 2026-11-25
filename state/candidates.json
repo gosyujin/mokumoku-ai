@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T03:37:16.729Z",
+  "updatedAt": "2026-11-25T04:07:16.059Z",
   "items": [
     {
       "feed": "publickey",
@@ -89,6 +89,46 @@
       "url": "https://piyolog.hatenadiary.jp/entry/2026/11/20/224814",
       "published": "2026-11-20T13:48:14.000Z",
       "foundAt": "2026-11-24T08:30:24.332Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "Rubyを安心して使い続けるために",
+      "url": "https://www.ruby.or.jp/ja/news/20261125",
+      "published": "2026-11-25T03:12:19.000Z",
+      "bookmarks": 6,
+      "foundAt": "2026-11-25T04:07:16.059Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "我々はもう少し、Googleに怒っていいと思う",
+      "url": "https://blog.tinect.jp/?p=91593",
+      "published": "2026-11-24T23:52:07.000Z",
+      "bookmarks": 7,
+      "foundAt": "2026-11-25T04:07:16.059Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "AI に文章を書かせるときは、ネストした箇条書きで取捨選択させる - id:onk のはてなブログ",
+      "url": "https://onk.hatenablog.jp/entry/2026/11/25/022804",
+      "published": "2026-11-25T01:35:22.000Z",
+      "bookmarks": 4,
+      "foundAt": "2026-11-25T04:07:16.059Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "MCP servers can now ship skills, run tasks, and more with Claude",
+      "url": "https://claude.com/resources/articles/skills-over-mcp-tasks-and-more",
+      "published": "2026-11-25T00:13:28.000Z",
+      "bookmarks": 5,
+      "foundAt": "2026-11-25T04:07:16.059Z",
       "offered": true
     },
     {
@@ -549,46 +589,6 @@
       "published": "2026-11-24T03:31:59.000Z",
       "bookmarks": 5,
       "foundAt": "2026-11-24T13:07:16.065Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "ソフトウェアファクトリーを前提に、サービス開発はどう変わるか｜すてぃお",
-      "url": "https://note.com/suthio/n/n91e27ebb133d",
-      "published": "2026-11-24T04:30:26.000Z",
-      "bookmarks": 10,
-      "foundAt": "2026-11-24T13:07:16.065Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "「Google Chrome 158」に深刻度最高の脆弱性、セキュリティアップデートが公開／サンドボックス外での任意コード実行につながるおそれ",
-      "url": "https://forest.watch.impress.co.jp/docs/news/2158615.html",
-      "published": "2026-11-24T02:56:00.000Z",
-      "bookmarks": 4,
-      "foundAt": "2026-11-24T13:07:16.065Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "呼びかけると故人の写真を映すAI仏壇「コハコ」発売、49万5000円 10年後の家族に動画を届ける機能も | テクノエッジ TechnoEdge",
-      "url": "https://www.techno-edge.net/article/2026/11/24/5803.html",
-      "published": "2026-11-24T08:03:49.000Z",
-      "bookmarks": 7,
-      "foundAt": "2026-11-24T12:37:16.864Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "都営新宿線「岩本町駅」が急行停車駅に 秋葉原との乗換駅",
-      "url": "https://www.watch.impress.co.jp/docs/news/2158833.html",
-      "published": "2026-11-24T12:12:03.000Z",
-      "bookmarks": 4,
-      "foundAt": "2026-11-24T12:37:16.864Z",
       "offered": true
     }
   ]
