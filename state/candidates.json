@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T10:07:16.402Z",
+  "updatedAt": "2026-11-25T10:37:21.838Z",
   "items": [
     {
       "feed": "publickey",
@@ -90,6 +90,26 @@
       "published": "2026-11-20T13:48:14.000Z",
       "foundAt": "2026-11-24T08:30:24.332Z",
       "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "AIで学習アプリを作って2週間で宅建に合格した話【テキスト不要】｜Shikimi",
+      "url": "https://note.com/shikimi_crypto/n/n35d0bb54e6fb",
+      "published": "2026-11-25T09:23:07.000Z",
+      "bookmarks": 10,
+      "foundAt": "2026-11-25T10:37:21.838Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "Google Search Ranking Hub | Google Search Central | Documentation | Google for Developers",
+      "url": "https://developers.google.com/search/docs/ranking",
+      "published": "2026-11-25T01:21:44.000Z",
+      "bookmarks": 4,
+      "foundAt": "2026-11-25T10:37:21.838Z",
+      "offered": false
     },
     {
       "feed": "hatebu",
@@ -569,26 +589,6 @@
       "published": "2026-11-24T21:27:04.000Z",
       "bookmarks": 5,
       "foundAt": "2026-11-25T02:07:29.346Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "「Claude」で作ったアプリをMac／Windowsにインストール可能に 全プランでβ提供",
-      "url": "https://www.itmedia.co.jp/news/article/2611/25/2000003431/",
-      "published": "2026-11-25T01:11:25.000Z",
-      "bookmarks": 4,
-      "foundAt": "2026-11-25T02:07:29.346Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "ずっしり重い新型ウォークマン 歴代最高65万円なぜここまで高級化：朝日新聞",
-      "url": "https://www.asahi.com/articles/ASVCN2QXSVCNULFA01XM.html",
-      "published": "2026-11-24T23:35:54.000Z",
-      "bookmarks": 6,
-      "foundAt": "2026-11-25T01:07:25.470Z",
       "offered": true
     }
   ]
