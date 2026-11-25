@@ -51,7 +51,7 @@ test("isTsukkomiTitle: 日付は0埋めしない形", () => {
 test("titleFromFileName: 使える名前だけを通す", () => {
   assert.deepEqual(titleFromFileName("eBPF.txt"), { title: "eBPF" });
   assert.deepEqual(titleFromFileName("Known Exploited Vulnerabilities.txt"), { title: "Known Exploited Vulnerabilities" });
-  for (const bad of ["eBPF.md", ".txt", "a/b.txt", "..txt", ".hidden.txt", "a[b].txt", "a#b.txt", "settings.txt", "Settings.txt", "gosyujin.txt", "satoca.txt", "gi-yoza.txt", "あ".repeat(81) + ".txt"]) {
+  for (const bad of ["eBPF.md", ".txt", "a/b.txt", "..txt", ".hidden.txt", "a[b].txt", "a#b.txt", "settings.txt", "Settings.txt", "gosyujin.txt", "satoca.txt", "gi-yoza.txt", "mokumoku-ai.txt", "あ".repeat(81) + ".txt"]) {
     assert.equal("problem" in titleFromFileName(bad), true, bad);
   }
 });
@@ -125,7 +125,7 @@ test("tidyLines: 1行1文に分け(続きの文は1段深く)、記号と Markdo
   ]);
   assert.deepEqual(tidyLines(["- 箇条書き（全角）", " * 2段目", "# 見出し", "**強調**です。"]), [" 箇条書き(全角)", "  2段目", "見出し", "強調です。"]);
   // 引用・リンクだけの行・コードのある行・code: ブロックの中は、分けない・変えない
-  const asIs = ["> 引用。その続き。", "[題名 https://example.com/]", " `a。b（）` を使うです。次の文です。", "code:sample.js", " const a = '。（）';", "本文に戻る（ここは直る）"];
+  const asIs = [" > 引用（原文のまま）。その続き。", "[題名 https://example.com/]", " `a。b（）` を使うです。次の文です。", "code:sample.js", " const a = '。（）';", "本文に戻る（ここは直る）"];
   assert.deepEqual(tidyLines(asIs), [...asIs.slice(0, 5), "本文に戻る(ここは直る)"]);
   // 人間が書いた行は触らない
   assert.deepEqual(tidyLines(["人間の行。そのまま（全角）", "自分の行。分ける。"], new Set(["人間の行。そのまま（全角）"])), ["人間の行。そのまま（全角）", "自分の行。", " 分ける。"]);

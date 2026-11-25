@@ -18,6 +18,13 @@ test("renderMarkdown: 見出しと箇条書きは別のかたまり。入れ子�
   assert.equal(renderMarkdown("1. 一\n2. 二"), "<ol><li>一</li><li>二</li></ol>");
 });
 
+test("renderMarkdown: 箇条書きの項目が > で始まるときは、引用にする(その下に出典をぶら下げられる)", () => {
+  assert.equal(
+    renderMarkdown("- 定義です。\n  - > run sandboxed programs\n    - 出典: https://ebpf.io/"),
+    '<ul><li>定義です。<ul><li><blockquote><p>run sandboxed programs</p></blockquote><ul><li>出典: <a href="https://ebpf.io/" rel="noopener">https://ebpf.io/</a></li></ul></li></ul></li></ul>',
+  );
+});
+
 test("renderMarkdown: 生の HTML は通さない(入れ子の中でも)", () => {
   assert.equal(renderMarkdown("- a\n  - <script>x</script>"), "<ul><li>a<ul><li>&lt;script&gt;x&lt;/script&gt;</li></ul></li></ul>");
 });

@@ -100,6 +100,15 @@ test("isPublicWebUrl", () => {
   }
 });
 
+test("quoteBlocks: 箇条書きの項目の中の引用(- > …)も取り出す", () => {
+  const body = "- 定義はこうです。\n  - > run sandboxed programs\n    - 出典: https://ebpf.io/what-is-ebpf/\n- 次の項目\n";
+  assert.deepEqual(quoteBlocks(body), [{ text: "run sandboxed programs", next: "    - 出典: https://ebpf.io/what-is-ebpf/" }]);
+  const withQuote = (quote: string) => GOOD.replace("気になったです。\n", `気になったです。\n\n${quote}\n`);
+  assert.deepEqual(check(withQuote("- 前置きです。\n  - > 短い引用\n    - 出典: https://example.com/article")), []);
+  assert.match(check(withQuote("- 前置きです。\n  - > 短い引用\n- 出典なし")).join("\n"), /引用に出典のリンクが無い/);
+  assert.match(check(withQuote("- > " + "あ".repeat(201) + "\n  - https://example.com/article")).join("\n"), /引用が長い\(201文字/);
+});
+
 test("quoteBlocks: コードブロックの中の > は引用として数えない", () => {
   const body = "本文\n\n> 引用1\n> 続き\n\n出典 https://example.com/\n\n```\n> これはコード\n```\n";
   assert.deepEqual(quoteBlocks(body), [{ text: "引用1\n続き", next: "出典 https://example.com/" }]);

@@ -78,6 +78,7 @@ function keepWhole(body: string): boolean {
  * 行の並びを整える: 全角記号を半角に、Markdown の名残を外し、1行に2つ以上の文があれば、文ごとの行に分ける。
  *   - 分けたときは、最初の文をもとの字下げに、続きの文を1段深くする(続きは、最初の文の掘り下げとして扱う)
  *   - `code:` `table:` の行と、その下の字下げが深い行(ブロックの中身)は、触らない
+ *   - 引用の行(`>` で始まる)は、原文そのままなので、触らない
  *   - keep にある行(ページにある、エージェント以外が書いた行)は、触らない
  *   - 空行は、そのまま返す
  */
@@ -99,6 +100,11 @@ export function tidyLines(lines: readonly string[], keep: ReadonlySet<string> = 
     }
     if (/^[ \t　]*(code|table):/.test(raw)) {
       blockIndent = rawIndent;
+      out.push(raw);
+      continue;
+    }
+    // 引用の行(> で始まる)は、原文そのままなので、記号も変えない
+    if (raw.trimStart().startsWith(">")) {
       out.push(raw);
       continue;
     }

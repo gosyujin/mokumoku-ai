@@ -85,7 +85,10 @@ function renderList(rows: readonly ListRow[], start: number, end: number): strin
   while (k < end) {
     let next = k + 1;
     while (next < end && rows[next].indent > base) next++;
-    html += `<li>${renderInline(rows[k].text)}${next > k + 1 ? renderList(rows, k + 1, next) : ""}</li>`;
+    // 項目が > で始まるときは、原文そのままの引用として出す
+    const quote = /^>\s?(.*)$/.exec(rows[k].text);
+    const inner = quote ? `<blockquote><p>${renderInline(quote[1])}</p></blockquote>` : renderInline(rows[k].text);
+    html += `<li>${inner}${next > k + 1 ? renderList(rows, k + 1, next) : ""}</li>`;
     k = next;
   }
   return `${html}</${tag}>`;

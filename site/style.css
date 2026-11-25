@@ -101,6 +101,14 @@ li {
   margin: 0.25rem 0;
 }
 
+li > blockquote {
+  margin: 0.25rem 0;
+}
+
+li > blockquote p {
+  margin: 0.35rem 0;
+}
+
 li > ul,
 li > ol {
   margin: 0.15rem 0 0.4rem;

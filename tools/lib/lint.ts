@@ -70,16 +70,19 @@ export function isPublicWebUrl(raw: string): boolean {
   return host.includes(".");
 }
 
-/** 引用(行頭が > の連続)を、直後の行と一緒に取り出す */
+/** 引用の行。行頭の `>` と、箇条書きの項目の中の `- > …`(字下げしていてもよい) */
+const QUOTE_LINE = /^(?:>|\s*[-*]\s+>)\s?/;
+
+/** 引用(引用の行の連続)を、直後の行と一緒に取り出す */
 export function quoteBlocks(body: string): { text: string; next: string }[] {
   const lines = body.split("\n");
   const blocks: { text: string; next: string }[] = [];
   let inCode = false;
   for (let i = 0; i < lines.length; i++) {
     if (lines[i].startsWith("```")) inCode = !inCode;
-    if (inCode || !/^>\s?/.test(lines[i])) continue;
+    if (inCode || !QUOTE_LINE.test(lines[i])) continue;
     const quote: string[] = [];
-    while (i < lines.length && /^>\s?/.test(lines[i])) quote.push(lines[i++].replace(/^>\s?/, ""));
+    while (i < lines.length && QUOTE_LINE.test(lines[i])) quote.push(lines[i++].replace(QUOTE_LINE, ""));
     let j = i;
     while (j < lines.length && lines[j].trim() === "") j++;
     blocks.push({ text: quote.join("\n"), next: lines[j] ?? "" });

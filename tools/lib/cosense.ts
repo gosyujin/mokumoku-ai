@@ -18,8 +18,8 @@ export const AGENT_ICON = "[gi-yoza.icon]";
 
 export const TSUKKOMI_TITLE = /^\d{4}年\d{1,2}月\d{1,2}日のツッコミ$/;
 
-/** エージェントに書かせないページ(設定・メンバーのページ・署名のアイコン) */
-export const RESERVED_TITLES: readonly string[] = ["settings", "favicon", "gosyujin", "gosyujin_2", "satoca", "gi-yoza"];
+/** エージェントに書かせないページ(設定・メンバーのページ・署名のアイコン・プロジェクト名の案内ページ) */
+export const RESERVED_TITLES: readonly string[] = ["settings", "favicon", "gosyujin", "gosyujin_2", "satoca", "gi-yoza", COSENSE_PROJECT];
 
 export const TITLE_MAX_CHARS = 80;
 export const PAGE_MAX_LINES = 300;
