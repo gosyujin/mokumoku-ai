@@ -140,11 +140,36 @@ export function formatPageBody(body: readonly string[]): string[] {
   return out;
 }
 
-/** 返信の先頭の行に、署名が無ければ付ける(字下げは保つ) */
+/** 返信の最後の行の末尾に、署名が無ければ付ける(人間の書き方「…だよ[gosyujin.icon]」に合わせる) */
 export function signReply(lines: readonly string[]): string[] {
   if (lines.length === 0 || lines.some((l) => l.includes(AGENT_ICON))) return [...lines];
-  const indent = /^\s*/.exec(lines[0])?.[0] ?? "";
-  return [`${indent}${AGENT_ICON} ${lines[0].slice(indent.length)}`, ...lines.slice(1)];
+  return [...lines.slice(0, -1), `${lines[lines.length - 1]}${AGENT_ICON}`];
+}
+
+/** 行頭の字下げ(空白・タブ・全角空白)の数 */
+function indentOf(text: string): number {
+  return /^[ \t\u3000]*/.exec(text)?.[0].length ?? 0;
+}
+
+/** 行のまとまりの字下げを、いちばん浅い行が base になるようにそろえる(まとまりの中の段差は保つ)。空行は落とす */
+export function reindent(lines: readonly string[], base: number): string[] {
+  const body = lines.filter((l) => l.trim() !== "");
+  const min = Math.min(...body.map(indentOf));
+  return body.map((l) => " ".repeat(base + indentOf(l) - min) + l.slice(indentOf(l)));
+}
+
+/**
+ * 返信する先の行の位置。人間の行のうち、最後に書かれた・変わったもの(同じ時刻なら、下にあるほう)。
+ * 人間の行が無ければ -1。
+ */
+export function replyTarget(lines: readonly Line[]): number {
+  let at = -1;
+  for (let i = 1; i < lines.length; i++) {
+    const l = lines[i];
+    if (!HUMAN_USER_IDS.includes(l.userId) || l.text.trim() === "") continue;
+    if (at === -1 || (l.updated ?? 0) >= (lines[at].updated ?? 0)) at = i;
+  }
+  return at;
 }
 
 /** 末尾の空行の、最初の1つの位置(無ければ行数) */
@@ -236,9 +261,23 @@ function tailInserts(lines: readonly Line[], texts: readonly string[], newId: ()
   return [...texts, ""].map((text) => ({ _insert: "_end", lines: { id: newId(), text } }));
 }
 
-/** ツッコミのページの末尾に、返信の行を足す変更を作る(ページの末尾は空行1つのままにする) */
+/**
+ * ツッコミのページに、返信の行を足す変更を作る。
+ *   - 返信する先は、人間が最後に書いた行(replyTarget)。その行より1段深く字下げする
+ *   - 入れる場所は、その行と、その下にぶら下がっている行(字下げが深い行)のすぐ次
+ *   - 署名は、返信の最後の行の末尾に付ける
+ * 人間の行が無ければ、字下げ1つで末尾に足す。ページの末尾は空行1つのままにする。
+ */
 export function planAppend(current: Page, lines: readonly string[], newId: () => string): Change[] {
-  return tailInserts(current.lines, signReply(lines), newId);
+  const cur = current.lines;
+  const target = replyTarget(cur);
+  if (target === -1) return tailInserts(cur, signReply(reindent(lines, 1)), newId);
+  const depth = indentOf(cur[target].text);
+  const texts = signReply(reindent(lines, depth + 1));
+  let next = target + 1;
+  while (next < cur.length && cur[next].text.trim() !== "" && indentOf(cur[next].text) > depth) next++;
+  if (next < cur.length) return texts.map((text) => ({ _insert: cur[next].id, lines: { id: newId(), text } }));
+  return [...texts, ""].map((text) => ({ _insert: "_end", lines: { id: newId(), text } }));
 }
 
 /** 人間が書いた行(ページ名の行と空行は除く) */

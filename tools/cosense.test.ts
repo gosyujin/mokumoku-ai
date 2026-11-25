@@ -17,6 +17,8 @@ import {
   pageUrl,
   planAppend,
   planPage,
+  reindent,
+  replyTarget,
   signReply,
   titleFromFileName,
   toLines,
@@ -99,9 +101,22 @@ test("formatPageBody: 先頭に空行1つ、区切りは空行1つ、署名、�
   assert.deepEqual(formatPageBody(once), once);
 });
 
-test("signReply: 返信の先頭に署名を付ける(字下げは保つ)", () => {
-  assert.deepEqual(signReply([" 直したです", "  詳しくは日記の追記に"]), [` ${AGENT_ICON} 直したです`, "  詳しくは日記の追記に"]);
+test("signReply: 返信の最後の行の末尾に署名を付ける", () => {
+  assert.deepEqual(signReply([" 直したです", "  詳しくは日記の追記に"]), [" 直したです", `  詳しくは日記の追記に${AGENT_ICON}`]);
   assert.deepEqual(signReply([`${AGENT_ICON} 済み`]), [`${AGENT_ICON} 済み`]);
+});
+
+test("reindent: いちばん浅い行を base にそろえ、中の段差は保つ。空行は落とす", () => {
+  assert.deepEqual(reindent(["直したです", "", " 詳しくは追記に"], 2), ["  直したです", "   詳しくは追記に"]);
+  assert.deepEqual(reindent(["   深く書いた", "\t\tタブ"], 1), ["  深く書いた", " タブ"]);
+});
+
+test("replyTarget: 人間が最後に書いた行。同じ時刻なら下の行", () => {
+  const cur = page("2026年11月24日のツッコミ", [["古い指摘", HUMAN, 100], [" 返信", AGENT, 300], ["新しい指摘", HUMAN, 200], ["", HUMAN, 250], ["知らない人", OTHER, 400]]);
+  assert.equal(replyTarget(cur.lines), 3);
+  const same = page("2026年11月24日のツッコミ", [["> 引用", HUMAN, 100], [" 指摘", HUMAN, 100]]);
+  assert.equal(replyTarget(same.lines), 2);
+  assert.equal(replyTarget(page("2026年11月24日のツッコミ", [["", HUMAN]]).lines), -1);
 });
 
 test("planPage: 無ければ作る(ページ名の次は空行、末尾は空行1つ)。同じなら何もしない", () => {
@@ -165,18 +180,41 @@ test("planPage: 消すことになる行に他人の行があれば、消さず�
   assert.equal((planPage(other, "eBPF", formatPageBody(["別の中身 https://example.com/"]), newId) as { mode: string }).mode, "append");
 });
 
-test("planAppend: 末尾の空行の手前に、署名つきで足す。空行で終わっていなければ、空行を1つ足す", () => {
+test("planAppend: 指摘の行のすぐ下に、1段深く、署名を文末に付けて足す", () => {
+  // 実際のページと同じ形(引用の行、1段下げた指摘、末尾の空行)
   seq = 0;
-  const cur = page("2026年11月24日のツッコミ", [["Java4Shell は Log4Shell の間違いでは?", HUMAN], ["", HUMAN]]);
-  assert.deepEqual(planAppend(cur, [" 確かめるです"], newId), [
-    { _insert: "l2", lines: { id: "new1", text: ` ${AGENT_ICON} 確かめるです` } },
+  const cur = page("2026年11月24日のツッコミ", [["", HUMAN], ["> 【Shirudo の記事について】", HUMAN, 100], [" 変だよ[gosyujin.icon]", HUMAN, 120], ["", HUMAN]]);
+  assert.deepEqual(planAppend(cur, [" 確かめたです。", " 直してもらったです。"], newId), [
+    { _insert: "l4", lines: { id: "new1", text: "  確かめたです。" } },
+    { _insert: "l4", lines: { id: "new2", text: `  直してもらったです。${AGENT_ICON}` } },
   ]);
+  // 字下げなしで書いた指摘には、字下げ1つで返す。空行で終わっていなければ、空行を1つ足す
   seq = 0;
   const noBlank = page("2026年11月24日のツッコミ", [["指摘", HUMAN]]);
-  assert.deepEqual(planAppend(noBlank, [" 確かめるです"], newId), [
-    { _insert: "_end", lines: { id: "new1", text: ` ${AGENT_ICON} 確かめるです` } },
+  assert.deepEqual(planAppend(noBlank, ["確かめるです"], newId), [
+    { _insert: "_end", lines: { id: "new1", text: ` 確かめるです${AGENT_ICON}` } },
     { _insert: "_end", lines: { id: "new2", text: "" } },
   ]);
+});
+
+test("planAppend: 前の返信の後ろに並べる。別の指摘が下にあっても、新しい指摘の下に入れる", () => {
+  seq = 0;
+  const cur = page("2026年11月24日のツッコミ", [
+    [" 指摘1", HUMAN, 100],
+    [`  前の返信${AGENT_ICON}`, AGENT, 150],
+    [" 指摘2", HUMAN, 110],
+    [`  指摘2への返信${AGENT_ICON}`, AGENT, 160],
+    ["", HUMAN],
+  ]);
+  // 指摘1 を人間が書き直した(いちばん新しい) → 指摘1 の下の、前の返信の次に入る
+  cur.lines[1].updated = 200;
+  assert.deepEqual(planAppend(cur, ["もう一度確かめたです"], newId), [
+    { _insert: "l3", lines: { id: "new1", text: `  もう一度確かめたです${AGENT_ICON}` } },
+  ]);
+  // 人間の行が無いページには、字下げ1つで末尾に足す
+  seq = 0;
+  const none = page("2026年11月24日のツッコミ", [["", AGENT]]);
+  assert.deepEqual(planAppend(none, ["書いたです"], newId), [{ _insert: "l1", lines: { id: "new1", text: ` 書いたです${AGENT_ICON}` } }]);
 });
 
 test("humanLines / inboxText: 人間の行だけを写し、新しい行に ★ を付ける", () => {
