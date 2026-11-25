@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T02:07:29.346Z",
+  "updatedAt": "2026-11-25T02:37:15.137Z",
   "items": [
     {
       "feed": "publickey",
@@ -80,6 +80,26 @@
       "url": "https://piyolog.hatenadiary.jp/entry/2026/11/20/224814",
       "published": "2026-11-20T13:48:14.000Z",
       "foundAt": "2026-11-24T08:30:24.332Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "国会図書館の軽量AI-OCR「NDLOCR-Lite」がv2.0に、読書バリアフリーを目指す機能強化／異体字包摂、表の構造化、「PyPI」経由でのインストールにも対応",
+      "url": "https://forest.watch.impress.co.jp/docs/news/2158877.html",
+      "published": "2026-11-25T00:50:47.000Z",
+      "bookmarks": 6,
+      "foundAt": "2026-11-25T02:37:15.137Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "AIにもブラックフライデー。Google AI Plus/Proの年間プランが半額！",
+      "url": "https://pc.watch.impress.co.jp/docs/news/2158884.html",
+      "published": "2026-11-24T22:33:26.000Z",
+      "bookmarks": 6,
+      "foundAt": "2026-11-25T02:37:15.137Z",
       "offered": true
     },
     {
@@ -570,26 +590,6 @@
       "published": "2026-11-24T05:43:19.000Z",
       "bookmarks": 5,
       "foundAt": "2026-11-24T10:37:14.821Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "ソフトバンク、「ITmedia」運営会社の売却検討 AI関連事業に集中 - 日本経済新聞",
-      "url": "https://www.nikkei.com/article/DGXZQOUC1688U0W6A111C2000000/",
-      "published": "2026-11-24T08:42:06.000Z",
-      "bookmarks": 14,
-      "foundAt": "2026-11-24T10:07:15.987Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "あなたの「信用情報」をスマホで確認できるサービス、JICCが再開",
-      "url": "https://japan.cnet.com/article/35255340/",
-      "published": "2026-11-24T09:16:43.000Z",
-      "bookmarks": 5,
-      "foundAt": "2026-11-24T10:07:15.987Z",
       "offered": true
     }
   ]

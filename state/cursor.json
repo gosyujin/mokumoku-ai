@@ -1,17 +1,21 @@
 {
-  "lastBeat": "2026-11-25T02:07:29.346Z",
-  "elapsedMinutes": 30,
+  "lastBeat": "2026-11-25T02:37:15.137Z",
+  "elapsedMinutes": 29,
   "trigger": "dispatch",
   "act": true,
   "reasons": [
     {
+      "kind": "tsukkomi",
+      "detail": "ツッコミ 新着1"
+    },
+    {
       "kind": "feed",
-      "detail": "はてブ 新着5"
+      "detail": "はてブ 新着2"
     }
   ],
   "llm": {
     "date": "2026-11-25",
-    "count": 8,
+    "count": 9,
     "limit": 12
   }
 }
