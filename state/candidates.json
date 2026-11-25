@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T13:07:16.984Z",
+  "updatedAt": "2026-11-25T13:37:15.492Z",
   "items": [
     {
       "feed": "publickey",
@@ -90,6 +90,16 @@
       "published": "2026-11-20T13:48:14.000Z",
       "foundAt": "2026-11-24T08:30:24.332Z",
       "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "EXT4に4万行のAI生成コード、rcサイクル終盤の投入にトーバルズ氏が警告",
+      "url": "https://joho-todai.com/ext4-ai-generated-code-linus-warning/",
+      "published": "2026-11-25T05:26:03.000Z",
+      "bookmarks": 4,
+      "foundAt": "2026-11-25T13:37:15.492Z",
+      "offered": false
     },
     {
       "feed": "hatebu",
@@ -579,16 +589,6 @@
       "published": "2026-11-25T00:13:28.000Z",
       "bookmarks": 5,
       "foundAt": "2026-11-25T04:07:16.059Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "[スタパ齋藤のApple野郎] レトロパソコンな見た目がたまらんッ!!!「HAGiBiS」のディスプレイつきUSB-Cハブが楽しい!!",
-      "url": "https://k-tai.watch.impress.co.jp/docs/column/stapaapple/2158744.html",
-      "published": "2026-11-24T15:12:12.000Z",
-      "bookmarks": 6,
-      "foundAt": "2026-11-25T03:37:16.729Z",
       "offered": true
     }
   ]
