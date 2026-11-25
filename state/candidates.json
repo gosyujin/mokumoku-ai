@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T02:37:15.137Z",
+  "updatedAt": "2026-11-25T03:07:25.938Z",
   "items": [
     {
       "feed": "publickey",
@@ -49,6 +49,15 @@
     {
       "feed": "piyolog",
       "priority": 2,
+      "title": "米CIAとODNIの非機密システムへの不正アクセスについてまとめてみた",
+      "url": "https://piyolog.hatenadiary.jp/entry/2026/11/25/120114",
+      "published": "2026-11-25T03:01:14.000Z",
+      "foundAt": "2026-11-25T03:07:25.938Z",
+      "offered": true
+    },
+    {
+      "feed": "piyolog",
+      "priority": 2,
       "title": "AIペネトレーションテスト基盤「Cairn」が大学への攻撃で見つけたゼロデイについてまとめてみた",
       "url": "https://piyolog.hatenadiary.jp/entry/2026/11/24/214547",
       "published": "2026-11-24T12:45:47.000Z",
@@ -80,6 +89,16 @@
       "url": "https://piyolog.hatenadiary.jp/entry/2026/11/20/224814",
       "published": "2026-11-20T13:48:14.000Z",
       "foundAt": "2026-11-24T08:30:24.332Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "@marty_friedman のポスト on X（2026-11-24 03:26） / X",
+      "url": "https://x.com/marty_friedman/status/2124932608882598144",
+      "published": "2026-11-25T02:30:15.000Z",
+      "bookmarks": 7,
+      "foundAt": "2026-11-25T03:07:25.938Z",
       "offered": true
     },
     {
@@ -569,26 +588,6 @@
       "url": "https://www.keio.co.jp/news/update/news_release/news_release2026/pdf/nr20261124_newsrelease.pdf",
       "published": "2026-11-24T09:24:27.000Z",
       "bookmarks": 6,
-      "foundAt": "2026-11-24T10:37:14.821Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "GitHub - mahialjaber/SOC-Log-Analysis-Datasets: Curated, simulated dataset of security logs (Windows, Web, Firewall, Cloud) with embedded attack vectors for SOC analysts to practice SIEM ingestion, th",
-      "url": "https://github.com/mahialjaber/SOC-Log-Analysis-Datasets",
-      "published": "2026-11-23T15:33:58.000Z",
-      "bookmarks": 4,
-      "foundAt": "2026-11-24T10:37:14.821Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "パッチ適用前にLinuxシステムを一時保護する「Shirudo」 OpenAIとCiscoが開発",
-      "url": "https://www.watch.impress.co.jp/docs/news/2158698.html",
-      "published": "2026-11-24T05:43:19.000Z",
-      "bookmarks": 5,
       "foundAt": "2026-11-24T10:37:14.821Z",
       "offered": true
     }
