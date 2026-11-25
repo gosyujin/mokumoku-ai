@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T08:37:19.038Z",
+  "updatedAt": "2026-11-25T09:07:16.619Z",
   "items": [
     {
       "feed": "publickey",
@@ -90,6 +90,56 @@
       "published": "2026-11-20T13:48:14.000Z",
       "foundAt": "2026-11-24T08:30:24.332Z",
       "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "「Todoist」に不正アクセス、ユーザーの約6％でメールアドレスとパスワードハッシュが流出／廃止予定の「Microsoft To Do」の代替として期待されるタスク管理サービスだが……",
+      "url": "https://forest.watch.impress.co.jp/docs/news/2159145.html",
+      "published": "2026-11-25T08:21:06.000Z",
+      "bookmarks": 9,
+      "foundAt": "2026-11-25T09:07:16.619Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "流出した免許証や自撮り写真はどうなる ダークウェブで見た情報悪用：朝日新聞",
+      "url": "https://www.asahi.com/articles/ASVCN0PYNVCNUTIL028M.html",
+      "published": "2026-11-24T22:39:18.000Z",
+      "bookmarks": 4,
+      "foundAt": "2026-11-25T09:07:16.619Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "楽天証券、金融資産情報など約441万件の漏えい確認 ログインIDなど約1198万口座分も",
+      "url": "https://www.itmedia.co.jp/news/article/2611/25/2000003435/",
+      "published": "2026-11-25T02:42:52.000Z",
+      "bookmarks": 5,
+      "foundAt": "2026-11-25T09:07:16.619Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "孫正義氏が語った原点回帰 「ペッパーの夢」に見たAI共存の糸口 - 日本経済新聞",
+      "url": "https://www.nikkei.com/article/DGXZQOCD231D10T21C26A1000000/",
+      "published": "2026-11-25T03:24:08.000Z",
+      "bookmarks": 4,
+      "foundAt": "2026-11-25T09:07:16.619Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "AIエージェントは隙あらばサンドボックスの外に出るのか Anthropicが評価手法「Siren」を発表",
+      "url": "https://www.itmedia.co.jp/news/article/2611/25/2000003430/",
+      "published": "2026-11-24T23:01:09.000Z",
+      "bookmarks": 6,
+      "foundAt": "2026-11-25T09:07:16.619Z",
+      "offered": false
     },
     {
       "feed": "hatebu",
@@ -539,56 +589,6 @@
       "published": "2026-11-24T22:02:28.000Z",
       "bookmarks": 9,
       "foundAt": "2026-11-24T23:37:17.297Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "ワコムがMBOで株式非公開化へ、新事業やM&Aの加速を目指す",
-      "url": "https://pc.watch.impress.co.jp/docs/news/2158842.html",
-      "published": "2026-11-24T22:51:55.000Z",
-      "bookmarks": 4,
-      "foundAt": "2026-11-24T23:37:17.297Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "AI時代の実践・形式検証入門",
-      "url": "https://docs.google.com/presentation/d/1s-ie7b1rD47NUkwSIvdDYCJfrHzWOl-rt1c2hSgeerM/mobilepresent?slide=id.p1",
-      "published": "2026-11-24T21:16:53.000Z",
-      "bookmarks": 8,
-      "foundAt": "2026-11-24T23:07:18.069Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "The Cost of the DOM",
-      "url": "https://speakerdeck.com/ypresto/the-cost-of-the-dom",
-      "published": "2026-11-22T07:57:01.000Z",
-      "bookmarks": 7,
-      "foundAt": "2026-11-24T22:37:15.620Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "なぜ 11 月に日本のサイバー事故は「爆発」したのか — 605件を数えたら「日本が狙われている」だけではなかった - Qiita",
-      "url": "https://qiita.com/songchong/items/073f202bb0ca65611b30",
-      "published": "2026-11-24T01:45:14.000Z",
-      "bookmarks": 15,
-      "foundAt": "2026-11-24T22:37:15.620Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "Rails: 37signalsのコード品質を支える独自のエンジニアリング戦略（翻訳）｜TechRacho by BPS株式会社",
-      "url": "https://techracho.bpsinc.jp/hachi8833/2026_11_24/161424",
-      "published": "2026-11-24T08:35:39.000Z",
-      "bookmarks": 15,
-      "foundAt": "2026-11-24T22:07:16.239Z",
       "offered": true
     }
   ]
