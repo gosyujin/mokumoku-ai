@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T03:07:15.234Z",
+  "updatedAt": "2026-11-26T03:37:18.892Z",
   "items": [
     {
       "feed": "publickey",
@@ -108,6 +108,26 @@
       "published": "2026-11-20T13:48:14.000Z",
       "foundAt": "2026-11-24T08:30:24.332Z",
       "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "米国の小学校で今学期になって毎日AI生成された気持ち悪い歌が放送、クラスのみんなが嫌がっているので娘が先生に話したところ「聞かなくていいよ。耳を塞いで」と言われた",
+      "url": "https://togetter.com/li/2775074",
+      "published": "2026-11-26T01:51:46.000Z",
+      "bookmarks": 11,
+      "foundAt": "2026-11-26T03:37:18.892Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "iPhone、広告を1回タップするだけでマルウェアに感染の恐れ 日本が主要な標的に",
+      "url": "https://news.mynavi.jp/techplus/article/20261125-5406233/",
+      "published": "2026-11-25T07:50:09.000Z",
+      "bookmarks": 12,
+      "foundAt": "2026-11-26T03:37:18.892Z",
+      "offered": false
     },
     {
       "feed": "hatebu",
@@ -567,26 +587,6 @@
       "published": "2026-11-25T05:26:03.000Z",
       "bookmarks": 4,
       "foundAt": "2026-11-25T13:37:15.492Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "高木浩光＠自宅の日記 - 「氏名は含まれておりません」では済まない——KARTE事件で漏れた行動の記録は誰の個人データか",
-      "url": "http://takagi-hiromitsu.jp/diary/20261124.html",
-      "published": "2026-11-25T00:26:29.000Z",
-      "bookmarks": 12,
-      "foundAt": "2026-11-25T13:07:16.984Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "Claude Code を5〜8個並べても迷わないように、自分用のダッシュボードをバイブコーディングで作った",
-      "url": "https://zenn.dev/nexta_/articles/a3ff76a9f98f1c",
-      "published": "2026-11-24T17:54:05.000Z",
-      "bookmarks": 29,
-      "foundAt": "2026-11-25T13:07:16.984Z",
       "offered": true
     }
   ]
