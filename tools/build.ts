@@ -1,6 +1,7 @@
 // build: entries/*.md から静的サイト(一覧・記事・Atom)を _site/ に作る。
+//   - 記事の冒頭に見出しの目次を付ける(見出しが2つ以上あるとき)
 //   - 記事の末尾に、その日のツッコミページ(Cosense)へのリンクを付ける
-//   - フッターの最終起床時刻は、ブラウザ側で state/cursor.json を取りに行く(site/footer.js)
+//   - ヘッダーの最終起床時刻は、ブラウザ側で state/cursor.json を取りに行く(site/footer.js)
 //   - 公開中のサイトと中身が同じなら deploy=false を出力する(毎回の起床でデプロイしないため)
 //
 // 実行: node tools/build.ts   (Node.js 22.18 以上)
@@ -101,14 +102,13 @@ function page(input: { title: string; root: string; main: string }): string {
 <body>
 <header class="site-header">
 <a class="site-name" href="${root}">${SITE_NAME}</a>
-<span class="tagline">${SITE_TAGLINE}</span>
+<span class="last-beat">最終起床: <span id="last-beat">確認中…</span></span>
 </header>
 <main>
 ${input.main}
 </main>
 <footer class="site-footer">
 <p>このサイトの文章は AI(${WRITER_NAME})が書いています。人間の事前確認は入っていません。</p>
-<p>最終起床: <span id="last-beat">確認中…</span></p>
 <p><a href="${REPO_URL}">GitHub</a> ・ <a href="${REPO_URL}/tree/main/journal">行動ログ</a> ・ <a href="${root}atom.xml">Atom</a></p>
 </footer>
 <script src="${root}footer.js" defer></script>
@@ -136,8 +136,43 @@ ${items}`;
   return page({ title: `${SITE_NAME} — ${SITE_TAGLINE}`, root: "./", main });
 }
 
+/**
+ * 本文の見出し(## → h3、### → h4)に id を振り、冒頭に置く目次を作る。
+ * 見出しが2つ未満なら目次は作らない。Atom には id の無い元の HTML を使う。
+ */
+function withToc(html: string): { html: string; toc: string } {
+  const items: { level: number; id: string; text: string }[] = [];
+  const body = html.replace(/<h([34])>(.*?)<\/h\1>/g, (_, level: string, inner: string) => {
+    const id = `sec-${items.length + 1}`;
+    items.push({ level: Number(level), id, text: inner.replace(/<[^>]*>/g, "") });
+    return `<h${level} id="${id}">${inner}</h${level}>`;
+  });
+  if (items.length < 2) return { html, toc: "" };
+  let toc = "";
+  let open = false; // h4 の入れ子の <ul> を開いているか
+  let hasTop = false; // h3 の項目を開いているか
+  for (const it of items) {
+    const link = `<a href="#${it.id}">${it.text}</a>`;
+    if (it.level === 3) {
+      if (open) toc += "</ul>";
+      if (hasTop) toc += "</li>";
+      toc += `<li>${link}`;
+      open = false;
+      hasTop = true;
+    } else {
+      if (!open) toc += "<ul>";
+      toc += `<li>${link}</li>`;
+      open = true;
+    }
+  }
+  if (open) toc += "</ul>";
+  if (hasTop) toc += "</li>";
+  return { html: body, toc: `<nav class="toc" aria-label="目次"><p class="toc-title">目次</p><ul>${toc}</ul></nav>` };
+}
+
 function entryPage(e: Entry, newer: Entry | undefined, older: Entry | undefined): string {
   const jp = japaneseDate(e.date);
+  const { html, toc } = withToc(e.html);
   const sources =
     e.sources.length === 0
       ? ""
@@ -160,8 +195,9 @@ function entryPage(e: Entry, newer: Entry | undefined, older: Entry | undefined)
 <h1>${escapeHtml(e.title)}</h1>
 <p class="ai-note">この日記は AI(${WRITER_NAME})が記事を読んで書いた感想です。事実は出典の記事を確認してください。</p>
 </header>
+${toc}
 <div class="entry-body">
-${e.html}
+${html}
 </div>
 ${sources}
 ${terms}

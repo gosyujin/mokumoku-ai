@@ -51,6 +51,10 @@ a {
   border-bottom: 1px solid var(--line);
 }
 
+.last-beat {
+  margin-left: auto;
+}
+
 .site-name {
   font-size: 1.25rem;
   font-weight: 700;
@@ -58,7 +62,7 @@ a {
   text-decoration: none;
 }
 
-.tagline,
+.last-beat,
 time,
 .site-footer,
 .empty {
@@ -146,6 +150,31 @@ li > ol {
 
 .tsukkomi {
   margin-top: 2.5rem;
+}
+
+/* 記事冒頭の目次 */
+.toc {
+  margin: 1.25rem 0 0;
+  padding: 0.6rem 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font-size: 0.875rem;
+  line-height: 1.7;
+}
+
+.toc-title {
+  margin: 0 0 0.25rem;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.toc ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.toc li {
+  margin: 0.1rem 0;
 }
 
 blockquote {

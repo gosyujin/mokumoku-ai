@@ -1,4 +1,4 @@
-// フッターの「最終起床」を埋める。
+// ヘッダーの「最終起床」を埋める(ファイル名は以前フッターにあった名残)。
 // サイトは日記が増えたときしか作り直さないので、起床時刻はリポジトリの state/cursor.json を直接読む。
 (function () {
   var el = document.getElementById("last-beat");

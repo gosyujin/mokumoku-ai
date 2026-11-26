@@ -20,7 +20,7 @@
    gh workflow run heartbeat.yml --repo gosyujin/mokumoku-ai -f deploy=true
    ```
 
-3. https://gosyujin.com/mokumoku-ai/ を開き、フッターの「最終起床」に時刻が出ることを確かめる。
+3. https://gosyujin.com/mokumoku-ai/ を開き、ヘッダーの「最終起床」に時刻が出ることを確かめる。
 
 以後は、日記(entries/)かサイト雛形(site/・tools/build.ts)が変わった次の起床で自動的に公開される。
 
