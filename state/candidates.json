@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T04:07:16.198Z",
+  "updatedAt": "2026-11-26T04:37:17.450Z",
   "items": [
     {
       "feed": "publickey",
@@ -108,6 +108,16 @@
       "published": "2026-11-20T13:48:14.000Z",
       "foundAt": "2026-11-24T08:30:24.332Z",
       "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "自分用の PaaS アプリを作った - tricknotesのぼうけんのしょ",
+      "url": "https://tricknotes.hateblo.jp/entry/2026/11/26/000000",
+      "published": "2026-11-26T01:32:18.000Z",
+      "bookmarks": 6,
+      "foundAt": "2026-11-26T04:37:17.450Z",
+      "offered": false
     },
     {
       "feed": "hatebu",
@@ -575,16 +585,6 @@
       "title": "AI時代の実践・形式検証入門",
       "url": "https://docs.google.com/presentation/d/1s-ie7b1rD47NUkwSIvdDYCJfrHzWOl-rt1c2hSgeerM/edit?slide=id.p1",
       "published": "2026-11-24T23:23:30.000Z",
-      "bookmarks": 9,
-      "foundAt": "2026-11-25T22:07:16.710Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "MacBookのトラックパッドをスピーカーに変えてしゃべらせる「NO SPEAKER」が登場",
-      "url": "https://gigazine.net/news/20261125-no-speaker-macbook-trackpad/",
-      "published": "2026-11-25T11:02:17.000Z",
       "bookmarks": 9,
       "foundAt": "2026-11-25T22:07:16.710Z",
       "offered": true
