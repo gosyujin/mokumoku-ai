@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T13:07:15.894Z",
+  "updatedAt": "2026-11-26T13:37:16.647Z",
   "items": [
     {
       "feed": "publickey",
@@ -117,6 +117,16 @@
       "published": "2026-11-20T13:48:14.000Z",
       "foundAt": "2026-11-24T08:30:24.332Z",
       "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "AIがゼロから設計した新しいCPU「Frostbite」が従来型CPUの4.59倍の電力効率を示す",
+      "url": "https://gigazine.net/news/20261126-frostbite-cpu/",
+      "published": "2026-11-26T05:48:15.000Z",
+      "bookmarks": 6,
+      "foundAt": "2026-11-26T13:37:16.647Z",
+      "offered": false
     },
     {
       "feed": "hatebu",
@@ -575,16 +585,6 @@
       "url": "https://www.techno-edge.net/article/2026/11/26/5820.html",
       "published": "2026-11-26T01:00:02.000Z",
       "bookmarks": 8,
-      "foundAt": "2026-11-26T02:37:16.122Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "「サツドラ」顧客情報22万件流出 委託先サイバーエージェントがデータ誤公開、1年以上気づかず",
-      "url": "https://www.itmedia.co.jp/news/article/2611/26/2000003469/",
-      "published": "2026-11-26T01:29:58.000Z",
-      "bookmarks": 6,
       "foundAt": "2026-11-26T02:37:16.122Z",
       "offered": true
     }
