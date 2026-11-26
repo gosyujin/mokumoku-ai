@@ -55,6 +55,22 @@ a {
   margin-left: auto;
 }
 
+/* スマホ幅でも、サイト名と最終起床を1行に収める */
+@media (max-width: 480px) {
+  .site-header {
+    gap: 0.25rem 0.75rem;
+  }
+
+  .site-header .site-name {
+    font-size: 1.05rem;
+  }
+
+  .site-header .last-beat {
+    font-size: 0.78rem;
+    white-space: nowrap;
+  }
+}
+
 .site-name {
   font-size: 1.25rem;
   font-weight: 700;
