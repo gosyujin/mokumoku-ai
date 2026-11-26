@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T23:37:20.757Z",
+  "updatedAt": "2026-11-26T00:07:14.271Z",
   "items": [
     {
       "feed": "publickey",
@@ -112,12 +112,42 @@
     {
       "feed": "hatebu",
       "priority": 3,
+      "title": "1Password、従業員のGitHubアカウント経由で顧客の氏名とメールアドレスが流出したと発表 — BigGo ファイナンス",
+      "url": "https://finance.biggo.jp/news/86bd3431-ad2e-4b18-b885-4fb6393beb46",
+      "published": "2026-11-25T20:50:44.000Z",
+      "bookmarks": 23,
+      "foundAt": "2026-11-26T00:07:14.271Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "「AI検索に電話番号が……」鳴りやまぬコールセンター バッファローは壊れた「顧客導線」をどう改善した？",
+      "url": "https://www.itmedia.co.jp/business/articles/2611/26/news015.html",
+      "published": "2026-11-25T22:50:37.000Z",
+      "bookmarks": 11,
+      "foundAt": "2026-11-26T00:07:14.271Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "「セキュアSAMBA」における利用者情報の漏えいのおそれに関するお詫びとお知らせ | 株式会社kubellストレージ",
+      "url": "https://www.kubell-storage.com/news/2026/11/samba.html",
+      "published": "2026-11-25T15:12:19.000Z",
+      "bookmarks": 4,
+      "foundAt": "2026-11-26T00:07:14.271Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
       "title": "Migrating our Messages API to Rust",
       "url": "https://www.anthropic.com/research/migrating-api-to-rust",
       "published": "2026-11-25T17:02:49.000Z",
       "bookmarks": 7,
       "foundAt": "2026-11-25T23:37:20.757Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
@@ -127,7 +157,7 @@
       "published": "2026-11-25T10:55:48.000Z",
       "bookmarks": 4,
       "foundAt": "2026-11-25T23:37:20.757Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
@@ -557,36 +587,6 @@
       "published": "2026-11-25T09:04:54.000Z",
       "bookmarks": 4,
       "foundAt": "2026-11-25T09:37:15.058Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "タイムズカー免許画像漏えいの見舞金、「現金かカーシェアeチケット3000円分」 12月1日から案内",
-      "url": "https://www.itmedia.co.jp/news/article/2611/25/2000003443/",
-      "published": "2026-11-25T06:59:49.000Z",
-      "bookmarks": 4,
-      "foundAt": "2026-11-25T09:37:15.058Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "“チャッピーに聞く”でも“ググる”でもない、エンジニアが選ぶ「知識が身に付く情報源」トップは？",
-      "url": "https://atmarkit.itmedia.co.jp/ait/articles/2611/24/news015.html",
-      "published": "2026-11-24T02:14:03.000Z",
-      "bookmarks": 6,
-      "foundAt": "2026-11-25T09:37:15.058Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "「Todoist」に不正アクセス、ユーザーの約6％でメールアドレスとパスワードハッシュが流出／廃止予定の「Microsoft To Do」の代替として期待されるタスク管理サービスだが……",
-      "url": "https://forest.watch.impress.co.jp/docs/news/2159145.html",
-      "published": "2026-11-25T08:21:06.000Z",
-      "bookmarks": 9,
-      "foundAt": "2026-11-25T09:07:16.619Z",
       "offered": true
     }
   ]
