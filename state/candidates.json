@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T22:37:14.086Z",
+  "updatedAt": "2026-11-26T23:02:11.911Z",
   "items": [
     {
       "feed": "publickey",
@@ -162,6 +162,36 @@
       "published": "2026-11-20T13:48:14.000Z",
       "foundAt": "2026-11-24T08:30:24.332Z",
       "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "2026-11-26 LayerXにおけるAI Agentを支えるデータ基盤のアーキテクチャと設計思想 / The Architecture and Design Philosophy of the Data Platform For AI Agents at LayerX",
+      "url": "https://speakerdeck.com/civitaspo/the-architecture-and-design-philosophy-of-the-data-platform-for-ai-agents-at-layerx",
+      "published": "2026-11-26T19:56:13.000Z",
+      "bookmarks": 12,
+      "foundAt": "2026-11-26T23:02:11.911Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "SSH is a GUI framework | ssh zydra.sh",
+      "url": "https://zydra.sh/articles/ssh-is-a-gui-framework/",
+      "published": "2026-11-26T08:03:47.000Z",
+      "bookmarks": 6,
+      "foundAt": "2026-11-26T23:02:11.911Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "Evolution Strategies at Scale: LLM Fine-Tuning Beyond Reinforcement Learning",
+      "url": "https://arxiv.org/abs/2509.24372",
+      "published": "2026-11-26T21:51:27.000Z",
+      "bookmarks": 4,
+      "foundAt": "2026-11-26T23:02:11.911Z",
+      "offered": false
     },
     {
       "feed": "hatebu",
@@ -551,36 +581,6 @@
       "published": "2026-11-26T03:01:56.000Z",
       "bookmarks": 10,
       "foundAt": "2026-11-26T07:07:17.427Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "日産が中国製PHVを「逆輸入」 27年度、先進電動車を日本で補完 - 日本経済新聞",
-      "url": "https://www.nikkei.com/article/DGXZQOUC1689U0W6A111C2000000/",
-      "published": "2026-11-26T04:11:50.000Z",
-      "bookmarks": 5,
-      "foundAt": "2026-11-26T07:07:17.427Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "飲食店の“AI商品画像”は景品表示法違反にならないの？ 弁護士の見解",
-      "url": "https://www.itmedia.co.jp/news/article/2611/26/2000003447/",
-      "published": "2026-11-26T05:02:24.000Z",
-      "bookmarks": 5,
-      "foundAt": "2026-11-26T06:37:22.078Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "ニート寸前の女子大生→“ChatGPTを使い倒して”未経験で100日連続アプリ開発→国際学会で発表…年収2000万円・25歳経営者の“生成AIで激変した人生” | 文春オンライン",
-      "url": "https://bunshun.jp/articles/-/93682",
-      "published": "2026-11-26T01:24:43.000Z",
-      "bookmarks": 7,
-      "foundAt": "2026-11-26T06:37:22.078Z",
       "offered": true
     }
   ]
