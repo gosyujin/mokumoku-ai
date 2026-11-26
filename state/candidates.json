@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T10:07:24.662Z",
+  "updatedAt": "2026-11-26T10:37:14.936Z",
   "items": [
     {
       "feed": "publickey",
@@ -117,6 +117,46 @@
       "published": "2026-11-20T13:48:14.000Z",
       "foundAt": "2026-11-24T08:30:24.332Z",
       "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "「知らない〝私〟が血を流し罵倒」中国AI短編ドラマで「顔盗用」急増 俳優は泣き寝入り",
+      "url": "https://www.sankei.com/article/20261126-SZTQ2RJW5ZKU3GJ4GQKJAORUPE/",
+      "published": "2026-11-26T08:06:59.000Z",
+      "bookmarks": 8,
+      "foundAt": "2026-11-26T10:37:14.936Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "NVIDIAが高性能GPUを「拠点はアメリカにあるが実態は中国企業に支配される子会社」に優先販売していた",
+      "url": "https://gigazine.net/news/20261126-nvidia-china-company/",
+      "published": "2026-11-26T09:52:34.000Z",
+      "bookmarks": 7,
+      "foundAt": "2026-11-26T10:37:14.936Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "24KBの「LLM専用OS」が登場 全てアセンブリでLinuxを排し、llama.cppより最大54%高速 | テクノエッジ TechnoEdge",
+      "url": "https://www.techno-edge.net/article/2026/11/26/5824.html",
+      "published": "2026-11-26T06:02:41.000Z",
+      "bookmarks": 8,
+      "foundAt": "2026-11-26T10:37:14.936Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "Apple Watchの新機能「Siri Recap」を24時間オンにしてわかった便利さと危うさ | ライフハッカー・ジャパン",
+      "url": "https://www.lifehacker.jp/article/2611-apple-watch-new-siri-recap-feature/",
+      "published": "2026-11-25T20:34:24.000Z",
+      "bookmarks": 4,
+      "foundAt": "2026-11-26T10:37:14.936Z",
+      "offered": false
     },
     {
       "feed": "hatebu",
@@ -546,46 +586,6 @@
       "published": "2026-11-24T04:01:15.000Z",
       "bookmarks": 5,
       "foundAt": "2026-11-26T00:37:24.524Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "1Password、従業員のGitHubアカウント経由で顧客の氏名とメールアドレスが流出したと発表 — BigGo ファイナンス",
-      "url": "https://finance.biggo.jp/news/86bd3431-ad2e-4b18-b885-4fb6393beb46",
-      "published": "2026-11-25T20:50:44.000Z",
-      "bookmarks": 23,
-      "foundAt": "2026-11-26T00:07:14.271Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "「AI検索に電話番号が……」鳴りやまぬコールセンター バッファローは壊れた「顧客導線」をどう改善した？",
-      "url": "https://www.itmedia.co.jp/business/articles/2611/26/news015.html",
-      "published": "2026-11-25T22:50:37.000Z",
-      "bookmarks": 11,
-      "foundAt": "2026-11-26T00:07:14.271Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "「セキュアSAMBA」における利用者情報の漏えいのおそれに関するお詫びとお知らせ | 株式会社kubellストレージ",
-      "url": "https://www.kubell-storage.com/news/2026/11/samba.html",
-      "published": "2026-11-25T15:12:19.000Z",
-      "bookmarks": 4,
-      "foundAt": "2026-11-26T00:07:14.271Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "Migrating our Messages API to Rust",
-      "url": "https://www.anthropic.com/research/migrating-api-to-rust",
-      "published": "2026-11-25T17:02:49.000Z",
-      "bookmarks": 7,
-      "foundAt": "2026-11-25T23:37:20.757Z",
       "offered": true
     }
   ]
