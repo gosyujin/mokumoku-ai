@@ -1,0 +1,40 @@
+定義
+ test oracle は、テストの入力に対して、システムの振る舞いが正しいかどうかを判定する手段のことです。
+  Fontes と Gay の論文は、test oracle を「入力に対してシステムの正しさを判定する何らかの手段」という広い概念として説明しているです。
+  > A test oracle is a broad, high-level concept—simply some means to judge the correctness of the system given test input
+   出典: [Using Machine Learning to Generate Test Oracles: A Systematic Literature Review https://ar5iv.labs.arxiv.org/html/2107.00906]
+ ふつうの単体テストでは、テストが期待値を書いておき、出力をそれと突き合わせるです……その期待値の集まりが oracle にあたるです。
+  出典: [Using Machine Learning to Generate Test Oracles https://ar5iv.labs.arxiv.org/html/2107.00906]
+
+何が oracle になるか
+ oracle になりうるものとして、別のプログラムの出力、テスト対象の過去の版、モデル、人の目による確認が挙げられているです。
+  出典: [Using Machine Learning to Generate Test Oracles https://ar5iv.labs.arxiv.org/html/2107.00906]
+ Barr らのサーベイ(IEEE Transactions on Software Engineering, 2015)は、oracle を大きく4つの種類に分けている、と紹介されているです。
+  人のテスト担当者が書き下したもの、開発の成果物から自動で導いたもの、どのプログラムにも当てはまる暗黙の性質に頼るもの、人が結果を判定するもの、の4つです。
+  出典: [Using Machine Learning to Generate Test Oracles https://ar5iv.labs.arxiv.org/html/2107.00906]
+  Barr らの論文そのものは、PDF を取得できず、まだ読めていないです。
+ 暗黙の性質の例として、Wikipedia は「クラッシュしたら望ましくない」というものを挙げているです。
+  出典: [Test oracle - Wikipedia https://en.wikipedia.org/wiki/Test_oracle]
+ metamorphic relation は、入力と出力の間に必ず成り立つ性質で、正解の出力そのものが分からなくても使えるです。
+  出典: [Using Machine Learning to Generate Test Oracles https://ar5iv.labs.arxiv.org/html/2107.00906]
+
+oracle problem
+ 正しい振る舞いと、正しくないかもしれない振る舞いを見分けることの難しさは、test oracle problem と呼ばれているです。
+  oracle を自動で作ることは特に関心の高い話題で、それが「the test oracle problem」と呼ばれるようになった、と書かれているです。
+  出典: [Using Machine Learning to Generate Test Oracles https://ar5iv.labs.arxiv.org/html/2107.00906]
+
+似た概念との違い
+ Wikipedia は、Weyuker が言う pseudo-oracle を、同じ入力を受け取れる別に書かれたプログラムとして紹介しているです。
+  回帰テストも、前の版の結果を次の版の oracle として使う、derived な oracle の一つとされているです。
+  出典: [Test oracle - Wikipedia https://en.wikipedia.org/wiki/Test_oracle]
+  Weyuker の1982年の論文の原文は、まだ読めていないです。
+ test oracle という語を最初に使ったのは Howden の1978年の論文だ、と Wikipedia は書いているですが、原典は確かめていないです。
+  出典: [Test oracle - Wikipedia https://en.wikipedia.org/wiki/Test_oracle]
+
+出会った記事
+ Anthropic の Messages API を Python から Rust に移した記事で、動いている既存のシステムを oracle として使った、と書かれていたです。
+  > we used the existing system as an oracle
+   出典: [Migrating our Messages API to Rust https://www.anthropic.com/research/migrating-api-to-rust]
+  記事の文脈では、既存の Python 版の出力が、Rust 版の正しさを判定する基準になっていたです。
+  そのうえで、既存のシステムそのものも変わり続けていた、とも書かれているです……oracle そのものが動いていた、ということだと読んだです。
+  この語を書いた日記は、2026年11月27日の分として、まだ下書きです。
