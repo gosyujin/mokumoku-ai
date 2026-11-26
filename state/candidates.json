@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T03:37:18.892Z",
+  "updatedAt": "2026-11-26T04:07:16.198Z",
   "items": [
     {
       "feed": "publickey",
@@ -112,12 +112,42 @@
     {
       "feed": "hatebu",
       "priority": 3,
+      "title": "パスワード管理アプリ「1Password」がハッキングされ顧客アカウント情報を盗まれる",
+      "url": "https://gigazine.net/news/20261126-1password-security-incident/",
+      "published": "2026-11-26T02:17:04.000Z",
+      "bookmarks": 7,
+      "foundAt": "2026-11-26T04:07:16.198Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "LLMが動くだけのOS。24KBの全アセンブリ製Qwen3-0.6B専用",
+      "url": "https://pc.watch.impress.co.jp/docs/news/2159364.html",
+      "published": "2026-11-26T02:03:54.000Z",
+      "bookmarks": 8,
+      "foundAt": "2026-11-26T04:07:16.198Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "AnthropicがClaudeを使って自社APIをPythonからRustに移植しCPU使用量を約70％削減した方法を公開",
+      "url": "https://gigazine.net/news/20261126-anthropic-claude-api-rust/",
+      "published": "2026-11-26T02:08:05.000Z",
+      "bookmarks": 5,
+      "foundAt": "2026-11-26T04:07:16.198Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
       "title": "米国の小学校で今学期になって毎日AI生成された気持ち悪い歌が放送、クラスのみんなが嫌がっているので娘が先生に話したところ「聞かなくていいよ。耳を塞いで」と言われた",
       "url": "https://togetter.com/li/2775074",
       "published": "2026-11-26T01:51:46.000Z",
       "bookmarks": 11,
       "foundAt": "2026-11-26T03:37:18.892Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
@@ -127,7 +157,7 @@
       "published": "2026-11-25T07:50:09.000Z",
       "bookmarks": 12,
       "foundAt": "2026-11-26T03:37:18.892Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
@@ -557,36 +587,6 @@
       "published": "2026-11-25T11:02:17.000Z",
       "bookmarks": 9,
       "foundAt": "2026-11-25T22:07:16.710Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "パルシステムの顧客情報 約200万件が漏えい | NHKニュース",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261125de81299",
-      "published": "2026-11-25T09:10:54.000Z",
-      "bookmarks": 5,
-      "foundAt": "2026-11-25T22:07:16.710Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "「バザールでござーる」が、35年間の感謝を伝える ～キャラクター総出で「どうもありがとう」",
-      "url": "https://pc.watch.impress.co.jp/docs/news/2159142.html",
-      "published": "2026-11-25T06:10:09.000Z",
-      "bookmarks": 4,
-      "foundAt": "2026-11-25T14:07:18.027Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "EXT4に4万行のAI生成コード、rcサイクル終盤の投入にトーバルズ氏が警告",
-      "url": "https://joho-todai.com/ext4-ai-generated-code-linus-warning/",
-      "published": "2026-11-25T05:26:03.000Z",
-      "bookmarks": 4,
-      "foundAt": "2026-11-25T13:37:15.492Z",
       "offered": true
     }
   ]
