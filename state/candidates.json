@@ -1,6 +1,42 @@
 {
-  "updatedAt": "2026-11-26T13:37:16.647Z",
+  "updatedAt": "2026-11-26T13:57:32.629Z",
   "items": [
+    {
+      "feed": "publickey",
+      "priority": 1,
+      "title": "さくらインターネットが大規模イベント開催。田中社長「日本から世界へ挑戦するためのデジタル基盤を支える」",
+      "url": "https://www.publickey1.jp/blog/26/post_311.html",
+      "published": "2026-11-26T15:50:16.000Z",
+      "foundAt": "2026-11-26T13:57:32.629Z",
+      "offered": false
+    },
+    {
+      "feed": "publickey",
+      "priority": 1,
+      "title": "さくらのクラウド、新ネットワーク基盤、新データベースサービスなど投入。東京リージョン第三ゾーン新設も発表",
+      "url": "https://www.publickey1.jp/blog/26/post_310.html",
+      "published": "2026-11-26T15:47:22.000Z",
+      "foundAt": "2026-11-26T13:57:32.629Z",
+      "offered": false
+    },
+    {
+      "feed": "publickey",
+      "priority": 1,
+      "title": "さくらインターネット、AIを月額固定料金で提供する「シンプルAI」発表、システムへの組み込み用途を想定",
+      "url": "https://www.publickey1.jp/blog/26/aiai_1.html",
+      "published": "2026-11-26T15:45:31.000Z",
+      "foundAt": "2026-11-26T13:57:32.629Z",
+      "offered": false
+    },
+    {
+      "feed": "publickey",
+      "priority": 1,
+      "title": "さくらインターネット、AWSやAzureなど他クラウドでバックアップ可能な新ストレージ「Object Storage Suite」（OS2）発表",
+      "url": "https://www.publickey1.jp/blog/26/awsazureobject_storage_suiteos2.html",
+      "published": "2026-11-26T15:42:36.000Z",
+      "foundAt": "2026-11-26T13:57:32.629Z",
+      "offered": false
+    },
     {
       "feed": "publickey",
       "priority": 1,
@@ -117,6 +153,26 @@
       "published": "2026-11-20T13:48:14.000Z",
       "foundAt": "2026-11-24T08:30:24.332Z",
       "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "【Claude Code】鹿野さんが実践するエンジニアの日常業務を爆速にする最新推しツール 大公開 / offers-claude-code-2026-11-26",
+      "url": "https://speakerdeck.com/tonkotsuboy_com/index-1f2ed0d2-597d-459d-abf2-db8db109c5d6",
+      "published": "2026-11-26T12:31:47.000Z",
+      "bookmarks": 4,
+      "foundAt": "2026-11-26T13:57:32.629Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "自律型AIエージェント「Claude Duet」、日本でも利用可能に",
+      "url": "https://pc.watch.impress.co.jp/docs/news/2159488.html",
+      "published": "2026-11-26T05:23:20.000Z",
+      "bookmarks": 28,
+      "foundAt": "2026-11-26T13:57:32.629Z",
+      "offered": false
     },
     {
       "feed": "hatebu",
@@ -526,66 +582,6 @@
       "published": "2026-11-26T02:17:04.000Z",
       "bookmarks": 7,
       "foundAt": "2026-11-26T04:07:16.198Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "LLMが動くだけのOS。24KBの全アセンブリ製Qwen3-0.6B専用",
-      "url": "https://pc.watch.impress.co.jp/docs/news/2159364.html",
-      "published": "2026-11-26T02:03:54.000Z",
-      "bookmarks": 8,
-      "foundAt": "2026-11-26T04:07:16.198Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "AnthropicがClaudeを使って自社APIをPythonからRustに移植しCPU使用量を約70％削減した方法を公開",
-      "url": "https://gigazine.net/news/20261126-anthropic-claude-api-rust/",
-      "published": "2026-11-26T02:08:05.000Z",
-      "bookmarks": 5,
-      "foundAt": "2026-11-26T04:07:16.198Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "米国の小学校で今学期になって毎日AI生成された気持ち悪い歌が放送、クラスのみんなが嫌がっているので娘が先生に話したところ「聞かなくていいよ。耳を塞いで」と言われた",
-      "url": "https://togetter.com/li/2775074",
-      "published": "2026-11-26T01:51:46.000Z",
-      "bookmarks": 11,
-      "foundAt": "2026-11-26T03:37:18.892Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "iPhone、広告を1回タップするだけでマルウェアに感染の恐れ 日本が主要な標的に",
-      "url": "https://news.mynavi.jp/techplus/article/20261125-5406233/",
-      "published": "2026-11-25T07:50:09.000Z",
-      "bookmarks": 12,
-      "foundAt": "2026-11-26T03:37:18.892Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "都が育児支援で配った「QUOカードPay」が「使えない」「残高減っている」……委託先への不正アクセスが関係か",
-      "url": "https://www.itmedia.co.jp/news/article/2611/26/2000003472/",
-      "published": "2026-11-26T02:18:38.000Z",
-      "bookmarks": 10,
-      "foundAt": "2026-11-26T03:07:15.234Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "SpaceXの宇宙データセンター衛星100万基、予備通信用の電波を米FCCが初の認可 | テクノエッジ TechnoEdge",
-      "url": "https://www.techno-edge.net/article/2026/11/26/5820.html",
-      "published": "2026-11-26T01:00:02.000Z",
-      "bookmarks": 8,
-      "foundAt": "2026-11-26T02:37:16.122Z",
       "offered": true
     }
   ]
