@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T08:37:14.272Z",
+  "updatedAt": "2026-11-26T09:07:25.590Z",
   "items": [
     {
       "feed": "publickey",
@@ -121,12 +121,32 @@
     {
       "feed": "hatebu",
       "priority": 3,
+      "title": "パスワード管理アプリ「Bitwarden」がWindows 11/macOSのパスキー機能と統合／OS標準のセキュリティ画面から保存・利用、拡張機能なしでもWebサイトへサインイン",
+      "url": "https://forest.watch.impress.co.jp/docs/news/2159319.html",
+      "published": "2026-11-26T07:18:21.000Z",
+      "bookmarks": 10,
+      "foundAt": "2026-11-26T09:07:25.590Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "旅行会社に残る価値は？ 生成AIに「旅の相談」が当たり前の今、業界の生存戦略",
+      "url": "https://www.itmedia.co.jp/business/articles/2611/26/news033.html",
+      "published": "2026-11-26T03:15:02.000Z",
+      "bookmarks": 4,
+      "foundAt": "2026-11-26T09:07:25.590Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
       "title": "「Apache Tomcat」に“致命的”な脆弱性、修正版は未公開／未認証ノードがクラスターに参加可能に。対象環境では「TLS 1.2」への切り替えを推奨",
       "url": "https://forest.watch.impress.co.jp/docs/news/2159305.html",
       "published": "2026-11-26T05:58:12.000Z",
       "bookmarks": 5,
       "foundAt": "2026-11-26T08:37:14.272Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
@@ -136,7 +156,7 @@
       "published": "2026-11-26T00:31:26.000Z",
       "bookmarks": 7,
       "foundAt": "2026-11-26T08:37:14.272Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
@@ -566,26 +586,6 @@
       "published": "2026-11-25T00:18:27.000Z",
       "bookmarks": 6,
       "foundAt": "2026-11-25T23:07:15.201Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "NVIDIA、LLM方式の画像生成AI「Nemotron-Labs-Image」を無償公開",
-      "url": "https://pc.watch.impress.co.jp/docs/news/2159286.html",
-      "published": "2026-11-25T15:35:05.000Z",
-      "bookmarks": 4,
-      "foundAt": "2026-11-25T23:07:15.201Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "アウトプットの「質」ってじゃあなんなんだよ",
-      "url": "https://zenn.dev/watany/articles/1efe3adea67dd5",
-      "published": "2026-11-25T12:01:00.000Z",
-      "bookmarks": 5,
-      "foundAt": "2026-11-25T22:37:15.542Z",
       "offered": true
     }
   ]
