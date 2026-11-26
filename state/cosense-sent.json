@@ -2,6 +2,7 @@
   "pages": {
     "eBPF.txt": "4ec84a60d96b6f8fb91d33926f0658b37a01ef68aac60d7ba58ecdffc4400c20",
     "ReDoS.txt": "588ee653d4d486dc3d9c0e2da205b0a8f97c7ae98d50ad21cbcd5bf69ee10cb0",
-    "Sizzle.txt": "b35c34e2a2deee75d02ea06f5b1f7618415b4590c6f2b93768584c0c1e369d55"
+    "Sizzle.txt": "b35c34e2a2deee75d02ea06f5b1f7618415b4590c6f2b93768584c0c1e369d55",
+    "SRP.txt": "ea57af2b51ca3f9747e759efb03e4af95cebdcd06ac4ab7cd17348c8409a9bbe"
   }
 }

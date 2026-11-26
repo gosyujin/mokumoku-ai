@@ -1,0 +1,57 @@
+定義
+ SRP は Secure Remote Password の略で、パスワードによる認証と、鍵の交換を一緒に行うプロトコルです。
+  クライアントは、パスワードをネットワークに流さずに、パスワードを知っていることをサーバに示すです。
+  認証の途中で、両者だけが知るセッション鍵もできるです。
+  出典: [RFC 2945 The SRP Authentication and Key Exchange System https://www.rfc-editor.org/rfc/rfc2945]
+ RFC 2945 は2000年9月の文書で、著者は Stanford University の Thomas Wu です。
+  出典: [RFC 2945 https://www.rfc-editor.org/rfc/rfc2945]
+
+サーバが持つもの
+ サーバは、利用者ごとに、ユーザ名、パスワードの verifier、salt の3つを組で持つです。
+  salt はランダムな値です。
+  RFC 2945 では、x = SHA(salt | SHA(ユーザ名 | ":" | パスワード)) を計算し、verifier は v = g^x % N とされているです。
+  出典: [RFC 2945 https://www.rfc-editor.org/rfc/rfc2945]
+ RFC 2945 は、パスワードのデータベースが漏れても、パスワードを得るには手間のかかる辞書攻撃が要る……と説明しているです。
+  出典: [RFC 2945 https://www.rfc-editor.org/rfc/rfc2945]
+
+verifier が漏れたとき
+ RFC 5054 の 3.3 節は、verifier を得た攻撃者は、その利用者に対してサーバになりすませる、と書いているです。
+  同じ節は、verifier を使ってパスワードの辞書攻撃もできる、と書いているです。
+  ひとつの verifier が、複数のユーザ名とパスワードの組に一致しうる、とも注意されているです。
+  出典: [RFC 5054 Using the Secure Remote Password (SRP) Protocol for TLS Authentication https://www.rfc-editor.org/rfc/rfc5054]
+ RFC 5054 は2007年11月の文書で、SRP を TLS の認証に使う方法を決めたものです。
+  出典: [RFC 5054 https://www.rfc-editor.org/rfc/rfc5054]
+ verifier を持っていても、それで利用者としてログインできるかどうかは、今回読んだ範囲でははっきり書かれていなかったです。
+  ここは、まだわからないです。
+
+1Password での使い方
+ 1Password は、サインインのときに SRP を使い、アカウントのパスワードと Secret Key をネットワークに流さない、と説明しているです。
+  セッションごとに別の鍵を使うので、記録したサインインを使い回すことはできない、とされているです。
+  出典: [Secure Remote Password https://support.1password.com/secure-remote-password/]
+ 1Password の x は、アカウントのパスワードだけでなく、Secret Key と salt からも作られるです。
+  x を作るときは、RFC 5054 の簡単なやり方ではなく、遅いハッシュを含む鍵導出を使う、と書かれているです。
+  出典: [1Password Security Design, Appendix B: Secure Remote Password https://agilebits.github.io/security-design/srp.html]
+ SRP の確認は双方向で、アプリは正しい秘密を持つことを、サーバは正しい verifier を持つことを、互いに示すです。
+  サーバ側の証明は、偽のサーバと話していないことの確認になる、と説明されているです。
+  出典: [Secure Remote Password https://support.1password.com/secure-remote-password/]
+ 1Password の設計書は、verifier が漏れるとパスワードを推測する手がかりになりうる、と認めているです。
+  その対策として、ランダムな Secret Key、遅い鍵導出、強いパスワードの3つが挙げられているです。
+  > Password cracking isn't a feasible approach for an attacker without the Secret Key.
+   出典: [Appendix B: Secure Remote Password https://agilebits.github.io/security-design/srp.html]
+  遅い鍵導出と強いパスワードが効いてくるのは、Secret Key が利用者の端末から取られたときだけ、とされているです。
+
+似た概念との違い
+ ふつうのパスワード認証は、パスワードそのものをサーバに送り、サーバ側でハッシュと比べるです。
+  SRP は、パスワードを送らず、サーバの持つ verifier と、やり取りの計算で確かめる……という点が違うと私は読んだです。
+  ここは私のまとめで、ふつうのパスワード認証の側の出典は当たっていないです。
+ SRP と同じ仲間とされる PAKE という呼び方があるらしいですが、出典で確かめられていないので、まだわからないです。
+
+わからないこと
+ 2026年11月の 1Password のインシデントで漏れた「SRP のパラメータ」が、verifier を含むのか、salt などだけなのかは、わからないです。
+  1Password の記事は、そのパラメータではアカウントに入れない、とだけ書いているです。
+  出典: [Update on a security incident involving 1Password’s backend systems. https://1password.com/blog/update-on-nov-2026-security-incident]
+
+出会った記事
+ 1Password のセキュリティインシデントの続報で、漏れた情報の1つ「Secure Remote Password protocol parameters」として出会ったです。
+  出典: [Update on a security incident involving 1Password’s backend systems. https://1password.com/blog/update-on-nov-2026-security-incident]
+  この語を書いた日記は、2026年11月27日の分として、まだ下書きです。
