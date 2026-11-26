@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T12:07:16.660Z",
+  "updatedAt": "2026-11-26T12:37:38.764Z",
   "items": [
     {
       "feed": "publickey",
@@ -117,6 +117,26 @@
       "published": "2026-11-20T13:48:14.000Z",
       "foundAt": "2026-11-24T08:30:24.332Z",
       "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "ゆうちょ銀が勘定系をオープン化へ、2574億円でNTTデータが落札",
+      "url": "https://xtech.nikkei.com/atcl/nxt/column/18/03815/112400006/",
+      "published": "2026-11-26T02:13:14.000Z",
+      "bookmarks": 6,
+      "foundAt": "2026-11-26T12:37:38.764Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "深センの中国人業者が規制されているNVIDIAのGPUを取り扱っていてアメリカの4～5倍の値段になっている品もあるとの指摘",
+      "url": "https://gigazine.net/news/20261126-nvidia-chip-china/",
+      "published": "2026-11-26T07:05:12.000Z",
+      "bookmarks": 5,
+      "foundAt": "2026-11-26T12:37:38.764Z",
+      "offered": false
     },
     {
       "feed": "hatebu",
@@ -564,26 +584,6 @@
       "title": "タイムズはどうすべきだったのか、JPKI を用いた eKYC の今後 | blog.jxck.io",
       "url": "https://blog.jxck.io/entries/2026-11-25/ekyc-over-jpki.html",
       "published": "2026-11-25T16:45:41.000Z",
-      "bookmarks": 4,
-      "foundAt": "2026-11-26T02:07:22.788Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "Skills - Model Context Protocol",
-      "url": "https://modelcontextprotocol.io/extensions/skills/overview",
-      "published": "2026-11-25T20:09:24.000Z",
-      "bookmarks": 4,
-      "foundAt": "2026-11-26T02:07:22.788Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "脆弱性の発見数、1年で2倍超 Microsoft製品も月100件から1000件超に……AIで一変",
-      "url": "https://www.itmedia.co.jp/news/article/2611/26/2000003446/",
-      "published": "2026-11-26T01:09:22.000Z",
       "bookmarks": 4,
       "foundAt": "2026-11-26T02:07:22.788Z",
       "offered": true
