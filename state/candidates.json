@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T23:02:11.911Z",
+  "updatedAt": "2026-11-26T23:37:24.868Z",
   "items": [
     {
       "feed": "publickey",
@@ -166,12 +166,32 @@
     {
       "feed": "hatebu",
       "priority": 3,
+      "title": "Anthropic、MCPサーバーがスキルを配信する「Skills over MCP」をパブリックベータ公開 ―Tasks、Elicitationの一般提供も開始 | gihyo.jp",
+      "url": "https://gihyo.jp/article/2026/11/skills-over-mcp",
+      "published": "2026-11-26T09:44:20.000Z",
+      "bookmarks": 9,
+      "foundAt": "2026-11-26T23:37:24.868Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "Aniwaffle | Expressive, lovable AI voices for your characters",
+      "url": "https://aniwaffle.com/",
+      "published": "2026-11-26T11:26:19.000Z",
+      "bookmarks": 5,
+      "foundAt": "2026-11-26T23:37:24.868Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
       "title": "2026-11-26 LayerXにおけるAI Agentを支えるデータ基盤のアーキテクチャと設計思想 / The Architecture and Design Philosophy of the Data Platform For AI Agents at LayerX",
       "url": "https://speakerdeck.com/civitaspo/the-architecture-and-design-philosophy-of-the-data-platform-for-ai-agents-at-layerx",
       "published": "2026-11-26T19:56:13.000Z",
       "bookmarks": 12,
       "foundAt": "2026-11-26T23:02:11.911Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
@@ -181,7 +201,7 @@
       "published": "2026-11-26T08:03:47.000Z",
       "bookmarks": 6,
       "foundAt": "2026-11-26T23:02:11.911Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
@@ -191,7 +211,7 @@
       "published": "2026-11-26T21:51:27.000Z",
       "bookmarks": 4,
       "foundAt": "2026-11-26T23:02:11.911Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
@@ -201,7 +221,7 @@
       "published": "2026-11-26T19:52:20.000Z",
       "bookmarks": 7,
       "foundAt": "2026-11-26T22:37:14.086Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
@@ -561,26 +581,6 @@
       "published": "2026-11-26T05:40:51.000Z",
       "bookmarks": 14,
       "foundAt": "2026-11-26T08:07:25.772Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "理解をあきらめないAI駆動開発 ——開発の流れに「理解の工程」を織り込む6つの実践｜株式会社アシュアード",
-      "url": "https://note.com/assuredjp/n/n6ec5f6544e0c",
-      "published": "2026-11-26T06:59:49.000Z",
-      "bookmarks": 11,
-      "foundAt": "2026-11-26T08:07:25.772Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "GoogleのAIが人間の介入なしに6本の数学論文を生成、素因数分解など数十年停滞していた分野に光",
-      "url": "https://gigazine.net/news/20261126-cogentic-6-research-papers/",
-      "published": "2026-11-26T03:01:56.000Z",
-      "bookmarks": 10,
-      "foundAt": "2026-11-26T07:07:17.427Z",
       "offered": true
     }
   ]
