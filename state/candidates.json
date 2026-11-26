@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T12:37:38.764Z",
+  "updatedAt": "2026-11-26T13:07:15.894Z",
   "items": [
     {
       "feed": "publickey",
@@ -121,12 +121,42 @@
     {
       "feed": "hatebu",
       "priority": 3,
+      "title": "GPT-6.2 Astraが歴史学者もわからなかった「1808年に描かれた北米旅行のスケッチブック」の作者を22分で特定",
+      "url": "https://gigazine.net/news/20261126-gpt-62-astra-solves-a-historical-mystery/",
+      "published": "2026-11-26T11:08:57.000Z",
+      "bookmarks": 7,
+      "foundAt": "2026-11-26T13:07:15.894Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "Jev で実現する Generative UI",
+      "url": "https://speakerdeck.com/azukiazusa1/slide-efc59f7e-336f-4e6c-8919-27211ebc3d07",
+      "published": "2026-11-26T12:42:06.000Z",
+      "bookmarks": 5,
+      "foundAt": "2026-11-26T13:07:15.894Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "Linux上で完全なmacOS GUIユーザー空間を実現する「xnulinux」",
+      "url": "https://gigazine.net/news/20261126-xnu-linux/",
+      "published": "2026-11-25T22:46:10.000Z",
+      "bookmarks": 10,
+      "foundAt": "2026-11-26T13:07:15.894Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
       "title": "ゆうちょ銀が勘定系をオープン化へ、2574億円でNTTデータが落札",
       "url": "https://xtech.nikkei.com/atcl/nxt/column/18/03815/112400006/",
       "published": "2026-11-26T02:13:14.000Z",
       "bookmarks": 6,
       "foundAt": "2026-11-26T12:37:38.764Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
@@ -136,7 +166,7 @@
       "published": "2026-11-26T07:05:12.000Z",
       "bookmarks": 5,
       "foundAt": "2026-11-26T12:37:38.764Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
@@ -556,36 +586,6 @@
       "published": "2026-11-26T01:29:58.000Z",
       "bookmarks": 6,
       "foundAt": "2026-11-26T02:37:16.122Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "pstack とは何か｜pstack 完全ガイド ─AIエージェントに雑なコード を書かせない技術─",
-      "url": "https://zenn.dev/karamage/books/50c18e52e7d19e/viewer/845d0c",
-      "published": "2026-11-24T08:58:47.000Z",
-      "bookmarks": 5,
-      "foundAt": "2026-11-26T02:37:16.122Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "MetaのAIエージェント Museを1ヶ月使い倒してわかったこと | kinoko dev",
-      "url": "https://dev.sin5d.com/meta-muse-usage",
-      "published": "2026-11-25T22:53:15.000Z",
-      "bookmarks": 6,
-      "foundAt": "2026-11-26T02:07:22.788Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "タイムズはどうすべきだったのか、JPKI を用いた eKYC の今後 | blog.jxck.io",
-      "url": "https://blog.jxck.io/entries/2026-11-25/ekyc-over-jpki.html",
-      "published": "2026-11-25T16:45:41.000Z",
-      "bookmarks": 4,
-      "foundAt": "2026-11-26T02:07:22.788Z",
       "offered": true
     }
   ]
