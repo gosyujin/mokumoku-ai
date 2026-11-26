@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T05:07:17.933Z",
+  "updatedAt": "2026-11-26T05:37:15.405Z",
   "items": [
     {
       "feed": "publickey",
@@ -108,6 +108,36 @@
       "published": "2026-11-20T13:48:14.000Z",
       "foundAt": "2026-11-24T08:30:24.332Z",
       "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "アディーレ法律事務所 不正アクセスで個人情報漏えい | NHKニュース",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261126de81692",
+      "published": "2026-11-26T04:56:37.000Z",
+      "bookmarks": 9,
+      "foundAt": "2026-11-26T05:37:15.405Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "衛星「最大100万基」--SpaceXの宇宙データセンター計画、米当局が条件付き承認",
+      "url": "https://japan.cnet.com/article/35255417/",
+      "published": "2026-11-25T22:47:51.000Z",
+      "bookmarks": 5,
+      "foundAt": "2026-11-26T05:37:15.405Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "OpenAIの最新モデルに酷評の嵐。本当の勝者はAnthropic？ | ギズモード・ジャパン",
+      "url": "https://www.gizmodo.jp/article/2611-openai-gpt-6-2-reviews-anthropic/",
+      "published": "2026-11-25T20:47:55.000Z",
+      "bookmarks": 4,
+      "foundAt": "2026-11-26T05:37:15.405Z",
+      "offered": false
     },
     {
       "feed": "hatebu",
@@ -556,36 +586,6 @@
       "url": "https://eiji.page/blog/niwaterm-fun-to-make",
       "published": "2026-11-25T11:04:20.000Z",
       "bookmarks": 22,
-      "foundAt": "2026-11-25T22:07:16.710Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "小型で低発熱なUSB充電器。エレコムが日本電源技術メーカーと協業",
-      "url": "https://pc.watch.impress.co.jp/docs/news/2158950.html",
-      "published": "2026-11-25T02:10:37.000Z",
-      "bookmarks": 7,
-      "foundAt": "2026-11-25T22:07:16.710Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "PayPayでシステム障害 カード連携サービスで決済できず | NHKニュース",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261125de81532",
-      "published": "2026-11-25T14:26:59.000Z",
-      "bookmarks": 8,
-      "foundAt": "2026-11-25T22:07:16.710Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "「小学生くらいの頃に見たロボットに乗って戦うアニメを探してるのですが見つかりません」情報を元に推理して2択に絞られるが、解決したと思ったら謎が残った",
-      "url": "https://togetter.com/li/2774878",
-      "published": "2026-11-25T11:47:41.000Z",
-      "bookmarks": 11,
       "foundAt": "2026-11-25T22:07:16.710Z",
       "offered": true
     }
