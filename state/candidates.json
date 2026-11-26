@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T09:37:24.725Z",
+  "updatedAt": "2026-11-26T10:07:24.662Z",
   "items": [
     {
       "feed": "publickey",
@@ -121,12 +121,32 @@
     {
       "feed": "hatebu",
       "priority": 3,
+      "title": "これぞAIのゲーム活用。音声でのみ指示できるドライブゲーム「妹に運転を教える」を遊んでみた／エンジンのかけ方も忘れている妹に、何と言えば安全運転できる？【レビュー】",
+      "url": "https://forest.watch.impress.co.jp/docs/review/2158342.html",
+      "published": "2026-11-25T23:18:01.000Z",
+      "bookmarks": 4,
+      "foundAt": "2026-11-26T10:07:24.662Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "Obsidian公式の「エージェント向け」スキル集が登場 Vault操作法とファイル形式をひとまとめに",
+      "url": "https://www.itmedia.co.jp/aiplus/article/2611/26/2000003470/",
+      "published": "2026-11-26T00:44:38.000Z",
+      "bookmarks": 12,
+      "foundAt": "2026-11-26T10:07:24.662Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
       "title": "みずほ銀行、顧客の管理番号3万件が漏洩 委託先に不正アクセス - 日本経済新聞",
       "url": "https://www.nikkei.com/article/DGXZQOUB266I30W6A121C2000000/",
       "published": "2026-11-26T08:06:01.000Z",
       "bookmarks": 4,
       "foundAt": "2026-11-26T09:37:24.725Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
@@ -566,26 +586,6 @@
       "published": "2026-11-25T17:02:49.000Z",
       "bookmarks": 7,
       "foundAt": "2026-11-25T23:37:20.757Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "AWS WAF の新料金（simplified pricing）と旧料金を試算して比べてみた | DevelopersIO",
-      "url": "https://dev.classmethod.jp/articles/aws-waf-simplified-pricing-estimate/",
-      "published": "2026-11-25T10:55:48.000Z",
-      "bookmarks": 4,
-      "foundAt": "2026-11-25T23:37:20.757Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "Button Sounds — tactile SFX for your UI",
-      "url": "https://buttons.joshwcomeau.com/",
-      "published": "2026-11-25T13:57:27.000Z",
-      "bookmarks": 7,
-      "foundAt": "2026-11-25T23:07:15.201Z",
       "offered": true
     }
   ]
