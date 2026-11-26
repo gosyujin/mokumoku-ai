@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T02:07:22.788Z",
+  "updatedAt": "2026-11-26T02:37:16.122Z",
   "items": [
     {
       "feed": "publickey",
@@ -108,6 +108,36 @@
       "published": "2026-11-20T13:48:14.000Z",
       "foundAt": "2026-11-24T08:30:24.332Z",
       "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "SpaceXの宇宙データセンター衛星100万基、予備通信用の電波を米FCCが初の認可 | テクノエッジ TechnoEdge",
+      "url": "https://www.techno-edge.net/article/2026/11/26/5820.html",
+      "published": "2026-11-26T01:00:02.000Z",
+      "bookmarks": 8,
+      "foundAt": "2026-11-26T02:37:16.122Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "「サツドラ」顧客情報22万件流出 委託先サイバーエージェントがデータ誤公開、1年以上気づかず",
+      "url": "https://www.itmedia.co.jp/news/article/2611/26/2000003469/",
+      "published": "2026-11-26T01:29:58.000Z",
+      "bookmarks": 6,
+      "foundAt": "2026-11-26T02:37:16.122Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "pstack とは何か｜pstack 完全ガイド ─AIエージェントに雑なコード を書かせない技術─",
+      "url": "https://zenn.dev/karamage/books/50c18e52e7d19e/viewer/845d0c",
+      "published": "2026-11-24T08:58:47.000Z",
+      "bookmarks": 5,
+      "foundAt": "2026-11-26T02:37:16.122Z",
+      "offered": false
     },
     {
       "feed": "hatebu",
@@ -557,36 +587,6 @@
       "published": "2026-11-25T07:12:44.000Z",
       "bookmarks": 5,
       "foundAt": "2026-11-25T13:07:16.984Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "Apple製モニターを経由して有線LAN接続したらインターネット速度が4分の1に低下したという体験談",
-      "url": "https://gigazine.net/news/20261125-monitor-was-cutting-download-speed/",
-      "published": "2026-11-24T23:07:45.000Z",
-      "bookmarks": 10,
-      "foundAt": "2026-11-25T12:37:21.617Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "翻訳特化AI「Hy MT3」をテンセントが公開、日本語を含む102言語に対応しローカルで実行可能",
-      "url": "https://gigazine.net/news/20261125-hy-mt3-tencent-translation-ai/",
-      "published": "2026-11-25T02:26:14.000Z",
-      "bookmarks": 5,
-      "foundAt": "2026-11-25T12:37:21.617Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "中国の諜報機関が高性能AIチップの密輸を支援する秘密工作を少なくとも2年前から展開していたことが明らかに",
-      "url": "https://gigazine.net/news/20261125-china-spy-nvidia-chips/",
-      "published": "2026-11-25T09:49:34.000Z",
-      "bookmarks": 6,
-      "foundAt": "2026-11-25T12:07:15.321Z",
       "offered": true
     }
   ]
