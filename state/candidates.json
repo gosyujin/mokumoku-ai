@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T04:37:17.450Z",
+  "updatedAt": "2026-11-26T05:07:17.933Z",
   "items": [
     {
       "feed": "publickey",
@@ -112,12 +112,22 @@
     {
       "feed": "hatebu",
       "priority": 3,
+      "title": "細部までこだわり抜かれた職人技！ UIデザインに最適、文字サイズが小さくてもくっきりと美しく表示されるフォント -Allo",
+      "url": "https://coliss.com/articles/freebies/allo-friendly-neighborhood-typeface.html",
+      "published": "2026-11-26T00:46:37.000Z",
+      "bookmarks": 5,
+      "foundAt": "2026-11-26T05:07:17.933Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
       "title": "自分用の PaaS アプリを作った - tricknotesのぼうけんのしょ",
       "url": "https://tricknotes.hateblo.jp/entry/2026/11/26/000000",
       "published": "2026-11-26T01:32:18.000Z",
       "bookmarks": 6,
       "foundAt": "2026-11-26T04:37:17.450Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
@@ -576,16 +586,6 @@
       "url": "https://togetter.com/li/2774878",
       "published": "2026-11-25T11:47:41.000Z",
       "bookmarks": 11,
-      "foundAt": "2026-11-25T22:07:16.710Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "AI時代の実践・形式検証入門",
-      "url": "https://docs.google.com/presentation/d/1s-ie7b1rD47NUkwSIvdDYCJfrHzWOl-rt1c2hSgeerM/edit?slide=id.p1",
-      "published": "2026-11-24T23:23:30.000Z",
-      "bookmarks": 9,
       "foundAt": "2026-11-25T22:07:16.710Z",
       "offered": true
     }
