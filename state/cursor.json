@@ -1,18 +1,18 @@
 {
-  "lastBeat": "2026-11-26T13:57:32.629Z",
-  "elapsedMinutes": 20,
-  "trigger": "schedule",
-  "act": false,
+  "lastBeat": "2026-11-26T22:07:18.470Z",
+  "elapsedMinutes": 489,
+  "trigger": "dispatch",
+  "act": true,
   "reasons": [
     {
       "kind": "feed",
-      "detail": "Publickey 新着4、はてブ 新着3"
+      "detail": "Publickey 新着4、piyolog 新着1、はてブ 新着11"
     }
   ],
   "llm": {
-    "date": "2026-11-26",
-    "count": 16,
+    "date": "2026-11-27",
+    "count": 1,
     "limit": 18
   },
-  "lastAct": "2026-11-26T13:07:15.894Z"
+  "lastAct": "2026-11-26T22:07:18.470Z"
 }

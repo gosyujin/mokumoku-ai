@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T13:57:32.629Z",
+  "updatedAt": "2026-11-26T22:07:18.470Z",
   "items": [
     {
       "feed": "publickey",
@@ -8,7 +8,7 @@
       "url": "https://www.publickey1.jp/blog/26/post_311.html",
       "published": "2026-11-26T15:50:16.000Z",
       "foundAt": "2026-11-26T13:57:32.629Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "publickey",
@@ -17,7 +17,7 @@
       "url": "https://www.publickey1.jp/blog/26/post_310.html",
       "published": "2026-11-26T15:47:22.000Z",
       "foundAt": "2026-11-26T13:57:32.629Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "publickey",
@@ -26,7 +26,7 @@
       "url": "https://www.publickey1.jp/blog/26/aiai_1.html",
       "published": "2026-11-26T15:45:31.000Z",
       "foundAt": "2026-11-26T13:57:32.629Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "publickey",
@@ -35,7 +35,7 @@
       "url": "https://www.publickey1.jp/blog/26/awsazureobject_storage_suiteos2.html",
       "published": "2026-11-26T15:42:36.000Z",
       "foundAt": "2026-11-26T13:57:32.629Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "publickey",
@@ -103,6 +103,15 @@
     {
       "feed": "piyolog",
       "priority": 2,
+      "title": "東京都「赤ちゃんファースト」で交換したQUOカードPayが使えなくなった件についてまとめてみた",
+      "url": "https://piyolog.hatenadiary.jp/entry/2026/11/27/004031",
+      "published": "2026-11-26T15:40:31.000Z",
+      "foundAt": "2026-11-26T22:07:18.470Z",
+      "offered": true
+    },
+    {
+      "feed": "piyolog",
+      "priority": 2,
       "title": "1Passwordへの不正アクセスについてまとめてみた",
       "url": "https://piyolog.hatenadiary.jp/entry/2026/11/26/153937",
       "published": "2026-11-26T06:39:37.000Z",
@@ -157,12 +166,92 @@
     {
       "feed": "hatebu",
       "priority": 3,
+      "title": "AEDの件、結局はてなのブコメでも「配慮なんていいから助けてほしい」とい..",
+      "url": "https://anond.hatelabo.jp/20261126073406",
+      "published": "2026-11-25T22:35:48.000Z",
+      "bookmarks": 54,
+      "foundAt": "2026-11-26T22:07:18.470Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "デジタル庁デザインシステムをどう使うか：導入先に合わせた「ローカルデザインシステム」を作る｜デジタル庁ニュース",
+      "url": "https://digital-agency-news.digital.go.jp/articles/2026-11-26",
+      "published": "2026-11-26T10:02:29.000Z",
+      "bookmarks": 12,
+      "foundAt": "2026-11-26T22:07:18.470Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "情報量が4倍のQRコードを作ろう - Qiita",
+      "url": "https://qiita.com/reipandada/items/17496db6ac5f64a5e61a",
+      "published": "2026-11-25T20:01:53.000Z",
+      "bookmarks": 4,
+      "foundAt": "2026-11-26T22:07:18.470Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "サービスチーム全員で2年半続けているドメインモデリングのリアル / domain-modeling-with-the-whole-service-team",
+      "url": "https://speakerdeck.com/kaminashi/domain-modeling-with-the-whole-service-team",
+      "published": "2026-11-26T12:14:26.000Z",
+      "bookmarks": 29,
+      "foundAt": "2026-11-26T22:07:18.470Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "「Telnet Client」（telnet.exe）が非推奨に ～将来のWindowsリリースで削除へ／リモートコンピューターと通信するOSのオプション機能",
+      "url": "https://forest.watch.impress.co.jp/docs/news/2159560.html",
+      "published": "2026-11-26T09:47:01.000Z",
+      "bookmarks": 13,
+      "foundAt": "2026-11-26T22:07:18.470Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "ニューヨーク・タイムズが写真家に「ユーザーにもわからないAI機能があるからPhotoshopをアップデートするな」と警告",
+      "url": "https://gigazine.net/news/20261126-nyt-warns-not-update-photoshop-ai-features/",
+      "published": "2026-11-26T13:05:35.000Z",
+      "bookmarks": 28,
+      "foundAt": "2026-11-26T22:07:18.470Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "🧠Work IQ・Fabric IQ・Foundry IQ・Web IQ って何だっけ？ Microsoft IQ の 4 つを 1 本で整理する - Qiita",
+      "url": "https://qiita.com/aktsmm/items/1a1ef35ee48d7ef665ba?ocid=AID3062894_TWITTER_oo_spl100011804015917",
+      "published": "2026-11-26T12:15:07.000Z",
+      "bookmarks": 5,
+      "foundAt": "2026-11-26T22:07:18.470Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "海外の音楽配信サービス、AI生成楽曲の一律禁止を発表。約2700万曲を削除へ【やじうまWatch】",
+      "url": "https://internet.watch.impress.co.jp/docs/yajiuma/2159409.html",
+      "published": "2026-11-26T03:25:54.000Z",
+      "bookmarks": 8,
+      "foundAt": "2026-11-26T22:07:18.470Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
       "title": "【Claude Code】鹿野さんが実践するエンジニアの日常業務を爆速にする最新推しツール 大公開 / offers-claude-code-2026-11-26",
       "url": "https://speakerdeck.com/tonkotsuboy_com/index-1f2ed0d2-597d-459d-abf2-db8db109c5d6",
       "published": "2026-11-26T12:31:47.000Z",
       "bookmarks": 4,
       "foundAt": "2026-11-26T13:57:32.629Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
@@ -172,7 +261,7 @@
       "published": "2026-11-26T05:23:20.000Z",
       "bookmarks": 28,
       "foundAt": "2026-11-26T13:57:32.629Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
@@ -182,7 +271,7 @@
       "published": "2026-11-26T05:48:15.000Z",
       "bookmarks": 6,
       "foundAt": "2026-11-26T13:37:16.647Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
@@ -492,96 +581,6 @@
       "published": "2026-11-26T05:50:48.000Z",
       "bookmarks": 4,
       "foundAt": "2026-11-26T06:37:22.078Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "Googleがオープンモデル「Gemma 4」のファインチューニングに役立つ情報を網羅したページを公開、ファインチューニング用スキルもあり",
-      "url": "https://gigazine.net/news/20261126-gemma-4-fine-tune/",
-      "published": "2026-11-26T03:30:36.000Z",
-      "bookmarks": 6,
-      "foundAt": "2026-11-26T06:07:19.195Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "GitHubに「人には見えない隠し文字」 小型AIの操作狙うものも……1億4500万件を調査",
-      "url": "https://www.itmedia.co.jp/news/article/2611/26/2000003460/",
-      "published": "2026-11-26T03:22:00.000Z",
-      "bookmarks": 10,
-      "foundAt": "2026-11-26T06:07:19.195Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "Character.AIのチャット履歴競売に41州とワシントンD.C.が異議 未成年者の約210万アカウント分も対象",
-      "url": "https://www.itmedia.co.jp/news/article/2611/26/2000003479/",
-      "published": "2026-11-26T04:45:24.000Z",
-      "bookmarks": 8,
-      "foundAt": "2026-11-26T06:07:19.195Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "アディーレ法律事務所 不正アクセスで個人情報漏えい | NHKニュース",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261126de81692",
-      "published": "2026-11-26T04:56:37.000Z",
-      "bookmarks": 9,
-      "foundAt": "2026-11-26T05:37:15.405Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "衛星「最大100万基」--SpaceXの宇宙データセンター計画、米当局が条件付き承認",
-      "url": "https://japan.cnet.com/article/35255417/",
-      "published": "2026-11-25T22:47:51.000Z",
-      "bookmarks": 5,
-      "foundAt": "2026-11-26T05:37:15.405Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "OpenAIの最新モデルに酷評の嵐。本当の勝者はAnthropic？ | ギズモード・ジャパン",
-      "url": "https://www.gizmodo.jp/article/2611-openai-gpt-6-2-reviews-anthropic/",
-      "published": "2026-11-25T20:47:55.000Z",
-      "bookmarks": 4,
-      "foundAt": "2026-11-26T05:37:15.405Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "細部までこだわり抜かれた職人技！ UIデザインに最適、文字サイズが小さくてもくっきりと美しく表示されるフォント -Allo",
-      "url": "https://coliss.com/articles/freebies/allo-friendly-neighborhood-typeface.html",
-      "published": "2026-11-26T00:46:37.000Z",
-      "bookmarks": 5,
-      "foundAt": "2026-11-26T05:07:17.933Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "自分用の PaaS アプリを作った - tricknotesのぼうけんのしょ",
-      "url": "https://tricknotes.hateblo.jp/entry/2026/11/26/000000",
-      "published": "2026-11-26T01:32:18.000Z",
-      "bookmarks": 6,
-      "foundAt": "2026-11-26T04:37:17.450Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "パスワード管理アプリ「1Password」がハッキングされ顧客アカウント情報を盗まれる",
-      "url": "https://gigazine.net/news/20261126-1password-security-incident/",
-      "published": "2026-11-26T02:17:04.000Z",
-      "bookmarks": 7,
-      "foundAt": "2026-11-26T04:07:16.198Z",
       "offered": true
     }
   ]
