@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T07:37:18.703Z",
+  "updatedAt": "2026-11-26T08:07:25.772Z",
   "items": [
     {
       "feed": "publickey",
@@ -116,6 +116,26 @@
       "url": "https://piyolog.hatenadiary.jp/entry/2026/11/20/224814",
       "published": "2026-11-20T13:48:14.000Z",
       "foundAt": "2026-11-24T08:30:24.332Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "CLAUDE.md / AGENTS.md を Claude Codeに継続的に書かせる",
+      "url": "https://anond.hatelabo.jp/20261126144022",
+      "published": "2026-11-26T05:40:51.000Z",
+      "bookmarks": 14,
+      "foundAt": "2026-11-26T08:07:25.772Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "理解をあきらめないAI駆動開発 ——開発の流れに「理解の工程」を織り込む6つの実践｜株式会社アシュアード",
+      "url": "https://note.com/assuredjp/n/n6ec5f6544e0c",
+      "published": "2026-11-26T06:59:49.000Z",
+      "bookmarks": 11,
+      "foundAt": "2026-11-26T08:07:25.772Z",
       "offered": true
     },
     {
@@ -565,26 +585,6 @@
       "url": "https://gigazine.net/news/20261125-anthropic-openai-employees-fear-unreleased-ai-models/",
       "published": "2026-11-25T11:43:19.000Z",
       "bookmarks": 42,
-      "foundAt": "2026-11-25T22:07:16.710Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "観測者から当事者へ、AI 時代にドメインへ深入りする知識と技術 / From Observer to Practitioner: Going Deep into Domains in the Age of AI",
-      "url": "https://speakerdeck.com/nrslib/from-observer-to-practitioner-going-deep-into-domains-in-the-age-of-ai",
-      "published": "2026-11-25T11:26:01.000Z",
-      "bookmarks": 14,
-      "foundAt": "2026-11-25T22:07:16.710Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "組織レベルごとの品質定義（リライト）｜snsk",
-      "url": "https://note.com/_snsk/n/n9473a6e95b1c",
-      "published": "2026-11-25T16:01:22.000Z",
-      "bookmarks": 17,
       "foundAt": "2026-11-25T22:07:16.710Z",
       "offered": true
     }
