@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T00:07:14.271Z",
+  "updatedAt": "2026-11-26T00:37:24.524Z",
   "items": [
     {
       "feed": "publickey",
@@ -108,6 +108,36 @@
       "published": "2026-11-20T13:48:14.000Z",
       "foundAt": "2026-11-24T08:30:24.332Z",
       "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "メタのAI責任者「超知能が近づいている」 リーマン予想の証明受け、社会の主導権をAIに渡さぬよう訴え",
+      "url": "https://japan.cnet.com/article/35255309/",
+      "published": "2026-11-23T22:46:18.000Z",
+      "bookmarks": 5,
+      "foundAt": "2026-11-26T00:37:24.524Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "ヤマト運輸の問い合わせチャットが停止中、委託先チャットプラスに不正アクセス 氏名・住所・電話番号が漏えいの可能性 | テクノエッジ TechnoEdge",
+      "url": "https://www.techno-edge.net/article/2026/11/25/5815.html",
+      "published": "2026-11-25T08:15:53.000Z",
+      "bookmarks": 5,
+      "foundAt": "2026-11-26T00:37:24.524Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "CI ランナーを小さくする TypeScript 7 の型チェック設定 - 株式会社ヘンリー エンジニアブログ",
+      "url": "https://dev.henry.jp/entry/2026/11/24/120000",
+      "published": "2026-11-24T04:01:15.000Z",
+      "bookmarks": 5,
+      "foundAt": "2026-11-26T00:37:24.524Z",
+      "offered": false
     },
     {
       "feed": "hatebu",
@@ -557,36 +587,6 @@
       "published": "2026-11-25T04:56:46.000Z",
       "bookmarks": 5,
       "foundAt": "2026-11-25T10:07:16.402Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "音楽サービスのTIDAL、AI生成楽曲を削除・受付停止へ 直近90日の配信楽曲の43％がAI生成",
-      "url": "https://www.itmedia.co.jp/news/article/2611/25/2000003433/",
-      "published": "2026-11-25T02:00:39.000Z",
-      "bookmarks": 5,
-      "foundAt": "2026-11-25T10:07:16.402Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "数学者への提言｜洞龍弥",
-      "url": "https://note.com/potycaty/n/n3a700f6c1d84",
-      "published": "2026-11-24T10:07:54.000Z",
-      "bookmarks": 7,
-      "foundAt": "2026-11-25T10:07:16.402Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "【重要】『XServer SNS』サービス提供終了のお知らせ",
-      "url": "https://sns.xserver.ne.jp/news/detail.php?view_id=20015",
-      "published": "2026-11-25T09:04:54.000Z",
-      "bookmarks": 4,
-      "foundAt": "2026-11-25T09:37:15.058Z",
       "offered": true
     }
   ]
