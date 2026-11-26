@@ -302,7 +302,7 @@ export function inboxText(page: Page, since: number | null, fetchedAt: string): 
     "",
     `- ページ: ${pageUrl(page.title)}`,
     `- 転記した時刻: ${fetchedAt}`,
-    "- 人間(gosyujin)が書いた行だけを写している。★ は、前回の転記のあとに増えた・変わった行。",
+    "- 隊長さん(gosyujin)が書いた行だけを写している。★ は、前回の転記のあとに増えた・変わった行。",
     "- このファイルは wake が書き直す。返信は cosense/append/ に書く。",
     "",
     "```",

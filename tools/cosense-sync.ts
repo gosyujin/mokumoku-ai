@@ -137,7 +137,7 @@ async function main(): Promise<void> {
       }
       const page = await readPage(parsed.title);
       if (page === null) {
-        note(file, "送らなかった: そのツッコミのページが無い(人間が書くまで、返信する先が無い)");
+        note(file, "送らなかった: そのツッコミのページが無い(隊長さんが書くまで、返信する先が無い)");
         continue;
       }
       const changes = planAppend(page, lines, newLineId);
@@ -188,7 +188,7 @@ async function main(): Promise<void> {
       const changes: Change[] =
         plan.kind === "create" ? plan.lines.map((text) => ({ _insert: "_end", lines: { id: newLineId(), text } })) : plan.changes;
       const what =
-        plan.kind === "create" ? "作成した" : plan.mode === "replace" ? "更新した" : "人間の行と重なるので、無い行だけを末尾に足した";
+        plan.kind === "create" ? "作成した" : plan.mode === "replace" ? "更新した" : "隊長さんの行と重なるので、無い行だけを末尾に足した";
       written++;
       if (DRY_RUN) {
         console.log(`${file}: (送らない)${what.replace(/した$/, "する")}。${describe(changes)} → ${pageUrl(parsed.title)}`);
