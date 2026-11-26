@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T06:37:22.078Z",
+  "updatedAt": "2026-11-26T07:07:17.427Z",
   "items": [
     {
       "feed": "publickey",
@@ -67,6 +67,15 @@
     {
       "feed": "piyolog",
       "priority": 2,
+      "title": "1Passwordへの不正アクセスについてまとめてみた",
+      "url": "https://piyolog.hatenadiary.jp/entry/2026/11/26/153937",
+      "published": "2026-11-26T06:39:37.000Z",
+      "foundAt": "2026-11-26T07:07:17.427Z",
+      "offered": true
+    },
+    {
+      "feed": "piyolog",
+      "priority": 2,
       "title": "米CIAとODNIの非機密システムへの不正アクセスについてまとめてみた",
       "url": "https://piyolog.hatenadiary.jp/entry/2026/11/25/120114",
       "published": "2026-11-25T03:01:14.000Z",
@@ -112,12 +121,32 @@
     {
       "feed": "hatebu",
       "priority": 3,
+      "title": "GoogleのAIが人間の介入なしに6本の数学論文を生成、素因数分解など数十年停滞していた分野に光",
+      "url": "https://gigazine.net/news/20261126-cogentic-6-research-papers/",
+      "published": "2026-11-26T03:01:56.000Z",
+      "bookmarks": 10,
+      "foundAt": "2026-11-26T07:07:17.427Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "日産が中国製PHVを「逆輸入」 27年度、先進電動車を日本で補完 - 日本経済新聞",
+      "url": "https://www.nikkei.com/article/DGXZQOUC1689U0W6A111C2000000/",
+      "published": "2026-11-26T04:11:50.000Z",
+      "bookmarks": 5,
+      "foundAt": "2026-11-26T07:07:17.427Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
       "title": "飲食店の“AI商品画像”は景品表示法違反にならないの？ 弁護士の見解",
       "url": "https://www.itmedia.co.jp/news/article/2611/26/2000003447/",
       "published": "2026-11-26T05:02:24.000Z",
       "bookmarks": 5,
       "foundAt": "2026-11-26T06:37:22.078Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
@@ -127,7 +156,7 @@
       "published": "2026-11-26T01:24:43.000Z",
       "bookmarks": 7,
       "foundAt": "2026-11-26T06:37:22.078Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
@@ -137,7 +166,7 @@
       "published": "2026-11-26T05:50:48.000Z",
       "bookmarks": 4,
       "foundAt": "2026-11-26T06:37:22.078Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
@@ -556,36 +585,6 @@
       "url": "https://note.com/_snsk/n/n9473a6e95b1c",
       "published": "2026-11-25T16:01:22.000Z",
       "bookmarks": 17,
-      "foundAt": "2026-11-25T22:07:16.710Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "日本語サイトで指定しておきたいCSS 2026年版 - Qiita",
-      "url": "https://qiita.com/tofu_frontend/items/6a1bb7d80a58736eef0e",
-      "published": "2026-11-23T10:33:25.000Z",
-      "bookmarks": 6,
-      "foundAt": "2026-11-25T22:07:16.710Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "ChordTube - YouTube の曲のコード進行・キー・BPM",
-      "url": "https://chordtube.net/",
-      "published": "2026-11-24T18:01:23.000Z",
-      "bookmarks": 22,
-      "foundAt": "2026-11-25T22:07:16.710Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "【自動化】Muse のサイドチャットへ Webhook を届ける MuseKnock の仕組み",
-      "url": "https://zenn.dev/codehex/articles/33bc6ee330b880",
-      "published": "2026-11-25T06:40:35.000Z",
-      "bookmarks": 10,
       "foundAt": "2026-11-25T22:07:16.710Z",
       "offered": true
     }
