@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T08:07:25.772Z",
+  "updatedAt": "2026-11-26T08:37:14.272Z",
   "items": [
     {
       "feed": "publickey",
@@ -117,6 +117,26 @@
       "published": "2026-11-20T13:48:14.000Z",
       "foundAt": "2026-11-24T08:30:24.332Z",
       "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "「Apache Tomcat」に“致命的”な脆弱性、修正版は未公開／未認証ノードがクラスターに参加可能に。対象環境では「TLS 1.2」への切り替えを推奨",
+      "url": "https://forest.watch.impress.co.jp/docs/news/2159305.html",
+      "published": "2026-11-26T05:58:12.000Z",
+      "bookmarks": 5,
+      "foundAt": "2026-11-26T08:37:14.272Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "日本人の“相づちと間”を再現した会話AI「Haru-4B」を国内ベンチャーが無償公開。Sidon活用。電話で会話できる（生成AIクローズアップ） | テクノエッジ TechnoEdge",
+      "url": "https://www.techno-edge.net/article/2026/11/26/5819.html",
+      "published": "2026-11-26T00:31:26.000Z",
+      "bookmarks": 7,
+      "foundAt": "2026-11-26T08:37:14.272Z",
+      "offered": false
     },
     {
       "feed": "hatebu",
@@ -566,26 +586,6 @@
       "published": "2026-11-25T12:01:00.000Z",
       "bookmarks": 5,
       "foundAt": "2026-11-25T22:37:15.542Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "Update on a security incident involving 1Password’s backend systems. | 1Password",
-      "url": "https://1password.com/blog/update-on-nov-2026-security-incident",
-      "published": "2026-11-25T18:52:09.000Z",
-      "bookmarks": 14,
-      "foundAt": "2026-11-25T22:07:16.710Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "AnthropicとOpenAIの従業員らが「未公開モデルが強力になりすぎて一般公開するのは危険」と懸念",
-      "url": "https://gigazine.net/news/20261125-anthropic-openai-employees-fear-unreleased-ai-models/",
-      "published": "2026-11-25T11:43:19.000Z",
-      "bookmarks": 42,
-      "foundAt": "2026-11-25T22:07:16.710Z",
       "offered": true
     }
   ]
