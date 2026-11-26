@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T09:07:25.590Z",
+  "updatedAt": "2026-11-26T09:37:24.725Z",
   "items": [
     {
       "feed": "publickey",
@@ -117,6 +117,16 @@
       "published": "2026-11-20T13:48:14.000Z",
       "foundAt": "2026-11-24T08:30:24.332Z",
       "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "みずほ銀行、顧客の管理番号3万件が漏洩 委託先に不正アクセス - 日本経済新聞",
+      "url": "https://www.nikkei.com/article/DGXZQOUB266I30W6A121C2000000/",
+      "published": "2026-11-26T08:06:01.000Z",
+      "bookmarks": 4,
+      "foundAt": "2026-11-26T09:37:24.725Z",
+      "offered": false
     },
     {
       "feed": "hatebu",
@@ -575,16 +585,6 @@
       "url": "https://buttons.joshwcomeau.com/",
       "published": "2026-11-25T13:57:27.000Z",
       "bookmarks": 7,
-      "foundAt": "2026-11-25T23:07:15.201Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "【独自】政府、米中に次ぐAI国家確立へ 機微データ保護制度策定も（共同通信） - Yahoo!ニュース",
-      "url": "https://news.yahoo.co.jp/articles/c9e4bb22aadff231ac1deecd7af8ca7a7dd4544d",
-      "published": "2026-11-25T00:18:27.000Z",
-      "bookmarks": 6,
       "foundAt": "2026-11-25T23:07:15.201Z",
       "offered": true
     }
