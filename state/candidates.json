@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T05:37:15.405Z",
+  "updatedAt": "2026-11-26T06:07:19.195Z",
   "items": [
     {
       "feed": "publickey",
@@ -112,12 +112,42 @@
     {
       "feed": "hatebu",
       "priority": 3,
+      "title": "Googleがオープンモデル「Gemma 4」のファインチューニングに役立つ情報を網羅したページを公開、ファインチューニング用スキルもあり",
+      "url": "https://gigazine.net/news/20261126-gemma-4-fine-tune/",
+      "published": "2026-11-26T03:30:36.000Z",
+      "bookmarks": 6,
+      "foundAt": "2026-11-26T06:07:19.195Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "GitHubに「人には見えない隠し文字」 小型AIの操作狙うものも……1億4500万件を調査",
+      "url": "https://www.itmedia.co.jp/news/article/2611/26/2000003460/",
+      "published": "2026-11-26T03:22:00.000Z",
+      "bookmarks": 10,
+      "foundAt": "2026-11-26T06:07:19.195Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "Character.AIのチャット履歴競売に41州とワシントンD.C.が異議 未成年者の約210万アカウント分も対象",
+      "url": "https://www.itmedia.co.jp/news/article/2611/26/2000003479/",
+      "published": "2026-11-26T04:45:24.000Z",
+      "bookmarks": 8,
+      "foundAt": "2026-11-26T06:07:19.195Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
       "title": "アディーレ法律事務所 不正アクセスで個人情報漏えい | NHKニュース",
       "url": "https://news.web.nhk/newsweb/na/nd-20261126de81692",
       "published": "2026-11-26T04:56:37.000Z",
       "bookmarks": 9,
       "foundAt": "2026-11-26T05:37:15.405Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
@@ -127,7 +157,7 @@
       "published": "2026-11-25T22:47:51.000Z",
       "bookmarks": 5,
       "foundAt": "2026-11-26T05:37:15.405Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
@@ -137,7 +167,7 @@
       "published": "2026-11-25T20:47:55.000Z",
       "bookmarks": 4,
       "foundAt": "2026-11-26T05:37:15.405Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
@@ -556,36 +586,6 @@
       "url": "https://speakerdeck.com/yoku0825/mysql-in-2026",
       "published": "2026-11-25T12:41:19.000Z",
       "bookmarks": 15,
-      "foundAt": "2026-11-25T22:07:16.710Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "GitHub Copilot が切り拓くエージェント時代の開発ワークフロー",
-      "url": "https://speakerdeck.com/moulongzhang/20261124-githubconnecttokyo-session2",
-      "published": "2026-11-25T07:56:34.000Z",
-      "bookmarks": 13,
-      "foundAt": "2026-11-25T22:07:16.710Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "AI-DLC最前線のCognitive Surrenderに陥らないチーム作り",
-      "url": "https://speakerdeck.com/yuukiyo/building-teams-that-resist-cognitive-surrender-in-ai-dlc",
-      "published": "2026-11-25T11:22:09.000Z",
-      "bookmarks": 13,
-      "foundAt": "2026-11-25T22:07:16.710Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "え！理想のターミナル作れますよ！早く気づいて！",
-      "url": "https://eiji.page/blog/niwaterm-fun-to-make",
-      "published": "2026-11-25T11:04:20.000Z",
-      "bookmarks": 22,
       "foundAt": "2026-11-25T22:07:16.710Z",
       "offered": true
     }
