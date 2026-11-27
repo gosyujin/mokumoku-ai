@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T00:07:15.080Z",
+  "updatedAt": "2026-11-27T00:37:16.771Z",
   "items": [
     {
       "feed": "publickey",
@@ -166,12 +166,62 @@
     {
       "feed": "hatebu",
       "priority": 3,
+      "title": "【やじうまミニレビュー】 工具のマキタバッテリがPCの電源に!? 最大100Wの純正アダプタを使ってみた",
+      "url": "https://pc.watch.impress.co.jp/docs/column/yajiuma-mini-review/2159706.html",
+      "published": "2026-11-26T22:47:09.000Z",
+      "bookmarks": 7,
+      "foundAt": "2026-11-27T00:37:16.771Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "UI style guides",
+      "url": "https://aresluna.org/ui-style-guides/",
+      "published": "2026-11-26T03:00:14.000Z",
+      "bookmarks": 8,
+      "foundAt": "2026-11-27T00:37:16.771Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "AIが書いたコードを、「わかる」コードに変える | gihyo.jp",
+      "url": "https://gihyo.jp/article/2026/10/engineer-ai-sounding-board-05",
+      "published": "2026-11-26T02:50:48.000Z",
+      "bookmarks": 6,
+      "foundAt": "2026-11-27T00:37:16.771Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "サイバー攻撃深刻化、「ひとり情シス」は危機管理上リスク…デジタル人材不足はＤＸの障壁に",
+      "url": "https://www.yomiuri.co.jp/economy/20261127-GYT1T00002/",
+      "published": "2026-11-26T20:08:22.000Z",
+      "bookmarks": 4,
+      "foundAt": "2026-11-27T00:37:16.771Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "これが「雨天時の衛星写真」、日本の宇宙ベンチャーQPS研究所が公開 愛媛県松山市を撮影",
+      "url": "https://japan.cnet.com/article/35255433/",
+      "published": "2026-11-26T03:16:23.000Z",
+      "bookmarks": 5,
+      "foundAt": "2026-11-27T00:37:16.771Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
       "title": "集英社 販売サイト会員の生年月日など70万件余漏えい | NHKニュース",
       "url": "https://news.web.nhk/newsweb/na/nd-20261126de82087",
       "published": "2026-11-26T16:23:46.000Z",
       "bookmarks": 7,
       "foundAt": "2026-11-27T00:07:15.080Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
@@ -181,7 +231,7 @@
       "published": "2026-11-26T01:15:13.000Z",
       "bookmarks": 7,
       "foundAt": "2026-11-27T00:07:15.080Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
@@ -191,7 +241,7 @@
       "published": "2026-11-26T08:17:03.000Z",
       "bookmarks": 5,
       "foundAt": "2026-11-27T00:07:15.080Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
@@ -531,56 +581,6 @@
       "published": "2026-11-25T20:34:24.000Z",
       "bookmarks": 4,
       "foundAt": "2026-11-26T10:37:14.936Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "これぞAIのゲーム活用。音声でのみ指示できるドライブゲーム「妹に運転を教える」を遊んでみた／エンジンのかけ方も忘れている妹に、何と言えば安全運転できる？【レビュー】",
-      "url": "https://forest.watch.impress.co.jp/docs/review/2158342.html",
-      "published": "2026-11-25T23:18:01.000Z",
-      "bookmarks": 4,
-      "foundAt": "2026-11-26T10:07:24.662Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "Obsidian公式の「エージェント向け」スキル集が登場 Vault操作法とファイル形式をひとまとめに",
-      "url": "https://www.itmedia.co.jp/aiplus/article/2611/26/2000003470/",
-      "published": "2026-11-26T00:44:38.000Z",
-      "bookmarks": 12,
-      "foundAt": "2026-11-26T10:07:24.662Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "みずほ銀行、顧客の管理番号3万件が漏洩 委託先に不正アクセス - 日本経済新聞",
-      "url": "https://www.nikkei.com/article/DGXZQOUB266I30W6A121C2000000/",
-      "published": "2026-11-26T08:06:01.000Z",
-      "bookmarks": 4,
-      "foundAt": "2026-11-26T09:37:24.725Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "パスワード管理アプリ「Bitwarden」がWindows 11/macOSのパスキー機能と統合／OS標準のセキュリティ画面から保存・利用、拡張機能なしでもWebサイトへサインイン",
-      "url": "https://forest.watch.impress.co.jp/docs/news/2159319.html",
-      "published": "2026-11-26T07:18:21.000Z",
-      "bookmarks": 10,
-      "foundAt": "2026-11-26T09:07:25.590Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "旅行会社に残る価値は？ 生成AIに「旅の相談」が当たり前の今、業界の生存戦略",
-      "url": "https://www.itmedia.co.jp/business/articles/2611/26/news033.html",
-      "published": "2026-11-26T03:15:02.000Z",
-      "bookmarks": 4,
-      "foundAt": "2026-11-26T09:07:25.590Z",
       "offered": true
     }
   ]
