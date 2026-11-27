@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T09:07:17.206Z",
+  "updatedAt": "2026-11-27T09:37:14.937Z",
   "items": [
     {
       "feed": "publickey",
@@ -121,12 +121,32 @@
     {
       "feed": "hatebu",
       "priority": 3,
+      "title": "顧客情報を守るため、売上15％の自社ECを閉店 ドールメーカーが明かした「決断」の背景",
+      "url": "https://www.itmedia.co.jp/news/article/2611/27/2000003518/",
+      "published": "2026-11-27T08:09:28.000Z",
+      "bookmarks": 5,
+      "foundAt": "2026-11-27T09:37:14.937Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "通話とSMSだけの「INFOBAR ZERO」は若者に刺さるか？ 米国のダムフォンブームが日本で起きない理由",
+      "url": "https://www.itmedia.co.jp/mobile/articles/2611/27/news076.html",
+      "published": "2026-11-27T05:37:18.000Z",
+      "bookmarks": 4,
+      "foundAt": "2026-11-27T09:37:14.937Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
       "title": "CVE-2026-99288 | Ubuntu",
       "url": "https://ubuntu.com/security/CVE-2026-99288",
       "published": "2026-11-27T04:20:59.000Z",
       "bookmarks": 4,
       "foundAt": "2026-11-27T09:07:17.206Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
@@ -136,7 +156,7 @@
       "published": "2026-11-27T03:22:52.000Z",
       "bookmarks": 5,
       "foundAt": "2026-11-27T09:07:17.206Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
@@ -566,16 +586,6 @@
       "published": "2026-11-26T21:51:27.000Z",
       "bookmarks": 4,
       "foundAt": "2026-11-26T23:02:11.911Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "息子が父親のSwitchを勝手に持ち出し、公園で紛失して帰ってきた→「みまもりアプリ」に暗証番号入力ミスの通知が…息子への対応は？取り戻す方法は？",
-      "url": "https://togetter.com/li/2775400",
-      "published": "2026-11-26T19:52:20.000Z",
-      "bookmarks": 7,
-      "foundAt": "2026-11-26T22:37:14.086Z",
       "offered": true
     }
   ]
