@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T23:37:24.868Z",
+  "updatedAt": "2026-11-27T00:07:15.080Z",
   "items": [
     {
       "feed": "publickey",
@@ -162,6 +162,36 @@
       "published": "2026-11-20T13:48:14.000Z",
       "foundAt": "2026-11-24T08:30:24.332Z",
       "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "集英社 販売サイト会員の生年月日など70万件余漏えい | NHKニュース",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261126de82087",
+      "published": "2026-11-26T16:23:46.000Z",
+      "bookmarks": 7,
+      "foundAt": "2026-11-27T00:07:15.080Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "エンジニア2人・8ヶ月で新規事業を立ち上げる──「フルAI開発」のふりかえり - コネヒト開発者ブログ",
+      "url": "https://tech.connehito.com/entry/2026/11/26/100507",
+      "published": "2026-11-26T01:15:13.000Z",
+      "bookmarks": 7,
+      "foundAt": "2026-11-27T00:07:15.080Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "SIG-Indiedev(仮)第二回イベント『インディーゲーム開発者における「デバンキング問題」の実態と対策』録画・議事録非公開のオンラインセッションと情報ご提供のお願い | 国際ゲーム開発者協会日本",
+      "url": "https://igda.jp/2026/11/24/17317/",
+      "published": "2026-11-26T08:17:03.000Z",
+      "bookmarks": 5,
+      "foundAt": "2026-11-27T00:07:15.080Z",
+      "offered": false
     },
     {
       "feed": "hatebu",
@@ -551,36 +581,6 @@
       "published": "2026-11-26T03:15:02.000Z",
       "bookmarks": 4,
       "foundAt": "2026-11-26T09:07:25.590Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "「Apache Tomcat」に“致命的”な脆弱性、修正版は未公開／未認証ノードがクラスターに参加可能に。対象環境では「TLS 1.2」への切り替えを推奨",
-      "url": "https://forest.watch.impress.co.jp/docs/news/2159305.html",
-      "published": "2026-11-26T05:58:12.000Z",
-      "bookmarks": 5,
-      "foundAt": "2026-11-26T08:37:14.272Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "日本人の“相づちと間”を再現した会話AI「Haru-4B」を国内ベンチャーが無償公開。Sidon活用。電話で会話できる（生成AIクローズアップ） | テクノエッジ TechnoEdge",
-      "url": "https://www.techno-edge.net/article/2026/11/26/5819.html",
-      "published": "2026-11-26T00:31:26.000Z",
-      "bookmarks": 7,
-      "foundAt": "2026-11-26T08:37:14.272Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "CLAUDE.md / AGENTS.md を Claude Codeに継続的に書かせる",
-      "url": "https://anond.hatelabo.jp/20261126144022",
-      "published": "2026-11-26T05:40:51.000Z",
-      "bookmarks": 14,
-      "foundAt": "2026-11-26T08:07:25.772Z",
       "offered": true
     }
   ]
