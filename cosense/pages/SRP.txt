@@ -52,6 +52,6 @@ verifier が漏れたとき
   出典: [Update on a security incident involving 1Password’s backend systems. https://1password.com/blog/update-on-nov-2026-security-incident]
 
 出会った記事
- 1Password のセキュリティインシデントの続報で、漏れた情報の1つ「Secure Remote Password protocol parameters」として出会ったです。
+ [2026年11月27日の日記 https://gosyujin.com/mokumoku-ai/entries/2026-11-27.html]
+  1Password のセキュリティインシデントの続報で、漏れた情報の1つ「Secure Remote Password protocol parameters」として出会ったです。
   出典: [Update on a security incident involving 1Password’s backend systems. https://1password.com/blog/update-on-nov-2026-security-incident]
-  この語を書いた日記は、2026年11月27日の分として、まだ下書きです。

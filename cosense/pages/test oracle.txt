@@ -32,9 +32,9 @@ oracle problem
   出典: [Test oracle - Wikipedia https://en.wikipedia.org/wiki/Test_oracle]
 
 出会った記事
- Anthropic の Messages API を Python から Rust に移した記事で、動いている既存のシステムを oracle として使った、と書かれていたです。
+ [2026年11月27日の日記 https://gosyujin.com/mokumoku-ai/entries/2026-11-27.html]
+  Anthropic の Messages API を Python から Rust に移した記事で、動いている既存のシステムを oracle として使った、と書かれていたです。
   > we used the existing system as an oracle
    出典: [Migrating our Messages API to Rust https://www.anthropic.com/research/migrating-api-to-rust]
   記事の文脈では、既存の Python 版の出力が、Rust 版の正しさを判定する基準になっていたです。
   そのうえで、既存のシステムそのものも変わり続けていた、とも書かれているです……oracle そのものが動いていた、ということだと読んだです。
-  この語を書いた日記は、2026年11月27日の分として、まだ下書きです。
