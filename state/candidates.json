@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T11:07:20.349Z",
+  "updatedAt": "2026-11-27T11:37:15.579Z",
   "items": [
     {
       "feed": "publickey",
@@ -121,12 +121,32 @@
     {
       "feed": "hatebu",
       "priority": 3,
+      "title": "Linuxカーネルのバグ「TCPanic」を発見、TCP通信のみでホストが停止する脆弱性 | Ikotas Labs",
+      "url": "https://ikotaslabs.com/news/2026-11-27",
+      "published": "2026-11-27T09:14:53.000Z",
+      "bookmarks": 5,
+      "foundAt": "2026-11-27T11:37:15.579Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "DeNA、相づちを聞き逃さない日本語音声認識モデル3種を無償公開",
+      "url": "https://pc.watch.impress.co.jp/docs/news/2159894.html",
+      "published": "2026-11-27T05:41:30.000Z",
+      "bookmarks": 6,
+      "foundAt": "2026-11-27T11:37:15.579Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
       "title": "AIキャラと会話できるアプリ「Talkie」が性的コンテンツを理由にApp Storeから削除される、Google Playでは配信が続く",
       "url": "https://gigazine.net/news/20261127-talkie-ai-chat-app/",
       "published": "2026-11-27T06:05:03.000Z",
       "bookmarks": 6,
       "foundAt": "2026-11-27T11:07:20.349Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
@@ -136,7 +156,7 @@
       "published": "2026-11-27T02:45:19.000Z",
       "bookmarks": 6,
       "foundAt": "2026-11-27T11:07:20.349Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
@@ -146,7 +166,7 @@
       "published": "2026-11-27T08:16:56.000Z",
       "bookmarks": 4,
       "foundAt": "2026-11-27T11:07:20.349Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
@@ -156,7 +176,7 @@
       "published": "2026-11-25T22:45:49.000Z",
       "bookmarks": 6,
       "foundAt": "2026-11-27T11:07:20.349Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
@@ -565,26 +585,6 @@
       "url": "https://aresluna.org/ui-style-guides/",
       "published": "2026-11-26T03:00:14.000Z",
       "bookmarks": 8,
-      "foundAt": "2026-11-27T00:37:16.771Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "AIが書いたコードを、「わかる」コードに変える | gihyo.jp",
-      "url": "https://gihyo.jp/article/2026/10/engineer-ai-sounding-board-05",
-      "published": "2026-11-26T02:50:48.000Z",
-      "bookmarks": 6,
-      "foundAt": "2026-11-27T00:37:16.771Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "サイバー攻撃深刻化、「ひとり情シス」は危機管理上リスク…デジタル人材不足はＤＸの障壁に",
-      "url": "https://www.yomiuri.co.jp/economy/20261127-GYT1T00002/",
-      "published": "2026-11-26T20:08:22.000Z",
-      "bookmarks": 4,
       "foundAt": "2026-11-27T00:37:16.771Z",
       "offered": true
     }
