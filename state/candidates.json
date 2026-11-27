@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T01:07:19.469Z",
+  "updatedAt": "2026-11-27T01:37:14.847Z",
   "items": [
     {
       "feed": "publickey",
@@ -166,12 +166,22 @@
     {
       "feed": "hatebu",
       "priority": 3,
+      "title": "「良いデザイン」をAIに判断させるには 〜チームで育てるデザインハーネス〜",
+      "url": "https://speakerdeck.com/tatsuroro/20261126-nikkei-teck-talk-51-design",
+      "published": "2026-11-26T13:23:23.000Z",
+      "bookmarks": 5,
+      "foundAt": "2026-11-27T01:37:14.847Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
       "title": "Skills over MCP、めっちゃよさそう | ashunar0",
       "url": "https://ashunar0.dev/posts/skills-over-mcp/",
       "published": "2026-11-26T22:15:24.000Z",
       "bookmarks": 4,
       "foundAt": "2026-11-27T01:07:19.469Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
@@ -570,16 +580,6 @@
       "url": "https://gigazine.net/news/20261126-nvidia-china-company/",
       "published": "2026-11-26T09:52:34.000Z",
       "bookmarks": 7,
-      "foundAt": "2026-11-26T10:37:14.936Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "24KBの「LLM専用OS」が登場 全てアセンブリでLinuxを排し、llama.cppより最大54%高速 | テクノエッジ TechnoEdge",
-      "url": "https://www.techno-edge.net/article/2026/11/26/5824.html",
-      "published": "2026-11-26T06:02:41.000Z",
-      "bookmarks": 8,
       "foundAt": "2026-11-26T10:37:14.936Z",
       "offered": true
     }
