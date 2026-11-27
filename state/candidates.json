@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T02:37:24.286Z",
+  "updatedAt": "2026-11-27T03:07:17.683Z",
   "items": [
     {
       "feed": "publickey",
@@ -162,6 +162,26 @@
       "published": "2026-11-20T13:48:14.000Z",
       "foundAt": "2026-11-24T08:30:24.332Z",
       "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "Androidアプリ開発者はまもなく自身の住所を公開しなければならなくなる",
+      "url": "https://gigazine.net/news/20261127-android-app-developers-have-to-share-address-publicly/",
+      "published": "2026-11-27T02:28:39.000Z",
+      "bookmarks": 6,
+      "foundAt": "2026-11-27T03:07:17.683Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "エヌビディアが東南アジア4か国への輸出を停止 欧米メディア | NHKニュース",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261127de82164",
+      "published": "2026-11-26T23:23:10.000Z",
+      "bookmarks": 4,
+      "foundAt": "2026-11-27T03:07:17.683Z",
+      "offered": false
     },
     {
       "feed": "hatebu",
@@ -561,26 +581,6 @@
       "published": "2026-11-26T07:05:12.000Z",
       "bookmarks": 5,
       "foundAt": "2026-11-26T12:37:38.764Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "MetaのAIエージェント「Muse」による買い物をAmazonがブロックしている件について「解除」する方向での提携について協議中との報道",
-      "url": "https://gigazine.net/news/20261126-muse-amazon-discuss/",
-      "published": "2026-11-26T10:04:37.000Z",
-      "bookmarks": 5,
-      "foundAt": "2026-11-26T12:07:16.660Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "SSDでGPUメモリをペタバイト級に拡張、キオクシアとNVIDIAがAI向けの実証",
-      "url": "https://pc.watch.impress.co.jp/docs/news/2159567.html",
-      "published": "2026-11-26T10:21:05.000Z",
-      "bookmarks": 11,
-      "foundAt": "2026-11-26T11:37:25.420Z",
       "offered": true
     }
   ]
