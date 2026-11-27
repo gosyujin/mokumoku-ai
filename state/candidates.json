@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T04:07:17.260Z",
+  "updatedAt": "2026-11-27T04:37:15.175Z",
   "items": [
     {
       "feed": "publickey",
@@ -171,7 +171,7 @@
       "published": "2026-11-27T01:21:19.000Z",
       "bookmarks": 9,
       "foundAt": "2026-11-27T04:07:17.260Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
@@ -181,7 +181,7 @@
       "published": "2026-11-26T09:37:48.000Z",
       "bookmarks": 7,
       "foundAt": "2026-11-27T04:07:17.260Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
@@ -191,7 +191,7 @@
       "published": "2026-11-27T03:54:36.000Z",
       "bookmarks": 5,
       "foundAt": "2026-11-27T04:07:17.260Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
@@ -201,7 +201,7 @@
       "published": "2026-11-26T22:33:36.000Z",
       "bookmarks": 4,
       "foundAt": "2026-11-27T04:07:17.260Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
