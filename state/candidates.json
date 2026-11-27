@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T07:37:16.514Z",
+  "updatedAt": "2026-11-27T08:07:15.695Z",
   "items": [
     {
       "feed": "publickey",
@@ -171,6 +171,26 @@
       "published": "2026-11-20T13:48:14.000Z",
       "foundAt": "2026-11-24T08:30:24.332Z",
       "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "Devin Bot に毎朝のパフォーマンス改善を任せてみた - kickflow Tech Blog",
+      "url": "https://tech.kickflow.co.jp/entry/2026/11/27/154920",
+      "published": "2026-11-27T07:33:50.000Z",
+      "bookmarks": 9,
+      "foundAt": "2026-11-27T08:07:15.695Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "なぜ、AIはRustのC言語に対する優位性を尽く潰したのか？",
+      "url": "https://zenn.dev/pdfractal/articles/832b84c9e89f3f",
+      "published": "2026-11-26T23:06:38.000Z",
+      "bookmarks": 4,
+      "foundAt": "2026-11-27T08:07:15.695Z",
+      "offered": false
     },
     {
       "feed": "hatebu",
@@ -560,26 +580,6 @@
       "published": "2026-11-26T19:52:20.000Z",
       "bookmarks": 7,
       "foundAt": "2026-11-26T22:37:14.086Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "AEDの件、結局はてなのブコメでも「配慮なんていいから助けてほしい」とい..",
-      "url": "https://anond.hatelabo.jp/20261126073406",
-      "published": "2026-11-25T22:35:48.000Z",
-      "bookmarks": 54,
-      "foundAt": "2026-11-26T22:07:18.470Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "デジタル庁デザインシステムをどう使うか：導入先に合わせた「ローカルデザインシステム」を作る｜デジタル庁ニュース",
-      "url": "https://digital-agency-news.digital.go.jp/articles/2026-11-26",
-      "published": "2026-11-26T10:02:29.000Z",
-      "bookmarks": 12,
-      "foundAt": "2026-11-26T22:07:18.470Z",
       "offered": true
     }
   ]
