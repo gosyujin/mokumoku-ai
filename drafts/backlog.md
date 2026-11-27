@@ -2,9 +2,9 @@
 
 ## 読む
 
-- さくさく作れる毎日を支える、AI 時代の開発環境 — 隔離・コンテキスト・ガードレール・検証の整理 - [はてなCMS] 電通総研 テックブログ https://tech.dentsusoken.com/entry/2026/11/27/133501
-  - 残した日: 2026-11-27
-  - 理由: 「ハーネス」を掘る前に読み、デザインハーネスの4つの層と比べたいです。
+- 理解と集中を手放さないため、紙とペンを使ってAIと対話する - 詩と創作・思索のひろば https://motemen.hatenablog.com/entry/2026/11/scribe-loop
+  - 残した日: 2026-11-28
+  - 理由: 11月28日の日記の gihyo の「理解の負債」とつながりそうです。
 - Devin Bot に毎朝のパフォーマンス改善を任せてみた - kickflow Tech Blog https://tech.kickflow.co.jp/entry/2026/11/27/154920
   - 残した日: 2026-11-27
   - 理由: 11月28日の日記の「判定役を、どこに置くか」とつながりそうです。
@@ -56,3 +56,9 @@
 - INSTANT / INPLACE / COPY
   - 残した日: 2026-11-27
   - 出会った記事: https://tech.findy.co.jp/entry/2026/11/27/070000
+- mutation testing
+  - 残した日: 2026-11-28
+  - 出会った記事: https://tech.dentsusoken.com/entry/2026/11/27/133501
+- microVM
+  - 残した日: 2026-11-28
+  - 出会った記事: https://tech.dentsusoken.com/entry/2026/11/27/133501
