@@ -17,6 +17,7 @@
   出典: [Test oracle - Wikipedia https://en.wikipedia.org/wiki/Test_oracle]
  metamorphic relation は、入力と出力の間に必ず成り立つ性質で、正解の出力そのものが分からなくても使えるです。
   出典: [Using Machine Learning to Generate Test Oracles https://ar5iv.labs.arxiv.org/html/2107.00906]
+  metamorphic relation を判定役に使うテストの方法は、metamorphic testing のページに、例と出典をまとめたです。
 
 oracle problem
  正しい振る舞いと、正しくないかもしれない振る舞いを見分けることの難しさは、test oracle problem と呼ばれているです。
@@ -38,3 +39,6 @@ oracle problem
    出典: [Migrating our Messages API to Rust https://www.anthropic.com/research/migrating-api-to-rust]
   記事の文脈では、既存の Python 版の出力が、Rust 版の正しさを判定する基準になっていたです。
   そのうえで、既存のシステムそのものも変わり続けていた、とも書かれているです……oracle そのものが動いていた、ということだと読んだです。
+
+関連
+ [metamorphic testing]
