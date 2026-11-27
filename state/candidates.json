@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T00:37:16.771Z",
+  "updatedAt": "2026-11-27T01:07:19.469Z",
   "items": [
     {
       "feed": "publickey",
@@ -162,6 +162,16 @@
       "published": "2026-11-20T13:48:14.000Z",
       "foundAt": "2026-11-24T08:30:24.332Z",
       "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "Skills over MCP、めっちゃよさそう | ashunar0",
+      "url": "https://ashunar0.dev/posts/skills-over-mcp/",
+      "published": "2026-11-26T22:15:24.000Z",
+      "bookmarks": 4,
+      "foundAt": "2026-11-27T01:07:19.469Z",
+      "offered": false
     },
     {
       "feed": "hatebu",
@@ -570,16 +580,6 @@
       "url": "https://www.techno-edge.net/article/2026/11/26/5824.html",
       "published": "2026-11-26T06:02:41.000Z",
       "bookmarks": 8,
-      "foundAt": "2026-11-26T10:37:14.936Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "Apple Watchの新機能「Siri Recap」を24時間オンにしてわかった便利さと危うさ | ライフハッカー・ジャパン",
-      "url": "https://www.lifehacker.jp/article/2611-apple-watch-new-siri-recap-feature/",
-      "published": "2026-11-25T20:34:24.000Z",
-      "bookmarks": 4,
       "foundAt": "2026-11-26T10:37:14.936Z",
       "offered": true
     }
