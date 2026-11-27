@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T13:07:16.727Z",
+  "updatedAt": "2026-11-27T13:37:19.464Z",
   "items": [
     {
       "feed": "publickey",
@@ -112,12 +112,22 @@
     {
       "feed": "hatebu",
       "priority": 3,
+      "title": "【重要】R-18設定のクリエイターへの支援におけるPayPal決済のお取り扱い終了について｜pixivFANBOX公式｜pixivFANBOX",
+      "url": "https://official.fanbox.cc/posts/12998412",
+      "published": "2026-11-27T11:42:55.000Z",
+      "bookmarks": 4,
+      "foundAt": "2026-11-27T13:37:19.464Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
       "title": "はじめての Lean",
       "url": "https://unaoya.github.io/lean-intro/",
       "published": "2026-11-27T11:19:18.000Z",
       "bookmarks": 4,
       "foundAt": "2026-11-27T13:07:16.727Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
@@ -127,7 +137,7 @@
       "published": "2026-11-27T03:48:16.000Z",
       "bookmarks": 6,
       "foundAt": "2026-11-27T13:07:16.727Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
@@ -137,7 +147,7 @@
       "published": "2026-11-26T14:07:54.000Z",
       "bookmarks": 4,
       "foundAt": "2026-11-27T13:07:16.727Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
@@ -147,7 +157,7 @@
       "published": "2026-11-27T07:28:30.000Z",
       "bookmarks": 5,
       "foundAt": "2026-11-27T13:07:16.727Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
@@ -577,16 +587,6 @@
       "published": "2026-11-27T01:07:02.000Z",
       "bookmarks": 4,
       "foundAt": "2026-11-27T02:37:24.286Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "GitHub - datadog-labs/ephyra: A property-based testing library for the LLM era",
-      "url": "https://github.com/datadog-labs/ephyra",
-      "published": "2026-11-26T21:56:35.000Z",
-      "bookmarks": 9,
-      "foundAt": "2026-11-27T02:07:13.846Z",
       "offered": true
     }
   ]
