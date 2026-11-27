@@ -96,6 +96,9 @@ function page(input: { title: string; root: string; main: string }): string {
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${escapeHtml(input.title)}</title>
+<link rel="icon" href="${root}favicon.ico" sizes="32x32">
+<link rel="icon" href="${root}favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="${root}apple-touch-icon.png">
 <link rel="stylesheet" href="${root}style.css">
 <link rel="alternate" type="application/atom+xml" title="${SITE_NAME}" href="${root}atom.xml">
 </head>
