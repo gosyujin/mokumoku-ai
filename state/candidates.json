@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T04:37:15.175Z",
+  "updatedAt": "2026-11-27T05:05:59.107Z",
   "items": [
     {
       "feed": "publickey",
@@ -103,6 +103,15 @@
     {
       "feed": "piyolog",
       "priority": 2,
+      "title": "「ARTEX」を使った攻撃の観測と被害組織の公表についてまとめてみた",
+      "url": "https://piyolog.hatenadiary.jp/entry/2026/11/27/134842",
+      "published": "2026-11-27T04:48:42.000Z",
+      "foundAt": "2026-11-27T05:05:59.107Z",
+      "offered": false
+    },
+    {
+      "feed": "piyolog",
+      "priority": 2,
       "title": "東京都「赤ちゃんファースト」で交換したQUOカードPayが使えなくなった件についてまとめてみた",
       "url": "https://piyolog.hatenadiary.jp/entry/2026/11/27/004031",
       "published": "2026-11-26T15:40:31.000Z",
@@ -162,6 +171,26 @@
       "published": "2026-11-20T13:48:14.000Z",
       "foundAt": "2026-11-24T08:30:24.332Z",
       "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "2026年に刊行されてよかったなと思うコンピューター技術書 - golden-luckyの日記",
+      "url": "https://golden-lucky.hatenablog.com/entry/2026/11/27/111643",
+      "published": "2026-11-27T02:26:32.000Z",
+      "bookmarks": 7,
+      "foundAt": "2026-11-27T05:05:59.107Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "AI法改正案の概要 “事業者に安全確保義務 罰則適用も” | NHKニュース",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261126de81752",
+      "published": "2026-11-26T09:52:18.000Z",
+      "bookmarks": 7,
+      "foundAt": "2026-11-27T05:05:59.107Z",
+      "offered": false
     },
     {
       "feed": "hatebu",
@@ -551,36 +580,6 @@
       "published": "2026-11-26T12:31:47.000Z",
       "bookmarks": 4,
       "foundAt": "2026-11-26T13:57:32.629Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "自律型AIエージェント「Claude Duet」、日本でも利用可能に",
-      "url": "https://pc.watch.impress.co.jp/docs/news/2159488.html",
-      "published": "2026-11-26T05:23:20.000Z",
-      "bookmarks": 28,
-      "foundAt": "2026-11-26T13:57:32.629Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "AIがゼロから設計した新しいCPU「Frostbite」が従来型CPUの4.59倍の電力効率を示す",
-      "url": "https://gigazine.net/news/20261126-frostbite-cpu/",
-      "published": "2026-11-26T05:48:15.000Z",
-      "bookmarks": 6,
-      "foundAt": "2026-11-26T13:37:16.647Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "GPT-6.2 Astraが歴史学者もわからなかった「1808年に描かれた北米旅行のスケッチブック」の作者を22分で特定",
-      "url": "https://gigazine.net/news/20261126-gpt-62-astra-solves-a-historical-mystery/",
-      "published": "2026-11-26T11:08:57.000Z",
-      "bookmarks": 7,
-      "foundAt": "2026-11-26T13:07:15.894Z",
       "offered": true
     }
   ]
