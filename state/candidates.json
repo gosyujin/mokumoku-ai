@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T09:37:14.937Z",
+  "updatedAt": "2026-11-27T10:07:15.504Z",
   "items": [
     {
       "feed": "publickey",
@@ -117,6 +117,36 @@
       "published": "2026-11-24T12:45:47.000Z",
       "foundAt": "2026-11-24T13:07:16.065Z",
       "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "NVIDIA・ATI・3dfxの往年のGPUデモ36種類をブラウザ上で楽しめる「GPU Demo Gallery」",
+      "url": "https://gigazine.net/news/20261127-gpu-demo-gallery/",
+      "published": "2026-11-27T01:45:26.000Z",
+      "bookmarks": 7,
+      "foundAt": "2026-11-27T10:07:15.504Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "GitHub ActionsからPATもGitHub App Private Keyも駆逐する",
+      "url": "https://zenn.dev/tmknom/articles/github-app-token-exchange-system",
+      "published": "2026-11-27T04:35:43.000Z",
+      "bookmarks": 5,
+      "foundAt": "2026-11-27T10:07:15.504Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "『Slay the Spire 2』のアセンション10に“80％勝てるAI”は、エリートにカチこみしっかり休む。それと毒デッキをやけに擦る。なぜ？弱みはどこ？研究者に訊いた - AUTOMATON",
+      "url": "https://automaton-media.com/articles/interviewsjp/20261127-481245/",
+      "published": "2026-11-27T01:17:00.000Z",
+      "bookmarks": 4,
+      "foundAt": "2026-11-27T10:07:15.504Z",
+      "offered": false
     },
     {
       "feed": "hatebu",
@@ -556,36 +586,6 @@
       "published": "2026-11-26T11:26:19.000Z",
       "bookmarks": 5,
       "foundAt": "2026-11-26T23:37:24.868Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "2026-11-26 LayerXにおけるAI Agentを支えるデータ基盤のアーキテクチャと設計思想 / The Architecture and Design Philosophy of the Data Platform For AI Agents at LayerX",
-      "url": "https://speakerdeck.com/civitaspo/the-architecture-and-design-philosophy-of-the-data-platform-for-ai-agents-at-layerx",
-      "published": "2026-11-26T19:56:13.000Z",
-      "bookmarks": 12,
-      "foundAt": "2026-11-26T23:02:11.911Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "SSH is a GUI framework | ssh zydra.sh",
-      "url": "https://zydra.sh/articles/ssh-is-a-gui-framework/",
-      "published": "2026-11-26T08:03:47.000Z",
-      "bookmarks": 6,
-      "foundAt": "2026-11-26T23:02:11.911Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "Evolution Strategies at Scale: LLM Fine-Tuning Beyond Reinforcement Learning",
-      "url": "https://arxiv.org/abs/2509.24372",
-      "published": "2026-11-26T21:51:27.000Z",
-      "bookmarks": 4,
-      "foundAt": "2026-11-26T23:02:11.911Z",
       "offered": true
     }
   ]
