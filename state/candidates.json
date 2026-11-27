@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T06:07:15.974Z",
+  "updatedAt": "2026-11-27T06:37:26.586Z",
   "items": [
     {
       "feed": "publickey",
@@ -170,6 +170,26 @@
       "url": "https://piyolog.hatenadiary.jp/entry/2026/11/20/224814",
       "published": "2026-11-20T13:48:14.000Z",
       "foundAt": "2026-11-24T08:30:24.332Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "サブスクの「お試し→自動更新」は客を逃していた？ 新規購読者数は「お試し→自動解約」比23％減 140万人で実験",
+      "url": "https://www.itmedia.co.jp/news/article/2611/27/2000003503/",
+      "published": "2026-11-27T03:22:23.000Z",
+      "bookmarks": 9,
+      "foundAt": "2026-11-27T06:37:26.586Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "GPU demos, 1998 to 2006",
+      "url": "https://gpu-demo-gallery.pages.dev/",
+      "published": "2026-11-27T02:00:47.000Z",
+      "bookmarks": 5,
+      "foundAt": "2026-11-27T06:37:26.586Z",
       "offered": true
     },
     {
@@ -559,26 +579,6 @@
       "url": "https://gigazine.net/news/20261126-nyt-warns-not-update-photoshop-ai-features/",
       "published": "2026-11-26T13:05:35.000Z",
       "bookmarks": 28,
-      "foundAt": "2026-11-26T22:07:18.470Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "🧠Work IQ・Fabric IQ・Foundry IQ・Web IQ って何だっけ？ Microsoft IQ の 4 つを 1 本で整理する - Qiita",
-      "url": "https://qiita.com/aktsmm/items/1a1ef35ee48d7ef665ba?ocid=AID3062894_TWITTER_oo_spl100011804015917",
-      "published": "2026-11-26T12:15:07.000Z",
-      "bookmarks": 5,
-      "foundAt": "2026-11-26T22:07:18.470Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "海外の音楽配信サービス、AI生成楽曲の一律禁止を発表。約2700万曲を削除へ【やじうまWatch】",
-      "url": "https://internet.watch.impress.co.jp/docs/yajiuma/2159409.html",
-      "published": "2026-11-26T03:25:54.000Z",
-      "bookmarks": 8,
       "foundAt": "2026-11-26T22:07:18.470Z",
       "offered": true
     }
