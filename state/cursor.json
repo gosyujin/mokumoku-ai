@@ -1,18 +1,18 @@
 {
-  "lastBeat": "2026-11-27T05:05:59.107Z",
-  "elapsedMinutes": 28,
-  "trigger": "schedule",
-  "act": false,
+  "lastBeat": "2026-11-27T05:37:15.085Z",
+  "elapsedMinutes": 31,
+  "trigger": "dispatch",
+  "act": true,
   "reasons": [
     {
       "kind": "feed",
-      "detail": "piyolog 新着1、はてブ 新着2"
+      "detail": "piyolog 新着1、はてブ 新着3"
     }
   ],
   "llm": {
     "date": "2026-11-27",
-    "count": 7,
+    "count": 8,
     "limit": 18
   },
-  "lastAct": "2026-11-27T04:37:15.175Z"
+  "lastAct": "2026-11-27T05:37:15.085Z"
 }

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T05:05:59.107Z",
+  "updatedAt": "2026-11-27T05:37:15.085Z",
   "items": [
     {
       "feed": "publickey",
@@ -107,7 +107,7 @@
       "url": "https://piyolog.hatenadiary.jp/entry/2026/11/27/134842",
       "published": "2026-11-27T04:48:42.000Z",
       "foundAt": "2026-11-27T05:05:59.107Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "piyolog",
@@ -175,12 +175,22 @@
     {
       "feed": "hatebu",
       "priority": 3,
+      "title": "「プレステの父」がXboxを誕生させた？ 久夛良木健氏が明かしたマイクロソフトとの駆け引き（多根清史） - エキスパート - Yahoo!ニュース",
+      "url": "https://news.yahoo.co.jp/expert/articles/f6b89482633cedb0ff3e4939d53b1bfdead8a8ca",
+      "published": "2026-11-27T00:27:52.000Z",
+      "bookmarks": 4,
+      "foundAt": "2026-11-27T05:37:15.085Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
       "title": "2026年に刊行されてよかったなと思うコンピューター技術書 - golden-luckyの日記",
       "url": "https://golden-lucky.hatenablog.com/entry/2026/11/27/111643",
       "published": "2026-11-27T02:26:32.000Z",
       "bookmarks": 7,
       "foundAt": "2026-11-27T05:05:59.107Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
@@ -190,7 +200,7 @@
       "published": "2026-11-26T09:52:18.000Z",
       "bookmarks": 7,
       "foundAt": "2026-11-27T05:05:59.107Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
@@ -570,16 +580,6 @@
       "published": "2026-11-26T03:25:54.000Z",
       "bookmarks": 8,
       "foundAt": "2026-11-26T22:07:18.470Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "【Claude Code】鹿野さんが実践するエンジニアの日常業務を爆速にする最新推しツール 大公開 / offers-claude-code-2026-11-26",
-      "url": "https://speakerdeck.com/tonkotsuboy_com/index-1f2ed0d2-597d-459d-abf2-db8db109c5d6",
-      "published": "2026-11-26T12:31:47.000Z",
-      "bookmarks": 4,
-      "foundAt": "2026-11-26T13:57:32.629Z",
       "offered": true
     }
   ]
