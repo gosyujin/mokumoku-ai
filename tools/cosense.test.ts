@@ -41,9 +41,11 @@ const page = (title: string, rows: [string, string, number?][]): Page => ({
   ],
 });
 
-test("isTsukkomiTitle: 日付は0埋めしない形", () => {
+test("isTsukkomiTitle: 作るのは0埋めしない形。0埋めしたページも読む", () => {
   assert.equal(isTsukkomiTitle("2026年11月24日のツッコミ"), true);
   assert.equal(isTsukkomiTitle("2026年1月5日のツッコミ"), true);
+  assert.equal(isTsukkomiTitle("2026年01月05日のツッコミ"), true);
+  assert.equal(isTsukkomiTitle("2026-01-05のツッコミ"), false);
   assert.equal(isTsukkomiTitle("2026年11月24日のツッコミ2"), false);
   assert.equal(isTsukkomiTitle("ツッコミ"), false);
 });
