@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T13:37:19.464Z",
+  "updatedAt": "2026-11-27T14:07:13.862Z",
   "items": [
     {
       "feed": "publickey",
@@ -108,6 +108,66 @@
       "published": "2026-11-25T03:01:14.000Z",
       "foundAt": "2026-11-25T03:07:25.938Z",
       "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "価格.comのAI駆動による全面刷新の現在地と振り返り",
+      "url": "https://speakerdeck.com/tkyowa/kakaku-com-ai-driven-system-renewal-202611",
+      "published": "2026-11-27T07:25:50.000Z",
+      "bookmarks": 4,
+      "foundAt": "2026-11-27T14:07:13.862Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "OpenAIが57年来の数学の難問「行列乗算はどこまで効率化できるのか」に決着をつける論文を公開",
+      "url": "https://gigazine.net/news/20261126-openai-matrix-multiplication/",
+      "published": "2026-11-26T08:35:02.000Z",
+      "bookmarks": 6,
+      "foundAt": "2026-11-27T14:07:13.862Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "後回しできる設計、 前倒しすべき設計。",
+      "url": "https://speakerdeck.com/anizozina/akitekucha-kanfarensu-2026-atomawashi-dekiru-sekkei-maedaoshi-subeki-sekkei",
+      "published": "2026-11-27T07:20:50.000Z",
+      "bookmarks": 4,
+      "foundAt": "2026-11-27T14:07:13.862Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "HOLY SHIT HOLY SHIT HOLY SHIT HOLY SHIT",
+      "url": "https://scottaaronson.blog/?p=10379",
+      "published": "2026-11-26T00:33:26.000Z",
+      "bookmarks": 6,
+      "foundAt": "2026-11-27T14:07:13.862Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "OpenAI「GPT-6.2」利用枠上限に達するのが最大40％早くなるように",
+      "url": "https://ascii.jp/elem/000/004/455/4455163/",
+      "published": "2026-11-26T08:09:12.000Z",
+      "bookmarks": 7,
+      "foundAt": "2026-11-27T14:07:13.862Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "れいわ・大石氏の「国家総動員・強制労働」発言は存在しない？ JFCのAI活用に重大な確認不足【ファクトチェック検証】｜じゃのっす",
+      "url": "https://note.com/shiny_broom7788/n/n3a99aa67b065",
+      "published": "2026-11-26T04:57:43.000Z",
+      "bookmarks": 5,
+      "foundAt": "2026-11-27T14:07:13.862Z",
+      "offered": false
     },
     {
       "feed": "hatebu",
@@ -527,66 +587,6 @@
       "published": "2026-11-27T02:28:39.000Z",
       "bookmarks": 6,
       "foundAt": "2026-11-27T03:07:17.683Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "エヌビディアが東南アジア4か国への輸出を停止 欧米メディア | NHKニュース",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261127de82164",
-      "published": "2026-11-26T23:23:10.000Z",
-      "bookmarks": 4,
-      "foundAt": "2026-11-27T03:07:17.683Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "AI使って開発するなら、モデリングするんだよ - 4つの図で始めるモデリングと、AIにモデルを実装させるアーキテクチャ",
-      "url": "https://speakerdeck.com/littlehands/umtp-suraido-20261125",
-      "published": "2026-11-26T23:54:33.000Z",
-      "bookmarks": 11,
-      "foundAt": "2026-11-27T02:37:24.286Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "gh-ostで2,500万行のテーブル変更をクエリ待ち1.31秒で通した話：Aurora MySQLへの導入と本番クローンでの検証 - Findy Tech Blog",
-      "url": "https://tech.findy.co.jp/entry/2026/11/27/070000",
-      "published": "2026-11-27T00:33:14.000Z",
-      "bookmarks": 10,
-      "foundAt": "2026-11-27T02:37:24.286Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "AIで証明の数学リーマン予想、英オックスフォード大学のメイナード教授「まだ人間は理解できず」 - 日本経済新聞",
-      "url": "https://www.nikkei.com/article/DGXZQOSG2544P0V21C26A1000000/",
-      "published": "2026-11-26T21:29:45.000Z",
-      "bookmarks": 4,
-      "foundAt": "2026-11-27T02:37:24.286Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "WordPressのシェア低下をどう見るか——使っている人、静的HTMLやEmDashへ動く人の違い | WP Calm",
-      "url": "https://www.wpcalm.jp/topic/wordpress-market-share-decline-static-html-and-new-cms/",
-      "published": "2026-11-26T08:55:17.000Z",
-      "bookmarks": 5,
-      "foundAt": "2026-11-27T02:37:24.286Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "モダナイズの目的に立ち返る",
-      "url": "https://speakerdeck.com/masuda220/aaa5fadd-e9cc-4c01-9359-b8389de8037a",
-      "published": "2026-11-27T01:07:02.000Z",
-      "bookmarks": 4,
-      "foundAt": "2026-11-27T02:37:24.286Z",
       "offered": true
     }
   ]
