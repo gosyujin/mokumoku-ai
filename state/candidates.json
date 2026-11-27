@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T06:37:26.586Z",
+  "updatedAt": "2026-11-27T07:07:18.755Z",
   "items": [
     {
       "feed": "publickey",
@@ -171,6 +171,46 @@
       "published": "2026-11-20T13:48:14.000Z",
       "foundAt": "2026-11-24T08:30:24.332Z",
       "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "マイナアプリに複数の脆弱性、マイナンバーカードの情報窃取の恐れ 最新版に更新を",
+      "url": "https://ascii.jp/elem/000/004/455/4455531/",
+      "published": "2026-11-27T05:14:25.000Z",
+      "bookmarks": 5,
+      "foundAt": "2026-11-27T07:07:18.755Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "止まらないKARTE漏えい 契約終了後「削除されたはず」のデータ流出相次ぐ 「人的オペレーションと管理の不備」",
+      "url": "https://www.itmedia.co.jp/news/article/2611/27/2000003517/",
+      "published": "2026-11-27T06:13:26.000Z",
+      "bookmarks": 5,
+      "foundAt": "2026-11-27T07:07:18.755Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "「ロリポップ！レンタルサーバー」および関連サービスに対する不正アクセスによるお客様情報の漏えいについて - ロリポップ！レンタルサーバー",
+      "url": "https://lolipop.jp/info/news/8279/",
+      "published": "2026-11-27T06:15:17.000Z",
+      "bookmarks": 4,
+      "foundAt": "2026-11-27T07:07:18.755Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "サーバー作成直後に設定しておくべき初期セキュリティ設定",
+      "url": "https://manual.sakura.ad.jp/vps/support/security/firstsecurity.html",
+      "published": "2017-03-01T06:01:53.000Z",
+      "bookmarks": 37,
+      "foundAt": "2026-11-27T07:07:18.755Z",
+      "offered": false
     },
     {
       "feed": "hatebu",
@@ -539,46 +579,6 @@
       "url": "https://digital-agency-news.digital.go.jp/articles/2026-11-26",
       "published": "2026-11-26T10:02:29.000Z",
       "bookmarks": 12,
-      "foundAt": "2026-11-26T22:07:18.470Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "情報量が4倍のQRコードを作ろう - Qiita",
-      "url": "https://qiita.com/reipandada/items/17496db6ac5f64a5e61a",
-      "published": "2026-11-25T20:01:53.000Z",
-      "bookmarks": 4,
-      "foundAt": "2026-11-26T22:07:18.470Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "サービスチーム全員で2年半続けているドメインモデリングのリアル / domain-modeling-with-the-whole-service-team",
-      "url": "https://speakerdeck.com/kaminashi/domain-modeling-with-the-whole-service-team",
-      "published": "2026-11-26T12:14:26.000Z",
-      "bookmarks": 29,
-      "foundAt": "2026-11-26T22:07:18.470Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "「Telnet Client」（telnet.exe）が非推奨に ～将来のWindowsリリースで削除へ／リモートコンピューターと通信するOSのオプション機能",
-      "url": "https://forest.watch.impress.co.jp/docs/news/2159560.html",
-      "published": "2026-11-26T09:47:01.000Z",
-      "bookmarks": 13,
-      "foundAt": "2026-11-26T22:07:18.470Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "ニューヨーク・タイムズが写真家に「ユーザーにもわからないAI機能があるからPhotoshopをアップデートするな」と警告",
-      "url": "https://gigazine.net/news/20261126-nyt-warns-not-update-photoshop-ai-features/",
-      "published": "2026-11-26T13:05:35.000Z",
-      "bookmarks": 28,
       "foundAt": "2026-11-26T22:07:18.470Z",
       "offered": true
     }
