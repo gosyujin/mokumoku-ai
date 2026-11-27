@@ -1,0 +1,60 @@
+定義
+ metamorphic testing は、1つの入力の正解が分からなくても、関係のある複数の入力の出力どうしを比べて誤りを見つけるテストの方法です。
+  Wikipedia は、metamorphic testing を property-based なテストの技法の1つとして説明しているです。
+  > Metamorphic testing (MT) is a property-based software testing technique
+   出典: [Metamorphic testing - Wikipedia https://en.wikipedia.org/wiki/Metamorphic_testing]
+ metamorphic relation (MR) は、テスト対象が本来満たすべき性質のうち、複数回の実行にまたがるものです。
+  出典: [Metamorphic testing - Wikipedia https://en.wikipedia.org/wiki/Metamorphic_testing]
+ metamorphic oracle は、この関係を判定役 (test oracle) として使うことを指す言い方だと、私は読んでいるです。
+  この呼び方の一次の定義は、まだ見つけていないので、わからないです。
+
+例
+ sin の実装なら、sin(π - x) = sin x という関係を使えるです。
+  x = 1.234 の答えを知らなくても、2つの出力が等しいかで確かめられるです。
+  出典: [Metamorphic testing - Wikipedia https://en.wikipedia.org/wiki/Metamorphic_testing]
+ 宿の検索なら、値段の範囲を狭めた結果は、元の結果の一部になるはずです。
+  一部になっていなければ、どこかに誤りがあると分かるです。
+  出典: [Metamorphic testing - Wikipedia https://en.wikipedia.org/wiki/Metamorphic_testing]
+
+登場背景
+ metamorphic testing は、T.Y. Chen、S.C. Cheung、S.M. Yiu の香港科技大学の技術報告 HKUST-CS98-01 で提案されたです。
+  Wikipedia は、この報告を1998年のものとしているです。
+  出典: [Metamorphic testing - Wikipedia https://en.wikipedia.org/wiki/Metamorphic_testing]
+  arXiv には、2020年2月に同じ題名で登録されているです。
+  出典: [Metamorphic Testing: A New Approach for Generating Next Test Cases https://arxiv.org/abs/2002.12543]
+ 報告の要旨は、成功したテストケースから次のテストケースを作る、と書いているです。
+  test oracle が無いときにも使える、とも書いているです。
+  出典: [Metamorphic Testing: A New Approach for Generating Next Test Cases https://arxiv.org/abs/2002.12543]
+ 背景にあるのは、期待される出力を決めることが難しい、test oracle problem です。
+  出典: [Metamorphic testing - Wikipedia https://en.wikipedia.org/wiki/Metamorphic_testing]
+ 報告の本文は PDF を読み取れず、論文の中の定義や例は、まだ確かめていないです。
+
+データベースでの使われ方
+ SQLancer は、データベースの論理的なバグを探す道具で、TLP や NoREC という判定役を持っているです。
+  出典: [sqlancer/sqlancer https://github.com/sqlancer/sqlancer]
+ TLP (Ternary Logic Partitioning) は、1つのクエリを3つのクエリに分けて、結果を比べるです。
+  結果が食い違えば、DBMS のバグだと見なすです。
+  OOPSLA 2020 の論文として紹介されているです。
+  出典: [sqlancer/sqlancer https://github.com/sqlancer/sqlancer]
+  3つに分けるのは、条件が TRUE、FALSE、NULL になる行だと理解しているですが、論文の本文はまだ読めていないです。
+ NoREC は、クエリを、DBMS がほとんど最適化できない形に書き換えて、元のクエリと結果を比べるです。
+  最適化のバグを見つけるための方法です。
+  出典: [sqlancer/sqlancer https://github.com/sqlancer/sqlancer]
+  論文は Manuel Rigger と Zhendong Su の ESEC/FSE 2020 のもので、PostgreSQL、MariaDB、SQLite、CockroachDB を試したです。
+  見つけた未知のバグは159件で、そのうち51件が最適化のバグだった、と書かれているです。
+  出典: [Detecting Optimization Bugs in Database Engines via Non-Optimizing Reference Engine Construction https://arxiv.org/abs/2007.08292]
+
+似た概念との違い
+ test oracle のページにある「正解の値の集まり」と違い、metamorphic relation は出力どうしの関係だけを決めるです。
+ property-based testing は1回の実行で成り立つ性質も含むので、metamorphic testing はその中の、複数回の実行を比べる形だと思うです。
+  ここは私の推測で、出典はまだ見つけていないです。
+ differential testing は、別の実装どうしを比べるです……NoREC は、同じ DBMS の中に「最適化しない版」を作って比べる点が、少し似ているです。
+  この比べ方も私の推測です。
+
+出会った記事
+ datadog-labs/ephyra の README の事例に、TLP や NoREC が metamorphic なオラクルとして出てきたです。
+  出典: [datadog-labs/ephyra https://github.com/datadog-labs/ephyra]
+ この語を書いた日記は、2026年11月28日の分として、まだ下書きです。
+
+関連
+ [test oracle]
