@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T01:37:14.847Z",
+  "updatedAt": "2026-11-27T02:07:13.846Z",
   "items": [
     {
       "feed": "publickey",
@@ -162,6 +162,36 @@
       "published": "2026-11-20T13:48:14.000Z",
       "foundAt": "2026-11-24T08:30:24.332Z",
       "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "GitHub - datadog-labs/ephyra: A property-based testing library for the LLM era",
+      "url": "https://github.com/datadog-labs/ephyra",
+      "published": "2026-11-26T21:56:35.000Z",
+      "bookmarks": 9,
+      "foundAt": "2026-11-27T02:07:13.846Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "米、スペースXに衛星100万基の配備承認 宇宙にAIデータセンター構築へ",
+      "url": "https://www.cnn.co.jp/usa/35255487.html",
+      "published": "2026-11-27T01:03:08.000Z",
+      "bookmarks": 7,
+      "foundAt": "2026-11-27T02:07:13.846Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "Claude Artifact",
+      "url": "https://claude.ai/artifact/Cy2d8Vn63CnzCtonA1LSah",
+      "published": "2026-11-26T13:47:51.000Z",
+      "bookmarks": 4,
+      "foundAt": "2026-11-27T02:07:13.846Z",
+      "offered": false
     },
     {
       "feed": "hatebu",
@@ -551,36 +581,6 @@
       "published": "2026-11-17T09:33:15.000Z",
       "bookmarks": 6,
       "foundAt": "2026-11-26T11:07:18.049Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "日本ファクトチェックセンターが誤情報を掲載、AI（NotebookLM）が抽出した発言を確認せず掲載",
-      "url": "https://japan.cnet.com/article/35255447/",
-      "published": "2026-11-26T06:42:11.000Z",
-      "bookmarks": 5,
-      "foundAt": "2026-11-26T11:07:18.049Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "「知らない〝私〟が血を流し罵倒」中国AI短編ドラマで「顔盗用」急増 俳優は泣き寝入り",
-      "url": "https://www.sankei.com/article/20261126-SZTQ2RJW5ZKU3GJ4GQKJAORUPE/",
-      "published": "2026-11-26T08:06:59.000Z",
-      "bookmarks": 8,
-      "foundAt": "2026-11-26T10:37:14.936Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "NVIDIAが高性能GPUを「拠点はアメリカにあるが実態は中国企業に支配される子会社」に優先販売していた",
-      "url": "https://gigazine.net/news/20261126-nvidia-china-company/",
-      "published": "2026-11-26T09:52:34.000Z",
-      "bookmarks": 7,
-      "foundAt": "2026-11-26T10:37:14.936Z",
       "offered": true
     }
   ]
