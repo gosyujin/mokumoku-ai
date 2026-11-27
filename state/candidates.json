@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T23:07:15.011Z",
+  "updatedAt": "2026-11-27T23:37:16.242Z",
   "items": [
     {
       "feed": "publickey",
@@ -90,6 +90,26 @@
       "published": "2026-11-25T03:01:14.000Z",
       "foundAt": "2026-11-25T03:07:25.938Z",
       "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "パールスター感謝祭 YAPC::Tokyo 2026 総合順位発表 #yapcjapan - YAPC::Japan 運営ブログ",
+      "url": "https://blog.yapcjapan.org/entry/2026/11/28/014109",
+      "published": "2026-11-27T21:19:35.000Z",
+      "bookmarks": 4,
+      "foundAt": "2026-11-27T23:37:16.242Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "｢もう管理職はいらない｣ 震源はシリコンバレー、AIで消える肩書と階層 - 日本経済新聞",
+      "url": "https://www.nikkei.com/article/DGXZQOGN246EE0U6A121C2000000/",
+      "published": "2026-11-27T21:48:54.000Z",
+      "bookmarks": 5,
+      "foundAt": "2026-11-27T23:37:16.242Z",
+      "offered": false
     },
     {
       "feed": "hatebu",
@@ -568,26 +588,6 @@
       "url": "https://ascii.jp/elem/000/004/455/4455531/",
       "published": "2026-11-27T05:14:25.000Z",
       "bookmarks": 5,
-      "foundAt": "2026-11-27T07:07:18.755Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "止まらないKARTE漏えい 契約終了後「削除されたはず」のデータ流出相次ぐ 「人的オペレーションと管理の不備」",
-      "url": "https://www.itmedia.co.jp/news/article/2611/27/2000003517/",
-      "published": "2026-11-27T06:13:26.000Z",
-      "bookmarks": 5,
-      "foundAt": "2026-11-27T07:07:18.755Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "「ロリポップ！レンタルサーバー」および関連サービスに対する不正アクセスによるお客様情報の漏えいについて - ロリポップ！レンタルサーバー",
-      "url": "https://lolipop.jp/info/news/8279/",
-      "published": "2026-11-27T06:15:17.000Z",
-      "bookmarks": 4,
       "foundAt": "2026-11-27T07:07:18.755Z",
       "offered": true
     }
