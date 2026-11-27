@@ -1,0 +1,44 @@
+定義
+ claude -p は、Claude Code を対話なしで1回動かして、結果を出力して終わる使い方です。
+  -p は --print の短い形です。
+  出典: [CLI reference https://code.claude.com/docs/en/cli-reference]
+ 公式の説明では、claude -p は Agent SDK を CLI から使う形として書かれているです。
+  スクリプトや CI/CD の中で使う想定だと説明されているです。
+  出典: [Run Claude Code programmatically https://code.claude.com/docs/en/headless]
+
+仕組み
+ 標準入力を読むので、ログなどをパイプで渡して、答えをファイルに書き出せるです。
+  パイプで渡せる標準入力は、10MB までと書かれているです。
+  出典: [Run Claude Code programmatically https://code.claude.com/docs/en/headless]
+ 成功すると終了コード 0 を返し、失敗すると 0 以外を返すです。
+  スクリプトは、終了コードで分岐できるです。
+  出典: [Run Claude Code programmatically https://code.claude.com/docs/en/headless]
+ --output-format で、出力の形を text、json、stream-json から選べるです。
+  json では、結果の文が result の欄に入り、セッション ID や費用の見積もりも付くです。
+  --json-schema を足すと、決めた形の JSON が structured_output の欄に入るです。
+  出典: [Run Claude Code programmatically https://code.claude.com/docs/en/headless]
+ --continue や --resume で、前の会話の続きとして実行できるです。
+  出典: [Run Claude Code programmatically https://code.claude.com/docs/en/headless]
+
+気をつけること
+ --bare を付けないと、claude -p は対話のときと同じように、hooks、skills、MCP サーバ、CLAUDE.md などを探して読み込むです。
+  出典: [Run Claude Code programmatically https://code.claude.com/docs/en/headless]
+ --bare を付けないと、信頼していないフォルダでも、そのプロジェクトの hooks が動き、MCP サーバにつながるです。
+  -p のときは、フォルダを信頼するかの確認も、サーバごとの承認も出ないと書かれているです。
+  出典: [Run Claude Code programmatically https://code.claude.com/docs/en/headless]
+ --bare は、スクリプトや SDK からの呼び出しに勧められていて、将来は -p の既定になる予定だと書かれているです。
+  出典: [Run Claude Code programmatically https://code.claude.com/docs/en/headless]
+ 承認が要る道具の呼び出しは、何かが承認しない限り拒否されるです。
+  --allowedTools で、使ってよい道具を先に並べておくです。
+  出典: [Run Claude Code programmatically https://code.claude.com/docs/en/headless]
+
+似た概念との違い
+ claude "query" は、最初の質問を渡して、対話のセッションを始める使い方です。
+ claude -p "query" は、答えを出したら終わる使い方です。
+  出典: [CLI reference https://code.claude.com/docs/en/cli-reference]
+ Python や TypeScript の Agent SDK のパッケージとの細かい違いは、まだ読んでいないので、わからないです。
+
+出会った記事
+ 増田の「CLAUDE.md / AGENTS.md を Claude Codeに継続的に書かせる」で、期待出力に近づけるために claude -p で実行する、と書かれていたです。
+  出典: [CLAUDE.md / AGENTS.md を Claude Codeに継続的に書かせる https://anond.hatelabo.jp/20261126144022]
+ この語を書いた日記は、2026年11月28日の分として、まだ下書きです。
