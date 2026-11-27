@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T10:37:15.274Z",
+  "updatedAt": "2026-11-27T11:07:20.349Z",
   "items": [
     {
       "feed": "publickey",
@@ -117,6 +117,46 @@
       "published": "2026-11-24T12:45:47.000Z",
       "foundAt": "2026-11-24T13:07:16.065Z",
       "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "AIキャラと会話できるアプリ「Talkie」が性的コンテンツを理由にApp Storeから削除される、Google Playでは配信が続く",
+      "url": "https://gigazine.net/news/20261127-talkie-ai-chat-app/",
+      "published": "2026-11-27T06:05:03.000Z",
+      "bookmarks": 6,
+      "foundAt": "2026-11-27T11:07:20.349Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "破産申請したAIチャットサービス「Character.AI」が2100万アカウント超の非公開の会話履歴を競売にかけようとしている",
+      "url": "https://gigazine.net/news/20261127-character-ai-asset-sale/",
+      "published": "2026-11-27T02:45:19.000Z",
+      "bookmarks": 6,
+      "foundAt": "2026-11-27T11:07:20.349Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "GMO熊谷氏「ハッカーを丸裸に」 サイバー攻撃の可視化サイト開設 - 日本経済新聞",
+      "url": "https://www.nikkei.com/article/DGXZQOUC271FH0X21C26A1000000/",
+      "published": "2026-11-27T08:16:56.000Z",
+      "bookmarks": 4,
+      "foundAt": "2026-11-27T11:07:20.349Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "ブラックフライデーでGoogle AIサブスク半額、Pro月額より年2万円お得。YouTubeプレミアムLiteやGoogle Health特典も | テクノエッジ TechnoEdge",
+      "url": "https://www.techno-edge.net/article/2026/11/25/5816.html",
+      "published": "2026-11-25T22:45:49.000Z",
+      "bookmarks": 6,
+      "foundAt": "2026-11-27T11:07:20.349Z",
+      "offered": false
     },
     {
       "feed": "hatebu",
@@ -546,46 +586,6 @@
       "published": "2026-11-26T20:08:22.000Z",
       "bookmarks": 4,
       "foundAt": "2026-11-27T00:37:16.771Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "これが「雨天時の衛星写真」、日本の宇宙ベンチャーQPS研究所が公開 愛媛県松山市を撮影",
-      "url": "https://japan.cnet.com/article/35255433/",
-      "published": "2026-11-26T03:16:23.000Z",
-      "bookmarks": 5,
-      "foundAt": "2026-11-27T00:37:16.771Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "集英社 販売サイト会員の生年月日など70万件余漏えい | NHKニュース",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261126de82087",
-      "published": "2026-11-26T16:23:46.000Z",
-      "bookmarks": 7,
-      "foundAt": "2026-11-27T00:07:15.080Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "エンジニア2人・8ヶ月で新規事業を立ち上げる──「フルAI開発」のふりかえり - コネヒト開発者ブログ",
-      "url": "https://tech.connehito.com/entry/2026/11/26/100507",
-      "published": "2026-11-26T01:15:13.000Z",
-      "bookmarks": 7,
-      "foundAt": "2026-11-27T00:07:15.080Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "SIG-Indiedev(仮)第二回イベント『インディーゲーム開発者における「デバンキング問題」の実態と対策』録画・議事録非公開のオンラインセッションと情報ご提供のお願い | 国際ゲーム開発者協会日本",
-      "url": "https://igda.jp/2026/11/24/17317/",
-      "published": "2026-11-26T08:17:03.000Z",
-      "bookmarks": 5,
-      "foundAt": "2026-11-27T00:07:15.080Z",
       "offered": true
     }
   ]
