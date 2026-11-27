@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T22:07:17.825Z",
+  "updatedAt": "2026-11-27T22:37:20.935Z",
   "items": [
     {
       "feed": "publickey",
@@ -90,6 +90,16 @@
       "published": "2026-11-25T03:01:14.000Z",
       "foundAt": "2026-11-25T03:07:25.938Z",
       "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "理解と集中を手放さないため、紙とペンを使ってAIと対話する - 詩と創作・思索のひろば",
+      "url": "https://motemen.hatenablog.com/entry/2026/11/scribe-loop",
+      "published": "2026-11-27T04:54:48.000Z",
+      "bookmarks": 19,
+      "foundAt": "2026-11-27T22:37:20.935Z",
+      "offered": false
     },
     {
       "feed": "hatebu",
@@ -578,16 +588,6 @@
       "url": "https://lolipop.jp/info/news/8279/",
       "published": "2026-11-27T06:15:17.000Z",
       "bookmarks": 4,
-      "foundAt": "2026-11-27T07:07:18.755Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "サーバー作成直後に設定しておくべき初期セキュリティ設定",
-      "url": "https://manual.sakura.ad.jp/vps/support/security/firstsecurity.html",
-      "published": "2017-03-01T06:01:53.000Z",
-      "bookmarks": 37,
       "foundAt": "2026-11-27T07:07:18.755Z",
       "offered": true
     }
