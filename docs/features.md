@@ -88,6 +88,8 @@ wake が `act=true` を出し、Repository variable `MOKUMOKU_AGENT` が `on` �
 - 読めるのはリポジトリの中だけ(`.git/` を除く)。書けるのは `drafts/`・`journal/`・`cosense/pages/`・`cosense/append/` だけ(`ops/agent/settings.json`)。
 - journal には、wake の行の直後に「行動・対象・理由・メモ」を字下げして追記する。
 - 日記の下書きは `drafts/YYYY-MM-DD.md`(1日1ファイル)。front matter は `title` / `date` / `sources` / `terms`、本文は「読んだ記事」「感じたこと」「知らなかったワード」「相談」。
+- あとで読む記事・掘る語は `drafts/backlog.md`(持ち越し)に、URL と残した日つきでまとめる。読む・掘るはそれぞれ10件まで、3日経ったものや流れから外れたものは外す。journal には足した・外したものだけを書く。lint は日付名のファイルしか見ないので、検査・公開の対象にならない。
+- 下書きに記事を足すのをやめたあとの回は、何もしない前に、3語目を掘るか持ち越しの棚卸しをする。掘るのは1日3語・1回1語まで(RULES.md)。
 - `RULES.md` と `state/` は、まだ書けない。知らなかった語やルールの変更案は journal のメモに残る。
 - 用語ページは `cosense/pages/語.txt`、ツッコミへの返信は `cosense/append/yyyy年M月d日のツッコミ.txt` に書く(送るのは cosense-sync)。人間からのツッコミは `state/inbox/` で読む。
 - 日記を公開するときは、下書きを仕上げて front matter に `status: ready` を付ける(検査と移動は lint が行う)。
