@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T22:37:20.935Z",
+  "updatedAt": "2026-11-27T23:07:15.011Z",
   "items": [
     {
       "feed": "publickey",
@@ -99,7 +99,7 @@
       "published": "2026-11-27T04:54:48.000Z",
       "bookmarks": 19,
       "foundAt": "2026-11-27T22:37:20.935Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
