@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T02:07:13.846Z",
+  "updatedAt": "2026-11-27T02:37:24.286Z",
   "items": [
     {
       "feed": "publickey",
@@ -166,12 +166,62 @@
     {
       "feed": "hatebu",
       "priority": 3,
+      "title": "AI使って開発するなら、モデリングするんだよ - 4つの図で始めるモデリングと、AIにモデルを実装させるアーキテクチャ",
+      "url": "https://speakerdeck.com/littlehands/umtp-suraido-20261125",
+      "published": "2026-11-26T23:54:33.000Z",
+      "bookmarks": 11,
+      "foundAt": "2026-11-27T02:37:24.286Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "gh-ostで2,500万行のテーブル変更をクエリ待ち1.31秒で通した話：Aurora MySQLへの導入と本番クローンでの検証 - Findy Tech Blog",
+      "url": "https://tech.findy.co.jp/entry/2026/11/27/070000",
+      "published": "2026-11-27T00:33:14.000Z",
+      "bookmarks": 10,
+      "foundAt": "2026-11-27T02:37:24.286Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "AIで証明の数学リーマン予想、英オックスフォード大学のメイナード教授「まだ人間は理解できず」 - 日本経済新聞",
+      "url": "https://www.nikkei.com/article/DGXZQOSG2544P0V21C26A1000000/",
+      "published": "2026-11-26T21:29:45.000Z",
+      "bookmarks": 4,
+      "foundAt": "2026-11-27T02:37:24.286Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "WordPressのシェア低下をどう見るか——使っている人、静的HTMLやEmDashへ動く人の違い | WP Calm",
+      "url": "https://www.wpcalm.jp/topic/wordpress-market-share-decline-static-html-and-new-cms/",
+      "published": "2026-11-26T08:55:17.000Z",
+      "bookmarks": 5,
+      "foundAt": "2026-11-27T02:37:24.286Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "モダナイズの目的に立ち返る",
+      "url": "https://speakerdeck.com/masuda220/aaa5fadd-e9cc-4c01-9359-b8389de8037a",
+      "published": "2026-11-27T01:07:02.000Z",
+      "bookmarks": 4,
+      "foundAt": "2026-11-27T02:37:24.286Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
       "title": "GitHub - datadog-labs/ephyra: A property-based testing library for the LLM era",
       "url": "https://github.com/datadog-labs/ephyra",
       "published": "2026-11-26T21:56:35.000Z",
       "bookmarks": 9,
       "foundAt": "2026-11-27T02:07:13.846Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
@@ -181,7 +231,7 @@
       "published": "2026-11-27T01:03:08.000Z",
       "bookmarks": 7,
       "foundAt": "2026-11-27T02:07:13.846Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
@@ -191,7 +241,7 @@
       "published": "2026-11-26T13:47:51.000Z",
       "bookmarks": 4,
       "foundAt": "2026-11-27T02:07:13.846Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
@@ -531,56 +581,6 @@
       "published": "2026-11-26T10:21:05.000Z",
       "bookmarks": 11,
       "foundAt": "2026-11-26T11:37:25.420Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "手書き文字やスケッチを生成できるAIモデル「PenGPT」",
-      "url": "https://gigazine.net/news/20261126-pengpt/",
-      "published": "2026-11-26T05:54:29.000Z",
-      "bookmarks": 6,
-      "foundAt": "2026-11-26T11:37:25.420Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "ChatGPTで作ったWebサイト、公開し続けると追加料金も 2027年2月から課金開始",
-      "url": "https://ascii.jp/elem/000/004/454/4454606/",
-      "published": "2026-11-26T07:34:56.000Z",
-      "bookmarks": 5,
-      "foundAt": "2026-11-26T11:37:25.420Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "【重要】「ASOBI STORE(電子書籍)」サービス終了のお知らせ",
-      "url": "https://shop.asobistore.jp/news/324/",
-      "published": "2026-11-26T08:22:59.000Z",
-      "bookmarks": 7,
-      "foundAt": "2026-11-26T11:07:18.049Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "「1Password」のGitHubアカウントに不正アクセス、顧客管理データの一部漏えい。パスワードの「保管庫」は影響なし",
-      "url": "https://internet.watch.impress.co.jp/docs/news/2159331.html",
-      "published": "2026-11-26T03:26:09.000Z",
-      "bookmarks": 4,
-      "foundAt": "2026-11-26T11:07:18.049Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "Actual curl rewrites in rust",
-      "url": "https://daniel.haxx.se/blog/2026/11/17/actual-curl-rewrites-in-rust/",
-      "published": "2026-11-17T09:33:15.000Z",
-      "bookmarks": 6,
-      "foundAt": "2026-11-26T11:07:18.049Z",
       "offered": true
     }
   ]
