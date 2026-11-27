@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T12:07:29.114Z",
+  "updatedAt": "2026-11-27T12:37:16.075Z",
   "items": [
     {
       "feed": "publickey",
@@ -116,6 +116,36 @@
       "url": "https://piyolog.hatenadiary.jp/entry/2026/11/24/214547",
       "published": "2026-11-24T12:45:47.000Z",
       "foundAt": "2026-11-24T13:07:16.065Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "さくさく作れる毎日を支える、AI 時代の開発環境 — 隔離・コンテキスト・ガードレール・検証の整理 - [はてなCMS] 電通総研 テックブログ",
+      "url": "https://tech.dentsusoken.com/entry/2026/11/27/133501",
+      "published": "2026-11-27T05:00:35.000Z",
+      "bookmarks": 6,
+      "foundAt": "2026-11-27T12:37:16.075Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "トクリュウ対策はまず戸締りを怠らないこと、防犯フィルムや補助ロックなどを設置してとにかく家に入らせないよう徹底的に守りを固めるところから始めよう",
+      "url": "https://togetter.com/li/2774418",
+      "published": "2026-11-26T08:38:07.000Z",
+      "bookmarks": 7,
+      "foundAt": "2026-11-27T12:37:16.075Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "サンタクロースと無料で話せる公衆電話を南太平洋の小さな島に設置した通信技術者の記録",
+      "url": "https://gigazine.net/news/20261127-payphone-on-pacific-island/",
+      "published": "2026-11-27T06:05:33.000Z",
+      "bookmarks": 5,
+      "foundAt": "2026-11-27T12:37:16.075Z",
       "offered": true
     },
     {
@@ -556,36 +586,6 @@
       "published": "2026-11-26T13:23:23.000Z",
       "bookmarks": 5,
       "foundAt": "2026-11-27T01:37:14.847Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "Skills over MCP、めっちゃよさそう | ashunar0",
-      "url": "https://ashunar0.dev/posts/skills-over-mcp/",
-      "published": "2026-11-26T22:15:24.000Z",
-      "bookmarks": 4,
-      "foundAt": "2026-11-27T01:07:19.469Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "【やじうまミニレビュー】 工具のマキタバッテリがPCの電源に!? 最大100Wの純正アダプタを使ってみた",
-      "url": "https://pc.watch.impress.co.jp/docs/column/yajiuma-mini-review/2159706.html",
-      "published": "2026-11-26T22:47:09.000Z",
-      "bookmarks": 7,
-      "foundAt": "2026-11-27T00:37:16.771Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "UI style guides",
-      "url": "https://aresluna.org/ui-style-guides/",
-      "published": "2026-11-26T03:00:14.000Z",
-      "bookmarks": 8,
-      "foundAt": "2026-11-27T00:37:16.771Z",
       "offered": true
     }
   ]
