@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T03:37:19.639Z",
+  "updatedAt": "2026-11-27T04:07:17.260Z",
   "items": [
     {
       "feed": "publickey",
@@ -162,6 +162,46 @@
       "published": "2026-11-20T13:48:14.000Z",
       "foundAt": "2026-11-24T08:30:24.332Z",
       "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "航空会社Peach、「KARTE」から最大約944万件の顧客情報漏えい 契約終了後も削除されず残存",
+      "url": "https://www.itmedia.co.jp/news/article/2611/27/2000003509/",
+      "published": "2026-11-27T01:21:19.000Z",
+      "bookmarks": 9,
+      "foundAt": "2026-11-27T04:07:17.260Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "AWS セキュリティ成熟度モデル v3 と PCI DSS 版・AI 版の変更点と評価ツールを確認する",
+      "url": "https://zenn.dev/cscloud_blog/articles/new-aws-security-maturity-model",
+      "published": "2026-11-26T09:37:48.000Z",
+      "bookmarks": 7,
+      "foundAt": "2026-11-27T04:07:17.260Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "AI に頼らず素手で挑む！カミナシ社内セキュリティ競技会『ごーとんカップ 2026』 - カミナシ エンジニアブログ",
+      "url": "https://kaminashi-developer.hatenablog.jp/entry/2026/11/27/123000",
+      "published": "2026-11-27T03:54:36.000Z",
+      "bookmarks": 5,
+      "foundAt": "2026-11-27T04:07:17.260Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "X、「ペアレンタルコントロール」を導入 メッセージ内容は見られず",
+      "url": "https://www.itmedia.co.jp/news/article/2611/27/2000003506/",
+      "published": "2026-11-26T22:33:36.000Z",
+      "bookmarks": 4,
+      "foundAt": "2026-11-27T04:07:17.260Z",
+      "offered": false
     },
     {
       "feed": "hatebu",
@@ -541,46 +581,6 @@
       "published": "2026-11-26T11:08:57.000Z",
       "bookmarks": 7,
       "foundAt": "2026-11-26T13:07:15.894Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "Jev で実現する Generative UI",
-      "url": "https://speakerdeck.com/azukiazusa1/slide-efc59f7e-336f-4e6c-8919-27211ebc3d07",
-      "published": "2026-11-26T12:42:06.000Z",
-      "bookmarks": 5,
-      "foundAt": "2026-11-26T13:07:15.894Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "Linux上で完全なmacOS GUIユーザー空間を実現する「xnulinux」",
-      "url": "https://gigazine.net/news/20261126-xnu-linux/",
-      "published": "2026-11-25T22:46:10.000Z",
-      "bookmarks": 10,
-      "foundAt": "2026-11-26T13:07:15.894Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "ゆうちょ銀が勘定系をオープン化へ、2574億円でNTTデータが落札",
-      "url": "https://xtech.nikkei.com/atcl/nxt/column/18/03815/112400006/",
-      "published": "2026-11-26T02:13:14.000Z",
-      "bookmarks": 6,
-      "foundAt": "2026-11-26T12:37:38.764Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "深センの中国人業者が規制されているNVIDIAのGPUを取り扱っていてアメリカの4～5倍の値段になっている品もあるとの指摘",
-      "url": "https://gigazine.net/news/20261126-nvidia-chip-china/",
-      "published": "2026-11-26T07:05:12.000Z",
-      "bookmarks": 5,
-      "foundAt": "2026-11-26T12:37:38.764Z",
       "offered": true
     }
   ]
