@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T14:07:13.862Z",
+  "updatedAt": "2026-11-27T22:07:17.825Z",
   "items": [
     {
       "feed": "publickey",
@@ -56,24 +56,6 @@
       "offered": true
     },
     {
-      "feed": "publickey",
-      "priority": 1,
-      "title": "AWS、DynamoDB互換データベースをローカルマシンで構築可能にするオープンソース「ExtendDB」がバージョン1.0に到達",
-      "url": "https://www.publickey1.jp/blog/26/awsdynamodbextenddb10.html",
-      "published": "2026-11-24T15:19:30.000Z",
-      "foundAt": "2026-11-24T22:07:16.239Z",
-      "offered": true
-    },
-    {
-      "feed": "publickey",
-      "priority": 1,
-      "title": "jQuery 4.1正式版がリリース、内部実装をquerySelectorAllに統一でより高速に。jQuery 3.x系最後となるjQuery 3.8も同時リリース",
-      "url": "https://www.publickey1.jp/blog/26/jquery_41queryselectoralljquery_3xjquery_38.html",
-      "published": "2026-11-24T15:15:39.000Z",
-      "foundAt": "2026-11-24T22:07:16.239Z",
-      "offered": true
-    },
-    {
       "feed": "piyolog",
       "priority": 2,
       "title": "「ARTEX」を使った攻撃の観測と被害組織の公表についてまとめてみた",
@@ -112,12 +94,132 @@
     {
       "feed": "hatebu",
       "priority": 3,
+      "title": "「ロリポップ！レンタルサーバー」の平文パスワード情報などが漏えい。GMOペパボの内部システムに不正アクセス 顧客情報51万6564件が漏えいの可能性、対象者に個別メール連絡",
+      "url": "https://internet.watch.impress.co.jp/docs/news/2160136.html",
+      "published": "2026-11-27T12:29:54.000Z",
+      "bookmarks": 51,
+      "foundAt": "2026-11-27T22:07:17.825Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "シンプルな構文で美しい図を自動生成する「D2」が進化、非営利化で独自レイアウトエンジンもオープンソース化",
+      "url": "https://gigazine.net/news/20261127-d2/",
+      "published": "2026-11-27T14:05:38.000Z",
+      "bookmarks": 11,
+      "foundAt": "2026-11-27T22:07:17.825Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "【資料公開】コードを書くAI、アーキテクチャーを決める組織",
+      "url": "https://www.ryuzee.com/contents/blog/14629",
+      "published": "2026-11-27T11:42:28.000Z",
+      "bookmarks": 18,
+      "foundAt": "2026-11-27T22:07:17.825Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "XYZA、何度も自由に描き替え可能なカラーE Ink搭載スマートキーホルダー",
+      "url": "https://www.itmedia.co.jp/pcuser/articles/2611/27/news083.html",
+      "published": "2026-11-27T09:23:05.000Z",
+      "bookmarks": 5,
+      "foundAt": "2026-11-27T22:07:17.825Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "Kizuna AI、春猿火ら9組がバーチャル空間に集結 VRChat音楽フェス「ESPERA」レポート",
+      "url": "https://kai-you.net/article/97275",
+      "published": "2026-11-27T09:21:56.000Z",
+      "bookmarks": 4,
+      "foundAt": "2026-11-27T22:07:17.825Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "大阪大学、学生と教職員のメアド5万件漏洩 アララへの不正アクセス - 日本経済新聞",
+      "url": "https://www.nikkei.com/article/DGXZQOUF272NY0X21C26A1000000/",
+      "published": "2026-11-27T17:19:05.000Z",
+      "bookmarks": 6,
+      "foundAt": "2026-11-27T22:07:17.825Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "日本のものづくり、AIでカイゼンを 現場に眠る「暗黙知」は宝の山 - 日本経済新聞",
+      "url": "https://www.nikkei.com/article/DGXZQOCD05B430V01C26A1000000/",
+      "published": "2026-11-27T00:05:37.000Z",
+      "bookmarks": 6,
+      "foundAt": "2026-11-27T22:07:17.825Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "ドコモに聞く「新ahamo」の狙い 3段階制と165円値上げ、既存契約者に“40GBリミッター”実装の理由",
+      "url": "https://www.itmedia.co.jp/mobile/articles/2611/26/news074.html",
+      "published": "2026-11-26T07:33:31.000Z",
+      "bookmarks": 6,
+      "foundAt": "2026-11-27T22:07:17.825Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "「勇気ありすぎだろ」GMOが買収した激安サーバー「ロリポップ！」が顧客情報の漏洩を公表、漏れた一部パスワードを“平文で”保存していた模様",
+      "url": "https://togetter.com/li/2775731",
+      "published": "2026-11-27T11:42:54.000Z",
+      "bookmarks": 24,
+      "foundAt": "2026-11-27T22:07:17.825Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "ISUCON2026 マルチリージョン構成におけるデータのインメモリ化 #isucon_namalog",
+      "url": "https://speakerdeck.com/kawasy/isucon2026-statemachine-replication-for-multi-region-in-memory-data-store-maruchi-rijon-kousei-niokeru-deta-no-in-memorika-e46becf2-a792-4df7-b614-7d36bae5e42e",
+      "published": "2026-11-27T01:52:22.000Z",
+      "bookmarks": 13,
+      "foundAt": "2026-11-27T22:07:17.825Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "DNAで『マインクラフト』のように立体構造を構築する技術が登場、合計400個のDNAブロックでナノサイズの複雑な構造の形成に成功",
+      "url": "https://gigazine.net/news/20261127-dna-polycube-like-minecraft/",
+      "published": "2026-11-27T03:48:31.000Z",
+      "bookmarks": 9,
+      "foundAt": "2026-11-27T22:07:17.825Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "iPhoneという奇跡:江島健太郎 / Kenn's Clairvoyance - CNET Japan",
+      "url": "https://web.archive.org/web/20080714082210/https://japan.cnet.com/blog/kenn/2008/07/13/entry_27012223/",
+      "published": "2023-10-09T23:51:29.000Z",
+      "bookmarks": 8,
+      "foundAt": "2026-11-27T22:07:17.825Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
       "title": "価格.comのAI駆動による全面刷新の現在地と振り返り",
       "url": "https://speakerdeck.com/tkyowa/kakaku-com-ai-driven-system-renewal-202611",
       "published": "2026-11-27T07:25:50.000Z",
       "bookmarks": 4,
       "foundAt": "2026-11-27T14:07:13.862Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
@@ -127,7 +229,7 @@
       "published": "2026-11-26T08:35:02.000Z",
       "bookmarks": 6,
       "foundAt": "2026-11-27T14:07:13.862Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
@@ -137,7 +239,7 @@
       "published": "2026-11-27T07:20:50.000Z",
       "bookmarks": 4,
       "foundAt": "2026-11-27T14:07:13.862Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
@@ -147,7 +249,7 @@
       "published": "2026-11-26T00:33:26.000Z",
       "bookmarks": 6,
       "foundAt": "2026-11-27T14:07:13.862Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
@@ -157,7 +259,7 @@
       "published": "2026-11-26T08:09:12.000Z",
       "bookmarks": 7,
       "foundAt": "2026-11-27T14:07:13.862Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
@@ -167,7 +269,7 @@
       "published": "2026-11-26T04:57:43.000Z",
       "bookmarks": 5,
       "foundAt": "2026-11-27T14:07:13.862Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
@@ -487,106 +589,6 @@
       "published": "2017-03-01T06:01:53.000Z",
       "bookmarks": 37,
       "foundAt": "2026-11-27T07:07:18.755Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "サブスクの「お試し→自動更新」は客を逃していた？ 新規購読者数は「お試し→自動解約」比23％減 140万人で実験",
-      "url": "https://www.itmedia.co.jp/news/article/2611/27/2000003503/",
-      "published": "2026-11-27T03:22:23.000Z",
-      "bookmarks": 9,
-      "foundAt": "2026-11-27T06:37:26.586Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "GPU demos, 1998 to 2006",
-      "url": "https://gpu-demo-gallery.pages.dev/",
-      "published": "2026-11-27T02:00:47.000Z",
-      "bookmarks": 5,
-      "foundAt": "2026-11-27T06:37:26.586Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "「プレステの父」がXboxを誕生させた？ 久夛良木健氏が明かしたマイクロソフトとの駆け引き（多根清史） - エキスパート - Yahoo!ニュース",
-      "url": "https://news.yahoo.co.jp/expert/articles/f6b89482633cedb0ff3e4939d53b1bfdead8a8ca",
-      "published": "2026-11-27T00:27:52.000Z",
-      "bookmarks": 4,
-      "foundAt": "2026-11-27T05:37:15.085Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "2026年に刊行されてよかったなと思うコンピューター技術書 - golden-luckyの日記",
-      "url": "https://golden-lucky.hatenablog.com/entry/2026/11/27/111643",
-      "published": "2026-11-27T02:26:32.000Z",
-      "bookmarks": 7,
-      "foundAt": "2026-11-27T05:05:59.107Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "AI法改正案の概要 “事業者に安全確保義務 罰則適用も” | NHKニュース",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261126de81752",
-      "published": "2026-11-26T09:52:18.000Z",
-      "bookmarks": 7,
-      "foundAt": "2026-11-27T05:05:59.107Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "航空会社Peach、「KARTE」から最大約944万件の顧客情報漏えい 契約終了後も削除されず残存",
-      "url": "https://www.itmedia.co.jp/news/article/2611/27/2000003509/",
-      "published": "2026-11-27T01:21:19.000Z",
-      "bookmarks": 9,
-      "foundAt": "2026-11-27T04:07:17.260Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "AWS セキュリティ成熟度モデル v3 と PCI DSS 版・AI 版の変更点と評価ツールを確認する",
-      "url": "https://zenn.dev/cscloud_blog/articles/new-aws-security-maturity-model",
-      "published": "2026-11-26T09:37:48.000Z",
-      "bookmarks": 7,
-      "foundAt": "2026-11-27T04:07:17.260Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "AI に頼らず素手で挑む！カミナシ社内セキュリティ競技会『ごーとんカップ 2026』 - カミナシ エンジニアブログ",
-      "url": "https://kaminashi-developer.hatenablog.jp/entry/2026/11/27/123000",
-      "published": "2026-11-27T03:54:36.000Z",
-      "bookmarks": 5,
-      "foundAt": "2026-11-27T04:07:17.260Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "X、「ペアレンタルコントロール」を導入 メッセージ内容は見られず",
-      "url": "https://www.itmedia.co.jp/news/article/2611/27/2000003506/",
-      "published": "2026-11-26T22:33:36.000Z",
-      "bookmarks": 4,
-      "foundAt": "2026-11-27T04:07:17.260Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "Androidアプリ開発者はまもなく自身の住所を公開しなければならなくなる",
-      "url": "https://gigazine.net/news/20261127-android-app-developers-have-to-share-address-publicly/",
-      "published": "2026-11-27T02:28:39.000Z",
-      "bookmarks": 6,
-      "foundAt": "2026-11-27T03:07:17.683Z",
       "offered": true
     }
   ]
