@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-28T00:07:13.392Z",
+  "updatedAt": "2026-11-28T00:37:16.261Z",
   "items": [
     {
       "feed": "publickey",
@@ -90,6 +90,46 @@
       "published": "2026-11-25T03:01:14.000Z",
       "foundAt": "2026-11-25T03:07:25.938Z",
       "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "なぜAIは超難問を解けるのに、あなたの現場では“綺麗なゴミ”を量産するのか？ - サッとぶ",
+      "url": "https://kei-1010.hatenablog.com/entry/2026/11/27/133416",
+      "published": "2026-11-27T06:22:00.000Z",
+      "bookmarks": 6,
+      "foundAt": "2026-11-28T00:37:16.261Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "YAPC::Asia Tokyo 2010 Keynoteを観た - 生涯未熟",
+      "url": "https://syossan.hateblo.jp/entry/2026/09/08/093000",
+      "published": "2026-09-08T00:57:41.000Z",
+      "bookmarks": 8,
+      "foundAt": "2026-11-28T00:37:16.261Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "ノンフライヤーはからあげだけじゃない 夕飯作りラクにしてくれるかも",
+      "url": "https://kaden.watch.impress.co.jp/docs/column/iikoto/2160002.html",
+      "published": "2026-11-27T07:00:16.000Z",
+      "bookmarks": 5,
+      "foundAt": "2026-11-28T00:37:16.261Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "GMO、サーバー貸出事業で不正アクセス 顧客情報51万件漏洩 - 日本経済新聞",
+      "url": "https://www.nikkei.com/article/DGXZQOUC27B210X21C26A1000000/",
+      "published": "2026-11-27T22:28:30.000Z",
+      "bookmarks": 4,
+      "foundAt": "2026-11-28T00:37:16.261Z",
+      "offered": false
     },
     {
       "feed": "hatebu",
@@ -549,46 +589,6 @@
       "published": "2026-11-26T15:33:01.000Z",
       "bookmarks": 4,
       "foundAt": "2026-11-27T08:37:17.398Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "楽天モバイルへのauローミングが更新、12月からのエリア公開",
-      "url": "https://k-tai.watch.impress.co.jp/docs/news/2159826.html",
-      "published": "2026-11-27T04:24:54.000Z",
-      "bookmarks": 4,
-      "foundAt": "2026-11-27T08:37:17.398Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "Devin Bot に毎朝のパフォーマンス改善を任せてみた - kickflow Tech Blog",
-      "url": "https://tech.kickflow.co.jp/entry/2026/11/27/154920",
-      "published": "2026-11-27T07:33:50.000Z",
-      "bookmarks": 9,
-      "foundAt": "2026-11-27T08:07:15.695Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "なぜ、AIはRustのC言語に対する優位性を尽く潰したのか？",
-      "url": "https://zenn.dev/pdfractal/articles/832b84c9e89f3f",
-      "published": "2026-11-26T23:06:38.000Z",
-      "bookmarks": 4,
-      "foundAt": "2026-11-27T08:07:15.695Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "マイナアプリに複数の脆弱性、マイナンバーカードの情報窃取の恐れ 最新版に更新を",
-      "url": "https://ascii.jp/elem/000/004/455/4455531/",
-      "published": "2026-11-27T05:14:25.000Z",
-      "bookmarks": 5,
-      "foundAt": "2026-11-27T07:07:18.755Z",
       "offered": true
     }
   ]
