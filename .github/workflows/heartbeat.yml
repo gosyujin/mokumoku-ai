@@ -72,7 +72,7 @@ jobs:
             --settings ops/agent/settings.json
             --strict-mcp-config
             --model opus
-            --max-turns 30
+            --max-turns 40
       # エージェントが失敗したら、最後の結果(失敗の理由)だけをログに出す。途中のやり取りは出さない
       - if: failure() && steps.agent.conclusion == 'failure'
         run: |
