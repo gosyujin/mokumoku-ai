@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-28T01:07:17.468Z",
+  "updatedAt": "2026-11-28T01:37:15.762Z",
   "items": [
     {
       "feed": "publickey",
@@ -90,6 +90,36 @@
       "published": "2026-11-25T03:01:14.000Z",
       "foundAt": "2026-11-25T03:07:25.938Z",
       "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "「日本語で」と書いても AI が英語に戻るので、Stop フックで止めた",
+      "url": "https://zenn.dev/hitori_pm/articles/cc955887656339",
+      "published": "2026-11-27T13:49:22.000Z",
+      "bookmarks": 6,
+      "foundAt": "2026-11-28T01:37:15.762Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "スマホの「マイナアプリ」に脆弱性、不正リンクからマイナンバーカード情報窃取のおそれ／iOS版/Android版ともに最新バージョンへのアップデートを",
+      "url": "https://forest.watch.impress.co.jp/docs/news/2160150.html",
+      "published": "2026-11-27T11:50:35.000Z",
+      "bookmarks": 5,
+      "foundAt": "2026-11-28T01:37:15.762Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "AWSのAI-DLC v2に学ぶ AIにドメイン境界を守らせる設計",
+      "url": "https://speakerdeck.com/j5ik2o/archcon2026",
+      "published": "2026-11-27T10:26:22.000Z",
+      "bookmarks": 6,
+      "foundAt": "2026-11-28T01:37:15.762Z",
+      "offered": false
     },
     {
       "feed": "hatebu",
@@ -559,36 +589,6 @@
       "published": "2026-11-27T05:37:18.000Z",
       "bookmarks": 4,
       "foundAt": "2026-11-27T09:37:14.937Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "CVE-2026-99288 | Ubuntu",
-      "url": "https://ubuntu.com/security/CVE-2026-99288",
-      "published": "2026-11-27T04:20:59.000Z",
-      "bookmarks": 4,
-      "foundAt": "2026-11-27T09:07:17.206Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "「フィッシング対策訓練」って実効性あるの？ 約1.2万人に模擬メール送り検証、結果は……",
-      "url": "https://www.itmedia.co.jp/news/article/2611/27/2000003502/",
-      "published": "2026-11-27T03:22:52.000Z",
-      "bookmarks": 5,
-      "foundAt": "2026-11-27T09:07:17.206Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "迷惑メール対策をしているのに、なぜ詐欺メールは届くのか",
-      "url": "https://zenn.dev/akagumi/articles/catch-all-phishing-invisible-chars",
-      "published": "2026-11-26T21:24:21.000Z",
-      "bookmarks": 4,
-      "foundAt": "2026-11-27T08:37:17.398Z",
       "offered": true
     }
   ]
