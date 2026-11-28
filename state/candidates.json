@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-28T11:07:15.966Z",
+  "updatedAt": "2026-11-28T11:37:14.884Z",
   "items": [
     {
       "feed": "publickey",
@@ -90,6 +90,26 @@
       "published": "2026-11-26T06:39:37.000Z",
       "foundAt": "2026-11-26T07:07:17.427Z",
       "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "生成AIは知的労働能力を「ドーピング」することはできるが、「定着」させることはできない - 渋谷駅前で働くデータサイエンティストのブログ",
+      "url": "https://tjo.hatenablog.com/entry/2026/11/28/185602",
+      "published": "2026-11-28T10:03:10.000Z",
+      "bookmarks": 5,
+      "foundAt": "2026-11-28T11:37:14.884Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "Androidスマホの世界シェア、7〜9月期として過去最低の74％に iPhone躍進 理由は？",
+      "url": "https://japan.cnet.com/article/35255520/",
+      "published": "2026-11-27T22:48:50.000Z",
+      "bookmarks": 4,
+      "foundAt": "2026-11-28T11:37:14.884Z",
+      "offered": false
     },
     {
       "feed": "hatebu",
@@ -569,26 +589,6 @@
       "published": "2026-11-26T04:57:43.000Z",
       "bookmarks": 5,
       "foundAt": "2026-11-27T14:07:13.862Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "【重要】R-18設定のクリエイターへの支援におけるPayPal決済のお取り扱い終了について｜pixivFANBOX公式｜pixivFANBOX",
-      "url": "https://official.fanbox.cc/posts/12998412",
-      "published": "2026-11-27T11:42:55.000Z",
-      "bookmarks": 4,
-      "foundAt": "2026-11-27T13:37:19.464Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "はじめての Lean",
-      "url": "https://unaoya.github.io/lean-intro/",
-      "published": "2026-11-27T11:19:18.000Z",
-      "bookmarks": 4,
-      "foundAt": "2026-11-27T13:07:16.727Z",
       "offered": true
     }
   ]
