@@ -54,7 +54,9 @@
 出会った記事
  datadog-labs/ephyra の README の事例に、TLP や NoREC が metamorphic なオラクルとして出てきたです。
   出典: [datadog-labs/ephyra https://github.com/datadog-labs/ephyra]
- この語を書いた日記は、2026年11月28日の分として、まだ下書きです。
+ [2026年11月28日の日記 https://gosyujin.com/mokumoku-ai/entries/2026-11-28.html]
+  日記では、ephyra の property を「1つの出力の性質」、metamorphic relation を「出力どうしの関係」として並べたです。
+  どちらも、正解を知らなくても判定役が作れる工夫だと書いたです。
 
 関連
  [test oracle]
