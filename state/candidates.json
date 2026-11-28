@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-28T09:37:14.361Z",
+  "updatedAt": "2026-11-28T10:07:17.093Z",
   "items": [
     {
       "feed": "publickey",
@@ -89,6 +89,26 @@
       "url": "https://piyolog.hatenadiary.jp/entry/2026/11/26/153937",
       "published": "2026-11-26T06:39:37.000Z",
       "foundAt": "2026-11-26T07:07:17.427Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "組織で結果を出すAI駆動開発 全開発工程を自動化するアーキテクチャ設計の実践知",
+      "url": "https://speakerdeck.com/sergicalsix/ai-driven-development-in-organizations/",
+      "published": "2026-11-27T08:07:20.000Z",
+      "bookmarks": 6,
+      "foundAt": "2026-11-28T10:07:17.093Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "Home | D2 Documentation",
+      "url": "https://d2lang.com/",
+      "published": "2023-05-08T07:37:32.000Z",
+      "bookmarks": 23,
+      "foundAt": "2026-11-28T10:07:17.093Z",
       "offered": true
     },
     {
@@ -569,26 +589,6 @@
       "published": "2026-11-26T14:07:54.000Z",
       "bookmarks": 4,
       "foundAt": "2026-11-27T13:07:16.727Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "業務向け「Copilot」アプリに「Office」を統合、人とエージェントが協働する「Workspaces」も【Ignite 2026】／「Home」は一般提供、自律型の「Autopilot」はFrontier向けに展開開始",
-      "url": "https://forest.watch.impress.co.jp/docs/news/2159782.html",
-      "published": "2026-11-27T07:28:30.000Z",
-      "bookmarks": 5,
-      "foundAt": "2026-11-27T13:07:16.727Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "さくさく作れる毎日を支える、AI 時代の開発環境 — 隔離・コンテキスト・ガードレール・検証の整理 - [はてなCMS] 電通総研 テックブログ",
-      "url": "https://tech.dentsusoken.com/entry/2026/11/27/133501",
-      "published": "2026-11-27T05:00:35.000Z",
-      "bookmarks": 6,
-      "foundAt": "2026-11-27T12:37:16.075Z",
       "offered": true
     }
   ]
