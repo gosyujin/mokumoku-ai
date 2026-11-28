@@ -1,0 +1,49 @@
+定義
+ AI エージェントの文脈では、モデルのまわりを囲むソフトウェアの足場を指すです。
+  Anthropic の記事は、その中身をループ、ツール、コンテキストの管理、ガードレールの4つとして挙げているです。
+  > An agent harness is the software scaffolding around a model: the loop, tools, context management, and guardrails
+   出典: [Agent Harness Design: 3 Patterns for Harnessing Claude's Intelligence https://claude.com/resources/articles/harnessing-claudes-intelligence]
+ 同じ記事は、足場に何を入れ、モデルが良くなったら何を外すかを決めることを、agent harness design と呼んでいるです。
+  出典: [Agent Harness Design: 3 Patterns for Harnessing Claude's Intelligence https://claude.com/resources/articles/harnessing-claudes-intelligence]
+ 2026年6月の論文は、エージェントのハーネスである条件を、T1からT4の4つにまとめているです。
+  T1 は、推論・行動・観察が交互に回り、次の一歩が直前の観察で決まるループです。
+  T2 は、ファイルの編集やコマンドの実行のように、外の環境を変えられるツールの口です。
+  T3 は、何をコンテキストに入れ、何を出すかを、作業や観察に応じて決めることです。
+  T4 は、モデルが協力するかどうかに関わらず効く、制限・検証・決まった動作が1つ以上あることです。
+  論文は、4つすべてを満たすときだけハーネスだ、としているです。
+  出典: [What makes a harness a harness https://arxiv.org/html/2606.10106]
+
+登場背景
+ 論文によると、harness という語は、馬具から、ソフトウェアのテストハーネス、機械学習の評価ハーネスを経て、エージェントのハーネスへ移ってきたです。
+  出典: [arXiv:2606.10106 https://arxiv.org/abs/2606.10106]
+  テストハーネスの元の定義は、ISTQB の用語集を取得できなかったので、まだ確かめていないです。
+ 同じ論文は、この語が製品、評価の足場、フレームワーク、SDK などに、ゆるく使い分けられていることを出発点にしているです。
+  出典: [arXiv:2606.10106 https://arxiv.org/abs/2606.10106]
+ OpenAI の Harness engineering の記事は、人が手で書いたコードが0行の製品を、5か月かけて作った話です。
+  リポジトリは約100万行、マージした pull request は約1,500件と書かれているです。
+  難しさの中心は、環境、フィードバックのループ、制御の仕組みを設計することに移った、と書かれているです。
+  ただし、この記事は harness という語そのものを定義していないです。
+  出典: [Harness engineering https://openai.com/index/harness-engineering/]
+ 長く動くエージェントでは、作業がセッションに分かれ、新しいセッションは前のことを覚えていない、という問題があるです。
+  Anthropic の記事は、初期化役のエージェントが機能の一覧と進み具合のファイルを用意し、次のセッションのエージェントがそれを読んで続ける形を示しているです。
+  同じ記事は、Claude Agent SDK を、汎用のエージェントのハーネスとして紹介しているです。
+  出典: [Effective harnesses for long-running agents https://anthropic.com/engineering/effective-harnesses-for-long-running-agents]
+
+似た概念との違い
+ 論文は、フレームワークをハーネスの上に置かれるものとして分けているです。
+  フレームワークは、役割や会話の取り決めで複数のエージェントを組み合わせ、その下に、エージェントごとのハーネスがあり得るです。
+  出典: [What makes a harness a harness https://arxiv.org/html/2606.10106]
+ 論文は、SDK を、ループを組み上げる前の部品として分けているです。
+  誰かがループを組むと、そのときにハーネスになる、という扱いです。
+  出典: [What makes a harness a harness https://arxiv.org/html/2606.10106]
+ 論文は、評価ハーネスを、作業が終わったあとに採点するものとして分けているです。
+  エージェントのハーネスが作業の最中に働くのに対して、評価ハーネスは「after the fact」に働く、という言い方です。
+  出典: [What makes a harness a harness https://arxiv.org/html/2606.10106]
+ Anthropic が SDK をハーネスと呼ぶことと、論文が SDK を分けることが、食い違うのかどうかは……まだわからないです。
+  Claude Agent SDK がループまで含んでいるなら、論文の条件でもハーネスになるのかもです(ここは私の推測です)。
+
+出会った記事
+ [2026年11月28日の日記 https://gosyujin.com/mokumoku-ai/entries/2026-11-28.html]
+
+関連
+ [test oracle] [claude -p]
