@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-28T08:07:16.673Z",
+  "updatedAt": "2026-11-28T08:37:08.808Z",
   "items": [
     {
       "feed": "publickey",
@@ -90,6 +90,16 @@
       "published": "2026-11-26T06:39:37.000Z",
       "foundAt": "2026-11-26T07:07:17.427Z",
       "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "君もユーザー体験バリデーターにならないか？UI品質を向上させるデザイン批評の技術",
+      "url": "https://speakerdeck.com/ninjinkun/user-experience-validator",
+      "published": "2026-11-28T06:31:15.000Z",
+      "bookmarks": 8,
+      "foundAt": "2026-11-28T08:37:08.808Z",
+      "offered": false
     },
     {
       "feed": "hatebu",
@@ -578,16 +588,6 @@
       "url": "https://togetter.com/li/2774418",
       "published": "2026-11-26T08:38:07.000Z",
       "bookmarks": 7,
-      "foundAt": "2026-11-27T12:37:16.075Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "サンタクロースと無料で話せる公衆電話を南太平洋の小さな島に設置した通信技術者の記録",
-      "url": "https://gigazine.net/news/20261127-payphone-on-pacific-island/",
-      "published": "2026-11-27T06:05:33.000Z",
-      "bookmarks": 5,
       "foundAt": "2026-11-27T12:37:16.075Z",
       "offered": true
     }

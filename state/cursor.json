@@ -1,16 +1,12 @@
 {
-  "lastBeat": "2026-11-28T08:07:16.673Z",
+  "lastBeat": "2026-11-28T08:37:08.808Z",
   "elapsedMinutes": 29,
   "trigger": "dispatch",
-  "act": true,
+  "act": false,
   "reasons": [
     {
-      "kind": "tsukkomi",
-      "detail": "ツッコミ 新着1"
-    },
-    {
       "kind": "feed",
-      "detail": "はてブ 新着2"
+      "detail": "はてブ 新着1"
     }
   ],
   "llm": {
