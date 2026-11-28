@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-28T11:37:14.884Z",
+  "updatedAt": "2026-11-28T13:07:35.434Z",
   "items": [
     {
       "feed": "publickey",
@@ -94,12 +94,62 @@
     {
       "feed": "hatebu",
       "priority": 3,
+      "title": "腰を守ろう。座り仕事にエルゴノミクスチェアが最適解なわけ【小寺信良のくらしDX】",
+      "url": "https://www.watch.impress.co.jp/docs/series/kodera/2159299.html",
+      "published": "2026-11-28T01:36:42.000Z",
+      "bookmarks": 14,
+      "foundAt": "2026-11-28T13:07:35.434Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "CTOからエンジニアへ",
+      "url": "https://speakerdeck.com/mirakui/20261127-yapc-lt",
+      "published": "2026-11-28T08:36:55.000Z",
+      "bookmarks": 10,
+      "foundAt": "2026-11-28T13:07:35.434Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "人類はまだWin+Shift+Tで画像に表示された文字をOCRでコピー出来ることを知らない…ただしMicrosoft PowerToysを入れる必要がある",
+      "url": "https://togetter.com/li/2776106",
+      "published": "2026-11-28T12:07:43.000Z",
+      "bookmarks": 9,
+      "foundAt": "2026-11-28T13:07:35.434Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "CQRS+ES実践ガイド / CQRS+ES Practice Guide",
+      "url": "https://speakerdeck.com/nrslib/cqrs-es-practice-guide",
+      "published": "2026-11-28T09:23:13.000Z",
+      "bookmarks": 10,
+      "foundAt": "2026-11-28T13:07:35.434Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "AI音声による虚偽通報が深刻化",
+      "url": "https://gigazine.net/news/20261128-fake-911-call-ai/",
+      "published": "2026-11-27T23:02:45.000Z",
+      "bookmarks": 7,
+      "foundAt": "2026-11-28T13:07:35.434Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
       "title": "生成AIは知的労働能力を「ドーピング」することはできるが、「定着」させることはできない - 渋谷駅前で働くデータサイエンティストのブログ",
       "url": "https://tjo.hatenablog.com/entry/2026/11/28/185602",
       "published": "2026-11-28T10:03:10.000Z",
       "bookmarks": 5,
       "foundAt": "2026-11-28T11:37:14.884Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
@@ -109,7 +159,7 @@
       "published": "2026-11-27T22:48:50.000Z",
       "bookmarks": 4,
       "foundAt": "2026-11-28T11:37:14.884Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
@@ -538,56 +588,6 @@
       "url": "https://speakerdeck.com/tkyowa/kakaku-com-ai-driven-system-renewal-202611",
       "published": "2026-11-27T07:25:50.000Z",
       "bookmarks": 4,
-      "foundAt": "2026-11-27T14:07:13.862Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "OpenAIが57年来の数学の難問「行列乗算はどこまで効率化できるのか」に決着をつける論文を公開",
-      "url": "https://gigazine.net/news/20261126-openai-matrix-multiplication/",
-      "published": "2026-11-26T08:35:02.000Z",
-      "bookmarks": 6,
-      "foundAt": "2026-11-27T14:07:13.862Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "後回しできる設計、 前倒しすべき設計。",
-      "url": "https://speakerdeck.com/anizozina/akitekucha-kanfarensu-2026-atomawashi-dekiru-sekkei-maedaoshi-subeki-sekkei",
-      "published": "2026-11-27T07:20:50.000Z",
-      "bookmarks": 4,
-      "foundAt": "2026-11-27T14:07:13.862Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "HOLY SHIT HOLY SHIT HOLY SHIT HOLY SHIT",
-      "url": "https://scottaaronson.blog/?p=10379",
-      "published": "2026-11-26T00:33:26.000Z",
-      "bookmarks": 6,
-      "foundAt": "2026-11-27T14:07:13.862Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "OpenAI「GPT-6.2」利用枠上限に達するのが最大40％早くなるように",
-      "url": "https://ascii.jp/elem/000/004/455/4455163/",
-      "published": "2026-11-26T08:09:12.000Z",
-      "bookmarks": 7,
-      "foundAt": "2026-11-27T14:07:13.862Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "れいわ・大石氏の「国家総動員・強制労働」発言は存在しない？ JFCのAI活用に重大な確認不足【ファクトチェック検証】｜じゃのっす",
-      "url": "https://note.com/shiny_broom7788/n/n3a99aa67b065",
-      "published": "2026-11-26T04:57:43.000Z",
-      "bookmarks": 5,
       "foundAt": "2026-11-27T14:07:13.862Z",
       "offered": true
     }
