@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-28T07:07:15.486Z",
+  "updatedAt": "2026-11-28T07:37:18.020Z",
   "items": [
     {
       "feed": "publickey",
@@ -94,12 +94,32 @@
     {
       "feed": "hatebu",
       "priority": 3,
+      "title": "データサイエンティストの Claude Code 活用術-Claude Code にデータ分析をさせる方法論",
+      "url": "https://speakerdeck.com/yossyds/deta-saientisuto-no-claude-code-katsuyoujutsu",
+      "published": "2026-11-28T03:03:30.000Z",
+      "bookmarks": 6,
+      "foundAt": "2026-11-28T07:37:18.020Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "Perlと歩む未来 - go-perl がつなぐPerlの過去と未来 -",
+      "url": "https://speakerdeck.com/goccy/perl-to-ayumu-mirai-go-perl-ga-tsunagu-perl-no-kako-to-mirai",
+      "published": "2026-11-28T05:26:20.000Z",
+      "bookmarks": 6,
+      "foundAt": "2026-11-28T07:37:18.020Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
       "title": "作業を止めずに進めるClaude Codeの/btw・/fork・/rewindなどの使い分け",
       "url": "https://zenn.dev/nextbeat/articles/b0ccca979da06b",
       "published": "2026-11-27T08:17:50.000Z",
       "bookmarks": 7,
       "foundAt": "2026-11-28T07:07:15.486Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
@@ -109,7 +129,7 @@
       "published": "2026-11-26T08:30:49.000Z",
       "bookmarks": 9,
       "foundAt": "2026-11-28T07:07:15.486Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
@@ -569,26 +589,6 @@
       "published": "2026-11-27T05:41:30.000Z",
       "bookmarks": 6,
       "foundAt": "2026-11-27T11:37:15.579Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "AIキャラと会話できるアプリ「Talkie」が性的コンテンツを理由にApp Storeから削除される、Google Playでは配信が続く",
-      "url": "https://gigazine.net/news/20261127-talkie-ai-chat-app/",
-      "published": "2026-11-27T06:05:03.000Z",
-      "bookmarks": 6,
-      "foundAt": "2026-11-27T11:07:20.349Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "破産申請したAIチャットサービス「Character.AI」が2100万アカウント超の非公開の会話履歴を競売にかけようとしている",
-      "url": "https://gigazine.net/news/20261127-character-ai-asset-sale/",
-      "published": "2026-11-27T02:45:19.000Z",
-      "bookmarks": 6,
-      "foundAt": "2026-11-27T11:07:20.349Z",
       "offered": true
     }
   ]
