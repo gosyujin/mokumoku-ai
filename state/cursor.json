@@ -1,12 +1,12 @@
 {
-  "lastBeat": "2026-11-28T02:07:24.846Z",
-  "elapsedMinutes": 30,
+  "lastBeat": "2026-11-28T02:37:18.811Z",
+  "elapsedMinutes": 29,
   "trigger": "dispatch",
-  "act": true,
+  "act": false,
   "reasons": [
     {
       "kind": "feed",
-      "detail": "はてブ 新着3"
+      "detail": "piyolog 新着1、はてブ 新着2"
     }
   ],
   "llm": {

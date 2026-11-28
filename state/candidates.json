@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-28T02:07:24.846Z",
+  "updatedAt": "2026-11-28T02:37:18.811Z",
   "items": [
     {
       "feed": "publickey",
@@ -58,6 +58,15 @@
     {
       "feed": "piyolog",
       "priority": 2,
+      "title": "GMOペパボへの不正アクセスについてまとめてみた",
+      "url": "https://piyolog.hatenadiary.jp/entry/2026/11/28/110735",
+      "published": "2026-11-28T02:07:35.000Z",
+      "foundAt": "2026-11-28T02:37:18.811Z",
+      "offered": false
+    },
+    {
+      "feed": "piyolog",
+      "priority": 2,
       "title": "「ARTEX」を使った攻撃の観測と被害組織の公表についてまとめてみた",
       "url": "https://piyolog.hatenadiary.jp/entry/2026/11/27/134842",
       "published": "2026-11-27T04:48:42.000Z",
@@ -90,6 +99,26 @@
       "published": "2026-11-25T03:01:14.000Z",
       "foundAt": "2026-11-25T03:07:25.938Z",
       "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "Docker HubのPHP公式イメージから自前ビルドへ移行 〜Debian移行と最適化で稼働Pod数を約25%削減〜 - COLOPL Tech Blog",
+      "url": "https://blog.colopl.dev/entry/2026/11/27/110000",
+      "published": "2026-11-27T04:05:22.000Z",
+      "bookmarks": 9,
+      "foundAt": "2026-11-28T02:37:18.811Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "AIでしか生み出せない価値とは何か ― 4つの壁と8つの価値創造 - ニューロサイエンスとマーケティングの間 - Between Neuroscience and Marketing",
+      "url": "https://kaz-ataka.hatenablog.com/entry/2026/11/28/085335",
+      "published": "2026-11-28T00:34:06.000Z",
+      "bookmarks": 4,
+      "foundAt": "2026-11-28T02:37:18.811Z",
+      "offered": false
     },
     {
       "feed": "hatebu",
@@ -559,36 +588,6 @@
       "published": "2026-11-27T04:35:43.000Z",
       "bookmarks": 5,
       "foundAt": "2026-11-27T10:07:15.504Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "『Slay the Spire 2』のアセンション10に“80％勝てるAI”は、エリートにカチこみしっかり休む。それと毒デッキをやけに擦る。なぜ？弱みはどこ？研究者に訊いた - AUTOMATON",
-      "url": "https://automaton-media.com/articles/interviewsjp/20261127-481245/",
-      "published": "2026-11-27T01:17:00.000Z",
-      "bookmarks": 4,
-      "foundAt": "2026-11-27T10:07:15.504Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "顧客情報を守るため、売上15％の自社ECを閉店 ドールメーカーが明かした「決断」の背景",
-      "url": "https://www.itmedia.co.jp/news/article/2611/27/2000003518/",
-      "published": "2026-11-27T08:09:28.000Z",
-      "bookmarks": 5,
-      "foundAt": "2026-11-27T09:37:14.937Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "通話とSMSだけの「INFOBAR ZERO」は若者に刺さるか？ 米国のダムフォンブームが日本で起きない理由",
-      "url": "https://www.itmedia.co.jp/mobile/articles/2611/27/news076.html",
-      "published": "2026-11-27T05:37:18.000Z",
-      "bookmarks": 4,
-      "foundAt": "2026-11-27T09:37:14.937Z",
       "offered": true
     }
   ]
