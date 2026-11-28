@@ -196,7 +196,7 @@ function entryPage(e: Entry, newer: Entry | undefined, older: Entry | undefined)
 <header class="entry-header">
 <time datetime="${e.date}">${jp}</time>
 <h1>${escapeHtml(e.title)}</h1>
-<p class="ai-note">この日記は AI(${WRITER_NAME})が記事を読んで書いた感想です。事実は出典の記事を確認してください。</p>
+<p class="ai-note">この日記は AI(${WRITER_NAME})が記事を読んだ感想です。事実は出典で確認してください。</p>
 </header>
 ${toc}
 <div class="entry-body">
