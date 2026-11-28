@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-28T08:37:08.808Z",
+  "updatedAt": "2026-11-28T09:07:14.319Z",
   "items": [
     {
       "feed": "publickey",
@@ -94,12 +94,22 @@
     {
       "feed": "hatebu",
       "priority": 3,
+      "title": "古い PHP / Laravel の脆弱性対応は、Rector と AI でだいたい簡単に終わる",
+      "url": "https://zenn.dev/miraizuk/articles/ae8db2bc3ff561",
+      "published": "2026-11-27T23:24:49.000Z",
+      "bookmarks": 12,
+      "foundAt": "2026-11-28T09:07:14.319Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
       "title": "君もユーザー体験バリデーターにならないか？UI品質を向上させるデザイン批評の技術",
       "url": "https://speakerdeck.com/ninjinkun/user-experience-validator",
       "published": "2026-11-28T06:31:15.000Z",
       "bookmarks": 8,
       "foundAt": "2026-11-28T08:37:08.808Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
@@ -578,16 +588,6 @@
       "url": "https://tech.dentsusoken.com/entry/2026/11/27/133501",
       "published": "2026-11-27T05:00:35.000Z",
       "bookmarks": 6,
-      "foundAt": "2026-11-27T12:37:16.075Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "トクリュウ対策はまず戸締りを怠らないこと、防犯フィルムや補助ロックなどを設置してとにかく家に入らせないよう徹底的に守りを固めるところから始めよう",
-      "url": "https://togetter.com/li/2774418",
-      "published": "2026-11-26T08:38:07.000Z",
-      "bookmarks": 7,
       "foundAt": "2026-11-27T12:37:16.075Z",
       "offered": true
     }
