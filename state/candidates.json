@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-28T06:37:16.106Z",
+  "updatedAt": "2026-11-28T07:07:15.486Z",
   "items": [
     {
       "feed": "publickey",
@@ -90,6 +90,26 @@
       "published": "2026-11-26T06:39:37.000Z",
       "foundAt": "2026-11-26T07:07:17.427Z",
       "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "作業を止めずに進めるClaude Codeの/btw・/fork・/rewindなどの使い分け",
+      "url": "https://zenn.dev/nextbeat/articles/b0ccca979da06b",
+      "published": "2026-11-27T08:17:50.000Z",
+      "bookmarks": 7,
+      "foundAt": "2026-11-28T07:07:15.486Z",
+      "offered": false
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "母が遺した実家の片付け。捨てたモノ1.3トン、業者22万円の収支を全部公開 - どかれふのExcel画廊",
+      "url": "https://www.dokarefu.com/entry/jikkajimai_katazuke",
+      "published": "2026-11-26T08:30:49.000Z",
+      "bookmarks": 9,
+      "foundAt": "2026-11-28T07:07:15.486Z",
+      "offered": false
     },
     {
       "feed": "hatebu",
@@ -567,26 +587,6 @@
       "title": "破産申請したAIチャットサービス「Character.AI」が2100万アカウント超の非公開の会話履歴を競売にかけようとしている",
       "url": "https://gigazine.net/news/20261127-character-ai-asset-sale/",
       "published": "2026-11-27T02:45:19.000Z",
-      "bookmarks": 6,
-      "foundAt": "2026-11-27T11:07:20.349Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "GMO熊谷氏「ハッカーを丸裸に」 サイバー攻撃の可視化サイト開設 - 日本経済新聞",
-      "url": "https://www.nikkei.com/article/DGXZQOUC271FH0X21C26A1000000/",
-      "published": "2026-11-27T08:16:56.000Z",
-      "bookmarks": 4,
-      "foundAt": "2026-11-27T11:07:20.349Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "ブラックフライデーでGoogle AIサブスク半額、Pro月額より年2万円お得。YouTubeプレミアムLiteやGoogle Health特典も | テクノエッジ TechnoEdge",
-      "url": "https://www.techno-edge.net/article/2026/11/25/5816.html",
-      "published": "2026-11-25T22:45:49.000Z",
       "bookmarks": 6,
       "foundAt": "2026-11-27T11:07:20.349Z",
       "offered": true
