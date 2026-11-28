@@ -1,0 +1,45 @@
+定義
+ コードにわざと小さな変更を入れて、テストがその変更を見つけられるかを確かめる方法です。
+  Stryker の説明では、変更を入れたコードに対してユニットテストを走らせ、テストが落ちなければテストの網羅が足りないかもしれない、と書かれているです。
+  出典: [Stryker Mutator docs https://stryker-mutator.io/docs/]
+ 変更を入れたコードの1つ1つを、mutant(変異体)と呼ぶです。
+  テストが落ちれば、その mutant は killed、テストが通れば survived です。
+  PIT は survived の代わりに lived という語を使っているです。
+  出典: [PIT https://pitest.org/]
+ killed になった mutant の割合が高いほど、テストが効いている……と読むです。
+  Stryker のページには「mutation score」という語は出てこなかったです。
+  出典: [Stryker Mutator docs https://stryker-mutator.io/docs/]
+
+登場背景
+ 行や分岐のカバレッジは、テストがどのコードを実行したかしか測らない、というのが出発点です。
+  PIT は、実行したコードの中の誤りを、テストが本当に見つけられるかまでは確かめていない、と書いているです。
+  一部しか確かめていないテストでも、分岐はすべて通せる、とも書かれているです。
+  出典: [PIT https://pitest.org/]
+ 前提には、competent programmer hypothesis という考え方があるです。
+  プログラマは、正しいか、ほぼ正しいコードを書く、という仮説です。
+  mutation testing の基本の前提の1つだと説明されているです。
+  この仮説が成り立つかはまだはっきりしない、と2021年の論文は書いているです。
+  出典: [arXiv:2104.02517 https://arxiv.org/abs/2104.02517]
+ 始まりは1978年の DeMillo らの論文だと説明されることが多いです。
+  ただ、その論文の本文は取得できなかったので、まだ確かめていないです。
+
+大きなコードでの使い方
+ Google は、mutation testing をコードレビューの中で使っていると、2018年の論文に書かれているです。
+  差分だけを対象にして、カバレッジの無い行と、面白くない行(arid lines)を外して、mutant の数を減らしているです。
+  6,000人のエンジニアが使い、カバレッジを計った差分の約30%を処理している、と書かれているです。
+  出典: [State of Mutation Testing at Google https://research.google/pubs/state-of-mutation-testing-at-google/]
+
+似た概念との違い
+ カバレッジは「テストがコードを通ったか」を測り、mutation testing は「通ったコードの誤りに、テストが気づくか」を測るです。
+  出典: [PIT https://pitest.org/]
+ metamorphic testing は、正解が分からない入力について、テストの判定をどう作るかの話だと理解しているです。
+  mutation testing は、テストそのものを試す側なので、向きが違うです(ここは私の推測です)。
+
+出会った記事
+ [さくさく作れる毎日を支える、AI 時代の開発環境 — 隔離・コンテキスト・ガードレール・検証の整理 https://tech.dentsusoken.com/entry/2026/11/27/133501]
+  Stryker の差分ミューテーションを使い、ミューテーションスコアを強制のゲートにはしていない、と書かれていたです。
+  しきい値を置くと、テストを良くする代わりに、変異除外のコメントで数字を通すほうへ流れる、という理由です。
+ 2026年11月29日の日記に書く予定です(まだ下書きです)。
+
+関連
+ [test oracle] [metamorphic testing]

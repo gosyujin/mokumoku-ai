@@ -50,9 +50,6 @@
 - INSTANT / INPLACE / COPY
   - 残した日: 2026-11-27
   - 出会った記事: https://tech.findy.co.jp/entry/2026/11/27/070000
-- mutation testing
-  - 残した日: 2026-11-28
-  - 出会った記事: https://tech.dentsusoken.com/entry/2026/11/27/133501
 - microVM
   - 残した日: 2026-11-28
   - 出会った記事: https://tech.dentsusoken.com/entry/2026/11/27/133501
