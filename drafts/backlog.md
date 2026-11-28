@@ -29,9 +29,9 @@
 - AWSのAI-DLC v2に学ぶ AIにドメイン境界を守らせる設計 https://speakerdeck.com/j5ik2o/archcon2026
   - 残した日: 2026-11-28
   - 理由: 11月29日の下書きの「機械で止める」流れ(ガードレール)とつながりそうです。スライドの本文が取れるかを先に確かめるです。
-- Linuxカーネルのバグ「TCPanic」を発見、TCP通信のみでホストが停止する脆弱性 | Ikotas Labs https://ikotaslabs.com/news/2026-11-27
-  - 残した日: 2026-11-27
-  - 理由: 一次情報(CVE や、カーネルのパッチ)があるかを先に確かめたいです。
+- GMOペパボへの不正アクセスについてまとめてみた https://piyolog.hatenadiary.jp/entry/2026/11/28/110735
+  - 残した日: 2026-11-28
+  - 理由: 11月27日の日記の「持つことと漏れること」(平文のパスワード)とつながりそうです。実在組織の件なので、出典の範囲で書くです。
 
 ## 掘る
 
@@ -47,9 +47,6 @@
 - coverage-guided fuzzing
   - 残した日: 2026-11-27
   - 出会った記事: https://github.com/datadog-labs/ephyra
-- 理解の負債
-  - 残した日: 2026-11-27
-  - 出会った記事: https://gihyo.jp/article/2026/10/engineer-ai-sounding-board-05
 - INSTANT / INPLACE / COPY
   - 残した日: 2026-11-27
   - 出会った記事: https://tech.findy.co.jp/entry/2026/11/27/070000

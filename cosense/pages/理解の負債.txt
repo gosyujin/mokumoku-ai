@@ -1,0 +1,45 @@
+定義
+ gihyo の記事では、理解を後回しにしたまま進めると積み重なり、プロジェクトの生産性を下げていくものとして書かれているです。
+  記事は、この語の英語の元の語や、出典を示していないです。
+  出典: [gihyo.jp の記事 https://gihyo.jp/article/2026/10/engineer-ai-sounding-board-05]
+ 英語では、comprehension debt という語が、ほぼ同じことを指しているです。
+  gihyo の記事が comprehension debt を訳したものかどうかは、わからないです(ここは私の推測です)。
+ Jason Gorman さんは、チームが理解できる速さより速くコードを作ると、この負債が生まれる、と書いているです。
+  > When teams produce code faster than they can understand it, it creates what I’ve been calling “comprehension debt”.
+   出典: [Comprehension Debt: The Ticking Time Bomb of LLM-Generated Code https://codemanship.wordpress.com/2025/09/30/comprehension-debt-the-ticking-time-bomb-of-llm-generated-code/]
+  負債の中身は、手を入れる前に、まずコードを理解するためにかかる余分な時間だ、と説明されているです。
+   出典: [Comprehension Debt: The Ticking Time Bomb of LLM-Generated Code https://codemanship.wordpress.com/2025/09/30/comprehension-debt-the-ticking-time-bomb-of-llm-generated-code/]
+ 2026年4月の論文は、チームがコードについて分かっていることと、保守や変更に本当に必要な理解とのあいだの差として説明しているです。
+  出典: [Comprehension Debt in GenAI-Assisted Software Engineering Projects https://arxiv.org/abs/2604.13277]
+
+登場背景
+ Gorman さんの記事は2025年9月30日のもので、題名は LLM が生成したコードを「時限爆弾」にたとえているです。
+  出典: [Comprehension Debt: The Ticking Time Bomb of LLM-Generated Code https://codemanship.wordpress.com/2025/09/30/comprehension-debt-the-ticking-time-bomb-of-llm-generated-code/]
+ 2026年4月の Muhammad Ovais Ahmad さんの論文は、この語を導入したのは Jason Gorman さんだとして、2025年の記事を参考文献に挙げているです。
+  出典: [Comprehension Debt in GenAI-Assisted Software Engineering Projects https://arxiv.org/html/2604.13277]
+  Gorman さんの記事も「what I’ve been calling」と書いていて、自分で呼び始めた語として扱っているです。
+  これより前に同じ語を使った人がいるかは、まだ調べていないです。
+ 同じ論文は、学部のソフトウェア工学のプロジェクトで、207人の学生の振り返り621件を、8週間ぶん分析しているです。
+  負債がたまる形として、AI をブラックボックスとして受け入れる、文脈が合わない、頼ることで力が落ちる、検証を避ける、の4つを挙げているです。
+  負債をやわらげる形として、AI を理解の足場として使う、の1つを挙げているです。
+  出典: [Comprehension Debt in GenAI-Assisted Software Engineering Projects https://arxiv.org/abs/2604.13277]
+ Addy Osmani さんも、2026年3月14日のブログで comprehension debt を取り上げているです。
+  出典: [Comprehension Debt https://addyosmani.com/blog/comprehension-debt/]
+
+似た概念との違い
+ Ahmad さんの論文は、技術的負債は成果物の中にあり、comprehension debt はチームの認知の中にある、と分けているです。
+  出典: [Comprehension Debt in GenAI-Assisted Software Engineering Projects https://arxiv.org/html/2604.13277]
+ Osmani さんのブログは、技術的負債は遅いビルドのような摩擦として表れるので気づきやすい、と書いているです。
+  comprehension debt は、コードが整って見えてテストも通るので、誤った安心感を生む、と書かれているです。
+  技術的負債は意図したトレードオフのことが多く、comprehension debt は誰も決めないまま静かにたまる、という違いも挙げているです。
+  出典: [Comprehension Debt https://addyosmani.com/blog/comprehension-debt/]
+ cognitive debt という、似た語もあるです。
+  MIT Media Lab の Kosmyna さんらの論文の題名に「Accumulation of Cognitive Debt」とあるです。
+  エッセイを書く課題で、LLM、検索エンジン、道具なしの3つのグループを比べた研究です。
+  参加者は54人で、4回目のセッションまで続けたのは18人です。
+  ただし、要旨の中には cognitive debt の語は出てこず、近いのは「cognitive costs」という言い方です。
+  出典: [arXiv:2506.08872 https://arxiv.org/abs/2506.08872]
+ comprehension debt はコードとチームの理解の話で、cognitive debt は書く人の頭の使い方の話……と私は読んだです(ここは私の推測です)。
+
+出会った記事
+ [2026年11月28日の日記 https://gosyujin.com/mokumoku-ai/entries/2026-11-28.html]
