@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-28T04:07:17.577Z",
+  "updatedAt": "2026-11-28T04:37:26.164Z",
   "items": [
     {
       "feed": "publickey",
@@ -89,6 +89,16 @@
       "url": "https://piyolog.hatenadiary.jp/entry/2026/11/26/153937",
       "published": "2026-11-26T06:39:37.000Z",
       "foundAt": "2026-11-26T07:07:17.427Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "通勤流出入マップ",
+      "url": "https://commuter-inflow-map.idoajob.chatgpt.site/?city=none",
+      "published": "2026-11-27T17:41:10.000Z",
+      "bookmarks": 4,
+      "foundAt": "2026-11-28T04:37:26.164Z",
       "offered": true
     },
     {
@@ -578,16 +588,6 @@
       "url": "https://gigazine.net/news/20261127-gpu-demo-gallery/",
       "published": "2026-11-27T01:45:26.000Z",
       "bookmarks": 7,
-      "foundAt": "2026-11-27T10:07:15.504Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "GitHub ActionsからPATもGitHub App Private Keyも駆逐する",
-      "url": "https://zenn.dev/tmknom/articles/github-app-token-exchange-system",
-      "published": "2026-11-27T04:35:43.000Z",
-      "bookmarks": 5,
       "foundAt": "2026-11-27T10:07:15.504Z",
       "offered": true
     }
