@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-28T10:37:17.957Z",
+  "updatedAt": "2026-11-28T11:07:15.966Z",
   "items": [
     {
       "feed": "publickey",
@@ -89,6 +89,26 @@
       "url": "https://piyolog.hatenadiary.jp/entry/2026/11/26/153937",
       "published": "2026-11-26T06:39:37.000Z",
       "foundAt": "2026-11-26T07:07:17.427Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "もう他人ごとじゃないイベントソーシング：社会を支える既存システムへの部分適用",
+      "url": "https://es.kosui.workers.dev/",
+      "published": "2026-11-28T06:22:48.000Z",
+      "bookmarks": 7,
+      "foundAt": "2026-11-28T11:07:15.966Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "AIエージェント中心アーキテクチャ―人の判断を仕組みに移し、チームの役割を変えるまで / architecture-con2026",
+      "url": "https://speakerdeck.com/visional_engineering_and_design/architecture-con2026",
+      "published": "2026-11-27T07:38:36.000Z",
+      "bookmarks": 4,
+      "foundAt": "2026-11-28T11:07:15.966Z",
       "offered": true
     },
     {
@@ -567,26 +587,6 @@
       "title": "はじめての Lean",
       "url": "https://unaoya.github.io/lean-intro/",
       "published": "2026-11-27T11:19:18.000Z",
-      "bookmarks": 4,
-      "foundAt": "2026-11-27T13:07:16.727Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "中国への過度なハイテク輸出規制は「国内開発体制の加速につながる」と半導体露光装置メーカー・ASMLのフーケCEOが警告",
-      "url": "https://gigazine.net/news/20261127-asml-ceo-warn-to-export-ban/",
-      "published": "2026-11-27T03:48:16.000Z",
-      "bookmarks": 6,
-      "foundAt": "2026-11-27T13:07:16.727Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "Claudeによるリーマン予想の形式証明、コード約7万6000行に短縮。独立検証も通過",
-      "url": "https://joho-todai.com/claude-riemann-hypothesis-formal-proof-76000-lines/",
-      "published": "2026-11-26T14:07:54.000Z",
       "bookmarks": 4,
       "foundAt": "2026-11-27T13:07:16.727Z",
       "offered": true
