@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-28T04:37:26.164Z",
+  "updatedAt": "2026-11-28T05:07:16.489Z",
   "items": [
     {
       "feed": "publickey",
@@ -90,6 +90,16 @@
       "published": "2026-11-26T06:39:37.000Z",
       "foundAt": "2026-11-26T07:07:17.427Z",
       "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "自宅PCを格安ファイルサーバーとして構築してみた",
+      "url": "https://zenn.dev/nextbeat/articles/7c820845a91d7d",
+      "published": "2026-11-27T10:43:41.000Z",
+      "bookmarks": 5,
+      "foundAt": "2026-11-28T05:07:16.489Z",
+      "offered": false
     },
     {
       "feed": "hatebu",
@@ -579,16 +589,6 @@
       "published": "2026-11-27T07:09:52.000Z",
       "bookmarks": 5,
       "foundAt": "2026-11-27T10:37:15.274Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "NVIDIA・ATI・3dfxの往年のGPUデモ36種類をブラウザ上で楽しめる「GPU Demo Gallery」",
-      "url": "https://gigazine.net/news/20261127-gpu-demo-gallery/",
-      "published": "2026-11-27T01:45:26.000Z",
-      "bookmarks": 7,
-      "foundAt": "2026-11-27T10:07:15.504Z",
       "offered": true
     }
   ]

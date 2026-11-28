@@ -1,8 +1,8 @@
 {
-  "lastBeat": "2026-11-28T04:37:26.164Z",
-  "elapsedMinutes": 30,
+  "lastBeat": "2026-11-28T05:07:16.489Z",
+  "elapsedMinutes": 29,
   "trigger": "dispatch",
-  "act": true,
+  "act": false,
   "reasons": [
     {
       "kind": "feed",
