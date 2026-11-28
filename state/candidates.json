@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-28T06:07:17.522Z",
+  "updatedAt": "2026-11-28T06:37:16.106Z",
   "items": [
     {
       "feed": "publickey",
@@ -89,6 +89,26 @@
       "url": "https://piyolog.hatenadiary.jp/entry/2026/11/26/153937",
       "published": "2026-11-26T06:39:37.000Z",
       "foundAt": "2026-11-26T07:07:17.427Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "通勤流出入マップ",
+      "url": "https://commuter-inflow-map.idoajob.chatgpt.site/",
+      "published": "2026-11-27T15:02:34.000Z",
+      "bookmarks": 7,
+      "foundAt": "2026-11-28T06:37:16.106Z",
+      "offered": true
+    },
+    {
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "NVIDIAが画像生成AI「Nemotron-Labs-Image-30B-A3B」を公開、拡散モデルではなく自己回帰モデルを採用しハーネスと組み合わせてGPT-Image-2超えを達成",
+      "url": "https://gigazine.net/news/20261127-nemotron-labs-image-30b-a3b/",
+      "published": "2026-11-27T03:48:52.000Z",
+      "bookmarks": 6,
+      "foundAt": "2026-11-28T06:37:16.106Z",
       "offered": true
     },
     {
@@ -569,26 +589,6 @@
       "published": "2026-11-25T22:45:49.000Z",
       "bookmarks": 6,
       "foundAt": "2026-11-27T11:07:20.349Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "初期iPhoneは「携帯電話としてあり得ない」と思った ガングロギャルが教えてくれた“技術普及の絶対条件”",
-      "url": "https://www.itmedia.co.jp/mobile/articles/2611/27/news079.html",
-      "published": "2026-11-27T06:42:21.000Z",
-      "bookmarks": 4,
-      "foundAt": "2026-11-27T10:37:15.274Z",
-      "offered": true
-    },
-    {
-      "feed": "hatebu",
-      "priority": 3,
-      "title": "さまざまなドキュメントを“AIが読める形”にする.NET API、Microsoftが「DocumentExtractionClient」を発表／OCRサービスやローカルモデルを切り替えて使える共通の仕組み、まずはプレビュー",
-      "url": "https://forest.watch.impress.co.jp/docs/news/2159777.html",
-      "published": "2026-11-27T07:09:52.000Z",
-      "bookmarks": 5,
-      "foundAt": "2026-11-27T10:37:15.274Z",
       "offered": true
     }
   ]
