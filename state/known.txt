@@ -1,6 +1,7 @@
 claude -p
 eBPF
 metamorphic testing
+mutation testing
 ReDoS
 Sizzle
 SRP
