@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-28T02:37:18.811Z",
+  "updatedAt": "2026-11-28T03:07:32.982Z",
   "items": [
     {
       "feed": "publickey",
@@ -62,7 +62,7 @@
       "url": "https://piyolog.hatenadiary.jp/entry/2026/11/28/110735",
       "published": "2026-11-28T02:07:35.000Z",
       "foundAt": "2026-11-28T02:37:18.811Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "piyolog",
@@ -92,12 +92,13 @@
       "offered": true
     },
     {
-      "feed": "piyolog",
-      "priority": 2,
-      "title": "米CIAとODNIの非機密システムへの不正アクセスについてまとめてみた",
-      "url": "https://piyolog.hatenadiary.jp/entry/2026/11/25/120114",
-      "published": "2026-11-25T03:01:14.000Z",
-      "foundAt": "2026-11-25T03:07:25.938Z",
+      "feed": "hatebu",
+      "priority": 3,
+      "title": "Windowsで定番のターミナルエミュレーター「Tera Term」にMac版が登場、原作者公認／本家の設定ファイル、「.ttl」ファイルもそのまま扱える【やじうまの杜】",
+      "url": "https://forest.watch.impress.co.jp/docs/serial/yajiuma/2159779.html",
+      "published": "2026-11-27T04:19:49.000Z",
+      "bookmarks": 7,
+      "foundAt": "2026-11-28T03:07:32.982Z",
       "offered": true
     },
     {
@@ -108,7 +109,7 @@
       "published": "2026-11-27T04:05:22.000Z",
       "bookmarks": 9,
       "foundAt": "2026-11-28T02:37:18.811Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
@@ -118,7 +119,7 @@
       "published": "2026-11-28T00:34:06.000Z",
       "bookmarks": 4,
       "foundAt": "2026-11-28T02:37:18.811Z",
-      "offered": false
+      "offered": true
     },
     {
       "feed": "hatebu",
